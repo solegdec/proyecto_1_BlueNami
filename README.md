@@ -49,3 +49,8 @@ Tiene mucha experiencia trabajando en equipo y una gran capacidad para resolver.
 Actualmente esta trabajando  como diseñadora de fotógrafa y diseñadora de catálogo.
 Apasionada del diseño, estudio HTML, CCS en “Plataforma5” Y busca en la programación
 una herramienta más para concretar y hacer posibles nuevas ideas.
+
+
+
+tablero de trabajo del proyecto:
+https://trello.com/b/04A1pD5B/proyecto-integrador
