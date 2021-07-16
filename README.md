@@ -2,6 +2,7 @@
 Blue Nami- Proyecto Integrador DH 2021
 
 DESCRIPCIÓN DE LOS PRODUCTOS OFRECIDOS
+
 Blue Nami es un e-commerce de Tablas de surf para todos los niveles. Encontramos tablas para
 aquellos que recién empiezan; que facilitan el aprendizaje seguro, la remada y son estables. La
 oferta incluye Tablas para un nivel intermedio, es decir aquellas que aportan cierta maniobrabilidad
@@ -9,6 +10,7 @@ incluso en olas pequeñas. Y por último Tablas para Nivel avanzado: Son tablas 
 velocidad y gran maniobrabilidad.
 
 DESCRIPCIÓN DE LA AUDIENCIA A LA QUE SE APUNTA
+
 Blue Nami es una empresa de venta de tablas de surf de óptima calidad, tanto para principiantes,
 como para nivel intermedio y nivel avanzado. La audiencia es un público variado, que abarca desde
 adolescentes hasta mayores de 40/50, mayormente un ABC 1.
@@ -20,15 +22,16 @@ en contacto con la naturaleza.
 
 DESCRIPCIÓN DEL GRUPO DE TRABAJO
 
+
  María Bevegni: si bien tiene experiencia en metodologías por haber trabajado en el
 departamento de IT dentro de una empresa agroindustrial, nunca había codeado ni una
 línea... Se anotó en el curso para tener un entendimiento punta a punta del mundo de la
 programación y, si puede, al finalizarlo desarrollar su primer sistema de gestión.
+
  Sebastián Uson: es un Project Manager con más de 6 años de experiencia trabajando en
 múltiples proyectos. Actualmente está utilizando nuevas tecnologías como Realidad
 Aumentada y Realidad Virtual. Centrándose en aplicaciones web y móviles. Mezclando sus
 estudios de programación y diseño.
-
 Sebastián tiene fuertes habilidades de comunicación y es capaz de resolver problemas de
 manera eficiente. Es un apasionado de su trabajo y se adapta rápidamente a las nuevas
 tecnologías, buscando constantemente mejorar y aprender. Él siempre está buscando
@@ -52,5 +55,5 @@ una herramienta más para concretar y hacer posibles nuevas ideas.
 
 
 
-tablero de trabajo del proyecto:
+Tablero de trabajo del proyecto:
 https://trello.com/b/04A1pD5B/proyecto-integrador
