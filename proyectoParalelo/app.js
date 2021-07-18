@@ -3,11 +3,9 @@ const app = express()
 const port = 3030
 const path = require('path')
 
-app.get('/', function(req, res) {
-    res.send('Hola mundo!')
-})
 
-app.get('/home', function(request, response) {
+
+app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, 'views/index.html'))
 })
 

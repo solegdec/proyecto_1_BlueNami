@@ -9,6 +9,19 @@ html {
     font-family: "helvetica neue", sans-serif;
 }
 
+.log {
+    font-family: "roboto";
+    font-size: 15px;
+    color:grey;
+    text-align: right;
+    padding: 10px 20px 10px 0px;
+}
+    
+
+
+.carro {    
+    padding: 0px;
+}
 .logo {
     padding: 5px;
     text-align: left;
