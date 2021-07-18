@@ -6,18 +6,17 @@ body {
 }
 
 html {
-    font-family: "helvetica neue", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .log {
     font-family: "roboto";
     font-size: 15px;
-    color:grey;
+    color: grey;
     text-align: right;
-    padding: 10px 20px 10px 0px;
+    height: 0px;
+    padding: 5px 20px 0px 0px;
 }
-    
-
 
 .logo {
     padding: 5px;
@@ -28,13 +27,14 @@ html {
 
 .nav {
     border-bottom: 1px solid #EAEAEB;
-    text-align: right;
+    text-align: center;
     height: 70px;
     line-height: 70px;
 }
 
 .menu {
     margin: 0 30px 0 0;
+    text-align: center;
 }
 
 .menu a {
@@ -43,10 +43,6 @@ html {
     color: gray;
     margin: 0 10px;
     line-height: 70px;
-}
-
-span {
-    color: #54D17A;
 }
 
 label {
@@ -62,7 +58,7 @@ label {
     display: none;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 572px) {
     label {
         display: block;
         cursor: pointer;
@@ -79,5 +75,9 @@ label {
     }
     #toggle:checked+.menu {
         display: block;
+        text-align: center;
+    }
+    .log {
+        vertical-align: top;
     }
 }
