@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,13 +37,13 @@
     </video>
     <section class="section section-a ">
         <div class="container ">
-            <h2 align: center>V</h2>
+            <img src="/img/logonombre_trans.png" class="logovideo">
         </div>
     </section>
     <section class="section section-b ">
         <div class="carousel">
             <div class="carousel-inner">
-                <h2 style="text-align:center">Productos</h2>
+                <h2>Productos</h2>
                 <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
                 <div class="carousel-item">
                     <img src="/img/producto01.jpg">
@@ -77,21 +78,48 @@
     </section>
 
     <section class="section section-c ">
-        <div class="container ">
-            <img src="/img/olas011.png" id="olas01">
-
-            <p>
-                <img src="/img/fotoola2.png" id="imgQS">Texto tan extenso como queramos que cubrirá la parte derecha de la imagen. Sigo poniendo texto para que se vea el efecto, Bla bla bla bla bla bla bla...
-            </p>
-            <img src="/img/olas03.png" id="olas01">
+        <img src="/img/olas011.png" id="olas01">
+        <h2>Quienes Somos</h2>
+        <div class="qsomos">
+            <img class="izquierda" src="/img/fotoola2.png">
+            <aside>exto tan extenso como queramos que cubrirá la parte derecha de la imagen. Sigo poniendo texto para que se vea el efecto, Bla bla bla bla bla bla bla...</aside>
+            <div class="reset"></div>
         </div>
+        <img src="/img/olas033.png" id="olas01">
     </section>
-    <section class="section section-d ">
-        <div class="container ">
-            <h2>Section B</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus.
-                Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-        </div>
+    <section class="sectionsection-d ">
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>INFORMACION<br>DE CONTACTO</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+                <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+            </section>
+        </section>
+
+        <form action="" class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names">
+
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone">
+
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email">
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje"></textarea>
+
+                <input type="submit" value="Enviar Mensaje" id="btnSend">
+                <input type="reset" value="Borrar Mensaje" id="btnSend">
+
+            </div>
+        </form>
+
     </section>
 
 
