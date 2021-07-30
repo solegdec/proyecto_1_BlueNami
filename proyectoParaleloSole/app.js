@@ -4,7 +4,13 @@ const port = 3030
 const path = require('path')
 
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname, 'views/productCart3.html'))
+    response.sendFile(path.join(__dirname, 'views/productCart.html'))
+})
+app.get('/', function(request, response) {
+    response.sendFile(path.join(__dirname, 'views/index.html'))
+})
+app.get('/', function(request, response) {
+    response.sendFile(path.join(__dirname, 'views/productDetail.html'))
 })
 
 app.use(express.static('public'))

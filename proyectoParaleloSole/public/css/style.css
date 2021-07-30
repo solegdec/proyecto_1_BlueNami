@@ -9,6 +9,7 @@ body {
     height:100%
 }
 h1{
+    font-size: 20px;
     display: block;
     width: 100%;
     text-align:  center;
@@ -17,7 +18,7 @@ h1{
     font-weight: 300;
 }
 h2{
-    font-weight: 300;
+    font-weight: 200;
 }
 .contenedorSole{
     font-family: "lobster";
@@ -45,39 +46,33 @@ h2{
     justify-content:space-evenly;
     border-bottom: rgb(82, 118, 173) dotted 2px ;  
 }
-.contenedorSole3{
+section.contenedorSole3{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     font-family: "lobster";
     width: 100%;
     height:100%;
     font-weight: 300;
     color: rgb(37, 75, 85);
-    font-style: normal;
-    display:flex;
-    align-content:space-between;
+    padding: 10px;
+    font-size: 20px;
       }
+     
    
-.fotoTabla1Sole{
-    margin:5px;
-    width: 200px;
-    height: 185px;
-    
-  }
-.fotoTabla2Sole{
-    margin:5px;
-    width: 200px;
-    height: 185px;
-    }
+
 .precioTabla1Sole {
-    margin:5px;
-    color:rgb(37, 75, 85);
-    align-self:center;
- }
+        margin:5px;
+        color:rgb(37, 75, 85);
+        align-self:center;
+     }
 .precioTabla2Sole{
     margin:5px;
     color:rgb(37, 75, 85);
     align-self:center;
   }
-.tabla1Sole{
+  .tabla1Sole{
     margin:5px;
     text-align: center;
     color:#254b55;
@@ -99,54 +94,88 @@ aside {
     align-self:center
    	}
 .botonPagarSole{
-    width: 50%;
+    width: 250px;
     height:50%;
-    border-radius: 20%;
-    font-size:medium;
-    color:rgb(53, 53, 53);
-    border-color: lightseagreen;
-    background-color: lightslategrey;
-    font-weight: bold;
-    text-align: center;
-    margin-top:20px;
-    margin-bottom: 20px;
-    margin-left: 30px;
-    margin-right: 1vw;
-}
-footer{
-    font-family: "lobster";
+    border-radius: 20px;
+    font-size:20px;
     font-weight: 300;
-    background-color:rgb(71, 85, 92) ;
-	width: 100%;
-    height:20px;
-    font-size: 0,5vw;
-    color: wheat;
-    padding: 24p 12px;
-    padding-top: 24px;
-    padding-right: 12px;
-    padding-bottom: 24px;
-    padding-left: 12px;
+    color:rgb(2, 16, 61);
+    border-color: cyan;
+    background-color: rgb(164, 170, 179);
+    padding: 5px;
     
 }
- h2.total{
-    width: 50%;
-    display: block;
-    text-align: center;
-    margin-top: 2vh;
-    font-size: small;
+.seguirComprandoSole{
+    width: 250px;
+    border-radius: 20px;
+    font-size:15px;
+    color:rgb(2, 16, 61);
+    border-color: cyan;
+    background-color: rgb(164, 170, 179);
+    padding: 5px;
 }
-.precioTabla1Sole img:hover {
-     -webkit-transform: rotateY(180deg);
-     -webkit-transform-style: preserve-3d;
+button{
+    color:rgb(2, 16, 61);
+    border-color: cyan;
+    border-radius: 20px;
+    background-color: rgb(164, 170, 179);
+    font-size:15px;
+    width:70px;
+    
+}
+.total{
+    align-self: center;
+    font-weight: 200;
+    color: rgb(2, 16, 61);
+    
+    
+}
+@keyframes surfear{
+    100%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.75;
+            }
+     50%{
+         opacity: 0.50;
+     }       
+     25%{
+         opacity: 0.25;
+     }
+    }
+.aSurfear{
+    font-size: 20px;
+    font-family: "lobster";
+    font-weight: 200;
+    color: rgb(2, 16, 61);
+    animation-name: surfear;
+    animation-duration:2s ;
+    animation-iteration-count: infinite;
+   
+    
+}
+input{
+    border-radius: 10px;
+    width:70px;
+    background-color: rgb(236, 216, 172);
+    padding: 2px 2px 2px 8px;
+    font-family: "lobster";
+    border-color: cyan;
+    margin:10px;
+   
+}
+.tabla1Sole img:hover {
     transform: rotateY(180deg);
-    transform-style: preserve-3d;} 
+    transform-style: preserve-3d;
 
-.precioTabla2Sole img:hover {
-    -webkit-transform: rotateY(180deg);
-    -webkit-transform-style: preserve-3d;
+} 
+
+.tabla2Sole img:hover {
     transform: rotateY(180deg);
-    transform-style: preserve-3d;} 
-
+    transform-style: preserve-3d;
+} 
+ 
 @keyframes opaco{
     0%{
         color: cyan;
@@ -186,9 +215,11 @@ footer{
 aside:hover{
     color:rgb(5, 151, 156);
 }
+
 .total:hover{
     font-size: x-large;
 }
+
 /* Desarrollo del la barra de navegacion*/
 
 nav {
@@ -455,10 +486,13 @@ label #sign-two {
 /*Fin del desarrollo del responsive para los moviles*/
 
 /* comienzo media Sole*/
-@media  (min-width: 576px){
+@media screen and  (min-width: 576px){
     
     h1{
         font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
     }
     section.contenedorSole{
         flex-direction: row;
@@ -471,68 +505,53 @@ label #sign-two {
         font-weight: 200;
     }
     section.contenedorSole3{
-        flex-direction: row;
+        flex-direction: column;
         font-weight: 200;
-    }
-    footer {
-        background:rgb(49, 64, 71);
-        width: 100%;
-        height:25px;
-        color: wheat;
-        padding: 4px 2px;
-        padding-top: 4px;
-        padding-right: 2px;
-        padding-bottom: 4px;
-        padding-left: 2px;
-        position: absolute;
-        bottom:0;
+        font-size: 20px;
     }
     
+    
+    
     }
-@media  (min-width: 800px){
+@media screen and  (min-width: 768px){
     h1{
-        font-size: 45px;
+        font-size: 30px;
       
     }
-    h2.total{
-        font-size: medium;
+    h2{
+        font-size: 25px;
+    }
+   
+    section.contenedorSole3{
+        flex-direction: row;
+        font-weight: 200;
+        font-size: 28px;
     }
     
-    footer{
-        background:rgb(49, 64, 71);
-        width: 100%;
-        height:45px;
-        color: wheat;
-        padding: 4px 2px;
-        padding-top: 4px;
-        padding-right: 2px;
-        padding-bottom: 4px;
-        padding-left: 2px;
-        position: absolute;
-        bottom: 0;
-    }
     }
     @media  (min-width: 1200px){
         
-        footer{
-            background:rgb(49, 64, 71);
-            width: 100%;
-            height:50px;
-            color: wheat;
-            padding: 4px 2px;
-            padding-top: 4px;
-            padding-right: 2px;
-            padding-bottom: 4px;
-            padding-left: 2px;
-            position: absolute;
-            bottom: 0;
-            font-size: 24px;
-        }
-        h2.total{
+        
+        .total{
             font-size: large;
         }
         
-        
+        h1{
+            font-size: 40px;
+          
+        } 
+        h2{
+            font-size: 30px;
+        }  
+        p{
+            font-size: 20px;
+
+        }   
+        section.contenedorSole3{
+            flex-direction: row;
+            font-weight: 200;
+            font-size:35px;
+        }
         
 
 }
