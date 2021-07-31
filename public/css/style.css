@@ -127,14 +127,14 @@ button{
     width:70px;
     
 }
-.total{
+.totalsole{
     align-self: center;
     font-weight: 200;
     color: rgb(2, 16, 61);
     
     
 }
-.todmedpago{
+.todmedpagosole{
     color: rgb(37, 75, 85);
 }
 @keyframes surfear{
@@ -219,11 +219,11 @@ input{
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-aside:hover{
+.asidesole:hover{
     color:rgb(5, 151, 156);
 }
 
-.total:hover{
+.totalsole:hover{
     font-size: x-large;
 }
 
@@ -931,7 +931,7 @@ footer {
 }
 
 
-/* comienzo media Sole*/
+
 /* comienzo media Sole*/
 @media screen and  (min-width: 576px){
     
@@ -957,16 +957,17 @@ footer {
         font-size: 20px;
     }
           
-    .todmedpago{
+    .todmedpagosole{
         
         font-size: 15px;
     }
-    .total{
+    .totalsole{
         font-size: 20px;
         text-align: center;
         align-self: center;
+       
     }
-    aside{
+    aside.asidesole{
         display: none;
     }
     }
@@ -983,15 +984,14 @@ footer {
         font-weight: 200;
         font-size: 28px;
     }
-    aside{
+    aside.asidesole{
         display:block;
     }
     
     }
     @media  (min-width: 1200px){
         
-        
-        .total{
+        .totalsole{
             font-size: large;
         }
         
@@ -1002,16 +1002,13 @@ footer {
         h2.h2sole{
             font-size: 30px;
         }  
-        p{
-            font-size: 20px;
-
-        }   
+        
         section.contenedorSole3{
             flex-direction: row;
             font-weight: 200;
             font-size:35px;
         }
-        aside{
+        aside.asidesole{
             display:block;
         }
 
