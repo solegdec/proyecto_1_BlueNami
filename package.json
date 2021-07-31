@@ -1,15 +1,23 @@
 {
-    "name": "proyectoParalelo",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.17.1"
-    }
+  "name": "proyectoparalelo",
+  "version": "1.0.0",
+  "description": "Blue Nami- Proyecto Integrador DH 2021",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solegdec/proyecto_1_BlueNami.git"
+  },
+  "bugs": {
+    "url": "https://github.com/solegdec/proyecto_1_BlueNami/issues"
+  },
+  "homepage": "https://github.com/solegdec/proyecto_1_BlueNami#readme"
 }
