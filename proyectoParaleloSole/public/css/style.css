@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body .bodySole {
     font-family: Roboto;
     background-color: rgb(207, 219, 235);
     height: 100%
@@ -240,6 +239,7 @@ nav {
     height: 65px;
     background: rgb(255, 255, 255);
     border-bottom: 1px solid #EAEAEB;
+    font-family: "roboto";   /* declare la tipo para la barra! GZ*/
 }
 
 nav h1 {
@@ -676,36 +676,46 @@ form.form_contact input[type="submit"]:hover {
     /*Fin de los css utilizados en la barra de navegacion movil*/
 }
 
-
 /*Fin del desarrollo del responsive para los moviles*/
 
+/* Comienzo CSS Gina*/
 
 /* Comienzo primer contenedor Gina*/
 
+.contenedorgz {
+    width: 80vw;
+    flex-direction: column;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    
+}
 .productogz {
     width: 100%;
     flex-direction: column;
+    
 }
-
 .imgproductogz {
     width: 100%;
     height: 80%;
     flex-direction: column;
+  
+   
 }
-
-.imggrandegz img {
+.imggrandegz img{
     width: 100%;
     height: 80%;
+ 
 }
-
-.imgcambiogz {
+.imgcambiogz{
     width: 100%;
     height: 20%;
     display: flex;
     flex-wrap: wrap;
-}
 
-.imgcambiogz img {
+}
+.imgcambiogz img{
     width: 20%;
     height: 20%;
     justify-content: space-around;
@@ -714,15 +724,16 @@ form.form_contact input[type="submit"]:hover {
 .desproductosgz {
     width: 100%;
     flex-direction: column;
+   
 }
 
-.desproductosgz h4 {
+.desproductosgz h4{
     font-family: "Numans";
     font-size: 18px;
     color: #7D7D7D;
-}
+    }
 
-.desproductosgz h1 {
+.desproductosgz h1{
     font-family: "Lobster";
     font-size: 50px;
     color: #000000;
@@ -730,7 +741,7 @@ form.form_contact input[type="submit"]:hover {
     margin: 0;
 }
 
-.coloresgz {
+.coloresgz{
     width: 60%;
     display: flex;
     flex-direction: row;
@@ -739,41 +750,41 @@ form.form_contact input[type="submit"]:hover {
     padding-left: 15%;
 }
 
-.coloresgz p {
+.coloresgz p{
     font-family: "Nova Cut";
     font-size: 15px;
     color: #000000;
     margin-right: 10px;
 }
 
-.color1gz {
+.color1gz{
     width: 30px;
     height: 30px;
     background: #FEC36A;
 }
-
-.color2gz {
+.color2gz{
     width: 30px;
     height: 30px;
     background: #FE398C;
-}
+    
+    }
 
-.color3gz {
+.color3gz{
     width: 30px;
     height: 30px;
     background: #7CDEDE;
 }
 
-.botongz {
+.botongz{
     width: 60%;
-    background-color: #E9B843;
+    background-color: #E9B843;    
     font-family: "roboto";
     font-size: 1em;
     border-radius: 10px;
-    margin-left: 20%;
+    margin-left: 20%;   
 }
 
-.preciosgz p {
+.preciosgz p{
     font-size: 40px;
     text-align: center;
 }
@@ -783,44 +794,41 @@ form.form_contact input[type="submit"]:hover {
     font-family: "Roboto";
     font-size: 1em;
 }
-
-
 /* Comienzo segundo contenedor Gina*/
-
-.divisiongz {
+.divisiongz{
     width: 100%;
     height: 10%;
+   
 }
-
-.divisiongz p {
-    font-family: "roboto";
-    font-size: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
+.divisiongz p{
+   font-family: "roboto";
+   font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+ 
 }
-
-.productosRelacionadosgz {
+.productosRelacionadosgz{
     width: 100%;
     flex-direction: column;
 }
 
+
 .tabla2gz {
     width: 100%;
     justify-content: space-around;
+    
 }
-
-.imgTabla2gz img {
+.imgTabla2gz img{
     width: 100%;
     height: 50%;
-}
 
+}
 .tabla3gz {
     width: 100%;
     align-items: center;
 }
-
-.imgTabla3gz img {
+.imgTabla3gz img{
     width: 100%;
     height: 50%;
 }
@@ -829,39 +837,38 @@ form.form_contact input[type="submit"]:hover {
     width: 100%;
     align-items: center;
 }
-
-.imgTabla4gz img {
+.imgTabla4gz img{
     width: 100%;
     height: 50%;
+  
 }
-
-.coloresRelgz {
+.coloresRelgz{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+
 }
 
-.color1Rgz {
+.color1Rgz{
     width: 20px;
     height: 20px;
     background: #FEC36A;
-}
 
-.color2Rgz {
+}
+.color2Rgz{
     width: 20px;
     height: 20px;
     background: #FE398C;
-}
+    }
 
-.color3Rgz {
+.color3Rgz{
     width: 20px;
     height: 20px;
     background: #7CDEDE;
 }
-
-.botAgrCarRelgz {
+.botAgrCarRelgz{
     width: 35%;
     height: 20%;
     background-color: #E9B843;
@@ -869,70 +876,101 @@ form.form_contact input[type="submit"]:hover {
     justify-content: center;
 }
 
-.botAgrCarRelgz p {
+.botAgrCarRelgz p{ 
     font-size: 15px;
     font-family: "Roboto";
+    
 }
-
-.titProdRelgz h1 {
+.titProdRelgz h1{
     margin: auto;
     font-family: "Lobster";
     font-size: 30px;
     color: #000000;
     text-align: center;
 }
-
-.preciosRgz p {
+.preciosRgz p{
     font-size: 30px;
     text-align: center;
 }
-
-.destablagz {
+.destablagz{
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
-
-
 /* Comienzo footer GINA*/
-
-.contFogz {
+.contFogz{
     margin-top: 80px;
     width: 30%;
 }
 
-.contFogz li {
+.contFogz li{
     color: grey;
 }
-
-.contFogz h4 {
-    color: grey;
+.contFogz h4{
+    color:grey;
 }
 
-.formpaggz {
+.formpaggz{
     margin-top: 70px;
     width: 30%;
 }
-
-.redesgz {
+.redesgz{
     margin-top: 180px;
-    width: 30%;
+    width:30%; 
 }
 
-footer {
+footer{
     background-image: url("/img/olasGina2.png");
     background-repeat: no-repeat;
     background-size: contain;
-}
 
+}  
 .contenerdorfootergz {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
+/* Comienzo media GINA*/
+        @media only screen and (max-width: 575px) {
+            label {
+                display: block;
+                cursor: pointer;
+            }
+            .menu {
+                text-align: center;
+                width: 100%;
+                display: none;
+            }
+            .menu a {
+                display: block;
+                border-bottom: 1px solid #EAEAEB;
+                margin: 0;
+            }
+            #toggle:checked+.menu {
+                display: block;
+                text-align: center;
+            }
+            .log {
+                vertical-align: top;
+            }  }
 
+            @media (min-width: 575px) {
+            .productogz {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .productosRelacionadosgz{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+
+            }
+            
+            }
 
 /* comienzo media Sole*/
 
