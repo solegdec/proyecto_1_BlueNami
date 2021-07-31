@@ -942,7 +942,11 @@ footer {
     background-image: url("/img/olasGina2.png");
     background-repeat: no-repeat;
     background-size: contain;
+<<<<<<< HEAD
 }
+=======
+    width: 100%;
+>>>>>>> b8d13b3966cc8d2c3358250f58fd5a2fa7cc2361
 
 .contenerdorfootergz {
     display: flex;
