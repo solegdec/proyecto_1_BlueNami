@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nova+Cut&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nova+Cut&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    
+    <div class="form-reg-logo">
+        <img width=50% src="/img/logo.png" alt="logo">
+    </div>
+    
+
+
+    <form class="form-reg-formulario" action="/" method="POST">
+        <section class="form-reg-titulo">
+            <h1 class="form-reg-h1"> Vos registrate. 
+            Nosotros te conseguimos la tabla.</h1>
+        </section>
+        
+        <section class="form-reg-name"> 
+            <p class="form-reg-p">
+                <label class="form-reg-label" for=nombre>Nombre.</label>
+                <input class="form-reg-input" type="text" name="nombre" id="nombre" placeholder=Nombre required>
+            </p>
+            
+            <p class="form-reg-p">
+                <label class="form-reg-label" for=apellido>Apellido.</label>
+                <input class="form-reg-input" type="text" name="apellido" id="apellido" placeholder=Apellido required>
+            </p>
+        </section>
+
+
+        <section class="form-reg-nacimiento">
+            <p class="form-reg-p">
+                <label class="form-reg-label" for=nacimiento> Fecha de nacimiento.</label>
+                <input class="form-reg-input" type="date" name="nacimiento" id="nacimiento" value=1990-06-30 min="1910-01-01">
+            </p>
+        </section>
+        
+
+        <section class="form-reg-mail">
+            <p class="form-reg-p">
+                <label class="form-reg-label" for=email >e-mail.</label>
+                <input class="form-reg-input" type="email" name="email" id="email" placeholder=mail@dominio.com required>
+            </p>
+        </section>
+
+
+        <section class="form-reg-tel">
+            <p class="form-reg-p">
+                <label class="form-reg-label" for=pais > Código.</label>
+                <select name="pais" id="pais" required>
+                    <option value="" selected disabled> País </option>
+                    <option value="+54" > Arg </option>
+                    <option value="+598" > Uru </option>
+                    <option value="+53" > Bra </option>
+                    <option value="+52" > Chi </option>
+                </select>
+            </p>
+
+            <p class="form-reg-p">
+                <label class="form-reg-label" for=telefono >Teléfono.</label>
+                <input class="form-reg-input" type="tel" name="telefono" id="telefono" placeholder="1122223333"required>
+            </p>    
+
+        </section>
+
+        <section class="form-reg-password">
+            <p class="form-reg-p">
+                <label class="form-reg-label" for="contraseña">Contraseña.</label>
+                <input class="form-reg-input" type="password" name="password" id="contraseña" required>
+            </p>
+        </section>
+
+        <section class="form-reg-boton">
+            <p class="form-reg-botonP">
+                <button type="submit" > Enviar  </button>
+                <img src="/img/tablaPerfil.png" alt="perfil">
+            </p>
+
+        </section>
+
+        <section class="form-reg-verificacion">
+            <h3 class="form-reg-h3"> Verificación </h3>
+        
+            <p class="form-reg-p"> ¿Dónde querés que te enviemos el código de verificación?</p>
+
+            <ul type=none>
+                <li><input class="form-reg-input" type="radio" value="mail" name="form-medio-de-verificacion" id="form-medio-de-verificacion" required>
+                    <label class="form-reg-label" for="form-medio-de-verificacion">e-mail</label> </li>                  
+                <li><input class="form-reg-input" type="radio" value="SMS" name="form-medio-de-verificacion" id="form-medio-de-verificacion" required>
+                    <label class="form-reg-label" for="form-medio-de-verificacion">SMS</label> </li>
+            </ul>
+        </section>
+
+        <section class="form-reg-codigo">
+                <p class="form-reg-p">
+                    <label class="form-reg-label" for=form-codigo>Ingresa aquí el código de 4 números.</label>
+                    <input class="form-reg-input" type="text" name="form-codigo" id="form-codigo" placeholder="1234" required>
+                </p>
+        </section>
+
+        <section class="form-reg-boton">
+            <p class="form-reg-botonP">
+                <button type="submit" > Enviar código </button>
+                <img src="/img/tablaPerfil.png" alt="perfil">
+            </p>
+        </section>
+
+
+        <section class="form-reg-listo">
+            <h2 class="form-reg-h2"> Listo! Entrá a elegir la tabla. Y a surfear. </h2>
+        </section>
+
+
+        <div class="form-reg-separacion-mobile">
+            <img width=90% src="/img/tablaPerfil.png" alt="Tabla de Surf Colores">
+        </div>
+
+        <div class="form-reg-separacion-tablet">
+            <img width=90% src="/img/tablaAbajo.png" alt="Tabla de Surf Colores">
+        </div>
+
+        <div class="form-reg-separacion-escritorio">
+            <img width=90% src="/img/tablaFrente.png" alt="Tabla de Surf Colores">
+        </div>
+
+        <section class="form-reg-notificaciones">
+            <h3 class="form-reg-h3"> ¿Querés? </h3>
+    
+            <p class="form-reg-p"> ¿Querés que te enviemos un mail cuando...</p>
+            <ul type=none> 
+                <li> <input class="form-reg-input" type="checkbox" value="novedad" name="notificaciones" id="novedad" checked>
+                     <label class="form-reg-label" for="novedad"> ...sacamos una nueva tabla al mercado? </label>
+                </li>
+                <li> <input class="form-reg-input" type="checkbox" value="ofertas" name="notificaciones" id="ofertas" checked>
+                     <label class="form-reg-label" for="form-medio-de-verificacion"> ...tenemos una nueva promoción? </label>                
+                </li>
+            </ul>
+        </section>
+
+        <section class="form-reg-boton">
+            <p class="form-reg-botonP">
+                <button type="submit" > Enviar preferencias </button>
+                <img src="/img/tablaPerfil.png" alt="perfil">
+            </p>
+
+        </section>
+    
+
+    </form>
+
+    <section class="form-reg-foto">
+        <img width=100% src="/img/olasBajas.png" alt="olas">
+    </section>
+
+</body>
+</html>

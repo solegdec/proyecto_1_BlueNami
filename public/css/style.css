@@ -1046,6 +1046,108 @@ footer {
 /* Fin CSS Login*/
 
 
+/* Comienzo CSS Register*/
+
+
+.form-reg-h1,
+.form-reg-h2,
+.form-reg-h3 {
+    font-family: 'Lobster', cursive;
+    }
+
+.form-reg-logo,
+.form-reg-separacion-mobile,
+.form-reg-separacion-tablet,
+.form-reg-separacion-escritorio {
+    display: flex;
+    justify-content: center;
+    }
+
+.form-reg-formulario {
+    display: flex;
+    flex-direction: column; 
+    }
+
+.form-reg-titulo,
+.form-reg-name,
+.form-reg-nacimiento,
+.form-reg-mail,
+.form-reg-tel,
+.form-reg-password,
+.form-reg-boton,
+.form-reg-verificacion,
+.form-reg-codigo,
+.form-reg-boton,
+.form-reg-listo,
+.form-reg-notificaciones,
+.form-reg-boton,
+.form-reg-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 5px; 
+    }
+
+.form-reg-verificacion ,
+.form-reg-notificaciones {
+    flex-direction: column;
+    }
+
+.form-reg-p,
+.form-reg-botonP {
+    display: flex;;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    }
+
+.form-reg-input:focus {
+    background-color:azure;
+    }
+
+.form-reg-label {
+    font-family: 'Nova Cut', cursive;
+    }
+
+.form-reg-input {
+    border-radius: 25;   
+    }
+
+.form-reg-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+.form-reg-botonP {
+    width: 200px;
+    }
+
+.form-reg-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    }
+
+
+.form-reg-separacion-mobile{
+    display: block;
+    }
+
+.form-reg-separacion-tablet{
+    display: none;
+    }
+
+.form-reg-separacion-escritorio{
+    display: none;
+    }
+
+
+/* Fin CSS Register*/
+
+
+
+
 
 /* Comienzo Media */
 
@@ -1128,6 +1230,38 @@ footer {
         font-size: 1.5em;
     }
 
+    .form-reg-separacion-mobile{
+        display: none;
+        }
+    
+        .form-reg-separacion-tablet{
+        display: block;
+        }
+    
+        .form-reg-separacion-escritorio{
+        display: none;
+        }
+    
+        .form-reg-titulo,
+        .form-reg-name,
+        .form-reg-nacimiento ,
+        .form-reg-mail,
+        .form-reg-tel,
+        .form-reg-password,
+        .form-reg-verificacion ,
+        .form-reg-codigo ,
+        .form-reg-listo,
+        .form-reg-notificaciones {
+            margin: auto;  
+        }
+    
+        .form-reg-formulario {
+            font-size: 1.5em;
+            }
+
+
+
+
 
 
 }
@@ -1166,6 +1300,27 @@ footer {
     .form-login-formulario {
        font-size: 2em;
         }
+
+
+        .form-reg-separacion-mobile{
+            display: none;
+            }
+            
+            .form-reg-separacion-tablet{
+            display: none;
+            }
+            
+            .form-reg-separacion-escritorio{
+            display: block;
+            }
+        
+            .form-reg-formulario {
+                font-size: 2em;
+                }
+        
+        
+
+
 
 }
 
