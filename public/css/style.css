@@ -921,6 +921,7 @@ footer{
     background-image: url("/img/olasGina2.png");
     background-repeat: no-repeat;
     background-size: contain;
+    width: 100%;
 
 }  
 .contenerdorfootergz {
@@ -1015,7 +1016,6 @@ footer{
 
     }
 
-   
 
 /*fin media Sole*/
 
