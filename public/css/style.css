@@ -942,11 +942,8 @@ footer {
     background-image: url("/img/olasGina2.png");
     background-repeat: no-repeat;
     background-size: contain;
-<<<<<<< HEAD
-}
-=======
     width: 100%;
->>>>>>> b8d13b3966cc8d2c3358250f58fd5a2fa7cc2361
+}
 
 .contenerdorfootergz {
     display: flex;
@@ -956,7 +953,101 @@ footer {
 }
 
 
-/* comienzo media Sole*/
+/* Comienzo CSS Login*/
+
+.form-login-logo,
+.form-login-separaciones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: center; 
+    }
+
+.form-login-h1 , 
+.form-login-h2  {
+    font-family: 'Lobster', cursive;
+    }
+
+.form-login-formulario {
+    display: flex;
+    flex-direction: column;
+    }
+
+.form-login-titulo,
+.form-login-mail,
+.form-login-password,
+.form-login-experiencia,
+.form-login-comment-olas,
+.form-login-comment-tablas,
+.form-login-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px; 
+    margin: auto
+    }
+
+.form-login-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+}
+
+.form-login-botonP {
+    width: 200px;
+    display: flex;;
+    flex-direction: column;   
+}
+
+.form-login-p {
+    display: flex;;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    }
+        
+.form-login-input:focus {
+    background-color:azure;
+    }
+
+.form-login-textarea:focus {
+    background-color:azure;
+    }
+
+.form-login-label-comment-tablas {
+    font-family: 'Nova Cut', cursive;
+    margin: auto;
+    }
+
+.form-login-label {
+    font-family: 'Nova Cut', cursive;
+    }
+     
+.form-login-input,
+.form-login-textarea {
+    border-radius: 5px;
+    margin: auto;
+    }
+
+.form-login-separacion-mobile{
+    display: block;
+    }      
+.form-login-separacion-tablet{
+    display: none;
+    }
+.form-login-separacion-escritorio{
+    display: none;
+    }
+
+
+
+/* Fin CSS Login*/
+
+
+
+/* Comienzo Media */
 
 @media screen and (min-width: 576px) {
     h1.micarritoSole {
@@ -991,6 +1082,19 @@ footer {
     aside.asidesole {
         display: none;
     }
+
+    .productogz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .productosRelacionadosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1008,9 +1112,27 @@ footer {
     aside.asidesole {
         display: block;
     }
+    .form-login-separacion-mobile{
+        display: none;
+        }  
+
+    .form-login-separacion-tablet{
+        display: block;
+        }
+            
+    .form-login-separacion-escritorio{
+        display: none;
+        }
+         
+    .form-login-formulario {
+        font-size: 1.5em;
+    }
+
+
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation: landscape) {
     .totalsole {
         font-size: large;
     }
@@ -1028,29 +1150,27 @@ footer {
     aside.asidesole {
         display: block;
     }
+
+    .form-login-separacion-mobile{
+        display: none;
+        }
+
+    .form-login-separacion-tablet{
+        display: none;
+        }
+
+    .form-login-separacion-escritorio{
+        display: block;
+        }       
+
+    .form-login-formulario {
+       font-size: 2em;
+        }
+
 }
 
 
-/*fin media Sole*/
+/*Fin Media */
 
 
-/* Comienzo media GINA*/
 
-@media (min-width: 575px) {
-    .productogz {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-    .productosRelacionadosgz {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-
-/*fin Gina*/
-
-
-/* Comienzo CSS Gina*/

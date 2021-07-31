@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nova+Cut&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nova+Cut&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="form-login-logo">
+        <img width=40% src="/img/logo.png" alt="logo">
+    </div>
+    
+
+    <form class="form-login-formulario" action="/" method="POST">
+        <section class="form-login-titulo">
+        <h1 class="form-login-h1"> Welcome back!</h1>
+        </section>
+
+        <section class="form-login-mail">
+            <p class="form-login-p">
+                <label class="form-login-label" for=email >e-mail:</label>
+                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com required>
+            </p>
+        </section>
+  
+        <section class="form-login-password">
+            <p class="form-login-p">
+                <label class="form-login-label" for="contraseña">Contraseña:</label>
+                <input class="form-login-input" type="password" name="password" id="contraseña" required>
+            </p>
+        </section>
+
+        <section class="form-login-boton">
+            <p class="form-login-botonP">
+                <button type="submit" > Enviar  </button>
+                <img src="/img/tablaPerfil.png" alt="perfil">
+            </p>
+        </section>
+
+  
+        <section class="form-login-experiencia">
+            <h2 class="form-login-h2"> ¿Estuviste surfeando? </h2>
+        </section>
+  
+        <section class="form-login-comment-olas">
+            <p class="form-login-p">
+                <label class="form-login-label" for="form-comentario-olas">¿Buenas olas? ¿Dónde?</label>
+                <textarea class="form-login-textarea" name="form-comentario" id="form-comentario">Brasil, Peru, Ecuador, Francia, Portugal, Australia, Japon... </textarea>
+            </p>
+        </section>
+  
+        <section class="form-login-comment-tablas">
+            <p class="form-login-p">
+                <label class="form-login-label-comment-tablas" for="form-comment-tabla">¡Compartinos fotos!</label>
+                <input class="form-login-input" type="file"  name="form-comment-tabla" id="form-comment-tabla" accept=".jpg , .png" multiple>
+            </p>
+        </section>
+    </form>
+
+    <div class="form-login-separaciones">
+        <div class="form-login-separacion-mobile">
+            <img width=100% src="/img/tablaPerfil.png" alt="Tabla de Surf Perfil">
+        </div>
+    
+        <div class="form-login-separacion-tablet">
+            <img width=100% src="/img/tablaAbajo.png" alt="Tabla de Surf Abajo">
+        </div>
+    
+        <div class="form-login-separacion-escritorio">
+            <img width=100% src="/img/tablaFrente.png" alt="Tabla de Surf Frente">
+        </div>
+    </div>
+
+
+    <section class="form-login-foto">
+        <img width=100% src="/img/olasAltas.png" alt="olas">
+    </section>
+
+
+</body>
+</html>
