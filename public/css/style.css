@@ -127,7 +127,7 @@ aside {
     padding: 5px;
 }
 
-button {
+button.buttonressole {
     color: rgb(2, 16, 61);
     border-color: cyan;
     border-radius: 20px;
@@ -171,7 +171,7 @@ button {
     animation-iteration-count: infinite;
 }
 
-input {
+input.inputsole {
     border-radius: 10px;
     width: 70px;
     background-color: rgb(236, 216, 172);
