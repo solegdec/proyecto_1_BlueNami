@@ -2,42 +2,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-/* COMIENZO CSS SOLE*/
 
+
+/* COMIENZO CSS SOLE*/
 
 body.bodysole {
     font-family: Roboto;
     background-color: rgb(207, 219, 235);
-    height:100%
+    height: 100%
 }
- h1.micarritoSole{
+
+h1.micarritoSole {
     font-size: 20px;
     display: block;
     width: 100%;
-    text-align:  center;
+    text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:rgb(9, 153, 219);
+    color: rgb(9, 153, 219);
     font-weight: 300;
 }
-h2.h2sole{
+
+h2.h2sole {
     font-weight: 200;
 }
-.contenedorSole{
-    font-family: "lobster";
-    width: 100%;
-    height: 100%;
-    font-weight: 200;
-    background-color:beige ;
-    padding: 10px;
-    border: 20 px solid rgb(6, 50, 78);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-    border-bottom: rgb(82, 118, 173) dotted 2px ;
-}
-.contenedorSole2{
+
+.contenedorSole {
     font-family: "lobster";
     width: 100%;
     height: 100%;
@@ -47,189 +37,212 @@ h2.h2sole{
     border: 20 px solid rgb(6, 50, 78);
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
-    border-bottom: rgb(82, 118, 173) dotted 2px ;  
+    justify-content: space-evenly;
+    border-bottom: rgb(82, 118, 173) dotted 2px;
 }
-section.contenedorSole3{
-    display:flex;
+
+.contenedorSole2 {
+    font-family: "lobster";
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+    background-color: beige;
+    padding: 10px;
+    border: 20 px solid rgb(6, 50, 78);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: rgb(82, 118, 173) dotted 2px;
+}
+
+section.contenedorSole3 {
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     font-family: "lobster";
     width: 100%;
-    height:100%;
+    height: 100%;
     font-weight: 300;
     color: rgb(90, 219, 252);
     padding: 10px;
     font-size: 20px;
-      }
-     
-   
+}
 
 .precioTabla1Sole {
-        margin:5px;
-        color:rgb(37, 75, 85);
-        align-self:center;
-     }
-.precioTabla2Sole{
-    margin:5px;
-    color:rgb(37, 75, 85);
-    align-self:center;
-  }
-  .tabla1Sole{
-    margin:5px;
-    text-align: center;
-    color:#254b55;
-    font-weight: 300;
-    align-self:center
+    margin: 5px;
+    color: rgb(37, 75, 85);
+    align-self: center;
 }
-.tabla2Sole{
-    margin:5px;
+
+.precioTabla2Sole {
+    margin: 5px;
+    color: rgb(37, 75, 85);
+    align-self: center;
+}
+
+.tabla1Sole {
+    margin: 5px;
     text-align: center;
-    color:#254b55;
+    color: #254b55;
     font-weight: 300;
-    align-self:center
-    }
+    align-self: center
+}
+
+.tabla2Sole {
+    margin: 5px;
+    text-align: center;
+    color: #254b55;
+    font-weight: 300;
+    align-self: center
+}
+
 aside {
-    color:rgb(37, 75, 85);
+    color: rgb(37, 75, 85);
     font-weight: 300;
     flex-direction: row;
     text-align: justify;
-    align-self:center
-   	}
-.botonPagarSole{
+    align-self: center
+}
+
+.botonPagarSole {
     width: 250px;
-    height:50%;
+    height: 50%;
     border-radius: 20px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: 300;
-    color:rgb(2, 16, 61);
+    color: rgb(2, 16, 61);
     border-color: cyan;
     background-color: rgb(164, 170, 179);
     padding: 5px;
-    
 }
-.seguirComprandoSole{
+
+.seguirComprandoSole {
     width: 250px;
     border-radius: 20px;
-    font-size:15px;
-    color:rgb(2, 16, 61);
+    font-size: 15px;
+    color: rgb(2, 16, 61);
     border-color: cyan;
     background-color: rgb(164, 170, 179);
     padding: 5px;
 }
-button{
-    color:rgb(2, 16, 61);
+
+button {
+    color: rgb(2, 16, 61);
     border-color: cyan;
     border-radius: 20px;
     background-color: rgb(164, 170, 179);
-    font-size:15px;
-    width:70px;
-    
+    font-size: 15px;
+    width: 70px;
 }
-.totalsole{
+
+.totalsole {
     align-self: center;
     font-weight: 200;
     color: rgb(2, 16, 61);
-    
-    
 }
-.todmedpagosole{
+
+.todmedpagosole {
     color: rgb(37, 75, 85);
 }
-@keyframes surfear{
-    100%{
+
+@keyframes surfear {
+    100% {
         opacity: 1;
     }
-    25%{
+    25% {
         opacity: 0.75;
-            }
-     50%{
-         opacity: 0.50;
-     }       
-     25%{
-         opacity: 0.25;
-     }
     }
-.aSurfear{
+    50% {
+        opacity: 0.50;
+    }
+    25% {
+        opacity: 0.25;
+    }
+}
+
+.aSurfear {
     font-size: 20px;
     font-family: "lobster";
     font-weight: 200;
     color: rgb(2, 16, 61);
     animation-name: surfear;
-    animation-duration:2s ;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
-   
-    
 }
-input{
+
+input {
     border-radius: 10px;
-    width:70px;
+    width: 70px;
     background-color: rgb(236, 216, 172);
     padding: 2px 2px 2px 8px;
     font-family: "lobster";
     border-color: cyan;
-    margin:10px;
-   
+    margin: 10px;
 }
+
 .tabla1Sole img:hover {
     transform: rotateY(180deg);
     transform-style: preserve-3d;
-
-} 
+}
 
 .tabla2Sole img:hover {
     transform: rotateY(180deg);
     transform-style: preserve-3d;
-} 
- 
-@keyframes opaco{
-    0%{
-        color: cyan;
-        }
-        25%{
-            color:rgb(23, 90, 216)
-        }
-        75%{color:rgb(95, 95, 231)}
-    100%{
-        color:rgb(3, 82, 119)
-        }
-    }
-@keyframes girar {
-    0%{
-        rotateY:100px
-    }
-    50%{
-        rotateY:100px;
-    }
-    100%{
-        rotateX:100px
-    }
-    
-}
-.precioTabla1Sole h4{
-    animation-name:opaco;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-.precioTabla2Sole h4{
-    animation-name:opaco;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-.asidesole:hover{
-    color:rgb(5, 151, 156);
 }
 
-.totalsole:hover{
+@keyframes opaco {
+    0% {
+        color: cyan;
+    }
+    25% {
+        color: rgb(23, 90, 216)
+    }
+    75% {
+        color: rgb(95, 95, 231)
+    }
+    100% {
+        color: rgb(3, 82, 119)
+    }
+}
+
+@keyframes girar {
+    0% {
+        rotateY: 100px
+    }
+    50% {
+        rotateY: 100px;
+    }
+    100% {
+        rotateX: 100px
+    }
+}
+
+.precioTabla1Sole h4 {
+    animation-name: opaco;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.precioTabla2Sole h4 {
+    animation-name: opaco;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.asidesole:hover {
+    color: rgb(5, 151, 156);
+}
+
+.totalsole:hover {
     font-size: x-large;
 }
 
 
+/*FIN CSS SOLE*/
 
-    /*FIN CSS SOLE*/
 
 /* Desarrollo del la barra de navegacion*/
 
@@ -237,7 +250,8 @@ nav {
     height: 65px;
     background: rgb(255, 255, 255);
     border-bottom: 1px solid #EAEAEB;
-    font-family: "roboto"; /*Agrege la tipo en el nav*/
+    font-family: "roboto";
+    /*Agrege la tipo en el nav*/
 }
 
 nav h1 {
@@ -302,7 +316,7 @@ label #sign-two {
 
 .section-b {
     background: rgb(255, 255, 255);
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .section-c {
@@ -677,8 +691,6 @@ form.form_contact input[type="submit"]:hover {
 
 /*Fin del desarrollo del responsive para los moviles*/
 
-
-
 .contenedorgz {
     width: 80vw;
     flex-direction: column;
@@ -686,33 +698,32 @@ form.form_contact input[type="submit"]:hover {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    
 }
+
 .productogz {
     width: 100%;
     flex-direction: column;
-    
 }
+
 .imgproductogz {
     width: 100%;
     height: 80%;
     flex-direction: column;
-  
-   
 }
-.imggrandegz img{
+
+.imggrandegz img {
     width: 100%;
     height: 80%;
- 
 }
-.imgcambiogz{
+
+.imgcambiogz {
     width: 100%;
     height: 20%;
     display: flex;
     flex-wrap: wrap;
-
 }
-.imgcambiogz img{
+
+.imgcambiogz img {
     width: 20%;
     height: 20%;
     justify-content: space-around;
@@ -721,16 +732,15 @@ form.form_contact input[type="submit"]:hover {
 .desproductosgz {
     width: 100%;
     flex-direction: column;
-   
 }
 
-.desproductosgz h4{
+.desproductosgz h4 {
     font-family: "Numans";
     font-size: 18px;
     color: #7D7D7D;
-    }
+}
 
-.desproductosgz h1{
+.desproductosgz h1 {
     font-family: "Lobster";
     font-size: 50px;
     color: #000000;
@@ -738,7 +748,7 @@ form.form_contact input[type="submit"]:hover {
     margin: 0;
 }
 
-.coloresgz{
+.coloresgz {
     width: 60%;
     display: flex;
     flex-direction: row;
@@ -747,41 +757,41 @@ form.form_contact input[type="submit"]:hover {
     padding-left: 15%;
 }
 
-.coloresgz p{
+.coloresgz p {
     font-family: "Nova Cut";
     font-size: 15px;
     color: #000000;
     margin-right: 10px;
 }
 
-.color1gz{
+.color1gz {
     width: 30px;
     height: 30px;
     background: #FEC36A;
 }
-.color2gz{
+
+.color2gz {
     width: 30px;
     height: 30px;
     background: #FE398C;
-    
-    }
+}
 
-.color3gz{
+.color3gz {
     width: 30px;
     height: 30px;
     background: #7CDEDE;
 }
 
-.botongz{
+.botongz {
     width: 60%;
-    background-color: #E9B843;    
+    background-color: #E9B843;
     font-family: "roboto";
     font-size: 1em;
     border-radius: 10px;
-    margin-left: 20%;   
+    margin-left: 20%;
 }
 
-.preciosgz p{
+.preciosgz p {
     font-size: 40px;
     text-align: center;
 }
@@ -791,41 +801,44 @@ form.form_contact input[type="submit"]:hover {
     font-family: "Roboto";
     font-size: 1em;
 }
+
+
 /* Comienzo segundo contenedor Gina*/
-.divisiongz{
+
+.divisiongz {
     width: 100%;
     height: 10%;
-   
 }
-.divisiongz p{
-   font-family: "roboto";
-   font-size: 25px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
- 
+
+.divisiongz p {
+    font-family: "roboto";
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.productosRelacionadosgz{
+
+.productosRelacionadosgz {
     width: 100%;
     flex-direction: column;
 }
 
-
 .tabla2gz {
     width: 100%;
     justify-content: space-around;
-    
 }
-.imgTabla2gz img{
+
+.imgTabla2gz img {
     width: 100%;
     height: 50%;
-
 }
+
 .tabla3gz {
     width: 100%;
     align-items: center;
 }
-.imgTabla3gz img{
+
+.imgTabla3gz img {
     width: 100%;
     height: 50%;
 }
@@ -834,38 +847,39 @@ form.form_contact input[type="submit"]:hover {
     width: 100%;
     align-items: center;
 }
-.imgTabla4gz img{
+
+.imgTabla4gz img {
     width: 100%;
     height: 50%;
-  
 }
-.coloresRelgz{
+
+.coloresRelgz {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-
 }
 
-.color1Rgz{
+.color1Rgz {
     width: 20px;
     height: 20px;
     background: #FEC36A;
-
 }
-.color2Rgz{
+
+.color2Rgz {
     width: 20px;
     height: 20px;
     background: #FE398C;
-    }
+}
 
-.color3Rgz{
+.color3Rgz {
     width: 20px;
     height: 20px;
     background: #7CDEDE;
 }
-.botAgrCarRelgz{
+
+.botAgrCarRelgz {
     width: 35%;
     height: 20%;
     background-color: #E9B843;
@@ -873,56 +887,63 @@ form.form_contact input[type="submit"]:hover {
     justify-content: center;
 }
 
-.botAgrCarRelgz p{ 
+.botAgrCarRelgz p {
     font-size: 15px;
     font-family: "Roboto";
-    
 }
-.titProdRelgz h1{
+
+.titProdRelgz h1 {
     margin: auto;
     font-family: "Lobster";
     font-size: 30px;
     color: #000000;
     text-align: center;
 }
-.preciosRgz p{
+
+.preciosRgz p {
     font-size: 30px;
     text-align: center;
 }
-.destablagz{
+
+.destablagz {
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
+
+
 /* Comienzo footer GINA*/
-.contFogz{
+
+.contFogz {
     margin-top: 80px;
     width: 30%;
 }
 
-.contFogz li{
+.contFogz li {
     color: grey;
 }
-.contFogz h4{
-    color:grey;
+
+.contFogz h4 {
+    color: grey;
 }
 
-.formpaggz{
+.formpaggz {
     margin-top: 70px;
     width: 30%;
 }
-.redesgz{
+
+.redesgz {
     margin-top: 180px;
-    width:30%; 
+    width: 30%;
 }
 
-footer{
+footer {
     background-image: url("/img/olasGina2.png");
     background-repeat: no-repeat;
     background-size: contain;
+}
 
-}  
 .contenerdorfootergz {
     display: flex;
     flex-direction: row;
@@ -931,111 +952,100 @@ footer{
 }
 
 
-
 /* comienzo media Sole*/
 
-@media screen and  (min-width: 576px){
-    
-    h1.micarritoSole{
+@media screen and (min-width: 576px) {
+    h1.micarritoSole {
         font-size: 20px;
     }
-    h2.h2sole{
+    h2.h2sole {
         font-size: 18px;
     }
-    section.contenedorSole{
+    section.contenedorSole {
         flex-direction: row;
         float: right;
         font-weight: 200;
     }
-    section.contenedorSole2{
+    section.contenedorSole2 {
         flex-direction: row;
         float: right;
         font-weight: 200;
     }
-    section.contenedorSole3{
+    section.contenedorSole3 {
         flex-direction: column;
         font-weight: 200;
         font-size: 20px;
     }
-          
-    .todmedpagosole{
-        
+    .todmedpagosole {
         font-size: 15px;
     }
-    .totalsole{
+    .totalsole {
         font-size: 20px;
         text-align: center;
         align-self: center;
-       
     }
-    aside.asidesole{
+    aside.asidesole {
         display: none;
     }
-    }
-@media screen and  (min-width: 768px){
-    h1.micarritoSole{
+}
+
+@media screen and (min-width: 768px) {
+    h1.micarritoSole {
         font-size: 30px;
-      
     }
-    h2.h2sole{
+    h2.h2sole {
         font-size: 25px;
     }
-    section.contenedorSole3{
+    section.contenedorSole3 {
         flex-direction: row;
         font-weight: 200;
         font-size: 28px;
     }
-    aside.asidesole{
-        display:block;
+    aside.asidesole {
+        display: block;
     }
-    
-    }
-    @media  (min-width: 1200px){
-        
-        .totalsole{
-            font-size: large;
-        }
-        
-        h1.micarritoSole{
-            font-size: 40px;
-          
-        } 
-        h2.h2sole{
-            font-size: 30px;
-        }  
-        
-        section.contenedorSole3{
-            flex-direction: row;
-            font-weight: 200;
-            font-size:35px;
-        }
-        aside.asidesole{
-            display:block;
-        }
+}
 
+@media (min-width: 1200px) {
+    .totalsole {
+        font-size: large;
     }
+    h1.micarritoSole {
+        font-size: 40px;
+    }
+    h2.h2sole {
+        font-size: 30px;
+    }
+    section.contenedorSole3 {
+        flex-direction: row;
+        font-weight: 200;
+        font-size: 35px;
+    }
+    aside.asidesole {
+        display: block;
+    }
+}
 
-   
 
 /*fin media Sole*/
 
+
 /* Comienzo media GINA*/
 
-    @media (min-width: 575px) {
+@media (min-width: 575px) {
     .productogz {
         width: 100%;
         display: flex;
         flex-direction: row;
     }
-
-    .productosRelacionadosgz{
+    .productosRelacionadosgz {
         width: 100%;
         display: flex;
         flex-direction: row;
+    }
+}
 
-    }
-    
-    }
+
 /*fin Gina*/
 
 
