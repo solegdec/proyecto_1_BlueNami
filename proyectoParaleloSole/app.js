@@ -6,7 +6,7 @@ const path = require('path')
 app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, 'views/index.html'))
 })
-app.get('/ProductCart', function(request, response) {
+app.get('/productCart', function(request, response) {
     response.sendFile(path.join(__dirname, 'views/productCart.html'))
 })
 
@@ -21,6 +21,7 @@ app.get('/register', function(request, response) {
 })
 
 app.use(express.static('public'))
+app.use(express.static('views'))
 
 app.get('*', function(request, response) {
     response.send('NOT FOUND', 404)
