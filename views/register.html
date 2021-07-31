@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -18,10 +20,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+    <nav>
+        <input type="checkbox" id="res-menu" checked>
+        <label for="res-menu">
+            <i class="fa fa-bars" id="sign-two"></i>
+            <i class="fa fa-times" id="sign-one"></i>
+        </label>
+        <img src="/img/logoBN.png" alt="Logo" />
+        <ul>
+            <li> <a href="/index.html">Home</a> </li>
+            <li> <a href="/productDetail.html">Productos</a></li>
+            <li> <a href="index.html#qsomos">Quienes somos</a> </li>
+            <li> <a href="index.html#contactos-index">contactos</a> </li>
+            <li> <a href="#" onClick="MyWindow=window.open('/login.html','MyWindow','width=600,height=400'); return false;">Login</a></li>
+            <li><a href="register.html">Registro</a></li>
+            <a href="productCart.html"><i class="fas fa-shopping-cart"></i></a>
+        </ul>
+    </nav>
     
     <div class="form-reg-logo">
-        <img width=50% src="/img/logo.png" alt="logo">
+        <img width=20% src="/img/logo.png" alt="logo">
     </div>
     
 
