@@ -28,6 +28,6 @@ app.get('*', function(request, response) {
     response.send('NOT FOUND', 404)
 })
 
-app.listen(process.env.PORT ||3030, function() {
+app.listen(port, function() {
     console.log('Servidor corriendo  en el puerto ' + port  );
 })
