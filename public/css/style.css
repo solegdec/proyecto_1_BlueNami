@@ -712,15 +712,17 @@ form.form_contact input[type="submit"]:hover {
     width: 100%;
     height: 80%;
     flex-direction: column;
+    
+
 }
 
 .imggrandegz img {
-    width: 100%;
+    width: 90%;
     height: 80%;
 }
 
 .imgcambiogz {
-    width: 100%;
+    width: 90%;
     height: 20%;
     display: flex;
     flex-wrap: wrap;
@@ -736,21 +738,22 @@ form.form_contact input[type="submit"]:hover {
 .desproductosgz {
     width: 100%;
     flex-direction: column;
+    justify-content: center;
 }
 
 .desproductosgz h4 {
     font-family: "Numans";
-    font-size: 18px;
+    font-size: 1em;
     color: #7D7D7D;
     padding: 10px;
 }
 
 .desproductosgz h1 {
     font-family: "Lobster";
-    font-size: 50px;
+    font-size: 3em;
     color: #000000;
     text-align: center;
-    padding: 10px;
+    
 }
 
 .coloresgz {
@@ -759,10 +762,10 @@ form.form_contact input[type="submit"]:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     margin-left: 15%;
+   
   
-
 }
 
 .coloresgz p {
@@ -798,7 +801,7 @@ form.form_contact input[type="submit"]:hover {
     border-radius: 10px;
     margin-left: 20%;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .preciosgz p {
@@ -807,12 +810,18 @@ form.form_contact input[type="submit"]:hover {
     padding: 10px 20px;
 }
 
-.descripciongz {
+aside.descripciongz li {
     padding: 0% 5%;
     font-family: "Roboto";
     font-size: 1em;
+   font-weight: 400;
+   line-height: 2em;
 }
 
+aside.descripciongz  p{
+    font-family: "Roboto";
+   font-weight: 800;
+}
 
 /* Comienzo segundo contenedor Gina*/
 
@@ -900,6 +909,7 @@ form.form_contact input[type="submit"]:hover {
 }
 
 .preciosRgz p {
+    font-family: "roboto";
     font-size: 30px;
     text-align: center;
 }
@@ -1138,6 +1148,7 @@ form.form_contact input[type="submit"]:hover {
     aside.asidesole {
         display: none;
     }
+
 /*CSS Gina*/
 
     .productogz {
@@ -1150,7 +1161,10 @@ form.form_contact input[type="submit"]:hover {
         display: flex;
         flex-direction: row;
     }
-    
+    aside.descripciongz {
+        display: none;
+    }  
+   
 }
 
 @media screen and (min-width: 768px) {
@@ -1212,11 +1226,12 @@ form.form_contact input[type="submit"]:hover {
         .form-reg-formulario {
             font-size: 1.5em;
             }
-
-
-
-
-
+/*MEdia Gina*/
+            aside.descripciongz {
+                display: block;
+            }  
+        
+            
 
 }
 
@@ -1270,10 +1285,11 @@ form.form_contact input[type="submit"]:hover {
         
             .form-reg-formulario {
                 font-size: 2em;
-                }
-                
-         
-
+                }    
+         /*MEdia Gina*/
+                aside.descripciongz {
+                    display: block;
+                }  
 }
 
 
