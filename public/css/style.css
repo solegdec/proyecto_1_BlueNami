@@ -685,7 +685,7 @@ form.form_contact input[type="submit"]:hover {
     nav ul {
         position: flex;
         width: 50vh;
-        height: 50vh;
+        height: 95vh;
         background: rgb(195, 199, 250);
         top: 50px;
         text-align: center;
