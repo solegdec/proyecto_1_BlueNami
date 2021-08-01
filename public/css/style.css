@@ -493,6 +493,12 @@ label #sign-two {
 
 /*Contenedor de Quienes somos*/
 
+.qstext {
+    font-size: 20px;
+    color: #000000;
+    font-family: "lobster";
+}
+
 div.qsomos {
     width: 100%;
     margin: 20px auto;
