@@ -890,19 +890,6 @@ form.form_contact input[type="submit"]:hover {
     background: #7CDEDE;
 }
 
-.botAgrCarRelgz {
-    width: 35%;
-    height: 20%;
-    background-color: #E9B843;
-    border-radius: 3px;
-    justify-content: center;
-}
-
-.botAgrCarRelgz p {
-    font-size: 15px;
-    font-family: "Roboto";
-}
-
 .titProdRelgz h1 {
     margin: auto;
     font-family: "Lobster";
@@ -926,6 +913,8 @@ form.form_contact input[type="submit"]:hover {
 
 /* Comienzo footer GINA*/
 .contenerdorfootergz{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1192,8 +1181,6 @@ footer.gz{
         flex-direction: row;
     }
     
-
-
 }
 
 @media screen and (min-width: 768px) {
@@ -1316,14 +1303,6 @@ footer.gz{
                 }
         /*Media Gina*/
                 
-                
-                footer.gz{
-                    background-image: url("/img/olasGina2.png");
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    
-                    
-                }
                 .contFogz {
                     font-family: "roboto";
                     font-size: 10px;
