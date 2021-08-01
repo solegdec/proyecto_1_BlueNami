@@ -32,7 +32,7 @@ h2.h2sole {
     width: 100%;
     height: 100%;
     font-weight: 200;
-    background-color:white;
+    background-color: white;
     padding: 10px;
     border: 20 px solid rgb(6, 50, 78);
     display: flex;
@@ -46,7 +46,7 @@ h2.h2sole {
     width: 100%;
     height: 100%;
     font-weight: 200;
-    background-color:white;
+    background-color: white;
     padding: 10px;
     border: 20 px solid rgb(6, 50, 78);
     display: flex;
@@ -302,6 +302,31 @@ label #sign-two {
 
 
 /*Fin de los css utilizados en la barra de navegacion*/
+
+
+/*css utilizados en la barra de fotter*/
+
+.footerintex {
+    text-align: center;
+    font-family: "roboto";
+}
+
+.footerimg {
+    width: 100%;
+}
+
+.mb-4 {
+    width: 100%;
+    background-color: #82b7df;
+}
+
+.copyrightstyle {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: "roboto";
+}
+
+
+/*css Fin de la barra de fotter*/
 
 
 /*Pagina home Css hechos por Seba*/
@@ -712,8 +737,6 @@ form.form_contact input[type="submit"]:hover {
     width: 100%;
     height: 80%;
     flex-direction: column;
-    
-
 }
 
 .imggrandegz img {
@@ -753,7 +776,6 @@ form.form_contact input[type="submit"]:hover {
     font-size: 3em;
     color: #000000;
     text-align: center;
-    
 }
 
 .coloresgz {
@@ -764,8 +786,6 @@ form.form_contact input[type="submit"]:hover {
     align-items: center;
     padding: 20px;
     margin-left: 15%;
-   
-  
 }
 
 .coloresgz p {
@@ -815,17 +835,19 @@ aside.descripciongz li {
     padding: 0% 5%;
     font-family: "Roboto";
     font-size: 1em;
-   font-weight: 400;
-   line-height: 2em;
+    font-weight: 400;
+    line-height: 2em;
 }
 
-aside.descripciongz  p{
+aside.descripciongz p {
     font-family: "Roboto";
-   font-weight: 800;
+    font-weight: 800;
 }
+
 aside.descripciongz {
     padding-top: 0px;
 }
+
 
 /* Comienzo segundo contenedor Gina*/
 
@@ -935,18 +957,18 @@ aside.descripciongz {
     flex-wrap: nowrap;
     align-content: space-around;
     align-items: stretch;
-    justify-content: center; 
-    }
+    justify-content: center;
+}
 
-.form-login-h1 , 
-.form-login-h2  {
+.form-login-h1,
+.form-login-h2 {
     font-family: 'Lobster', cursive;
-    }
+}
 
 .form-login-formulario {
     display: flex;
     flex-direction: column;
-    }
+}
 
 .form-login-titulo,
 .form-login-mail,
@@ -958,9 +980,9 @@ aside.descripciongz {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 5px; 
+    padding: 5px;
     margin: auto
-    }
+}
 
 .form-login-boton {
     display: flex;
@@ -971,60 +993,64 @@ aside.descripciongz {
 
 .form-login-botonP {
     width: 200px;
-    display: flex;;
-    flex-direction: column;   
+    display: flex;
+    ;
+    flex-direction: column;
 }
 
 .form-login-p {
-    display: flex;;
+    display: flex;
+    ;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    }
-        
+}
+
 .form-login-input:focus {
-    background-color:azure;
-    }
+    background-color: azure;
+}
 
 .form-login-textarea:focus {
-    background-color:azure;
-    }
+    background-color: azure;
+}
 
 .form-login-label-comment-tablas {
     font-family: 'Nova Cut', cursive;
     margin: auto;
-    }
+}
 
 .form-login-label {
     font-family: 'Nova Cut', cursive;
-    }
-     
+}
+
 .form-login-input,
 .form-login-textarea {
     border-radius: 5px;
     margin: auto;
-    }
+}
 
-.form-login-separacion-mobile{
+.form-login-separacion-mobile {
     display: block;
-    }      
-.form-login-separacion-tablet{
+}
+
+.form-login-separacion-tablet {
     display: none;
-    }
-.form-login-separacion-escritorio{
+}
+
+.form-login-separacion-escritorio {
     display: none;
-    }
+}
+
 
 /* Fin CSS Login*/
 
 
 /* Comienzo CSS Register*/
 
-
 .form-reg-h1,
 .form-reg-h2,
 .form-reg-h3 {
     font-family: 'Lobster', cursive;
-    }
+}
 
 .form-reg-logo,
 .form-reg-separacion-mobile,
@@ -1032,12 +1058,12 @@ aside.descripciongz {
 .form-reg-separacion-escritorio {
     display: flex;
     justify-content: center;
-    }
+}
 
 .form-reg-formulario {
     display: flex;
-    flex-direction: column; 
-    }
+    flex-direction: column;
+}
 
 .form-reg-titulo,
 .form-reg-name,
@@ -1056,66 +1082,65 @@ aside.descripciongz {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 5px; 
-    }
+    padding: 5px;
+}
 
-.form-reg-verificacion ,
+.form-reg-verificacion,
 .form-reg-notificaciones {
     flex-direction: column;
-    }
+}
 
 .form-reg-p,
 .form-reg-botonP {
-    display: flex;;
+    display: flex;
+    ;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    }
+}
 
 .form-reg-input:focus {
-    background-color:azure;
-    }
+    background-color: azure;
+}
 
 .form-reg-label {
     font-family: 'Nova Cut', cursive;
-    }
+}
 
 .form-reg-input {
-    border-radius: 25;   
-    }
+    border-radius: 25;
+}
 
 .form-reg-boton {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    }
+}
 
 .form-reg-botonP {
     width: 200px;
-    }
+}
 
 .form-reg-foto {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-grow: 1;
-    }
+}
 
-
-.form-reg-separacion-mobile{
+.form-reg-separacion-mobile {
     display: block;
-    }
+}
 
-.form-reg-separacion-tablet{
+.form-reg-separacion-tablet {
     display: none;
-    }
+}
 
-.form-reg-separacion-escritorio{
+.form-reg-separacion-escritorio {
     display: none;
-    }
+}
 
 
 /* Fin CSS Register*/
-
 
 
 /* Comienzo Media */
@@ -1153,9 +1178,7 @@ aside.descripciongz {
     aside.asidesole {
         display: none;
     }
-
-/*CSS Gina*/
-
+    /*CSS Gina*/
     .productogz {
         width: 100%;
         display: flex;
@@ -1168,8 +1191,7 @@ aside.descripciongz {
     }
     aside.descripciongz {
         display: none;
-    }  
-   
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1187,55 +1209,46 @@ aside.descripciongz {
     aside.asidesole {
         display: block;
     }
-    .form-login-separacion-mobile{
+    .form-login-separacion-mobile {
         display: none;
-        }  
-
-    .form-login-separacion-tablet{
+    }
+    .form-login-separacion-tablet {
         display: block;
-        }
-            
-    .form-login-separacion-escritorio{
+    }
+    .form-login-separacion-escritorio {
         display: none;
-        }
-         
+    }
     .form-login-formulario {
         font-size: 1.5em;
     }
-
-    .form-reg-separacion-mobile{
+    .form-reg-separacion-mobile {
         display: none;
-        }
-    
-        .form-reg-separacion-tablet{
+    }
+    .form-reg-separacion-tablet {
         display: block;
-        }
-    
-        .form-reg-separacion-escritorio{
+    }
+    .form-reg-separacion-escritorio {
         display: none;
-        }
-    
-        .form-reg-titulo,
-        .form-reg-name,
-        .form-reg-nacimiento ,
-        .form-reg-mail,
-        .form-reg-tel,
-        .form-reg-password,
-        .form-reg-verificacion ,
-        .form-reg-codigo ,
-        .form-reg-listo,
-        .form-reg-notificaciones {
-            margin: auto;  
-        }
-    
-        .form-reg-formulario {
-            font-size: 1.5em;
-            }
-/*MEdia Gina*/
-            aside.descripciongz {
-                display: block;
-            }  
-
+    }
+    .form-reg-titulo,
+    .form-reg-name,
+    .form-reg-nacimiento,
+    .form-reg-mail,
+    .form-reg-tel,
+    .form-reg-password,
+    .form-reg-verificacion,
+    .form-reg-codigo,
+    .form-reg-listo,
+    .form-reg-notificaciones {
+        margin: auto;
+    }
+    .form-reg-formulario {
+        font-size: 1.5em;
+    }
+    /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+    }
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
@@ -1256,47 +1269,35 @@ aside.descripciongz {
     aside.asidesole {
         display: block;
     }
-
-    .form-login-separacion-mobile{
+    .form-login-separacion-mobile {
         display: none;
-        }
-
-    .form-login-separacion-tablet{
+    }
+    .form-login-separacion-tablet {
         display: none;
-        }
-
-    .form-login-separacion-escritorio{
+    }
+    .form-login-separacion-escritorio {
         display: block;
-        }       
-
+    }
     .form-login-formulario {
-       font-size: 2em;
-        }
-
-
-        .form-reg-separacion-mobile{
-            display: none;
-            }
-            
-            .form-reg-separacion-tablet{
-            display: none;
-            }
-            
-            .form-reg-separacion-escritorio{
-            display: block;
-            }
-        
-            .form-reg-formulario {
-                font-size: 2em;
-                }    
-         /*MEdia Gina*/
-                aside.descripciongz {
-                    display: block;
-                }  
+        font-size: 2em;
+    }
+    .form-reg-separacion-mobile {
+        display: none;
+    }
+    .form-reg-separacion-tablet {
+        display: none;
+    }
+    .form-reg-separacion-escritorio {
+        display: block;
+    }
+    .form-reg-formulario {
+        font-size: 2em;
+    }
+    /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+    }
 }
 
 
 /*Fin Media */
-
-
-
