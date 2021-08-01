@@ -113,7 +113,7 @@ aside {
     font-weight: 300;
     color: rgb(2, 16, 61);
     border-color: cyan;
-    background-color: rgb(164, 170, 179);
+    background-color: #E9B843;
     padding: 5px;
 }
 
@@ -123,7 +123,7 @@ aside {
     font-size: 15px;
     color: rgb(2, 16, 61);
     border-color: cyan;
-    background-color: rgb(164, 170, 179);
+    background-color: #E9B843;
     padding: 5px;
 }
 
@@ -131,7 +131,7 @@ button.buttonressole {
     color: rgb(2, 16, 61);
     border-color: cyan;
     border-radius: 20px;
-    background-color: rgb(164, 170, 179);
+    background-color: #E9B843;
     font-size: 15px;
     width: 70px;
 }
