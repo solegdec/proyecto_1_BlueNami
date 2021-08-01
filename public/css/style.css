@@ -730,6 +730,7 @@ form.form_contact input[type="submit"]:hover {
     width: 20%;
     height: 20%;
     justify-content: space-around;
+    opacity: 0.3;
 }
 
 .desproductosgz {
