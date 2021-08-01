@@ -805,9 +805,10 @@ form.form_contact input[type="submit"]:hover {
 }
 
 .preciosgz p {
+    font-family: "roboto";
     font-size: 40px;
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 10px;
 }
 
 aside.descripciongz li {
@@ -821,6 +822,9 @@ aside.descripciongz li {
 aside.descripciongz  p{
     font-family: "Roboto";
    font-weight: 800;
+}
+aside.descripciongz {
+    padding-top: 0px;
 }
 
 /* Comienzo segundo contenedor Gina*/
@@ -920,6 +924,7 @@ aside.descripciongz  p{
     align-items: center;
     justify-content: space-around;
 }
+
 
 /* Comienzo CSS Login*/
 
@@ -1230,8 +1235,6 @@ aside.descripciongz  p{
             aside.descripciongz {
                 display: block;
             }  
-        
-            
 
 }
 
