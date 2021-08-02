@@ -854,6 +854,16 @@ aside.descripciongz {
     padding-top: 0px;
 }
 
+.descripcion2gz{
+    width: 100%;
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.2em;
+
+}
+
 
 /* Comienzo segundo contenedor Gina*/
 
@@ -1254,6 +1264,11 @@ aside.descripciongz {
     /*MEdia Gina*/
     aside.descripciongz {
         display: block;
+
+    } 
+    .descripcion2gz{
+    display:none;      
+        
     }
 }
 
@@ -1302,7 +1317,12 @@ aside.descripciongz {
     /*MEdia Gina*/
     aside.descripciongz {
         display: block;
+        
     }
+    .descripcion2gz{
+        display:none; 
+     
+     }
 }
 
 
