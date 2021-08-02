@@ -57,3 +57,6 @@ una herramienta más para concretar y hacer posibles nuevas ideas.
 
 Tablero de trabajo del proyecto:
 https://trello.com/b/04A1pD5B/proyecto-integrador
+
+App funcionando en HEROKU:
+https://bluenami.herokuapp.com/
