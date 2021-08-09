@@ -886,6 +886,11 @@ aside.descripciongz {
     flex-direction: column;
 }
 
+.productosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
 .tabla2gz {
     width: 100%;
     justify-content: space-around;
@@ -962,6 +967,11 @@ aside.descripciongz {
     align-items: center;
     justify-content: space-around;
 }
+
+.barra-bus {
+    padding: 20px;
+}
+
 
 
 /* Comienzo CSS Login*/
@@ -1205,9 +1215,16 @@ aside.descripciongz {
         display: flex;
         flex-direction: row;
     }
+    .productosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
     aside.descripciongz {
         display: none;
     }
+    
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -1267,9 +1284,18 @@ aside.descripciongz {
 
     } 
     .descripcion2gz{
-    display:none;      
-        
+    display:none;         
     }
+    .productosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+   .contenedor4tablasgz{
+    width: 100%;
+    flex-direction: row;
+}
+
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
@@ -1323,6 +1349,12 @@ aside.descripciongz {
         display:none; 
      
      }
+     .contenedor4tablasgz{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
 }
 
 
