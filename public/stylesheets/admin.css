@@ -33,13 +33,16 @@ button.selAdmin{
     background-color: #E9B843;
     padding: 10px 10px 10px 10px;
     margin:10px 10px 10px 10px;
-
 }
 .botonesSelAdmin{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+
+
+
 input.campos{
     width:85%;
     height:100%;
@@ -68,9 +71,12 @@ input.campos{
     width:85%;
     height:fit-content;
 }
-button.selAdmin{
+.botonesSelAdmin{
+    display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
+
     
 }
 @media screen and (min-width: 768px) {
@@ -81,6 +87,12 @@ button.selAdmin{
     input.campos{
         width:85%;
     }
+    .botonesSelAdmin{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    
 }
 @media (min-width: 1200px) and (orientation: landscape){
     table.tablaAdmin{
@@ -89,6 +101,12 @@ button.selAdmin{
         
     }
     input.campos{
-        width:100%;
+        width:90%;
     }
+    .botonesSelAdmin{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
 }
