@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+tbody{
+    margin:50px;
+    padding: 50px;
+}
  table.tablaAdmin{
     
     width: 50%;
@@ -16,10 +20,30 @@ button.eliminarAdmin{
     width:100%;
     height:100%;
     padding: 20px 10px 20px 10px;
+    color:rgb(4, 53, 117);
+}
+button.selAdmin{
+    width: 150px;
+    height: 50%;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(2, 16, 61);
+    border-color: cyan;
+    background-color: #E9B843;
+    padding: 10px 10px 10px 10px;
+    margin:10px 10px 10px 10px;
+
+}
+.botonesSelAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 input.campos{
     width:85%;
     height:100%;
+    color:rgb(4, 53, 117)
 }
 .thead{
    font-family: Lobster;
@@ -27,15 +51,14 @@ input.campos{
 
 
 }
-th{
-    text-align: center;
-}
+
 td img{
     display: block;
     margin-left: auto;
     margin-right: auto;
 
 }
+
 @media screen and (min-width: 576px){
 table.tablaAdmin{
     width: 70%;
@@ -44,6 +67,9 @@ table.tablaAdmin{
 input.campos{
     width:85%;
     height:fit-content;
+}
+button.selAdmin{
+    flex-direction: column;
 }
     
 }
