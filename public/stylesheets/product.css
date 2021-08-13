@@ -1,0 +1,309 @@
+/*Comienzo css Gina*/
+
+.contenedorgz {
+    width: 80vw;
+    flex-direction: column;
+    max-width: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.productogz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.imgproductogz {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+}
+
+.imggrandegz img {
+    width: 90%;
+    height: 80%;
+}
+
+.imgcambiogz {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgcambiogz img {
+    width: 20%;
+    height: 20%;
+    justify-content: space-around;
+    opacity: 0.3;
+}
+
+.desproductosgz {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desproductosgz h4 {
+    font-family: "Numans";
+    font-size: 1em;
+    color: #7D7D7D;
+    padding: 10px;
+}
+
+.desproductosgz h1 {
+    font-family: "Lobster";
+    font-size: 3em;
+    color: #000000;
+    text-align: center;
+}
+
+.coloresgz {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-left: 15%;
+}
+
+.coloresgz p {
+    font-family: "Nova Cut";
+    font-size: 15px;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.color1gz {
+    width: 30px;
+    height: 30px;
+    background: #FEC36A;
+}
+
+.color2gz {
+    width: 30px;
+    height: 30px;
+    background: #FE398C;
+}
+
+.color3gz {
+    width: 30px;
+    height: 30px;
+    background: #7CDEDE;
+}
+
+.botongz {
+    width: 60%;
+    background-color: #E9B843;
+    font-family: "roboto";
+    font-size: 1em;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.preciosgz p {
+    font-family: "roboto";
+    font-size: 40px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+aside.descripciongz li {
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+aside.descripciongz p {
+    font-family: "Roboto";
+    font-weight: 800;
+}
+
+aside.descripciongz {
+    padding-top: 0px;
+}
+
+.descripcion2gz{
+    width: 100%;
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.2em;
+
+}
+
+
+/* Comienzo segundo contenedor Gina*/
+
+.divisiongz {
+    width: 100%;
+    height: 10%;
+}
+
+.divisiongz p {
+    font-family: "roboto";
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.productosRelacionadosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.productosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.tabla2gz {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.imgTabla2gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.tabla3gz {
+    width: 100%;
+    align-items: center;
+}
+
+.imgTabla3gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.tabla4gz {
+    width: 100%;
+    align-items: center;
+}
+
+.imgTabla4gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.coloresRelgz {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.color1Rgz {
+    width: 20px;
+    height: 20px;
+    background: #FEC36A;
+}
+
+.color2Rgz {
+    width: 20px;
+    height: 20px;
+    background: #FE398C;
+}
+
+.color3Rgz {
+    width: 20px;
+    height: 20px;
+    background: #7CDEDE;
+}
+
+.titProdRelgz h1 {
+    margin: auto;
+    font-family: "Lobster";
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+.preciosRgz p {
+    font-family: "roboto";
+    font-size: 30px;
+    text-align: center;
+}
+
+.destablagz {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.barra-bus {
+    padding: 20px;
+}
+/* Comienzo Media */
+
+@media screen and (min-width: 576px) {
+        /*CSS Gina*/
+        .productogz {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .productosRelacionadosgz {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .productosgz {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        aside.descripciongz {
+            display: none;
+        }
+
+}
+@media screen and (min-width: 768px) {
+        /*MEdia Gina*/
+        aside.descripciongz {
+            display: block;
+    
+        } 
+        .descripcion2gz{
+        display:none;         
+        }
+        .productosgz {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+       .contenedor4tablasgz{
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    }
+    @media (min-width: 1200px) and (orientation: landscape) {
+          /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+        
+    }
+    .descripcion2gz{
+        display:none; 
+     
+     }
+     .contenedor4tablasgz{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+}
