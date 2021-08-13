@@ -17,7 +17,10 @@ const loginRouter = require("./routes/loginRouter.js")
 const indexRouter = require("./routes/indexRouter.js")
 const productRouter = require("./routes/productRouter.js")
 const productDetailRouter = require("./routes/productDetailRouter.js")
+const adminAddRouter = require("./routes/adminAddRouter.js")
 const adminRouter = require("./routes/adminRouter.js")
+
+
     // fin rutas nuestras
 
 
@@ -46,6 +49,7 @@ app.use('/register', registerRouter)
 app.use('/product', productRouter)
 app.use("/productDetail", productDetailRouter)
 app.use("/admin",adminRouter)
+app.use ("/adminAdd",adminAddRouter)
     // cierre app.use nuestros
 
 
