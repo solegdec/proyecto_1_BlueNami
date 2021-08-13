@@ -1,0 +1,1128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* COMIENZO CSS SOLE*/
+
+
+/*FIN CSS SOLE*/
+
+
+/* Desarrollo del la barra de navegacion*/
+
+nav {
+    height: 65px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid #EAEAEB;
+    font-family: "roboto";
+    /*Agrege la tipo en el nav*/
+}
+
+nav h1 {
+    position: absolute;
+    width: 200px;
+    top: 8px;
+    left: 5%;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+nav ul {
+    float: right;
+    margin-right: 25px;
+    margin-top: 7px;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 8px;
+}
+
+nav ul li a {
+    position: relative;
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+label #sign-one,
+label #sign-two {
+    font-size: 50 px;
+    color: rgb(0, 0, 0);
+    float: right;
+    line-height: 50px;
+    margin-top: 7px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#res-menu {
+    display: none;
+}
+
+
+/*Fin de los css utilizados en la barra de navegacion*/
+
+
+/*css utilizados en la barra de fotter*/
+
+.footerintex {
+    text-align: center;
+    font-family: "roboto";
+}
+
+.footerimg {
+    width: 100%;
+}
+
+.mb-4 {
+    width: 100%;
+    background-color: #82b7df;
+}
+
+.copyrightstyle {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: "roboto";
+}
+
+
+/*css Fin de la barra de fotter*/
+
+
+/*Pagina home Css hechos por Seba*/
+
+
+/*Contenedor de video*/
+
+.section-a {
+    font-size: 100 px;
+    color: #fff;
+}
+
+.section-b {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.section-c {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#olas01 {
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+#imgQS {
+    width: 50%;
+    margin-bottom: 7px;
+}
+
+#videoBG {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto
+}
+
+.logovideo {
+    width: 50%;
+    margin-left: 25%;
+    position: relative;
+}
+
+
+/*contenedor de las fotos de producto*/
+
+.carousel {
+    position: relative;
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+/*Contenedor de Quienes somos*/
+
+.qstext {
+    font-size: 20px;
+    color: #000000;
+    font-family: "lobster";
+}
+
+div.qsomos {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 27px;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+div.qsomos img.izquierda {
+    float: left;
+    width: 50%;
+    margin-right: 5px;
+}
+
+
+/*Contenedor de Contactos*/
+
+.sectionsection-d {
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Informacion de Contacto*/
+
+.cantact_info::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #4091EC;
+    opacity: 0.1;
+}
+
+.cantact_info {
+    width: 38%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/img/fondoContacto.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.info_title,
+.info_items {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.info_title {
+    margin-bottom: 60px;
+}
+
+.info_title span {
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_title h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.info_items p {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info_items p:nth-child(1) span {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.info_items p:nth-child(2) span {
+    font-size: 50px;
+    margin-right: 15px;
+    margin-left: 4px;
+}
+
+
+/* Formulario de contacto*/
+
+form.form_contact {
+    width: 62%;
+    padding: 30px 40px;
+}
+
+form.form_contact h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+form.form_contact .user_info {
+    display: flex;
+    flex-direction: column;
+}
+
+form.form_contact label {
+    font-weight: 600;
+}
+
+form.form_contact input,
+form.form_contact textarea {
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+    font-family: 'Open sans';
+    color: #5A5A5A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form.form_contact textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+form.form_contact input[type="reset"] {
+    width: 150px;
+    background: #6bacd4;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    align-self: flex-end;
+    color: #fff;
+    font-family: 'Open sans';
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form.form_contact input[type="reset"]:hover {
+    background: #689cc4;
+}
+
+form.form_contact input[type="submit"] {
+    width: 150px;
+    background: #6bacd4;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    align-self: flex-end;
+    color: #fff;
+    font-family: 'Open sans';
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form.form_contact input[type="submit"]:hover {
+    background: #689cc4;
+}
+
+
+/*Cierre de Contactos*/
+
+
+/*Fin Pagina home Css hechos por Seba*/
+
+
+/*Comienzo del desarrollo del responsive para moviles*/
+
+@media (max-width:576px) {
+    /* Desarrollo del la barra de navegacion movil*/
+    label #sign-one {
+        display: block;
+    }
+    nav ul {
+        position: flex;
+        width: 50vh;
+        height: 95vh;
+        background: rgb(195, 199, 250);
+        top: 50px;
+        text-align: center;
+        opacity: 0.5;
+    }
+    nav ul li {
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+        border-bottom: 1px solid #EAEAEB;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    #res-menu:checked~ul {
+        left: 0;
+        display: none;
+    }
+    #res-menu:checked~label #sign-one {
+        display: none;
+    }
+    #res-menu:checked~label #sign-two {
+        display: block;
+    }
+    /*Fin de los css utilizados en la barra de navegacion movil*/
+}
+
+
+/*Fin del desarrollo del responsive para los moviles*/
+
+
+/*Comienzo css Gina*/
+
+.contenedorgz {
+    width: 80vw;
+    flex-direction: column;
+    max-width: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.productogz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.imgproductogz {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+}
+
+.imggrandegz img {
+    width: 90%;
+    height: 80%;
+}
+
+.imgcambiogz {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgcambiogz img {
+    width: 20%;
+    height: 20%;
+    justify-content: space-around;
+    opacity: 0.3;
+}
+
+.desproductosgz {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desproductosgz h4 {
+    font-family: "Numans";
+    font-size: 1em;
+    color: #7D7D7D;
+    padding: 10px;
+}
+
+.desproductosgz h1 {
+    font-family: "Lobster";
+    font-size: 3em;
+    color: #000000;
+    text-align: center;
+}
+
+.coloresgz {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-left: 15%;
+}
+
+.coloresgz p {
+    font-family: "Nova Cut";
+    font-size: 15px;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.color1gz {
+    width: 30px;
+    height: 30px;
+    background: #FEC36A;
+}
+
+.color2gz {
+    width: 30px;
+    height: 30px;
+    background: #FE398C;
+}
+
+.color3gz {
+    width: 30px;
+    height: 30px;
+    background: #7CDEDE;
+}
+
+.botongz {
+    width: 60%;
+    background-color: #E9B843;
+    font-family: "roboto";
+    font-size: 1em;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.preciosgz p {
+    font-family: "roboto";
+    font-size: 40px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+aside.descripciongz li {
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+aside.descripciongz p {
+    font-family: "Roboto";
+    font-weight: 800;
+}
+
+aside.descripciongz {
+    padding-top: 0px;
+}
+
+.descripcion2gz{
+    width: 100%;
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.2em;
+
+}
+
+
+/* Comienzo segundo contenedor Gina*/
+
+.divisiongz {
+    width: 100%;
+    height: 10%;
+}
+
+.divisiongz p {
+    font-family: "roboto";
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.productosRelacionadosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.productosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.tabla2gz {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.imgTabla2gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.tabla3gz {
+    width: 100%;
+    align-items: center;
+}
+
+.imgTabla3gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.tabla4gz {
+    width: 100%;
+    align-items: center;
+}
+
+.imgTabla4gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.coloresRelgz {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.color1Rgz {
+    width: 20px;
+    height: 20px;
+    background: #FEC36A;
+}
+
+.color2Rgz {
+    width: 20px;
+    height: 20px;
+    background: #FE398C;
+}
+
+.color3Rgz {
+    width: 20px;
+    height: 20px;
+    background: #7CDEDE;
+}
+
+.titProdRelgz h1 {
+    margin: auto;
+    font-family: "Lobster";
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+.preciosRgz p {
+    font-family: "roboto";
+    font-size: 30px;
+    text-align: center;
+}
+
+.destablagz {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.barra-bus {
+    padding: 20px;
+}
+
+
+
+/* Comienzo CSS Login*/
+
+.form-login-logo,
+.form-login-separaciones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.form-login-h1,
+.form-login-h2 {
+    font-family: 'Lobster', cursive;
+}
+
+.form-login-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login-titulo,
+.form-login-mail,
+.form-login-password,
+.form-login-experiencia,
+.form-login-comment-olas,
+.form-login-comment-tablas,
+.form-login-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    margin: auto
+}
+
+.form-login-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+}
+
+.form-login-botonP {
+    width: 200px;
+    display: flex;
+    ;
+    flex-direction: column;
+}
+
+.form-login-p {
+    display: flex;
+    ;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-login-input:focus {
+    background-color: azure;
+}
+
+.form-login-textarea:focus {
+    background-color: azure;
+}
+
+.form-login-label-comment-tablas {
+    font-family: 'Nova Cut', cursive;
+    margin: auto;
+}
+
+.form-login-label {
+    font-family: 'Nova Cut', cursive;
+}
+
+.form-login-input,
+.form-login-textarea {
+    border-radius: 5px;
+    margin: auto;
+}
+
+.form-login-separacion-mobile {
+    display: block;
+}
+
+.form-login-separacion-tablet {
+    display: none;
+}
+
+.form-login-separacion-escritorio {
+    display: none;
+}
+
+
+/* Fin CSS Login*/
+
+
+/* Comienzo CSS Register*/
+
+.form-reg-h1,
+.form-reg-h2,
+.form-reg-h3 {
+    font-family: 'Lobster', cursive;
+}
+
+.form-reg-logo,
+.form-reg-separacion-mobile,
+.form-reg-separacion-tablet,
+.form-reg-separacion-escritorio {
+    display: flex;
+    justify-content: center;
+}
+
+.form-reg-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-reg-titulo,
+.form-reg-name,
+.form-reg-nacimiento,
+.form-reg-mail,
+.form-reg-tel,
+.form-reg-password,
+.form-reg-boton,
+.form-reg-verificacion,
+.form-reg-codigo,
+.form-reg-boton,
+.form-reg-listo,
+.form-reg-notificaciones,
+.form-reg-boton,
+.form-reg-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.form-reg-verificacion,
+.form-reg-notificaciones {
+    flex-direction: column;
+}
+
+.form-reg-p,
+.form-reg-botonP {
+    display: flex;
+    ;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-reg-input:focus {
+    background-color: azure;
+}
+
+.form-reg-label {
+    font-family: 'Nova Cut', cursive;
+}
+
+.form-reg-input {
+    border-radius: 25;
+}
+
+.form-reg-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-reg-botonP {
+    width: 200px;
+}
+
+.form-reg-foto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.form-reg-separacion-mobile {
+    display: block;
+}
+
+.form-reg-separacion-tablet {
+    display: none;
+}
+
+.form-reg-separacion-escritorio {
+    display: none;
+}
+
+
+/* Fin CSS Register*/
+
+
+/* Comienzo Media */
+
+@media screen and (min-width: 576px) {
+    h1.micarritoSole {
+        font-size: 20px;
+    }
+    h2.h2sole {
+        font-size: 18px;
+    }
+    section.contenedorSole {
+        flex-direction: row;
+        float: right;
+        font-weight: 200;
+    }
+    section.contenedorSole2 {
+        flex-direction: row;
+        float: right;
+        font-weight: 200;
+    }
+    section.contenedorSole3 {
+        flex-direction: column;
+        font-weight: 200;
+        font-size: 20px;
+    }
+    .todmedpagosole {
+        font-size: 15px;
+    }
+    .totalsole {
+        font-size: 20px;
+        text-align: center;
+        align-self: center;
+    }
+    aside.asidesole {
+        display: none;
+    }
+    /*CSS Gina*/
+    .productogz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .productosRelacionadosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .productosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    aside.descripciongz {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    h1.micarritoSole {
+        font-size: 30px;
+    }
+    h2.h2sole {
+        font-size: 25px;
+    }
+    section.contenedorSole3 {
+        flex-direction: row;
+        font-weight: 200;
+        font-size: 28px;
+    }
+    aside.asidesole {
+        display: block;
+    }
+    .form-login-separacion-mobile {
+        display: none;
+    }
+    .form-login-separacion-tablet {
+        display: block;
+    }
+    .form-login-separacion-escritorio {
+        display: none;
+    }
+    .form-login-formulario {
+        font-size: 1.5em;
+    }
+    .form-reg-separacion-mobile {
+        display: none;
+    }
+    .form-reg-separacion-tablet {
+        display: block;
+    }
+    .form-reg-separacion-escritorio {
+        display: none;
+    }
+    .form-reg-titulo,
+    .form-reg-name,
+    .form-reg-nacimiento,
+    .form-reg-mail,
+    .form-reg-tel,
+    .form-reg-password,
+    .form-reg-verificacion,
+    .form-reg-codigo,
+    .form-reg-listo,
+    .form-reg-notificaciones {
+        margin: auto;
+    }
+    .form-reg-formulario {
+        font-size: 1.5em;
+    }
+    /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+
+    } 
+    .descripcion2gz{
+    display:none;         
+    }
+    .productosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+   .contenedor4tablasgz{
+    width: 100%;
+    flex-direction: row;
+}
+
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    .totalsole {
+        font-size: large;
+    }
+    h1.micarritoSole {
+        font-size: 40px;
+    }
+    h2.h2sole {
+        font-size: 30px;
+    }
+    section.contenedorSole3 {
+        flex-direction: row;
+        font-weight: 200;
+        font-size: 35px;
+    }
+    aside.asidesole {
+        display: block;
+    }
+    .form-login-separacion-mobile {
+        display: none;
+    }
+    .form-login-separacion-tablet {
+        display: none;
+    }
+    .form-login-separacion-escritorio {
+        display: block;
+    }
+    .form-login-formulario {
+        font-size: 2em;
+    }
+    .form-reg-separacion-mobile {
+        display: none;
+    }
+    .form-reg-separacion-tablet {
+        display: none;
+    }
+    .form-reg-separacion-escritorio {
+        display: block;
+    }
+    .form-reg-formulario {
+        font-size: 2em;
+    }
+    /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+        
+    }
+    .descripcion2gz{
+        display:none; 
+     
+     }
+     .contenedor4tablasgz{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+
+/*Fin Media */
