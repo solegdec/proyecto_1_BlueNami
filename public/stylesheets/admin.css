@@ -4,10 +4,22 @@
     box-sizing: border-box;
 }
  table.tablaAdmin{
-    border: 2px solid black;
-    margin: 10px;
-    padding: 10px;
+    
+    width: 50%;
+    border: 2px solid rgb(6, 185, 240);
 
+    margin: 10px 10px 10px 10px ;
+    padding: 10px 10px 10px 10px;
+
+}
+button.eliminarAdmin{
+    width:100%;
+    height:100%;
+    padding: 20px 10px 20px 10px;
+}
+input.campos{
+    width:85%;
+    height:100%;
 }
 .thead{
    font-family: Lobster;
@@ -17,4 +29,40 @@
 }
 th{
     text-align: center;
+}
+td img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+@media screen and (min-width: 576px){
+table.tablaAdmin{
+    width: 70%;
+    
+}
+input.campos{
+    width:85%;
+    height:fit-content;
+}
+    
+}
+@media screen and (min-width: 768px) {
+    table.tablaAdmin{
+        width: 85%;
+        
+    }
+    input.campos{
+        width:85%;
+    }
+}
+@media (min-width: 1200px) and (orientation: landscape){
+    table.tablaAdmin{
+        width: 100%;
+        height:fit-content;
+        
+    }
+    input.campos{
+        width:100%;
+    }
 }
