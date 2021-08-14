@@ -10,8 +10,8 @@ tbody{
  table.tablaAdmin{
     
     width: 50%;
-    border: 2px solid rgb(6, 185, 240);
-
+    border: 1px solid rgb(184, 189, 190);
+    box-shadow: azure;
     margin: 10px 10px 10px 10px ;
     padding: 10px 10px 10px 10px;
 
@@ -24,15 +24,15 @@ button.eliminarAdmin{
 }
 button.selAdmin{
     width: 150px;
-    height: 50%;
+    height: 30%;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300;
-    color: rgb(2, 16, 61);
-    border-color: cyan;
+    color: rgb(1, 13, 48);
+    border-color: rgb(95, 99, 99);
     background-color: #E9B843;
-    padding: 10px 10px 10px 10px;
-    margin:10px 10px 10px 10px;
+    padding: 15px 10px 20px 10px;
+    margin:15px 10px 15px 10px;
 }
 .botonesSelAdmin{
     display: flex;
@@ -49,7 +49,7 @@ input.campos{
     color:rgb(4, 53, 117)
 }
 .thead{
-   font-family: Lobster;
+  
    font-weight: 100;
 
 
