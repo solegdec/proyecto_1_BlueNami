@@ -5,4 +5,7 @@ const adminAddController= require ("../controllers/adminAddController.js")
 
 router.get ("/", adminAddController.entrarAdminAdd);
 
+
+
+
 module.exports = router;

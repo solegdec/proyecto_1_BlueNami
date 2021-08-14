@@ -4,7 +4,7 @@
     <%
     let add = "notview";
     let mod = "block";
-    let id= 1;
+    let id=req.params.id;
     if ( id == 0){
     add="block";
     mod="notview";
@@ -21,7 +21,7 @@
 
                 <div id="add" class="<%= add %>">
                     <div class="add-titulo">
-                        <h2 class="add-titulo-2">Agregar Product</h2>
+                        <h2 class="add-titulo-2">Agregar Producto</h2>
                     </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
@@ -34,12 +34,12 @@
                                     <input id="name" name="name" type="text" class="campos_add" required />
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="description">Description</label>
+                                    <label for="description">Descripción</label>
                                     <br/>
                                     <textarea class="form-control validate" rows="3" required></textarea>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="category">Category</label>
+                                    <label for="category">Categoria</label>
                                     <br/>
                                     <select id="category" class="campos_cat" id="category">
                             <option selected>Select category</option>
@@ -51,7 +51,7 @@
                                 <div class="row">
                                     <div class="form-group mb-3 col-xs-12 col-sm-6">
                                         <label for="expire_date">
-                                fecha
+                                Fecha
                             </label>
                                         <br/>
                                         <input id="date" name="expire_date" type="text" class="campos_add" data-large-mode="true" />
@@ -130,24 +130,16 @@
                         <br/>
                         <div class="add-subirImagen">
                             <div class="add-imagen">
-                                <img src="img/tablagz.png" alt="Girl in a jacket" width="100" height="100" onclick="document.getElementById('fileInput').click();">
+                                <img src="img/tablagz.png" alt="surfboard" width="100" height="100" onclick="document.getElementById('fileInput').click();">
                             </div>
                             <div class="add-imgbutton">
                                 <input id="fileInput" type="file" style="display:none;" />
                                 <input type="button" class="button2" value="Modificar Imagen" onclick="document.getElementById('fileInput').click();" />
                             </div>
                             <br/>
-                            <div class="add-subirImagen">
-                                <div class="add-imagen">
-                                    <img src="img/empty-img.png" alt="surfboard" width="100" height="100" onclick="document.getElementById('fileInput').click();"> >>>>>>> df34273dded389698460bd96ca3d1aabc5c3ca2b
-                                </div>
-                                <div class="NewProduct">
-                                    <button type="submit" class="button_add">Modificar Producto</button>
-                                </div>
-                                </form>
-                            </div>
+                            
                             <div class="NewProduct">
-                                <a href="/admin"><button class= "selAdmin" type="submit" class="button_add">Nuevo Producto</button></a>
+                                <a href="/admin"><button class= "selAdmin" type="submit" class="button_add">Modificar Producto</button></a>
                             </div>
                             </form>
                         </div>

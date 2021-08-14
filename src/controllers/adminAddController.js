@@ -3,5 +3,8 @@ const adminAddController={
         res.render("adminAdd")
         
     }
-}
+   
+
+    }
+
 module.exports= adminAddController;
