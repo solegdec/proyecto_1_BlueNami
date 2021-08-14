@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <%- include("./partials/head") %>
-<body class="bodysole">
-    <%- include("./partials/header") %>
-    <div>
-        <h1 class="micarritoSole">MI CARRITO</h1>
-    </div>
-    <section class="contenedorSole">
-        <div class="tabla1Sole">
-            <h2 class="h2sole">Tabla Super Fish</h2>
-            <img src="\img\tablaVector50x62 (1) (1).png">
-        </div>
-        <div class="fotoTabla1Sole">
-            <img src="img/tabla1chica.png">
-        </div>
-        <aside class="asidesole">
-            <ul>
-                <li> La Super Fish es la tabla liviana ideal</li>
-                <li> Mayor deslizamiento en olas chicas y medianas </li>
-                <li> Gran maniobrabilidad</li>
-                <li> Diseño exclusivo Blue Nami </li>
-            </ul>
-        </aside>
-        <div class="precioTabla1Sole">
-            <input class="inputsole" type="text" name="precio" id="precio" value="$2500">
-            <button class="buttonressole" type="reset" name="reset" id="reset"> Eliminar </button>
-            <h4>Envio Gratis </h4>
-        </div>
-    </section>
-    <section class="contenedorSole2">
-        <div class="tabla2Sole">
-            <h2 class="h2sole">Tabla Longboard </h2>
-            <img src="\img\tablaVector50x62 (1) (1).png">
-        </div>
-        <div class="fotoTabla4Sole">
-            <img src="img/tabla4Sole.png">
-        </div>
-        <aside class="asidesole">
-            <ul>
-                <li> La Longboard es la tabla más estable</li>
-                <li> Su superficie permite caminar sobre ella en la ola </li>
-                <li> Gran maniobrabilidad</li>
-                <li> Diseño exclusivo Blue Nami </li>
-            </ul>
-        </aside>
-        <div class="precioTabla2Sole">
-            <input class="inputsole" type="text" name="precio" id="precio" value="$2500">
-            <button class="buttonressole" type="reset" name="reset" id="reset"> Eliminar </button>
-            <h4>Envio Gratis </h4>
-        </div>
-    </section>
-    <section class="contenedorSole3">
-        <a href="/product"> <div><button class="seguirComprandoSole" ><img src="\img\tablaVector50x62 izq.png"> SEGUIR COMPRANDO</button></div></a>
-       <div class="totalsole"> <label for="total">Total<input class="inputsole" type="text" name="precio" id="precio" value="$5000"> </label></div>
-       <div class="todmedpagosole">
-        -Todos los medios de pago-
-        <i class="fas fa-credit-card"></i>
-        <i class="far fa-money-bill-alt"></i>
-     </div>
-        <a href="/checkout.html"><button class="botonPagarSole">PAGAR <img src="\img\tablaVector50x62 (1) (1).png" alt=""></button></a>
-        <div><p class="aSurfear">
-        ...y te vas a surfear...<img src="\img\tablaVector50x62 (1) (1).png" >
-        </p>
-    </div>
-    
+<%- include("./partials/head") %>
+
+    <body class="bodysole">
+        <%- include("./partials/header") %>
+            <div>
+                <h1 class="micarritoSole">MI CARRITO</h1>
+            </div>
+            <section class="contenedorSole">
+                <div class="tabla1Sole">
+                    <h2 class="h2sole">Tabla Super Fish</h2>
+                    <img src="\img\tablaVector50x62 (1) (1).png">
+                </div>
+                <div class="fotoTabla1Sole">
+                    <img src="img/tabla1chica.png">
+                </div>
+                <aside class="asidesole">
+                    <ul>
+                        <li> La Super Fish es la tabla liviana ideal</li>
+                        <li> Mayor deslizamiento en olas chicas y medianas </li>
+                        <li> Gran maniobrabilidad</li>
+                        <li> Diseño exclusivo Blue Nami </li>
+                    </ul>
+                </aside>
+                <div class="precioTabla1Sole">
+                    <input class="inputsole" type="text" name="precio" id="precio" value="$2500">
+                    <button class="buttonressole" type="reset" name="reset" id="reset"> Eliminar </button>
+                    <h4>Envio Gratis </h4>
+                </div>
+            </section>
+            <section class="contenedorSole2">
+                <div class="tabla2Sole">
+                    <h2 class="h2sole">Tabla Longboard </h2>
+                    <img src="\img\tablaVector50x62 (1) (1).png">
+                </div>
+                <div class="fotoTabla4Sole">
+                    <img src="img/tabla4Sole.png">
+                </div>
+                <aside class="asidesole">
+                    <ul>
+                        <li> La Longboard es la tabla más estable</li>
+                        <li> Su superficie permite caminar sobre ella en la ola </li>
+                        <li> Gran maniobrabilidad</li>
+                        <li> Diseño exclusivo Blue Nami </li>
+                    </ul>
+                </aside>
+                <div class="precioTabla2Sole">
+                    <input class="inputsole" type="text" name="precio" id="precio" value="$2500">
+                    <button class="buttonressole" type="reset" name="reset" id="reset"> Eliminar </button>
+                    <h4>Envio Gratis </h4>
+                </div>
+            </section>
+            <section class="contenedorSole3">
+                <a href="/product">
+                    <div><button class="seguirComprandoSole"><img src="\img\tablaVector50x62 izq.png"> SEGUIR COMPRANDO</button></div>
+                </a>
+                <div class="totalsole"> <label for="total">Total<input class="inputsole" type="text" name="precio" id="precio" value="$5000"> </label></div>
+                <div class="todmedpagosole">
+                    -Todos los medios de pago-
+                    <i class="fas fa-credit-card"></i>
+                    <i class="far fa-money-bill-alt"></i>
+                </div>
+                <a href="/checkout.html"><button class="botonPagarSole">PAGAR <img src="\img\tablaVector50x62 (1) (1).png" alt=""></button></a>
+                <div>
+                    <p class="aSurfear">
+                        ...y te vas a surfear...<img src="\img\tablaVector50x62 (1) (1).png">
+                    </p>
+                </div>
 
 
 
-        
-    </section>
-    
-    <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
-    <%- include("./partials/footer") %>
-</body>
+
+
+            </section>
+
+            <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
+            <%- include("./partials/footer") %>
+    </body>
 
 </html>
