@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.h2admin{
+    text-align: center;
+}
 tbody{
     margin:50px;
     padding: 50px;
@@ -44,6 +47,7 @@ button.selAdmin{
 
 
 input.campos{
+    text-align: center;
     width:85%;
     height:100%;
     color:rgb(4, 53, 117)
