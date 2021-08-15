@@ -2,9 +2,11 @@
 <%- include("./partials/head") %>
 
     <%
+    const valores = window.location.search;
+    const urlParams = new URLSearchParams(valores);
+    var id = urlParams.get('id');
     let add = "notview";
     let mod = "block";
-    let id=req.params.id;
     if ( id == 0){
     add="block";
     mod="notview";
@@ -137,7 +139,7 @@
                                 <input type="button" class="button2" value="Modificar Imagen" onclick="document.getElementById('fileInput').click();" />
                             </div>
                             <br/>
-                            
+
                             <div class="NewProduct">
                                 <a href="/admin"><button class= "selAdmin" type="submit" class="button_add">Modificar Producto</button></a>
                             </div>
