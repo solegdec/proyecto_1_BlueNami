@@ -103,8 +103,11 @@ input.campos{
         height:fit-content;
         
     }
-    input.campos{
+    input.camposAdmin{
+        color: rgb(37, 35, 35);
         width:90%;
+        text-align: center;
+        background-color: rgb(228, 226, 220);
     }
     .botonesSelAdmin{
         display: flex;
