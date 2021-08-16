@@ -19,6 +19,7 @@ const productRouter = require("./routes/productRouter.js")
 const productDetailRouter = require("./routes/productDetailRouter.js")
 const adminAddRouter = require("./routes/adminAddRouter.js")
 const adminRouter = require("./routes/adminRouter.js")
+const adminModRouter = require("./routes/adminModRouter.js")
 
 
     // fin rutas nuestras
@@ -50,6 +51,8 @@ app.use('/product', productRouter)
 app.use("/productDetail", productDetailRouter)
 app.use("/admin",adminRouter)
 app.use ("/adminAdd",adminAddRouter)
+app.use ("/adminMod",adminModRouter)
+
     // cierre app.use nuestros
 
 
