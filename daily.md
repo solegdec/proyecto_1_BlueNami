@@ -5,6 +5,7 @@ Mas alla de eso, tambien sirvieron para acrecentar la confianza con el grupo, y 
 Las daily han sido una gran herramienta en el desarrollo del sprint, y las mantendremos a lo largo de toda la cursada.
 
 
+
 Sprint 2:
 Minutas:
 
