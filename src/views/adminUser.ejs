@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+
+
+<body>
+    <%- include("./partials/headerAdmin") %>
+    <div class="tm-product-table-container">
+        <table class="table table-hover tm-table-small tm-product-table">
+            <div>
+                <div>
+                    <table class=" ">
+                        <thead>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">hola</th>
+                            <th scope="col">hola</th>
+                            <th scope="col">hola</th>
+                            <th scope="col">&nbsp;</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"> <input type="checkbox"> </th>
+
+                                <td>chau</td>
+                                <td>chau</td>
+                                <td>chau</td>
+                                <td>
+                                    <a href="#">
+                                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                    </a>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> <input type="checkbox"> </th>
+
+                                <td>chau</td>
+                                <td>chau</td>
+                                <td>chau</td>
+                                <td>
+                                    <a href="#">
+                                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                    </a>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </table>
+    </div>
+    <div class="botonesSelAdmin">
+        <a href="/adminAdd"> <button class="selAdmin" type="submit">AGREGAR NUEVO</button><br></a>
+        <a href="/adminMod"><button class="selAdmin" type="submit">MODIFICAR</button><br></a>
+        <a href="/admin"><button class="selAdmin" type="reset">ELIMINAR</button> <br></a>
+
+    </div>
+    <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>    
+ <%- include("./partials/footer") %>
+</body>
+
+</html>
