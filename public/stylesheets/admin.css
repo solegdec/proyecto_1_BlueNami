@@ -41,16 +41,6 @@ button.selAdmin{
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-
-
-
-input.campos{
-    text-align: center;
-    width:85%;
-    height:100%;
-    color:rgb(4, 53, 117)
-}
 .thead{
   
    font-weight: 100;
@@ -70,10 +60,7 @@ table.tablaAdmin{
     width: 70%;
     
 }
-input.campos{
-    width:85%;
-    height:fit-content;
-}
+
 .botonesSelAdmin{
     display: flex;
     flex-direction: column;
@@ -87,9 +74,7 @@ input.campos{
         width: 85%;
         
     }
-    input.campos{
-        width:85%;
-    }
+   
     .botonesSelAdmin{
         display: flex;
         flex-direction: row;
@@ -103,12 +88,7 @@ input.campos{
         height:fit-content;
         
     }
-    input.camposAdmin{
-        color: rgb(37, 35, 35);
-        width:90%;
-        text-align: center;
-        background-color: rgb(228, 226, 220);
-    }
+   
     .botonesSelAdmin{
         display: flex;
         flex-direction: row;

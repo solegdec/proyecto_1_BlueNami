@@ -17,9 +17,11 @@ const loginRouter = require("./routes/loginRouter.js")
 const indexRouter = require("./routes/indexRouter.js")
 const productRouter = require("./routes/productRouter.js")
 const productDetailRouter = require("./routes/productDetailRouter.js")
+
+const adminProductRouter = require("./routes/adminProductRouter.js")
 const adminAddRouter = require("./routes/adminAddRouter.js")
-const adminRouter = require("./routes/adminRouter.js")
 const adminModRouter = require("./routes/adminModRouter.js")
+
 const adminUserRouter = require("./routes/adminUserRouter.js")
 
 
@@ -50,7 +52,7 @@ app.use('/login', loginRouter)
 app.use('/register', registerRouter)
 app.use('/product', productRouter)
 app.use("/productDetail", productDetailRouter)
-app.use("/admin",adminRouter)
+app.use("/adminProduct",adminProductRouter)
 app.use ("/adminAdd",adminAddRouter)
 app.use ("/adminMod",adminModRouter)
 app.use("/adminUser",adminUserRouter)
