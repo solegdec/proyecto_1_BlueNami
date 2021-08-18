@@ -6,6 +6,7 @@ var logger = require('morgan');
 var app = express();
 
 //heroku
+//app.listen(process.env.PORT||3030, function(){console.log("ok")})
 const port = process.env.PORT || 3030
 
 
