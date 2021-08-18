@@ -1,41 +1,95 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <%- include("./partials/head") %>
-    <body class= "bodyAdminAdd">
-<%- include("./partials/headerAdmin") %>
+
+   
+
+        <body class= "bodyAdminAdd">
+            <%- include("./partials/headerAdmin") %>
 
             <div id="card">
+
+                
                     <div class="add-titulo">
-                        <h2 class="add-titulo-2">Agregar Usuario</h2>
+                        <h2 class="add-titulo-2">Agregar Producto</h2>
                     </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
                             <form action="" class="tm-edit-product-form">
                                 <div class="form-group mb-3">
-                                    <label for="id">Id</label><br/>
-                                    <input id="id" name="id" type="number" class="campos_add" required />
+                                    <label for="name">
+                             Nombre
+                        </label>
+                                    <br/>
+                                    <input id="name" name="name" type="text" class="campos_add" required />
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="tabla">Nombre & Apellido</label><br/>
-                                    <input id="nombreCompleto" name="nombreCompleto" type="text" class="campos_add" required />
+                                    <label for="description">Descripción</label>
+                                    <br/>
+                                    <textarea class="form-control validate" rows="3" required></textarea>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="genero">Genero</label><br/>
-                                    <input id="genero" name="genero" type="text" class="campos_add" required />
+                                    <label for="category">Modelo</label>
+                                    <br/>
+                                    <select id="category" class="campos_cat" id="category">
+                            <option selected>Seleccionar</option>
+                            <option value="1">New Arrival</option>
+                            <option value="2">Most Popular</option>
+                            <option value="3">Trending</option>
+                            </select>
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label for="email">E-Mail</label><br/>
-                                    <input id="email" name="email" type="email" class="campos_add" required />
+                                <div class="row">
+                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                        <label for="expire_date">
+                                Fecha
+                            </label>
+                                        <br/>
+                                        <input id="date" name="expire_date" type="date" class="campos_add" data-large-mode="true" />
+                                    </div>
+                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+
+
+                                        Unidades
+                                        </label>
+                                        <br/>
+                                        <input id="unidades" name="stock" type="text" class="campos_add" required />
+                                    </div>
+                                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                        <label for="stock">Color</label>
+                        <br/>
+                        <input id="unidades" name="stock" type="text" class="campos_add" value="" required />
+                    </div>
                                 </div>
-                                
-                                 <button type="submit" class="button_add">Agregar Usuario</button>
+
+                        </div>
+                        <br/>
+                        <div class="add-subirImagen">
+                            <div class="add-imagen">
+                                <img src="img/empty-img.png" alt="surfboard" width="100" height="100" onclick="document.getElementById('fileInput').click();">
+                            </div>
+                            <div class="add-imgbutton">
+                                <input id="fileInput" type="file" style="display:none;" />
+                                <input type="button" class="button2" value="Agregar Imagen" onclick="document.getElementById('fileInput').click();" />
+                            </div>
+                        </div>
+                        
+                            <button type="submit" class="button_add">Agregar Producto</button>
+                        
+                        </form>
+                    </div>
+
+               
+                
+                       
+                        <br/>
+                        
                             </form>
                         </div>
- 
-                    </div>    
- 
+<a href="/admin"><button class="volverAdmin" type="submit"> Volver a Admin</button></a>
+                    </div>
+                </div>
             </div>
-<div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>
-<%- include("./partials/footer") %>                                
-    </body>    
+                <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>
+                <%- include("./partials/footer") %>
+        </body>
 
-</html>        
+        </html>
