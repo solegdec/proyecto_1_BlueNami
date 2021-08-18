@@ -25,8 +25,8 @@ const adminAddProductRouter = require("./routes/adminAddProductRouter.js")
 const adminModProductRouter = require("./routes/adminModProductRouter.js")
 // rutas administrador Usuario
 const adminUserRouter = require("./routes/adminUserRouter.js")
-const adminAddUserRouter =require("./routes/adminAddUserRouter")
-const adminModUserRouter =require("./routes/adminModUserRouter")
+const adminAddUserRouter = require("./routes/adminAddUserRouter.js")
+const adminModUserRouter = require("./routes/adminModUserRouter.js")
 // fin rutas nuestras
 
 
@@ -60,11 +60,6 @@ app.use ("/adminAddProduct",adminAddProductRouter)
 app.use ("/adminModProduct",adminModProductRouter)
 //app.use administrador Usuario
 app.use("/adminUser",adminUserRouter)
-app.use("/adminAddUser",adminAddUserRouter)
-app.use("/adminModUser",adminModUserRouter)
-
-
-
 
 // cierre app.use nuestros
 
@@ -85,6 +80,8 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
+//agregamos listen nuestro
 
+// cierre listen nuestro
 
 module.exports = app;
