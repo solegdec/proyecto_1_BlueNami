@@ -84,8 +84,6 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-//agregamos listen nuestro
-app.listen(process.env.PORT||3030, function(){console.log("ok")})
-// cierre listen nuestro
+
 
 module.exports = app;
