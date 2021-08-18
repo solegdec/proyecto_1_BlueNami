@@ -59,8 +59,8 @@ app.use ("/adminAddProduct",adminAddProductRouter)
 app.use ("/adminModProduct",adminModProductRouter)
 //app.use administrador Usuario
 app.use("/adminUser",adminUserRouter)
-app.use("/adminAddUser",adminUserRouter)
-app.use("/adminModUser",adminUserRouter)
+app.use("/adminAddUser",adminAddUserRouter)
+app.use("/adminModUser",adminModUserRouter)
 
 
 
