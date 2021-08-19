@@ -6,8 +6,10 @@ var logger = require('morgan');
 var app = express();
 
 //heroku
-//app.listen(process.env.PORT||3030, function(){console.log("ok")})
+
 const port = process.env.PORT || 3030
+// Para que funcione nodemon, comentar  la linea 12- Para heroku sacar el comentario
+// app.listen(process.env.PORT||3030, function(){console.log("ok")})
 
 
 var usersRouter = require('./routes/users');
@@ -60,7 +62,8 @@ app.use ("/adminAddProduct",adminAddProductRouter)
 app.use ("/adminModProduct",adminModProductRouter)
 //app.use administrador Usuario
 app.use("/adminUser",adminUserRouter)
-
+app.use ("/adminAddUser",adminAddUserRouter)
+app.use ("/adminModUser",adminModUserRouter)
 // cierre app.use nuestros
 
 
