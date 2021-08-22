@@ -3,7 +3,7 @@ const path = require("path");
 
 function findAll(){
   //leer el json
-  let usersJson= fs.readFileSync(path.join(__dirname, "../data/users.json"))
+  let usersJson= fs.readFileSync(path.join(__dirname, "../../data/users.json"))
 
   //parsear la inform
   let data = JSON.parse(usersJson)
@@ -15,7 +15,7 @@ function writeJson(array){
   let arrayJson = JSON.stringify(array);
   
   //procesamos la inform en el Json
-  return fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayJson);
+  return fs.writeFileSync(path.join(__dirname, "../../data/users.json"), arrayJson);
 
 }
 

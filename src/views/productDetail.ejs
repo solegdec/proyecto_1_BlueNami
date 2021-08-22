@@ -21,8 +21,8 @@
                         </div>
                     </article>
                     <article class="desproductosgz">
-                        <h4>Tabla muy importante</h4>
-                        <h1>Tabla Super Fish</h1>
+                        <h4>Tabla</h4>
+                        <h1><%=tabla.name %></h1>
                         <div class="coloresgz">
                             <p>Colores</p>
                             <div class="color1gz">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="preciosgz">
-                            <p>$2500</p>
+                            <p><%= tabla.precio %></p>
                         </div>
                         <div class="botAgrCargz">
                             <a href="productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -41,35 +41,27 @@
 
                         <aside class="descripciongz">
                             <p>Tabla:</p><br>
-                            <li>El tamaño se mide en pies, desde 4.8" hasta 9".</li>
+                            <li><%=tabla.descripcion %></li>
 
                             <li>Las más grandes de ellas proporcionan un surf más pausado.</li>
 
                             <li>La velocidad de remo es mayor pero son menos manejables y dinámicas que las más pequeñas.</li>
                         </aside>
                     </article>
+                   <a href="/product/<%=tabla.id%>/edit"> <button>edit tabla</button></a>
                 </section>
-                <section>
-                    <aside class="descripcion2gz">
-                        <p>Tabla:</p><br>
-                        <li>El tamaño se mide en pies, desde 4.8" hasta 9".</li>
-
-                        <li>Las más grandes de ellas proporcionan un surf más pausado.</li>
-
-                        <li>La velocidad de remo es mayor pero son menos manejables y dinámicas que las más pequeñas.</li>
-                    </aside>
-                </section>
+                
                 <div class="divisiongz">
                     <p>Productos Relacionados</p>
                 </div>
                 <section class="productosRelacionadosgz">
                     <article class="tabla2gz">
                         <div class="imgTabla2gz">
-                            <a href="productDetail"><img src="/img/tabla2.png"></a>
+                            <a href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto%>"></a>
                         </div>
                         <div class="destablagz">
                             <div class="titProdRelgz">
-                                <h1>Tabla Super Fish</h1>
+                                <h1><%=tabla.name %></h1>
                                 </a>
                             </div>
                             <div class="coloresRelgz">
@@ -81,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="preciosRgz">
-                                <p>$2500</p>
+                                <p><%=tabla.precio%></p>
                             </div>
                             <div class="botAgrCargz">
                                 <a href="productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -91,11 +83,11 @@
                     </article>
                     <article class="tabla3gz">
                         <div class="imgTabla3gz">
-                            <a href="productDetail"><img src="/img/tabla3.png"></a>
+                            <a href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto%>"></a>
                         </div>
                         <div class="destablagz">
                             <div class="titProdRelgz">
-                                <h1>Tabla Super Fish</h1>
+                                <h1><%=tabla.name %></h1>
                             </div>
                             <div class="coloresRelgz">
                                 <div class="color1Rgz">
@@ -106,7 +98,7 @@
                                 </div>
                             </div>
                             <div class="preciosRgz">
-                                <p>$2500</p>
+                                <p><%=tabla.precio %></p>
                             </div>
                             <div class="botAgrCargz">
                                 <a href="productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -116,11 +108,11 @@
                     </article>
                     <article class="tabla4gz">
                         <div class="imgTabla4gz">
-                            <a href="productDetail"><img src="/img/tabla4.png"></a>
+                            <a href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto%>"></a>
                         </div>
                         <div class="destablagz">
                             <div class="titProdRelgz">
-                                <h1>Tabla Super Fish</h1>
+                                <h1><%=tabla.name %></h1>
                             </div>
                             <div class="coloresRelgz">
                                 <div class="color1Rgz">
@@ -131,7 +123,7 @@
                                 </div>
                             </div>
                             <div class="preciosRgz">
-                                <p>$2500</p>
+                                <p><%=tabla.precio %></p>
                             </div>
                             <div class="botAgrCargz">
                                 <a href="productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -142,7 +134,8 @@
                     </article>
                 </section>
             </div>
-
+            <a href="adminModProduct"><button>editar</button></a>
+            <a href="adminAddProduct"><button>agregar nuevo</button></a>
             <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>
 
             <%- include("./partials/footer") %>
