@@ -63,7 +63,7 @@ const adminController={
             return tabla.id !=req.params.id
         })
         writeJson(tablasNoBorradas);
-        res.redirect("product/list")
+        res.redirect("admin")
     },
     
 }

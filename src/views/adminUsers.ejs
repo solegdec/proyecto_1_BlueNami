@@ -30,9 +30,9 @@
         
                                         <td><%=user.id%></td>
                                         <td><%=user.nombreCompleto%></td>
-                                        <td><a href="/adminUser/detail/<%=user.id%>"></a></td>
-                                        <td><a href="/adminUser/edit/<%=user.id%>"></a></td>
-                                        <td><a href="/adminUser/delete/<%=user.id%>"></a></td>
+                                        <td><a href="/adminUser/detail/<%=user.id%>"><i class="fas fa-info-circle"></i></a></td>
+                                        <td><a href="/adminUser/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
+                                        <td><a href="/adminUser/delete/<%=user.id%>"><i class="far fa-trash-alt"></i></a></td>
                                     
                                     </tr>
                                     <% }) %>

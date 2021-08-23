@@ -20,20 +20,35 @@ function findAll(){
 const userController={
     list:(req,res)=>{
         let users=findAll();       
-        res.render("adminUser", {users})    
+        res.render("adminUsers", {users})    
     },
     detail: (req,res)=>{
         let users = findAll();
         let userEncontrado= users.find(function(user){
             return user.id==req.params.id
         })
-        res.render("adminUser",{user:userEncontrado})
+        res.render("adminUsers",{user:userEncontrado})
     },
     create: (req,res)=>{
-        res.render("adminAddProduct")
+        res.render("user-add-form")
     },
-    store: (req,res)=>{
-        res.render("adminAddProduct")
+    store: function(req, res){
+        //busco todos los autos
+        let users = findAll()
+    
+        //creo un nuevo auto
+        let nuevoUser = {
+          id: users.length + 1 ,
+          nombreCompleto: req.body.nombreCompleto ,
+          genero: req.body.genero,
+          email: req.body.email ,
+          
+        }
+        let usersActualizados = [...users, nuevoUser]
+        writeJson(usersActualizados);
+
+        //devuelvo una respuesta
+        res.redirect("/adminUsers/list");
     },
     edit: (req,res)=>{
         let users = findAll();
@@ -56,7 +71,7 @@ const userController={
             return user
         })
         writeJson(usersActualizados);
-        res.redirect("adminUser/:req.params.id")
+        res.redirect("adminUsers/:req.params.id")
     },
     destroy: (req,res)=>{
         let users = findAll();
@@ -64,7 +79,7 @@ const userController={
             return user.id !=req.params.id
         })
         writeJson(usersNoBorrados);
-        res.redirect("adminUser/list")
+        res.redirect("adminUsers/list")
     },
 }
 module.exports= userController;
