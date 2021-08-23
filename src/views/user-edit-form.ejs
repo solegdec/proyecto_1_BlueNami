@@ -9,23 +9,23 @@
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
-                            <form  class="tm-edit-product-form" action="/adminModUser" method="POST" enctype="multipart/form-data">
+                            <form  class="tm-edit-product-form" action="/adminUsers/<%= user.id %>/edit?:_method=PUT" method="POST" enctype="multipart/form-data">
                                 <div class="form-group mb-3">
                                     <label for="id">Id</label><br/>
-                                    <input id="id" name="id" type="number" class="campos_add" required />
+                                    <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"required />
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="nombreCompleto">Nombre Completo</label><br/>
-                                    <input id="nombreCompleto"  name ="nombreCompleto" type="text"class="campos_add" required >
+                                    <input id="nombreCompleto"  name ="nombreCompleto" type="text"class="campos_add" value="<%= user.nombreCompleto%>"required >
                                 </div>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="genero">Gener</label><br/>                          
-                                    <input id="genero" name="genero" type="text" class="campos_add" >
+                                    <input id="genero" name="genero" type="text" class="campos_add" value="<%= user.genero%>" >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="email" >E-Mail</label><br/>
-                                    <input id="email"name="email" type="email"class="campos_add" required />
+                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required />
                                 </div>
                                     <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>
