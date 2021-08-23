@@ -9,56 +9,6 @@
     margin: auto;
 }
 
-.productogz {
-    width: 100%;
-    flex-direction: column;
-}
-
-.imgproductogz {
-    width: 100%;
-    height: 80%;
-    flex-direction: column;
-}
-
-.imggrandegz img {
-    width: 90%;
-    height: 80%;
-}
-
-.imgcambiogz {
-    width: 90%;
-    height: 20%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.imgcambiogz img {
-    width: 20%;
-    height: 20%;
-    justify-content: space-around;
-    opacity: 0.3;
-}
-
-.desproductosgz {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.desproductosgz h4 {
-    font-family: "Numans";
-    font-size: 1em;
-    color: #7D7D7D;
-    padding: 10px;
-}
-
-.desproductosgz h1 {
-    font-family: "Lobster";
-    font-size: 1em;
-    color: #000000;
-    text-align: center;
-}
-
 .coloresgz {
     width: 60%;
     display: flex;
@@ -112,22 +62,9 @@
     padding: 5px 10px;
 }
 
-aside.descripciongz li {
-    padding: 0% 5%;
-    font-family: "Roboto";
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 2em;
-}
 
-aside.descripciongz p {
-    font-family: "Roboto";
-    font-weight: 800;
-}
 
-aside.descripciongz {
-    padding-top: 0px;
-}
+
 
 .descripcion2gz{
     width: 100%;
@@ -169,8 +106,7 @@ aside.descripciongz {
 
 .tabla2gz {
     width: 100%;
-        
-    justify-content:space-evenly;
+    justify-content: space-around;
 }
 
 .imgTabla2gz img {
@@ -178,25 +114,7 @@ aside.descripciongz {
     height: 20%;
 }
 
-.tabla3gz {
-    width: 100%;
-    align-items: center;
-}
 
-.imgTabla3gz img {
-    width: 100%;
-    height: 50%;
-}
-
-.tabla4gz {
-    width: 100%;
-    align-items: center;
-}
-
-.imgTabla4gz img {
-    width: 100%;
-    height: 50%;
-}
 
 .coloresRelgz {
     width: 100%;
@@ -252,11 +170,7 @@ aside.descripciongz {
 
 @media screen and (min-width: 576px) {
         /*CSS Gina*/
-        .productogz {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-        }
+        
         .productosRelacionadosgz {
             width: 100%;
             display: flex;
@@ -267,17 +181,12 @@ aside.descripciongz {
             display: flex;
             flex-direction: row;
         }
-        aside.descripciongz {
-            display: none;
-        }
+       
 
 }
 @media screen and (min-width: 768px) {
         /*MEdia Gina*/
-        aside.descripciongz {
-            display: block;
-    
-        } 
+       
         .descripcion2gz{
         display:none;         
         }
@@ -294,10 +203,7 @@ aside.descripciongz {
     }
     @media (min-width: 1200px) and (orientation: landscape) {
           /*MEdia Gina*/
-    aside.descripciongz {
-        display: block;
-        
-    }
+   
     .descripcion2gz{
         display:none; 
      

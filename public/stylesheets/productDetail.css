@@ -1,4 +1,5 @@
 /*Comienzo css Gina*/
+/*Prueba*/
 
 .contenedorgz {
     width: 80vw;
@@ -43,6 +44,7 @@
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    margin: 5% 0;
 }
 
 .desproductosgz h4 {
@@ -74,6 +76,7 @@
     font-size: 15px;
     color: #000000;
     margin-right: 10px;
+    margin-top: 5%;
 }
 
 .color1gz {
@@ -101,15 +104,15 @@
     font-size: 1em;
     border-radius: 10px;
     margin-left: 20%;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .preciosgz p {
     font-family: "roboto";
     font-size: 40px;
     text-align: center;
-    padding: 5px 10px;
+    padding: 20px 10px;
 }
 
 aside.descripciongz li {
@@ -171,7 +174,7 @@ aside.descripciongz {
     width: 200px;
     margin: auto;
     border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+ 
 }
 
 .imgTabla2gz img {
@@ -241,7 +244,7 @@ aside.descripciongz {
 }
 
 .destablagz {
-    width: 50%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -250,6 +253,7 @@ aside.descripciongz {
 .barra-bus {
     padding: 20px;
 }
+
 
 
 /* Comienzo Media */
