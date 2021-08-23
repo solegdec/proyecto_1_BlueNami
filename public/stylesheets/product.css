@@ -170,7 +170,7 @@ aside.descripciongz {
 .tabla2gz {
     width: 100%;
         
-    justify-content: space-around;
+    justify-content:space-evenly;
 }
 
 .imgTabla2gz img {
