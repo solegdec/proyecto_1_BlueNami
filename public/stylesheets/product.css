@@ -54,7 +54,7 @@
 
 .desproductosgz h1 {
     font-family: "Lobster";
-    font-size: 3em;
+    font-size: 1em;
     color: #000000;
     text-align: center;
 }
@@ -95,7 +95,7 @@
 }
 
 .botongz {
-    width: 60%;
+    width: 100%;
     background-color: #E9B843;
     font-family: "roboto";
     font-size: 1em;
@@ -107,7 +107,7 @@
 
 .preciosgz p {
     font-family: "roboto";
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     padding: 5px 10px;
 }
@@ -152,7 +152,7 @@ aside.descripciongz {
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
+    
     padding: 20px;
 }
 
@@ -166,9 +166,10 @@ aside.descripciongz {
     flex-direction: column;
 }
 
+
 .tabla2gz {
     width: 100%;
-   
+        
     justify-content: space-around;
 }
 
@@ -226,14 +227,14 @@ aside.descripciongz {
 .titProdRelgz h1 {
     margin: auto;
     font-family: "Lobster";
-    font-size: 30px;
+    font-size: 20px;
     color: #000000;
     text-align: center;
 }
 
 .preciosRgz p {
     font-family: "roboto";
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
