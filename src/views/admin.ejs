@@ -18,6 +18,10 @@
                             <th scope="col">&nbsp;</th>
                             <th scope="col">Id</th>
                             <th scope="col">Tabla</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Unidades</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Borrar</th>
@@ -33,9 +37,13 @@
 
                                 <td><%=tabla.id%></td>
                                 <td><%=tabla.name%></td>
-                                <td><a href="/product/detail/<%=tabla.id%>"><i class="fas fa-info-circle"></a></td>
+                                <td><%=tabla.modelo%></td>
+                                <td><%=tabla.precio%></td>
+                                <td><%=tabla.color%></td>
+                                <td><%=tabla.unidades%></td>
+                                <td><a href="/product/<%=tabla.id%>"><i class="fas fa-info-circle"></a></td>
                                 <td><a href="/product/<%=tabla.id%>/edit"><i class="far fa-edit"></a></td>
-                                <td><a href="/product/delete/<%=tabla.id%>"><i class="far fa-trash-alt"></a></td>
+                                <td><a href="/product/<%=tabla.id%>/delete"><i class="far fa-trash-alt"></a></td>
                             
                             </tr> 
                             </form>      
