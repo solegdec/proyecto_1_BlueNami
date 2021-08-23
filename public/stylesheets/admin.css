@@ -47,7 +47,10 @@ button.selAdmin{
 
 
 }
-
+td{
+    text-align: center;
+    margin-top: 10px;
+}
 td img{
     display: block;
     margin-left: auto;

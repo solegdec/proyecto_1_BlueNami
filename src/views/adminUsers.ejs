@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<%- include("./partials/head") %>
+
+    <body>
+        <%- include("./partials/headerAdmin") %>
+        
+            <div>
+                <h2 class="h2admin">Administrador de Usuarios</h2>
+            </div>
+            <div class="tm-product-table-container">
+                <table class="table table-hover tm-table-small tm-product-table">
+                    <div>
+                        <div>
+                            <table class="tablaAdmin">
+                                <thead>
+                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre Completo </th>
+                                    <th scope="col">Ver</th>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">Borrar</th>
+                                                               
+                                    <th scope="col">&nbsp;</th>
+                                </thead>
+                            <tbody>
+                                <% users.forEach(function(user){ %>
+                                    <tr>
+                                        <th scope="row"> <input type="checkbox"> </th>
+        
+                                        <td><%=user.id%></td>
+                                        <td><%=user.nombreCompleto%></td>
+                                        <td><a href="/adminUser/detail/<%=user.id%>"></a></td>
+                                        <td><a href="/adminUser/edit/<%=user.id%>"></a></td>
+                                        <td><a href="/adminUser/delete/<%=user.id%>"></a></td>
+                                    
+                                    </tr>
+                                    <% }) %>
+                                    
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </table>
+            </div>
+            
+
+            <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
+            <%- include("./partials/footer") %>
+    </body>
+
+</html>
