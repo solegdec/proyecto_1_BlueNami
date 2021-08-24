@@ -29,10 +29,24 @@ const adminController={
         res.render("productDetail",{tabla:tablaEncontrada})
     },
     create: (req,res)=>{
-        res.render("adminAddProduct")
+
+        res.render("product-add-form")
     },
     store: (req,res)=>{
-        res.render("adminAddProduct")
+        let tablas = findAll();
+        let nuevaTabla={
+            id:tablas.length+1,
+            name:req.body.name,
+            modelo:req.body.modelo,
+            precio:req.body.precio,
+            descripcion:req.body.descripcion,
+            color:req.body.color,
+            //foto:req.body.foto
+        }
+        let tablasActualizadas=[...tablas,nuevaTabla]
+        writeJson(tablasActualizadas);
+
+        res.redirect("/admin/list")
     },
     edit: (req,res)=>{
         let tablas = findAll();
@@ -50,7 +64,7 @@ const adminController={
                 tabla.precio=req.body.precio
                 tabla.descripcion=req.body.descripcion
                 tabla.color=req.body.color
-                tabla.foto=req.body.foto
+               // tabla.foto=req.body.foto
             }
             return tabla
         })

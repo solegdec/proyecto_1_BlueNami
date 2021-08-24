@@ -36,7 +36,9 @@ app.use("/login",loginRouter)
 app.use("/register",registerRouter)
 app.use("/product",productRouter)
 app.use("/product-edit-form",productRouter)
+app.use("/product-add-form",adminRouter)
 app.use("/adminUser",userRouter)
+app.use("/user-add-form",adminRouter)
 app.use("/admin",adminRouter)
 
 

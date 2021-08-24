@@ -30,10 +30,24 @@ const productController={
         res.render("productDetail",{tabla:tablaEncontrada})
     },
     create: (req,res)=>{
-        res.render("adminAddProduct")
+
+        res.render("product-add-form")
     },
     store: (req,res)=>{
-        res.render("adminAddProduct")
+        let tablas = findAll();
+        let nuevaTabla={
+            id:tablas.length+1,
+            name:req.body.name,
+            modelo:req.body.modelo,
+            precio:req.body.precio,
+            descripcion:req.body.descripcion,
+            color:req.body.color,
+            foto:req.body.foto
+        }
+        let tablasActualizadas=[...tablas,nuevaTabla]
+        writeJson(tablasActualizadas);
+
+        res.redirect("/product/list")
     },
     edit: (req,res)=>{
         let tablas = findAll();
