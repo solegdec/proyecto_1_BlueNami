@@ -35,11 +35,17 @@ app.use("/productCart",productCartRouter)
 app.use("/login",loginRouter)
 app.use("/register",registerRouter)
 app.use("/product",productRouter)
+//administrador productos
+app.use("/admin",adminRouter)
+//administrador usuarios
+app.use("/adminUser",userRouter)
+//formularios edit y add product
 app.use("/product-edit-form",productRouter)
 app.use("/product-add-form",adminRouter)
-app.use("/adminUser",userRouter)
-app.use("/user-add-form",adminRouter)
-app.use("/admin",adminRouter)
+//formularios edit y add user
+app.use("/user-add-form",userRouter)
+app.use ("/user-edit-form", userRouter)
+
 
 
 // cierre app.use nuestros

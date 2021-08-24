@@ -10,6 +10,7 @@
                     <div class="add-bloque">
                         <div class="add-formulario">
                             <form  class="tm-edit-product-form" action="/product/<%= tabla.id %>/edit?:_method=PUT" method="POST" enctype="multipart/form-data">
+                                
                                 <div class="form-group mb-3">
                                     <label for="id">Id</label><br/>
                                     <input id="id" name="id" type="text" class="campos_add" value="<%= tabla.id%> "required />
@@ -56,10 +57,11 @@
                         </div>
                     </div>
                </div> 
-               <form action="/product/delete/<%=tabla.id %>?_method=DELETE" method="POST">
+               <form action="/product/<%=tabla.id %>/delete?_method=DELETE" method="POST">
                 <button type="submit">
                   Borrar
                 </button>
+            </form>
               </form>
           
         </div>     

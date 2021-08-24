@@ -11,8 +11,9 @@ router.get("/", userController.list);
 router.get("/:id", userController.detail);
 
 //create 
-router.get("/adminUser/create", userController.create);
-router.post("/adminUser", userController.store);
+
+router.get("/adminUser/create", userController.create)
+router.post("/create", userController.store);
 
 //edit
 router.get("/:id/edit", userController.edit);

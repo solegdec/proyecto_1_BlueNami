@@ -19,7 +19,7 @@ router.get("/:id/edit", productController.edit);
 router.put("/:id/edit", productController.update);
 
 // delete
-router.delete("/delete/:id", productController.destroy);
+router.delete("/:id/delete", productController.destroy);
 
 
 module.exports = router;
