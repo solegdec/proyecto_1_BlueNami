@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <%- include("./partials/head") %>
 
-    <body class= "bodyAdminAdd">   
-        <%- include("./partials/headerAdmin") %>    
-        <div id="card">
-            <div class="add-titulo">
-                <h2 class="add-titulo-2">Agregar Producto</h2>
-                 </div>
-                    <div class="add-bloque">
-                        <div class="add-formulario">
-                            <form  class="tm-edit-product-form" action="/admin/create" method="POST" >
-                                <div class="form-group mb-3">
-                                    <label for="id">Id</label><br/>
-                                    <input id="id" name="id" type="text" class="campos_add" required />
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="name">Tabla</label><br/>
-                                    <input id="name"  name ="name" type="text"class="campos_add" required >
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="modelo">Modelo</label><br/>
-                                    <input id="modelo" class="campos_cat" type="text" name="modelo" required>
-                                    
-                                </div>
-                                <div class="row">
+    <body class="bodyAdminAdd">
+        <%- include("./partials/headerAdmin") %>
+            <div id="card">
+                <div class="add-titulo">
+                    <h2 class="add-titulo-2">Agregar Producto</h2>
+                </div>
+                <div class="add-bloque">
+                    <div class="add-formulario">
+                        <form class="tm-edit-product-form" action="/admin/create" method="POST">
+                            <div class="form-group mb-3">
+                                <label for="id">Id</label><br/>
+                                <input id="id" name="id" type="text" class="campos_add" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="name">Tabla</label><br/>
+                                <input id="name" name="name" type="text" class="campos_add" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="modelo">Modelo</label><br/>
+                                <select id="modelo" class="campos_cat" name="modelo" required>
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">KAILANI</option>
+                                        <option value="2">MALIA</option>
+                                        <option value="3">MALU </option>
+                                        <option value="4">INOA</option>
+                                        <option value="5">HINO</option>
+                                        <option value="6">MAELI</option>
+                                        <option value="7">KOA</option>
+                                        <option value="8">LANI</option>
+                                        <option value="9"> KALEA</option>
+                                        <option value="10">MAKANI</option>
+                                        </select>
+                            </div>
+                            <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="precio">Precio</label><br/>                          
-                                    <input id="precio" name="precio" type="text" class="campos_add" >
+                                    <label for="precio">Precio</label><br/>
+                                    <input id="precio" name="precio" type="text" class="campos_add">
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="color" >Color</label><br/>
-                                    <input id="color"name="color" type="text"class="campos_add" required />
+                                    <label for="color">Color</label><br/>
+                                    <input id="color" name="color" type="text" class="campos_add" required />
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion">Descripción</label><br/>
-                                    <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text"required></textarea>
+                                    <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" required></textarea>
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="unidades" >Unidades</label><br/>
-                                    <input id="unidades"name="unidades" type="number"class="campos_add" required />
+                                    <label for="unidades">Unidades</label><br/>
+                                    <input id="unidades" name="unidades" type="number" class="campos_add" required />
                                 </div> <br>
-                            <!--<div class="add-subirImagen">
+                                <!--<div class="add-subirImagen">
                                     <div class="add-imagen">
                                     <img src="img/empty-img.png" alt="surfboard" width="100" height="100" onclick="document.getElementById('fileInput').click();">
                                     </div>
@@ -50,14 +61,14 @@
                                     </div> 
                                 </div>-->
                                 <button type="submit" class="button_add">Agregar Producto</button>
-                            </form>
+                        </form>
                         </div>
                     </div>
-               </div> 
-          
-        </div>     
-        <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>       
-        <%- include("./partials/footer") %>               
-  </body>      
+                </div>
 
-</html>       
+            </div>
+            <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>
+            <%- include("./partials/footer") %>
+    </body>
+
+    </html>

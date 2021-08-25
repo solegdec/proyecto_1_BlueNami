@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-button.volverAdmin{
-        margin-left: 200px;
 
-    
+button.volverAdmin {
+    margin-left: 200px;
 }
+
 #card {
     margin: 3em auto;
     display: flex;
@@ -33,7 +33,6 @@ textarea {
 .campos_cat {
     width: 50%;
     height: 20px;
-    padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -71,7 +70,8 @@ textarea {
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px;
 }
-.button_add{
+
+.button_add {
     width: 150px;
     height: 30%;
     border-radius: 20px;
@@ -81,5 +81,5 @@ textarea {
     border-color: rgb(95, 99, 99);
     background-color: #E9B843;
     padding: 15px 10px 20px 10px;
-    margin:15px 10px 15px 10px;
+    margin: 15px 10px 15px 10px;
 }
