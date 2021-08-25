@@ -170,14 +170,6 @@ aside.descripciongz {
     flex-direction: column;
 }
 
-.tabla2gz {
-    justify-content: space-around;
-    display: inline-block;
-    width: 400px;
-    margin: auto;
-    border-radius: 6px;
-}
-
 .imgTabla2gz img {
     width: 100%;
     display: block;

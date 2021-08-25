@@ -9,7 +9,6 @@
     margin: auto;
 }
 
-
 .botongz1 {
     width: 60%;
     background-color: #E9B843;
@@ -24,10 +23,13 @@
 
 /* Comienzo segundo contenedor Gina*/
 
-
-.tabla2gz {
-    width: 100%;
+.tabla_lista {
+    box-shadow: inset 0 -3em 3em rgb(1 162 209 / 31%), 0 0 0 2px rgb(255 255 255), 0.3em 0.3em 1em rgb(0 0 0 / 30%);
     justify-content: space-around;
+    display: inline-block;
+    width: 300px;
+    margin: auto;
+    border-radius: 6px;
 }
 
 .imgTabla2gz img {
@@ -85,18 +87,18 @@
 .barra-bus {
     padding: 20px;
 }
+
+
 /* Comienzo Media */
 
 @media screen and (min-width: 576px) {
-        /*CSS Gina*/
-
+    /*CSS Gina*/
 }
+
 @media screen and (min-width: 768px) {
-        /*MEdia Gina*/
-       
-    }
-    @media (min-width: 1200px) and (orientation: landscape) {
-          /*MEdia Gina*/
+    /*MEdia Gina*/
+}
 
-
+@media (min-width: 1200px) and (orientation: landscape) {
+    /*MEdia Gina*/
 }
