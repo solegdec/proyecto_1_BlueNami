@@ -17,18 +17,18 @@ function findAll(){
     return fs.writeFileSync(path.join(__dirname, "../data/users.json", arrayJson))
   }
 
-const userController={
+  const userController={
     list:(req,res)=>{
         let users=findAll();       
         res.render("adminUsers", {users})    
     },
-    detail: (req,res)=>{
+    /*detail: (req,res)=>{
         let users = findAll();
         let userEncontrado= users.find(function(user){
             return user.id==req.params.id
         })
         res.render("adminUsers",{user:userEncontrado})
-    },
+    },*/
     create: (req,res)=>{
         res.render("user-add-form")
     },
@@ -62,16 +62,14 @@ const userController={
         let usersActualizados= users.map(function(user){
             if (user.id == req.params.id){
                 user.name=req.body.name
-                //tabla.modelo=req.body.modelo
-                //tabla.precio=req.body.precio
                 user.genero=req.body.genero
                 user.email=req.body.email
-               //user.foto=req.body.foto
+               
             }
             return user
         })
         writeJson(usersActualizados);
-        res.redirect("adminUsers/:req.params.id")
+        res.redirect("/adminUsers/"+ req.params.id)
     },
     destroy: (req,res)=>{
         let users = findAll();

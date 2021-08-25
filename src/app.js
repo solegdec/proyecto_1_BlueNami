@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
-//const methodOverride=require("method-override")
+const methodOverride=require("method-override")
 
 //heroku
 const port = process.env.PORT || 3030
@@ -15,6 +15,7 @@ const port = process.env.PORT || 3030
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use (methodOverride("_method"))
 //rutas nuestras
 const productCartRouter = require("./routes/productCartRouter.js")
 const registerRouter = require("./routes/registerRouter.js")
@@ -40,11 +41,11 @@ app.use("/admin",adminRouter)
 //administrador usuarios
 app.use("/adminUser",userRouter)
 //formularios edit y add product
-app.use("/product-edit-form",productRouter)
-app.use("/product-add-form",adminRouter)
+//app.use("/product-edit-form",adminRouter)
+//app.use("/product-add-form",adminRouter)
 //formularios edit y add user
 app.use("/user-add-form",userRouter)
-app.use ("/user-edit-form", userRouter)
+app.use ("/user-edit-form",userRouter)
 
 
 
@@ -56,7 +57,7 @@ app.use(cookieParser());
  //app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('./public'));
 app.use("/styles", express.static(__dirname + "/styles"));
-//app.use (methodOverride("_method"))
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));

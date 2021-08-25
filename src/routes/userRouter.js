@@ -8,11 +8,10 @@ const userController= require ("../controllers/userController.js")
 router.get("/", userController.list);
 
 //detail
-router.get("/:id", userController.detail);
+//router.get("/:id", userController.detail);
 
 //create 
-
-router.get("/adminUser/create", userController.create)
+router.get("/create", userController.create);
 router.post("/create", userController.store);
 
 //edit
@@ -20,7 +19,6 @@ router.get("/:id/edit", userController.edit);
 router.put("/:id/edit", userController.update);
 
 // delete
-router.delete("/delete/:id", userController.destroy);
-
+router.delete("/destroy/:id", userController.destroy)
 
 module.exports = router;

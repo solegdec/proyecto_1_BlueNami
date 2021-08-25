@@ -9,7 +9,7 @@ router.get ("/", adminController.list);
 
 
 //detail
-//router.get("/:id", adminController.detail);
+router.get("/:id", adminController.detail);
 
 //create 
 router.get("/create", adminController.create);
@@ -20,8 +20,5 @@ router.get("/:id/edit", adminController.edit);
 router.put("/:id/edit", adminController.update);
 
 // delete
-router.delete("/delete/:id", adminController.destroy);
-
-
-
+router.delete("/destroy/:id", adminController.destroy);
 module.exports = router;

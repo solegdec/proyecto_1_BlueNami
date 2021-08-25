@@ -17,7 +17,7 @@ function findAll(){
     return fs.writeFileSync(path.join(__dirname, "../data/tablas.json", arrayJson))
   }
 
-const productController={
+  const productController={
     list:(req,res)=>{
         let tablas=findAll();       
         res.render("product", {tablas})    
@@ -30,24 +30,24 @@ const productController={
         res.render("productDetail",{tabla:tablaEncontrada})
     },
     create: (req,res)=>{
-            
+
         res.render("product-add-form")
     },
     store: (req,res)=>{
         let tablas = findAll();
         let nuevaTabla={
-            id:tablas.length +1,
+            id:tablas.length+1,
             name:req.body.name,
             modelo:req.body.modelo,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            color:req.body.color
-            //foto:req.body.foto
+            color:req.body.color,
+            foto:req.body.foto
         }
         let tablasActualizadas=[...tablas,nuevaTabla]
         writeJson(tablasActualizadas);
 
-        return res.send("nueva tabla!")
+        res.redirect("/product/list")
     },
     edit: (req,res)=>{
         let tablas = findAll();
@@ -70,7 +70,7 @@ const productController={
             return tabla
         })
         writeJson(tablasActualizadas);
-        res.redirect("product/req.params.id")
+        res.redirect("product/:req.params.id")
     },
     destroy: (req,res)=>{
         let tablas = findAll();

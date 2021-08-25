@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html>
 <%- include("./partials/head") %>
-
     <body>
         <%- include("./partials/headerAdmin") %>
-        
             <div>
                 <h2 class="h2admin">Administrador de Usuarios</h2>
             </div>
+            <article class="h2admin">
+                <a href="/user-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
+              </article>
             <div class="tm-product-table-container">
-                <table class="table table-hover tm-table-small tm-product-table">
-                    <div>
-                        <div>
-                            <table class="tablaAdmin">
-                                <thead>
-                                    <th scope="col">&nbsp;</th>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Nombre Completo </th>
-                                    <th scope="col">Género</th>
-                                    <th scope="col">E-mail</th>
-                                    <th scope="col">Editar</th>
-                                    <th scope="col">Borrar</th>
-                                                               
-                                    <th scope="col">&nbsp;</th>
-                                </thead>
-                            <tbody>
-                                <% users.forEach(function(user){ %>
-                                    <tr>
-                                        <th scope="row"> <input type="checkbox"> </th>
-        
-                                        <td><%=user.id%></td>
-                                        <td><%=user.nombreCompleto%></td>
-                                        <td><%=user.genero%></td>
-                                        <td><%=user.email%></td>
-                                        <td><a href="/adminUsers/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
-                                        <td><a href="/adminUsers/<%=user.id%>/delete"><i class="far fa-trash-alt"></i></a></td>
-                                    
-                                    </tr>
-                                    <% }) %>
-                                    
-                            </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </table>
-            </div>
-            
-
-            <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
+                <table class="tablaAdmin">
+                    <thead>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">Id</th>           
+                        <th scope="col">Nombre Completo </th>
+                        <th scope="col">Género</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Borrar</th>  
+                        <th scope="col">&nbsp;</th>            
+                    </thead>
+                    <tbody>           
+                    <%users.forEach(function(user){ %>
+                        <tr>
+                         <th scope="row"> <input type="checkbox"> </th>
+                        <td><%=user.id%></td>
+                        <td><%=user.nombreCompleto%></td>
+                        <td><%=user.genero%></td>
+                        <td><%=user.email%></td>
+                        <td><a href="/adminUser/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
+                        <td><a href="/adminUser/<%=user.id%>/delete"><i class="far fa-trash-alt"></i></a></td>            
+                        </tr>
+                     <% }) %>               
+                    </tbody>                
+                </table>            
+               </div>
+              <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
             <%- include("./partials/footer") %>
     </body>
 
