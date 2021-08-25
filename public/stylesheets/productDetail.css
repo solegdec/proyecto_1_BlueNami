@@ -1,4 +1,6 @@
 /*Comienzo css Gina*/
+
+
 /*Prueba*/
 
 .contenedorgz {
@@ -174,13 +176,12 @@ aside.descripciongz {
     width: 200px;
     margin: auto;
     border-radius: 6px;
- 
 }
 
 .imgTabla2gz img {
-    width: 100px;
-    height: 100px;
-    align-items: center;
+    width: 100%;
+    display: block;
+    margin: auto;
 }
 
 .tabla3gz {
@@ -253,7 +254,6 @@ aside.descripciongz {
 .barra-bus {
     padding: 20px;
 }
-
 
 
 /* Comienzo Media */
