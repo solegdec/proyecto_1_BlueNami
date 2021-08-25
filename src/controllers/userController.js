@@ -3,7 +3,7 @@ const path = require("path");
 
 function findAll(){
     //leer el json
-    let usersJson= fs.readFileSync(path.join(__dirname, "../data/users.json"))
+    let usersJson = fs.readFileSync(path.join(__dirname, "../data/users.json"))
   
     //parsear la inform
     let data = JSON.parse(usersJson)
@@ -14,7 +14,7 @@ function findAll(){
     //leer el json
 
     let arrayJson= JSON.stringify(array);
-    return fs.writeFileSync(path.join(__dirname, "../data/users.json", arrayJson))
+    return fs.writeFileSync(path.join(__dirname, "../data/users.json",arrayJson))
   }
 
   const userController={
@@ -33,10 +33,10 @@ function findAll(){
         res.render("user-add-form")
     },
     store: function(req, res){
-        //busco todos los autos
+        
         let users = findAll()
     
-        //creo un nuevo auto
+        
         let nuevoUser = {
           id: users.length + 1 ,
           nombreCompleto: req.body.nombreCompleto ,
