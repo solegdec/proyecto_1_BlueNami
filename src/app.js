@@ -15,8 +15,19 @@ const port = process.env.PORT || 3030
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+// app use
 app.use (methodOverride("_method"))
-//rutas nuestras
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+ //app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('./public'));
+app.use("/styles", express.static(__dirname + "/styles"));
+
+
+//const nuestras
 const productCartRouter = require("./routes/productCartRouter.js")
 const registerRouter = require("./routes/registerRouter.js")
 const loginRouter = require("./routes/loginRouter.js")
@@ -25,18 +36,13 @@ const productRouter = require("./routes/productRouter.js")
 
 const userRouter = require("./routes/userRouter.js")
 const adminRouter = require ("./routes/adminRouter.js")
-
  
-// fin rutas nuestras
+// fin const nuestras
 
-app.use(methodOverride("_method"))
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
- //app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('./public'));
-app.use("/styles", express.static(__dirname + "/styles"));
+
+
+
+
 
 // app.use nuestros
 app.use(indexRouter)
@@ -57,7 +63,12 @@ app.use ("/user-edit-form",userRouter)
 
 
 
+
 // cierre app.use nuestros
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

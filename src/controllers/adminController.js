@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+
 function findAll(){
    let tablasJson= fs.readFileSync(path.join(__dirname, "../data/tablas.json"))
     let data = JSON.parse(tablasJson)
@@ -75,7 +76,7 @@ function writeJson(array){
                 return tabla.id !=req.params.id
             })
             writeJson(tablasNoBorradas);
-            res.redirect("admin")
+            res.redirect("/admin")
         },
         
         

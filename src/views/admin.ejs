@@ -14,14 +14,13 @@
                         <thead class="thead">
                             <th scope="col">&nbsp;</th>
                             <th scope="col">Id</th>
-                            <th scope="col">Tabla</th>
+                            <th scope="col">Nombre</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Color</th>
                             <th scope="col">Unidades</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
-                            <th scope="col">Borrar</th>
                             <th scope="col">&nbsp;</th>
                         </thead>
                         <tbody>
@@ -37,9 +36,16 @@
                             <td><%=tabla.unidades%></td>
                             <td><a href="/admin/<%=tabla.id%>"><i class="fas fa-info-circle"></a></td>
                             <td><a href="/admin/<%=tabla.id%>/edit"><i class="far fa-edit"></a></td>
-                            <td><a href="/admin/<%=tabla.id%>/delete"><i class="far fa-trash-alt"></a></td>
+                            <td></td>
+
                             </tr> 
-                            </form>      
+                            </form>    
+                            
+                            <form action="/admin/destroy/<%=tabla.id%>?_method=DELETE"  method="POST" >
+                                 <button type="submit"> Borrar <i class="far fa-trash-alt"> </button> 
+                            </form>
+
+
                             <% }) %>
                         </tbody>
                     </table>
