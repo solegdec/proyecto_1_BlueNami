@@ -68,7 +68,7 @@ function writeJson(array){
                 return tabla
             })
             writeJson(tablasActualizadas);
-            res.redirect("/product/"+req.params.id)
+            res.redirect("/admin")
         },
         destroy: (req,res)=>{
             let tablas = findAll();

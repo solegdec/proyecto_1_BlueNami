@@ -22,7 +22,7 @@
                             <div class="form-group mb-3">
                                 <label for="modelo">Modelo</label><br/>
                                 <select id="modelo" class="campos_cat" name="modelo" value="<%= tabla.modelo%>" required>
-                                        <option>Seleccionar</option>
+                                        
                                         <option value="<%= tabla.modelo%>">KAILANI</option>
                                         <option value="<%= tabla.modelo%>">MALIA</option>
                                         <option value="<%= tabla.modelo%>">MALU </option>
@@ -50,22 +50,21 @@
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="unidades">Unidades</label><br/>
-                                    <input id="unidades" name="unidades" type="number" class="campos_add" value="<%= tabla.unidades%>" required />
+                                    <input id="unidades" name="unidades" type="text" class="campos_add" value="<%= tabla.unidades%>" required />
                                 </div> <br>
 
 
                                 <button type="submit" class="button_add">Confirmar Cambios</button>
                         </form>
-                        </form>
+                        
                         </div>
                     </div>
                 </div>
-                <form action="/product/<%=tabla.id %>/delete?_method=DELETE" method="POST">
-                    <button type="submit">
-                  Borrar
-                </button>
+
+                <form action="/admin/destroy/<%=tabla.id %>/?_method=DELETE" method="POST">
+                    <button type="submit">Borrar Producto</button>
                 </form>
-                </form>
+                
 
             </div>
             <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>

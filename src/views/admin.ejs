@@ -6,9 +6,7 @@
         <div>
             <h2 class="h2admin">Administrador de Productos</h2>
         </div>
-          <article class="h2admin">
-            <a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
-          </article>
+          
                <div class="tablaAdmin">
                     <table class="tablaAdmin">
                         <thead class="thead">
@@ -25,7 +23,7 @@
                         </thead>
                         <tbody>
                             <% tablas.forEach(function(tabla){ %>
-                            <form  class="tm-edit-product-form" action="" method="POST" >
+                        <form  class="tm-edit-product-form" action="" method="POST" >
                             <tr>
                             <th scope="row"> <input type="checkbox"> </th>
                             <td><%=tabla.id%></td>
@@ -34,21 +32,17 @@
                             <td><%=tabla.precio%></td>
                             <td><%=tabla.color%></td>
                             <td><%=tabla.unidades%></td>
-                            <td><a href="/admin/<%=tabla.id%>"><i class="fas fa-info-circle"></a></td>
+                        </form> 
+                            <td><a href="/product/<%=tabla.id%>"><i class="fas fa-info-circle"></a></td>
                             <td><a href="/admin/<%=tabla.id%>/edit"><i class="far fa-edit"></a></td>
-                            <td></td>
-
                             </tr> 
-                            </form>    
-                            
-                            <form action="/admin/destroy/<%=tabla.id%>?_method=DELETE"  method="POST" >
-                                 <button type="submit"> Borrar <i class="far fa-trash-alt"> </button> 
-                            </form>
-
-
-                            <% }) %>
+                         <% }) %>       
+         
                         </tbody>
                     </table>
+                    <article class="h2admin">
+                        <a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a>
+                      </article>
                 </div>
               <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
             <%- include("./partials/footer") %>
