@@ -12,7 +12,7 @@
                             <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" >
                                 <div class="form-group mb-3">
                                     <label for="id">Id</label><br/>
-                                    <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"required />
+                                    <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"  readonly>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="nombreCompleto">Nombre Completo</label><br/>
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="email" >E-Mail</label><br/>
-                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required />
+                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required >
                                 </div>
                                 
                                     <button type="submit" class="button_add">Confirmar Cambios</button>

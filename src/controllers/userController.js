@@ -30,8 +30,9 @@ function findAll(){
     },
     store: function(req, res){
         let users = findAll()
+        let userId = users.length === 0 ? 1 :  users[users.length-1].id + 1
         let nuevoUser = {
-          id: users.length + 1 ,
+          id: userId ,
           nombreCompleto: req.body.nombreCompleto ,
           genero: req.body.genero,
           email: req.body.email ,

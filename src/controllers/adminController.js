@@ -31,8 +31,9 @@ function writeJson(array){
         },
         store: (req,res)=>{
             let tablas = findAll();
+            let tablaId = tablas.length === 0 ? 1 :  tablas[tablas.length-1].id + 1
             let nuevaTabla={
-                id:tablas.length+1,
+                id:tablaId,
                 name:req.body.name,
                 modelo:req.body.modelo,
                 precio:req.body.precio,
