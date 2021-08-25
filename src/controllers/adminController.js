@@ -58,8 +58,10 @@ function writeJson(array){
                     tabla.name=req.body.name
                     tabla.modelo=req.body.modelo
                     tabla.precio=req.body.precio
-                    tabla.descripcion=req.body.descripcion
                     tabla.color=req.body.color
+                    tabla.descripcion=req.body.descripcion
+                    tabla.unidades=req.body.unidades
+                   
                    // tabla.foto=req.body.foto
                 }
                 return tabla
