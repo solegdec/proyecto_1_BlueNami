@@ -9,99 +9,20 @@
     margin: auto;
 }
 
-.coloresgz {
+
+.botongz1 {
     width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    margin-left: 15%;
-}
-
-.coloresgz p {
-    font-family: "Nova Cut";
-    font-size: 15px;
-    color: #000000;
-    margin-right: 10px;
-}
-
-.color1gz {
-    width: 30px;
-    height: 30px;
-    background: #FEC36A;
-}
-
-.color2gz {
-    width: 30px;
-    height: 30px;
-    background: #FE398C;
-}
-
-.color3gz {
-    width: 30px;
-    height: 30px;
-    background: #7CDEDE;
-}
-
-.botongz {
-    width: 100%;
     background-color: #E9B843;
     font-family: "roboto";
     font-size: 1em;
     border-radius: 10px;
     margin-left: 20%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.preciosgz p {
-    font-family: "roboto";
-    font-size: 20px;
-    text-align: center;
-    padding: 5px 10px;
-}
-
-
-
-
-
-.descripcion2gz{
-    width: 100%;
-    padding: 0% 5%;
-    font-family: "Roboto";
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.2em;
-
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 
 /* Comienzo segundo contenedor Gina*/
-
-.divisiongz {
-    width: 100%;
-    height: 10%;
-}
-
-.divisiongz p {
-    font-family: "roboto";
-    font-size: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    
-    padding: 20px;
-}
-
-.productosRelacionadosgz {
-    width: 100%;
-    flex-direction: column;
-}
-
-.productosgz {
-    width: 100%;
-    flex-direction: column;
-}
 
 
 .tabla2gz {
@@ -113,8 +34,6 @@
     width: 20%;
     height: 20%;
 }
-
-
 
 .coloresRelgz {
     width: 100%;
@@ -170,48 +89,14 @@
 
 @media screen and (min-width: 576px) {
         /*CSS Gina*/
-        
-        .productosRelacionadosgz {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-        }
-        .productosgz {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-        }
-       
 
 }
 @media screen and (min-width: 768px) {
         /*MEdia Gina*/
        
-        .descripcion2gz{
-        display:none;         
-        }
-        .productosgz {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-        }
-       .contenedor4tablasgz{
-        width: 100%;
-        flex-direction: row;
-    }
-    
     }
     @media (min-width: 1200px) and (orientation: landscape) {
           /*MEdia Gina*/
-   
-    .descripcion2gz{
-        display:none; 
-     
-     }
-     .contenedor4tablasgz{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
+
 
 }
