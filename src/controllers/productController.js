@@ -17,7 +17,7 @@ function findAll(){
     return fs.writeFileSync(path.join(__dirname, "../data/tablas.json", arrayJson))
   }
 
-  const productController={
+const productController={
     list:(req,res)=>{
         let tablas=findAll();       
         res.render("product", {tablas})    
@@ -80,5 +80,6 @@ function findAll(){
         writeJson(tablasNoBorradas);
         res.redirect("product/list")
     },
+    
 }
-module.exports= productController;
+module.exports = productController;

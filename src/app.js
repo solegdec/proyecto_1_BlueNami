@@ -9,7 +9,7 @@ const methodOverride=require("method-override")
 //heroku
 const port = process.env.PORT || 3030
 // Para que funcione nodemon, comentar  la linea 12- Para heroku sacar el comentario
-// app.listen(process.env.PORT||3030, function(){console.log("ok")})
+ app.listen(process.env.PORT||3030, function(){console.log("ok")})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
