@@ -10,7 +10,7 @@ function findAll(){
  
   function writeJson(array){
     let arrayJson= JSON.stringify(array);
-    return fs.writeFileSync(path.join(__dirname, "../data/users.json",arrayJson))
+    return fs.writeFileSync(path.join(__dirname, "../data/users.json"),arrayJson)
   }
 
   const userController={
@@ -29,10 +29,7 @@ function findAll(){
         res.render("user-add-form")
     },
     store: function(req, res){
-        
         let users = findAll()
-    
-        
         let nuevoUser = {
           id: users.length + 1 ,
           nombreCompleto: req.body.nombreCompleto ,
@@ -44,28 +41,27 @@ function findAll(){
         writeJson(usersActualizados);
 
         //devuelvo una respuesta
-        res.redirect("adminUsers");
+        res.redirect("/adminUser");
     },
     edit: (req,res)=>{
         let users = findAll();
         let userEncontrado=users.find(function(user){
             return user.id==req.params.id
         })
-        res.render("user-edit-form",{user:userEncontrado})
+        res.render("user-edit-form",{user : userEncontrado})
     },
     update: (req,res)=>{
         let users = findAll();
         let usersActualizados= users.map(function(user){
             if (user.id == req.params.id){
-                user.name=req.body.name
+                user.nombreCompleto=req.body.nombreCompleto
                 user.genero=req.body.genero
-                user.email=req.body.email
-               
+                user.email=req.body.email  
             }
             return user
         })
         writeJson(usersActualizados);
-        res.redirect("/adminUsers/"+ req.params.id)
+        res.redirect("/adminUser")
     },
     destroy: (req,res)=>{
         let users = findAll();
@@ -73,7 +69,7 @@ function findAll(){
             return user.id !=req.params.id
         })
         writeJson(usersNoBorrados);
-        res.redirect("adminUsers/list")
+        res.redirect("/adminUser")
     },
 }
 module.exports= userController;

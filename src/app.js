@@ -59,7 +59,7 @@ app.use("/adminUser",userRouter)
 app.use("/product-add-form",adminRouter)
 //formularios edit y add user
 app.use("/user-add-form",userRouter)
-app.use ("/user-edit-form",userRouter)
+//app.use ("/user-edit-form",userRouter)
 
 
 

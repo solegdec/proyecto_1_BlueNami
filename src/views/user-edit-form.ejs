@@ -9,7 +9,7 @@
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
-                            <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit?_method=PUT" method="POST" >
+                            <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" >
                                 <div class="form-group mb-3">
                                     <label for="id">Id</label><br/>
                                     <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"required />
@@ -20,7 +20,7 @@
                                 </div>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="genero">Gener</label><br/>                          
+                                    <label for="genero">Genero</label><br/>                          
                                     <input id="genero" name="genero" type="text" class="campos_add" value="<%= user.genero%>" >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -28,12 +28,15 @@
                                     <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required />
                                 </div>
                                 
-                                    <button type="submit" class="button_add"></button>
+                                    <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>
                         </div>
                     </div>
                </div> 
-          
+               <form action="/adminUser/destroy/<%=user.id %>/?_method=DELETE" method="POST">
+                <button type="submit">Borrar Usuario</button>
+            </form>
+
         </div>     
         <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>       
         <%- include("./partials/footer") %>               

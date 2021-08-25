@@ -38,12 +38,13 @@ function writeJson(array){
                 precio:req.body.precio,
                 descripcion:req.body.descripcion,
                 color:req.body.color,
+                unidades:req.body.unidades,
                 //foto:req.body.foto
             }
             let tablasActualizadas=[...tablas,nuevaTabla]
             writeJson(tablasActualizadas);
     
-            res.redirect("/")
+            res.redirect("/admin")
         },
         edit: (req,res)=>{
             let tablas = findAll();

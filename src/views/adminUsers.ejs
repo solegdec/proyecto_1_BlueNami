@@ -6,9 +6,7 @@
             <div>
                 <h2 class="h2admin">Administrador de Usuarios</h2>
             </div>
-            <article class="h2admin">
-                <a href="/user-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
-              </article>
+            
             <div class="tm-product-table-container">
                 <table class="tablaAdmin">
                     <thead>
@@ -17,8 +15,7 @@
                         <th scope="col">Nombre Completo </th>
                         <th scope="col">Género</th>
                         <th scope="col">E-mail</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Borrar</th>  
+                        <th scope="col">Editar</th> 
                         <th scope="col">&nbsp;</th>            
                     </thead>
                     <tbody>           
@@ -30,11 +27,16 @@
                         <td><%=user.genero%></td>
                         <td><%=user.email%></td>
                         <td><a href="/adminUser/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
-                        <td><a href="/adminUser/<%=user.id%>/delete"><i class="far fa-trash-alt"></i></a></td>            
+                
                         </tr>
                      <% }) %>               
                     </tbody>                
-                </table>            
+                </table>  
+                
+                <article class="h2admin">
+                    <a href="/user-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Usuario</a>
+                  </article>
+
                </div>
               <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
             <%- include("./partials/footer") %>
