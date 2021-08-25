@@ -1,19 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 function findAll(){
-    //leer el json
-    let tablasJson= fs.readFileSync(path.join(__dirname, "../data/tablas.json"))
-  
-    //parsear la inform
+   let tablasJson= fs.readFileSync(path.join(__dirname, "../data/tablas.json"))
     let data = JSON.parse(tablasJson)
     return data
   }
-  //actualizar json
-  function writeJson(array){
-    //leer el json
 
+function writeJson(array){
     let arrayJson= JSON.stringify(array);
-    return fs.writeFileSync(path.join(__dirname, "../data/tablas.json", arrayJson))}
+    return fs.writeFileSync(path.join(__dirname, "../data/tablas.json"), arrayJson)
+}
 
     
     const adminController={

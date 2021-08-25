@@ -29,6 +29,14 @@ const adminRouter = require ("./routes/adminRouter.js")
  
 // fin rutas nuestras
 
+app.use(methodOverride("_method"))
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+ //app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('./public'));
+app.use("/styles", express.static(__dirname + "/styles"));
 
 // app.use nuestros
 app.use(indexRouter)
@@ -50,13 +58,6 @@ app.use ("/user-edit-form",userRouter)
 
 
 // cierre app.use nuestros
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
- //app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('./public'));
-app.use("/styles", express.static(__dirname + "/styles"));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

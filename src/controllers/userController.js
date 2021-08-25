@@ -2,17 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 function findAll(){
-    //leer el json
+    
     let usersJson = fs.readFileSync(path.join(__dirname, "../data/users.json"))
-  
-    //parsear la inform
     let data = JSON.parse(usersJson)
     return data
   }
-  //actualizar json
+ 
   function writeJson(array){
-    //leer el json
-
     let arrayJson= JSON.stringify(array);
     return fs.writeFileSync(path.join(__dirname, "../data/users.json",arrayJson))
   }
