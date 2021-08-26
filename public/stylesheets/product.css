@@ -1,5 +1,9 @@
 /*Comienzo css Gina*/
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .contenedorgz {
     width: 80vw;
     flex-direction: column;
@@ -7,6 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+   
 }
 
 .botongz1 {
@@ -85,7 +90,10 @@
 }
 
 .barra-bus {
-    padding: 20px;
+    margin: 30px auto;
+     
+    text-align: center;
+    
 }
 
 
