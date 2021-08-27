@@ -15,24 +15,21 @@ tbody{
     margin:50px;
     padding: 50px;
 }
-.tm-product-table-container{
-    
-    
-    
-}
+
  table.tablaAdmin{
      max-width: 1200px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     margin: 40px 40px;
     padding: 10px 10px 10px 10px;
-
 }
 
 .h2admin1 a{
-        font-size: 20px;
+        font-size: 14px;
+        font-weight:500;
         font-family: "roboto";
         text-decoration: none;  
+        color:black;
     }
 .h2admin h2{
     font-family: "lobster";
@@ -91,6 +88,18 @@ td img{
     margin-left: auto;
     margin-right: auto;
 
+}
+.buttonAdmin {
+    width: 150px;
+    height: 30%;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(1, 13, 48);
+    border-color: rgb(95, 99, 99);
+    background-color: #E9B843;
+    padding: 10px 5px 10px 5px;
+    margin: 10px 5px 10px 5px;
 }
 
 @media screen and (min-width: 576px){
