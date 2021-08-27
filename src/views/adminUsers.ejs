@@ -3,20 +3,19 @@
 <%- include("./partials/head") %>
     <body>
         <%- include("./partials/headerAdmin") %>
-            <div>
-                <h2 class="h2admin">Administrador de Usuarios</h2>
+            <div class="h2adminUsers">
+                <h2>Administrador de Usuarios</h2>
             </div>
             
             <div class="tm-product-table-container">
-                <table class="tablaAdmin">
+                <table class="tablaAdminUsers">
                     <thead>
                         <th scope="col">&nbsp;</th>
                         <th scope="col">Id</th>           
                         <th scope="col">Nombre Completo </th>
                         <th scope="col">Género</th>
                         <th scope="col">E-mail</th>
-                        <th scope="col">Editar</th> 
-                        <th scope="col">&nbsp;</th>            
+                        <th scope="col">Editar</th>           
                     </thead>
                     <tbody>           
                     <%users.forEach(function(user){ %>
@@ -33,7 +32,7 @@
                     </tbody>                
                 </table>  
                 
-                <article class="h2admin">
+                <article class="h2adminUsers">
                     <a href="/user-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Usuario</a>
                   </article>
 

@@ -34,7 +34,7 @@ tbody{
 
 }
 .thead{
-    background-color: rgb(164, 250, 255);
+    background-color:#E9B843;
 }
 
 table.tablaAdmin th{
@@ -45,10 +45,9 @@ table.tablaAdmin th{
 }
 table.tablaAdmin td{
     font-family: "roboto";
-    letter-spacing: 1px;
     padding: 10px;
     text-align: left;
-    
+    font-size: 13px;  
  }
 
 button.eliminarAdmin{
@@ -79,10 +78,6 @@ button.selAdmin{
    font-weight: 100;
 
 
-}
-td{
-    text-align: center;
-    margin-top: 10px;
 }
 td img{
     display: block;
