@@ -29,15 +29,14 @@
 /* Comienzo segundo contenedor Gina*/
 
 input.buscarProd{
-    width:500px;
+    width:40%;
     margin:10px;
     padding:10px 16px;
     border-radius:32px;
     outline:none;
     border:2px solid #ccd1d1;
     background:#d4f4fc;
-    transition:all 0.5s; 
-    
+    transition:all 0.5s;  
 }
 
 article.tabla_lista {
@@ -46,11 +45,10 @@ article.tabla_lista {
     display: inline-block;
     width: 70%;
     margin: 12px;
-    border-radius: 6px;
+    border-radius: 4px;
     flex-direction: row;
-    flex-direction: column;
-    
-}
+    flex-direction: column;   
+ }
 
 .imgTabla2gz img {
     width: 20%;
@@ -105,8 +103,6 @@ article.tabla_lista {
 }
 
 .barra-bus {
-    margin: 30px auto;
-     
     text-align: center;
     
 }
@@ -117,7 +113,8 @@ article.tabla_lista {
 @media screen and (min-width: 576px) {
     /*CSS Gina*/
     article.tabla_lista {
-        width: 80%;
+        width: 85%;
+    
        
     }
 }
@@ -128,12 +125,14 @@ article.tabla_lista {
     article.tabla_lista {
         width: 30%;
        
+       
     }
 
 @media (min-width: 1200px) and (orientation: landscape) {
     /*MEdia Gina*/
     article.tabla_lista {
         width: 22%;
+    
        
     }
 }}
