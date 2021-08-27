@@ -41,7 +41,6 @@ function findAll(){
         let usersActualizados = [...users, nuevoUser]
         writeJson(usersActualizados);
 
-        //devuelvo una respuesta
         res.redirect("/adminUser");
     },
     edit: (req,res)=>{
