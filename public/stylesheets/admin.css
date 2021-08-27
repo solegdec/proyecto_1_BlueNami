@@ -101,7 +101,9 @@ td img{
     padding: 10px 5px 10px 5px;
     margin: 10px 5px 10px 5px;
 }
-
+input.campos_add{
+    height: auto;
+}
 @media screen and (min-width: 576px){
 table.tablaAdmin{
     width: 70%;
