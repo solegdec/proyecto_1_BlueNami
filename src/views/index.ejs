@@ -1,111 +1,139 @@
-
 <!DOCTYPE html>
 <html>
 <%- include("./partials/head") %>
 
 
-   <body>
-       
-<%- include("./partials/header") %>
+    <body>
 
-    <video id="videoBG" autoplay="true" muted="true" loop="true">
+        <%- include("./partials/header") %>
+
+            <video id="videoBG" autoplay="true" muted="true" loop="true">
         <source src="/img/prefinal.mp4 " type="video/mp4 ">
     </video>
-    <section class="section section-a ">
-        <div class="container ">
-            <img src="/img/logonombre_trans.png" class="logovideo">
-        </div>
-    </section>
-    <section class="section section-b ">
-        
-        <div class="carousel">
-            <div class="carousel-inner">
-                <h1 class="micarritoSole">Productos</h1>
-                
-                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                <div class="carousel-item">
-                    <img src="/img/producto01.jpg">
+            <section class="section section-a ">
+                <div class="container ">
+                    <img src="/img/logonombre_trans.png" class="logovideo">
                 </div>
-                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item">
-                    <img src="/img/producto02.jpg">
-                </div>
-                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item">
-                    <img src="/img/producto03.jpg">
-                </div>
-                
-                <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-                <label for="carousel-2" class="carousel-control next control-1">›</label>
-                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-                <label for="carousel-3" class="carousel-control next control-2">›</label>
-                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-                <label for="carousel-1" class="carousel-control next control-3">›</label>
-                <ol class="carousel-indicators">
-                    <li>
-                        <label for="carousel-1" class="carousel-bullet">•</label>
-                    </li>
-                    <li>
-                        <label for="carousel-2" class="carousel-bullet">•</label>
-                    </li>
-                    <li>
-                        <label for="carousel-3" class="carousel-bullet">•</label>
-                    </li>
-                </ol>
-            </div>
-        </div>
-        
-    </section>
-
-    <section class="section section-c ">
-        <img src="/img/olas011.png" id="olas01">
-        <h1 class="micarritoSole" id="qsomos">Quienes Somos</h1>
-        <div class="qsomos">
-            <img class="izquierda" src="/img/fotoola2.png">
-            <aside class="qstext">Aquí comemos-dormimos-bebemos surf, vamos a surfear y hablamos de tablas de surf todo el día. Como puedes ver, en nuestro equipo, SOMOS Surfistas Blue Nami es un equipo de surfistas apasionados y profesionales de la web. La empresa fue fundada
-                en 2016 por Maria, Gina, Seba y Sole, amantes del surf y los deportes de acción, a quienes puedes encontrar fácilmente en las playas de Cap Ferret. Probablemente se pregunte por qué nos llamamos Blue Nami ¡Esa es una gran pregunta! Blue
-                significa "azul" y Nami significa "ola". Esperamos que, gracias a nuestro sitio web, tenga muchas olas azules para disfrutar. Hay algo bastante inspirador en la cultura del surf. Aqui, la lealtad y la solidaridad cuentan más que la jerarquía
-                o el dinero. Esos son valores que todos compartimos en Blue Nami, tanto los empleados como los miembros de nuestro sitio web.</aside>
-            <div class="reset"></div>
-        </div>
-        <img src="/img/olas033.png" id="olas01">
-    </section>
-    <section class="sectionsection-d ">
-        <section class="cantact_info" id="contactos-index">
-            <section class="info_title">
-                <span class="fa fa-user-circle"></span>
-                <h2 class="micarritoSole">Contacto</h2>
             </section>
-            <section class="info_items">
-                <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
-                <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+            <section class="section section-b ">
+
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <h1 class="micarritoSole">Productos</h1>
+
+                        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                        <div class="carousel-item">
+                            </article>
+                            <article class="tabla3gz">
+                                <div class="imgTabla3gz">
+                                    <a href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto3%>"></a>
+                                </div>
+                                <div class="destablagz">
+                                    <div class="titProdRelgz">
+                                        <h1>
+                                            <%=tabla.name %>
+                                        </h1>
+                                    </div>
+                                    <div class="coloresRelgz">
+                                        <div class="color1Rgz">
+                                        </div>
+                                        <div class="color2Rgz">
+                                        </div>
+                                        <div class="color3Rgz">
+                                        </div>
+                                    </div>
+                                    <div class="preciosRgz">
+                                        <p>
+                                            <%=tabla.precio %>
+                                        </p>
+                                    </div>
+                                    <div class="botAgrCargz">
+                                        <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
+                                    </div>
+
+                                </div>
+                            </article>
+                        </div>
+                        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                        <div class="carousel-item">
+                            <img src="/img/producto02.jpg">
+                        </div>
+                        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                        <div class="carousel-item">
+                            <img src="/img/producto03.jpg">
+                        </div>
+
+                        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                        <label for="carousel-2" class="carousel-control next control-1">›</label>
+                        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                        <label for="carousel-3" class="carousel-control next control-2">›</label>
+                        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                        <label for="carousel-1" class="carousel-control next control-3">›</label>
+                        <ol class="carousel-indicators">
+                            <li>
+                                <label for="carousel-1" class="carousel-bullet">•</label>
+                            </li>
+                            <li>
+                                <label for="carousel-2" class="carousel-bullet">•</label>
+                            </li>
+                            <li>
+                                <label for="carousel-3" class="carousel-bullet">•</label>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
             </section>
-        </section>
 
-        <form action="" class="form_contact">
-            <h2>Envia un mensaje</h2>
-            <div class="user_info">
-                <label for="names">Nombres *</label>
-                <input type="text" id="names">
+            <section class="section section-c ">
+                <img src="/img/olas011.png" id="olas01">
+                <h1 class="micarritoSole" id="qsomos">Quienes Somos</h1>
+                <div class="qsomos">
+                    <img class="izquierda" src="/img/fotoola2.png">
+                    <aside class="qstext">Aquí comemos-dormimos-bebemos surf, vamos a surfear y hablamos de tablas de surf todo el día. Como puedes ver, en nuestro equipo, SOMOS Surfistas Blue Nami es un equipo de surfistas apasionados y profesionales de la web. La empresa
+                        fue fundada en 2016 por Maria, Gina, Seba y Sole, amantes del surf y los deportes de acción, a quienes puedes encontrar fácilmente en las playas de Cap Ferret. Probablemente se pregunte por qué nos llamamos Blue Nami ¡Esa es una
+                        gran pregunta! Blue significa "azul" y Nami significa "ola". Esperamos que, gracias a nuestro sitio web, tenga muchas olas azules para disfrutar. Hay algo bastante inspirador en la cultura del surf. Aqui, la lealtad y la solidaridad
+                        cuentan más que la jerarquía o el dinero. Esos son valores que todos compartimos en Blue Nami, tanto los empleados como los miembros de nuestro sitio web.</aside>
+                    <div class="reset"></div>
+                </div>
+                <img src="/img/olas033.png" id="olas01">
+            </section>
+            <section class="sectionsection-d ">
+                <section class="cantact_info" id="contactos-index">
+                    <section class="info_title">
+                        <span class="fa fa-user-circle"></span>
+                        <h2 class="micarritoSole">Contacto</h2>
+                    </section>
+                    <section class="info_items">
+                        <p><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+                        <p><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+                    </section>
+                </section>
 
-                <label for="phone">Telefono / Celular</label>
-                <input type="text" id="phone">
+                <form action="" class="form_contact">
+                    <h2>Envia un mensaje</h2>
+                    <div class="user_info">
+                        <label for="names">Nombres *</label>
+                        <input type="text" id="names">
 
-                <label for="email">Correo electronico *</label>
-                <input type="text" id="email">
+                        <label for="phone">Telefono / Celular</label>
+                        <input type="text" id="phone">
 
-                <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje"></textarea>
+                        <label for="email">Correo electronico *</label>
+                        <input type="text" id="email">
 
-                <input type="submit" value="Enviar Mensaje" id="btnSend">
-                <input type="reset" value="Borrar Mensaje" id="btnSend">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje"></textarea>
 
-            </div>
-        </form>
+                        <input type="submit" value="Enviar Mensaje" id="btnSend">
+                        <input type="reset" value="Borrar Mensaje" id="btnSend">
 
-    </section>
+                    </div>
+                </form>
 
-    <%- include("./partials/footer") %> 
-</body>
+            </section>
+
+            <%- include("./partials/footer") %>
+    </body>
 
 </html>
