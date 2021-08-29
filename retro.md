@@ -11,3 +11,10 @@ Hacer más: reuniones por fuera de los daily con objetivos mas claros.
 Continuar haciendo: reunion de planificación & daily stand up meeting.
 Hacer menos: trabajar solos sin hacer peer review.
 Dejar de hacer: reuniones no predeterminadas (sin fin definido).
+
+Retrospectiva Sprint 3
+Comenzar a hacer: minutas de reunión inmediatamente después de las reuniones.
+Hacer más: trabajar simultáneamente en mismos archivos cada uno en su Git local sin temer a posibles conflictos
+Continuar haciendo: trabajo en equipo y varios commits cada integrante sobre el proyecto en el GitHub.
+Hacer menos: intentar implementar funcionalidades aún no enseñadas en clases.
+Dejar de hacer: reuniones no predeterminadas (sin inicio y fin definidos).
