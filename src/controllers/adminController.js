@@ -40,7 +40,8 @@ function writeJson(array){
                 descripcion:req.body.descripcion,
                 color:req.body.color,
                 unidades:req.body.unidades,
-                //foto:req.body.foto
+                foto:req.file.filename
+                
             }
             let tablasActualizadas=[...tablas,nuevaTabla]
             writeJson(tablasActualizadas);
@@ -64,8 +65,8 @@ function writeJson(array){
                     tabla.color=req.body.color
                     tabla.descripcion=req.body.descripcion
                     tabla.unidades=req.body.unidades
+                    
                    
-                   // tabla.foto=req.body.foto
                 }
                 return tabla
             })
