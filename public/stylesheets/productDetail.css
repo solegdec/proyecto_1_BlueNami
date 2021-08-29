@@ -243,6 +243,25 @@ aside.descripciongz {
     justify-content: space-around;
 }
 
+.buttonDetail {
+    width: 100px;
+    height: 30%;
+    border-radius: 20px;
+    color: rgb(1, 13, 48);
+    border-color: rgb(95, 99, 99);
+    background-color: #E9B843;
+    padding:5px 0px 5px 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+.buttonDetail a{
+    font-family: "roboto";
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    
+}
 
 
 /* Comienzo Media */
