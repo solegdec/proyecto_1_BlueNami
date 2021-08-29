@@ -60,10 +60,7 @@ se trabaja en el css de productos dado que al ser dinamico precisa ajustes,
 25/8
 se arregla el pull down del formulario del abm de prodcutos.
 se sigue trabajando en el CSS de productos.
-recibimos el feedback de mati:
-1) teniamos problemas en la ubicacion de algunos app.use debian estar arriba de las rutas en el app.js
-2) en la ruta del admin/create, tomaba al create como un parametro (?), entonces para solucionarlo debimos agregarle a la ruta del detail un detail/:id para ser mas especificos.
-3) teniamos mal escrita la funcion del writeJson.
+recibimos el feedback de mati: 1.-teniamos problemas en la ubicacion de algunos app.use debian estar arriba de las rutas en el app.js. 2.-en la ruta del admin/create, tomaba al create como un parametro (?), entonces para solucionarlo debimos agregarle a la ruta del detail un detail/:id para ser mas especificos. 3.-teniamos mal escrita la funcion del writeJson.
 hicimos las correcciones con el feedback de mati. trabajamos en las rutas, controller y vistas. ya anda casi todas las funciones
 se modifican las fotos de las tablas para que todas queden del mismo tamaño en la vista.
 rabajamos en las rutas, controller y vistas. ya andan todas las funciones!
