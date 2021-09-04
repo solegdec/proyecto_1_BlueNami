@@ -16,14 +16,14 @@ const port = process.env.PORT || 3030
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method")) //para usar el metodo delete y put
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); //captura info de un formulaario
 app.use(cookieParser());
 app.use(express.static('./public'));
 app.use("/styles", express.static(__dirname + "/styles"));
-app.use(session({secret: 'BlueNami',resave: false,saveUninitialized: true,}));
+app.use(session({secret:'BlueNami',resave: false,saveUninitialized: true,}));
 
 const productCartRouter = require("./routes/productCartRouter.js")
 const clientRouter = require("./routes/clientRouter.js")

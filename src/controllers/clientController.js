@@ -1,10 +1,22 @@
+const {validationResult}=require ("express-validator");
+
 const clientController={
     
     register:(req,res)=>{
         res.render("register")
         },
-    store:(req,res)=>{
-            res.send(req.body)
+        store:(req,res)=>{
+            const resultado= validationResult(req);
+            if (resultado.errors.length>0){
+                return res.render("register", {
+                    errors: resultado.mapped(),
+                    oldData:req.body
+                });
+                
+            }
+          
+            res.redirect("/profile")
+            
             
         },
     login:(req,res)=>{
@@ -12,7 +24,7 @@ const clientController={
             
         },
     update:(req,res)=>{
-            res.send("hola")
+            res.redirect("/index")
             
         },
 }

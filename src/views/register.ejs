@@ -13,7 +13,7 @@
     
 
 
-    <form class="form-reg-formulario" action="/" method="POST">
+    <form class="form-reg-formulario" action="/" method="POST" enctype="multipart/form-data">
         <section class="form-reg-titulo">
             <h1 class="form-reg-h1"> Vos registrate. 
             Nosotros te conseguimos la tabla.</h1>
@@ -22,12 +22,22 @@
         <section class="form-reg-name"> 
             <p class="form-reg-p">
                 <label class="form-reg-label" for=nombre>Nombre.</label>
-                <input class="form-reg-input" type="text" name="nombre" id="nombre" placeholder=Nombre required>
+                <input class="form-reg-input" type="text" name="nombre" value="<%=locals.oldData ? oldData.nombre:null%>"  id="nombre" placeholder=Nombre>
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class="text-danger">
+                        <%= errors.nombre.msg %> 
+                    </div>
+                <% } %>
             </p>
             
             <p class="form-reg-p">
                 <label class="form-reg-label" for=apellido>Apellido.</label>
-                <input class="form-reg-input" type="text" name="apellido" id="apellido" placeholder=Apellido required>
+                <input class="form-reg-input" type="text" name="apellido" value="<%=locals.oldData ? oldData.apellido:null%>"  id="apellido" placeholder=Apellido>
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class="text-danger">
+                        <%= errors.apellido.msg %> 
+                    </div>
+                <% } %>
             </p>
         </section>
 
@@ -35,7 +45,7 @@
         <section class="form-reg-nacimiento">
             <p class="form-reg-p">
                 <label class="form-reg-label" for=nacimiento> Fecha de nacimiento.</label>
-                <input class="form-reg-input" type="date" name="nacimiento" id="nacimiento" value=1990-06-30 min="1910-01-01">
+                <input class="form-reg-input" type="date" name="nacimiento" id="nacimiento" value=1990-06-30 min="1910-01-01"required>
             </p>
         </section>
         
@@ -43,27 +53,50 @@
         <section class="form-reg-mail">
             <p class="form-reg-p">
                 <label class="form-reg-label" for=email >e-mail.</label>
-                <input class="form-reg-input" type="email" name="email" id="email" placeholder=mail@dominio.com required>
+                <input class="form-reg-input" type="email" name="email" value="<%=locals.oldData ? oldData.email:null%>"  id="email" placeholder=mail@dominio.com>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
             </p>
         </section>
 
 
         <section class="form-reg-tel">
             <p class="form-reg-p">
-                <label class="form-reg-label" for=pais > Código.</label>
-                <select name="pais" name id="pais" required>
-                    <option value="" selected disabled> País </option>
-                    <option value="+54" > Arg </option>
-                    <option value="+598" > Uru </option>
-                    <option value="+53" > Bra </option>
-                    <option value="+52" > Chi </option>
-                </select>
-                
+                <div class="form-group">
+                    <label><b>Código:</b></label>
+                    <select 
+                        name="pais" 
+                        class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
+                        <option value="">Elegí un país</option>
+                        <%  
+                            let pais = ['+54', '+53', '+52', '+598'];
+                        %>
+                        <% for (const unPais of pais) { %>
+                            <option 
+                                value="<%= unPais %>"
+                                <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
+                            > <%= unPais %> </option>
+                        <% } %>
+                    </select>
+                    <% if (locals.errors && errors.pais) { %>
+                        <div class="text-danger">
+                            <%= errors.pais.msg %>
+                        </div>
+                    <% } %>
+                </div>
             </p>
 
             <p class="form-reg-p">
                 <label class="form-reg-label" for=telefono >Teléfono.</label>
-                <input class="form-reg-input" type="tel" name="telefono" id="telefono" placeholder="1122223333"required>
+                <input class="form-reg-input" type="tel" name="telefono" value="<%=locals.oldData ? oldData.telefono:null%>"  id="telefono" placeholder="1122223333">
+                <% if (locals.errors && errors.telefono) { %>
+                    <div class="text-danger">
+                        <%= errors.telefono.msg %> 
+                    </div>
+                <% } %>
             </p>    
 
         </section>
@@ -71,7 +104,7 @@
         <section class="form-reg-password">
             <p class="form-reg-p">
                 <label class="form-reg-label" for="contraseña">Contraseña.</label>
-                <input class="form-reg-input" type="password" name="password" id="contraseña" required>
+                <input class="form-reg-input" type="password" name="password" id="contraseña">
             </p>
         </section>
 
