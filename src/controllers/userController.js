@@ -18,13 +18,13 @@ function findAll(){
         let users=findAll();       
         res.render("adminUsers", {users})    
     },
-    /*detail: (req,res)=>{
+    detail: (req,res)=>{
         let users = findAll();
         let userEncontrado= users.find(function(user){
             return user.id==req.params.id
         })
-        res.render("adminUsers",{user:userEncontrado})
-    },*/
+        res.render("profile",{user:userEncontrado})
+    },
     create: (req,res)=>{
         res.render("user-add-form")
     },

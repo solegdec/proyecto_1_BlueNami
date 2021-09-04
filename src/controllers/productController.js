@@ -22,6 +22,7 @@ const productController={
         })
         res.render("productDetail",{tabla:tablaEncontrada})
     },
+    
 }
 
 module.exports = productController;

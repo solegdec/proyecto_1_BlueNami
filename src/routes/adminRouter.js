@@ -6,7 +6,7 @@ const path=require("path")
 //multer
 const storage=multer.diskStorage({
     destination:function(req,file,cb){
-      cb(null, "./public/img")
+      cb(null, "./public/img/avatars")
     },
     filename:function(req,file,cb){
         let newFileName= Date.now()+path.extname(file.originalname)

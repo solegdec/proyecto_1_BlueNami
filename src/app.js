@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 const methodOverride=require("method-override")
+const session = require('express-session');
 
 //heroku
 const port = process.env.PORT || 3030
@@ -22,10 +23,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('./public'));
 app.use("/styles", express.static(__dirname + "/styles"));
+app.use(session({secret: 'BlueNami',resave: false,saveUninitialized: true,}));
 
 const productCartRouter = require("./routes/productCartRouter.js")
-const registerRouter = require("./routes/registerRouter.js")
-const loginRouter = require("./routes/loginRouter.js")
+const clientRouter = require("./routes/clientRouter.js")
 const indexRouter = require("./routes/indexRouter.js")
 const productRouter = require("./routes/productRouter.js")
 const userRouter = require("./routes/userRouter.js")
@@ -33,8 +34,7 @@ const adminRouter = require ("./routes/adminRouter.js")
 
 app.use(indexRouter)
 app.use("/productCart",productCartRouter)
-app.use("/login",loginRouter)
-app.use("/register",registerRouter)
+app.use("/client",clientRouter)
 app.use("/product",productRouter)
 app.use("/admin",adminRouter)
 app.use("/adminUser",userRouter)

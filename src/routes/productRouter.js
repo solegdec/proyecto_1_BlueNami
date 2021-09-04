@@ -15,4 +15,7 @@ router.get("/:id", productController.detail);
 
 
 
+
+
+
 module.exports = router;
