@@ -46,7 +46,7 @@ router.get ("/register", clientController.registerForm)
 
 router.post("/register", uploadFile.single("avatar"),validations,clientController.store)
 
-//router.get('/profile/:id', clientController.profile);
+router.get('/profile/:id', clientController.profile);
 
 router.get ("/login", clientController.login);
 
