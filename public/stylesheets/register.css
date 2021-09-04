@@ -92,7 +92,10 @@
 .form-reg-separacion-escritorio {
     display: none;
 }
-
+span.error{
+    font-size: 12px;
+    color:red
+}
 
 /* Fin CSS Register*/
 

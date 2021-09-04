@@ -13,7 +13,7 @@
     
 
 
-    <form class="form-reg-formulario" action="/" method="POST" enctype="multipart/form-data">
+    <form class="form-reg-formulario" action="/client/register" method="POST" enctype="multipart/form-data">
         <section class="form-reg-titulo">
             <h1 class="form-reg-h1"> Vos registrate. 
             Nosotros te conseguimos la tabla.</h1>
@@ -24,9 +24,8 @@
                 <label class="form-reg-label" for=nombre>Nombre.</label>
                 <input class="form-reg-input" type="text" name="nombre" value="<%=locals.oldData ? oldData.nombre:null%>"  id="nombre" placeholder=Nombre>
                 <% if (locals.errors && errors.nombre) { %>
-                    <div class="text-danger">
-                        <%= errors.nombre.msg %> 
-                    </div>
+                   <span class="error"> <%= errors.nombre.msg %> </span>
+                  
                 <% } %>
             </p>
             
@@ -34,10 +33,8 @@
                 <label class="form-reg-label" for=apellido>Apellido.</label>
                 <input class="form-reg-input" type="text" name="apellido" value="<%=locals.oldData ? oldData.apellido:null%>"  id="apellido" placeholder=Apellido>
                 <% if (locals.errors && errors.apellido) { %>
-                    <div class="text-danger">
-                        <%= errors.apellido.msg %> 
-                    </div>
-                <% } %>
+                    <span class="error">  <%= errors.apellido.msg %> </span>
+                 <% } %>
             </p>
         </section>
 
@@ -55,9 +52,7 @@
                 <label class="form-reg-label" for=email >e-mail.</label>
                 <input class="form-reg-input" type="email" name="email" value="<%=locals.oldData ? oldData.email:null%>"  id="email" placeholder=mail@dominio.com>
                 <% if (locals.errors && errors.email) { %>
-                    <div class="text-danger">
-                        <%= errors.email.msg %> 
-                    </div>
+                    <span class="error">  <%= errors.email.msg %> </span>
                 <% } %>
             </p>
         </section>
@@ -65,38 +60,32 @@
 
         <section class="form-reg-tel">
             <p class="form-reg-p">
-                <div class="form-group">
-                    <label><b>Código:</b></label>
+               
+                    <label class="form-reg-label"><b>Código:</b></label>
                     <select 
                         name="pais" 
                         class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
-                        <option value="">Elegí un país</option>
-                        <%  
-                            let pais = ['+54', '+53', '+52', '+598'];
-                        %>
+                        <option value="">Elegí un país</option> <br>
+                        <%  let pais = ['+54', '+53', '+52', '+598']; %>
                         <% for (const unPais of pais) { %>
-                            <option 
-                                value="<%= unPais %>"
-                                <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
-                            > <%= unPais %> </option>
+                        <option value="<%= unPais %>"
+                            <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
+                            > <%= unPais %> 
+                        </option>
                         <% } %>
                     </select>
-                    <% if (locals.errors && errors.pais) { %>
-                        <div class="text-danger">
-                            <%= errors.pais.msg %>
-                        </div>
-                    <% } %>
-                </div>
+                        <% if (locals.errors && errors.pais) { %>
+                            <span class="error">    <%= errors.pais.msg %></span>
+                        <% } %> 
+                
             </p>
 
             <p class="form-reg-p">
                 <label class="form-reg-label" for=telefono >Teléfono.</label>
                 <input class="form-reg-input" type="tel" name="telefono" value="<%=locals.oldData ? oldData.telefono:null%>"  id="telefono" placeholder="1122223333">
                 <% if (locals.errors && errors.telefono) { %>
-                    <div class="text-danger">
-                        <%= errors.telefono.msg %> 
-                    </div>
-                <% } %>
+                    <span class="error">    <%= errors.telefono.msg %> </span>
+               <% } %>
             </p>    
 
         </section>
@@ -104,17 +93,22 @@
         <section class="form-reg-password">
             <p class="form-reg-p">
                 <label class="form-reg-label" for="contraseña">Contraseña.</label>
-                <input class="form-reg-input" type="password" name="password" id="contraseña">
+                <input class="form-reg-input" type="password" name="contraseña" id="contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <span class="error">   <%= errors.contraseña.msg %>  </span>           
+                <% } %>
             </p>
         </section>
 
         <section class="form-reg-boton">
             <p class="form-reg-botonP">
                 <button type="submit" > Enviar  </button>
-                <img src="/img/tablaPerfil.png" alt="perfil">
+                <img src="/img/tablaPerfil.png" alt="perfil" >
             </p>
 
         </section>
+   </form>
+   <!--<form class="form-reg-formulario"action="">
 
         <section class="form-reg-verificacion">
             <h3 class="form-reg-h3"> Verificación </h3>
@@ -142,7 +136,7 @@
                 <img src="/img/tablaPerfil.png" alt="perfil">
             </p>
         </section>
-
+    -->
 
         <section class="form-reg-listo">
             <h2 class="form-reg-h2"> Listo! Entrá a elegir la tabla. Y a surfear. </h2>
@@ -184,7 +178,7 @@
         </section>
     
 
-    </form>
+   </form>
 
     <section class="form-reg-foto">
         <img width=100% src="/img/olasBajas.png" alt="olas">

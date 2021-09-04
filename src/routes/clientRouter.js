@@ -5,6 +5,8 @@ const path=require("path")
 
 const {check}=require("express-validator")
 
+const clientController= require ("../controllers/clientController.js")
+
 const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
         cb(null,"../../public/img/avatars")
@@ -17,7 +19,7 @@ const storage=multer.diskStorage({
 })
 const uploadFile=multer({storage})
 
-const clientController= require ("../controllers/clientController.js")
+
 
 const validations=[
     check("nombre").notEmpty().withMessage("Tienes que completar este campo"),
@@ -39,9 +41,15 @@ const validations=[
     )
 ]
 
-router.get ("/register", clientController.register)
+
+router.get ("/register", clientController.registerForm)
+
 router.post("/register", uploadFile.single("avatar"),validations,clientController.store)
+
+//router.get('/profile/:id', clientController.profile);
+
 router.get ("/login", clientController.login);
+
 router.post("/login",clientController.update);
 
 
