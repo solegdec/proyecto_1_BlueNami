@@ -33,9 +33,13 @@ function findAll(){
         let userId = users.length === 0 ? 1 :  users[users.length-1].id + 1
         let nuevoUser = {
           id: userId ,
-          nombreCompleto: req.body.nombreCompleto ,
+          nombre: req.body.nombre ,
           genero: req.body.genero,
+          fechaNac: req.body.fechaNac ,
+          pais: req.body.pais ,
+          apellido: req.body.apellido ,
           email: req.body.email ,
+          contraseña: req.body.contraseña
           
         }
         let usersActualizados = [...users, nuevoUser]

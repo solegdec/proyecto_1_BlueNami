@@ -12,17 +12,37 @@
                             <form  class="tm-edit-product-form" action="/adminUser/create" method="POST" >
                     
                                 <div class="form-group mb-3">
-                                    <label for="nombreCompleto">Nombre Completo</label><br/>
-                                    <input id="nombreCompleto"  name ="nombreCompleto" type="text"class="campos_add" required >
-                                </div>
+                                    <label for="nombre">Nombre </label><br/>
+                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" required >
+                                </div><br>
+                                <div class="form-group mb-3">
+                                    <label for="apellido">Apellido</label><br/>
+                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" required >
+                                </div><br>
+                                <div class="form-group mb-3">
+                                    <label for="fechaNac">Fecha de Nacimiento</label><br/>
+                                    <input id="fechaNac"  name ="fechaNac" type="date"class="campos_add" required >
+                                </div><br>
+                                <div class="form-group mb-3">
+                                    <label for="genero">Genero</label><br/>
+                                    <input id="genero"  name ="genero" type="text"class="campos_add" required >
+                                </div><br>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="genero">Genero</label><br/>                          
-                                    <input id="genero" name="genero" type="text" class="campos_add" >
-                                </div>
+                                    <label for="pais">Pais de Origen</label><br/>                          
+                                    <input id="pais" name="pais" type="text" class="campos_add" >
+                                </div><br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="email" >E-Mail</label><br/>
                                     <input id="email"name="email" type="email"class="campos_add" required />
+                                </div><br>
+                                <div class="form-group mb-3">
+                                    <label for="contraseña">Contraseña</label><br/>
+                                    <input id="contraseña"  name ="contraseña" type="text"class="campos_add" required >
+                                </div><br>
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="avatar"> Agregar Imagen de Perfil </label><br>
+                                    <input id="avatar" type="file" name="avatar" value="avatar" class="campos_add">
                                 </div>
                                     <button type="submit" class="button_add">Agregar Usuario</button>
                                     
