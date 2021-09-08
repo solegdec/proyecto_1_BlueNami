@@ -12,9 +12,13 @@
                     <thead>
                         <th scope="col">&nbsp;</th>
                         <th scope="col">Id</th>           
-                        <th scope="col">Nombre Completo </th>
+                        <th scope="col">Nombre </th>
+                        <th scope="col">Apellido </th>
+                        <th scope="col">Fecha de Nacimiento </th>
+                        <th scope="col">Pais de Origen </th>
                         <th scope="col">Género</th>
                         <th scope="col">E-mail</th>
+                        <th scope="col">Contraseña </th>
                         <th scope="col">Editar</th>           
                     </thead>
                     <tbody>           
@@ -22,9 +26,14 @@
                         <tr>
                          <th scope="row"> <input type="checkbox"> </th>
                         <td><%=user.id%></td>
-                        <td><%=user.nombreCompleto%></td>
+                        <td><%=user.nombre%></td>
+                        <td><%=user.apellido%></td>
+                        <td><%=user.fechaNac%></td>
+                        <td><%=user.pais%></td>
                         <td><%=user.genero%></td>
                         <td><%=user.email%></td>
+                        <td><%=user.contraseña%></td>
+                       
                         <td><a href="/adminUser/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
                 
                         </tr>
