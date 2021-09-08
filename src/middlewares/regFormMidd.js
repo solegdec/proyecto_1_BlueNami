@@ -10,7 +10,7 @@ const validations=[
     .isEmail().withMessage("Tienes que completar con un email"),
     check("pais").notEmpty().withMessage("Tienes que completar este campo"),
     check("telefono").notEmpty().withMessage("Tienes que completar este campo"),
-    check("contraseña").notEmpty().withMessage("Tienes que completar este campo"),
+    check("password").notEmpty().withMessage("Tienes que completar este campo"),
     check("avatar").custom((value,{req})=>{
         let file=req.file;
         if (!file){
