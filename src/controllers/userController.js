@@ -18,7 +18,7 @@ function findAll(){
         let users=findAll();       
         res.render("adminUsers", {users})    
     },
-    detail: (req,res)=>{
+    profile: (req,res)=>{
         let users = findAll();
         let userEncontrado= users.find(function(user){
             return user.id==req.params.id
@@ -45,7 +45,7 @@ function findAll(){
         let usersActualizados = [...users, nuevoUser]
         writeJson(usersActualizados);
 
-        res.redirect("/adminUser");
+        res.redirect("/adminuser");
     },
     edit: (req,res)=>{
         let users = findAll();

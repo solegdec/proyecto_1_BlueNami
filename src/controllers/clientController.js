@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require('bcryptjs');
 
-function findAll(){
+/*function findAll(){
     let usersJson = fs.readFileSync(path.join(__dirname, "../data/users.json"))
     let data = JSON.parse(usersJson)
     return data
@@ -11,29 +11,33 @@ function findAll(){
  function writeJson(array){
     let arrayJson= JSON.stringify(array);
     return fs.writeFileSync(path.join(__dirname, "../data/users.json"),arrayJson)
-  }
+  }*/
 
 const User = require('../models/User.js');
 
 const clientController = {
-	create: (req, res) => {
+	register: (req, res) => {
 		return res.render('register');
 	},
-	store: (req, res) => {
+	processRegister: (req, res) => {
+
 		const resultValidation = validationResult(req);
+	
 
-		if (resultValidation.errors.length > 0) {
-			return res.render('register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
+			if (resultValidation.errors.length > 0) {
+				return res.render('register', {
+					errors: resultValidation.mapped(),
+					oldData: req.body
+				})}
 		
-
+		
+		User.create();
+		//return res.send("ok");
+	
 		let userInDB = User.findByField('email', req.body.email);
 
 		if (userInDB) {
-			return res.render('userRegisterForm', {
+			return res.render('register', {
 				errors: {
 					email: {
 						msg: 'Este email ya está registrado'
@@ -51,7 +55,7 @@ const clientController = {
 
 		let userCreated = User.create(userToCreate);
 
-		return res.redirect('/client/login');
+		return res.redirect('/profile',{userCreated});
 	},
 	login: (req, res) => {
 		return res.render('login');
@@ -62,14 +66,14 @@ const clientController = {
 		if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.contraseña, userToLogin.contraseña);
 			if (isOkThePassword) {
-				delete userToLogin.password;
+				delete userToLogin.contraseña;
 				req.session.userLogged = userToLogin;
 
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/client/profile');
+				return res.redirect('/profile');
 			} 
 			return res.render('login', {
 				errors: {
@@ -99,7 +103,9 @@ const clientController = {
 		req.session.destroy();
 		return res.redirect('/');
 	}
+	
 }
+
 
 
 module.exports= clientController;
