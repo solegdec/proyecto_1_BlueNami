@@ -10,5 +10,29 @@
   "password": "$2a$10$7JR/ysvWf4cO8Nb3k.VU5.I4wLM3AGBbAnaLWsbb7WDjNdp/zWqiC",
   "confirm_password": "2222",
   "avatar": "1631302954016_img.png"
+ },
+ {
+  "id": 2,
+  "nombre": "una",
+  "apellido": "prueba",
+  "genero": "mas",
+  "fechaNac": "1990-06-30",
+  "email": "dale@seba.com",
+  "pais": "Argentina",
+  "password": "$2a$10$vu3IcxtmI2DiL.fgOM/SweO8Q3E/lnM82FfLLrsKni/V/j.EunqZK",
+  "confirm_password": "9999",
+  "avatar": "1631308135936_img.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "sole",
+  "apellido": "Guerra Decono",
+  "genero": "femenino",
+  "fechaNac": "1990-04-23",
+  "email": "soledecono@hotmail.com",
+  "pais": "Argentina",
+  "password": "$2a$10$eJ1/wS3lpCueJ1mdI88V7.POhhgyq0/psEccBNUgoj1gbtnh0HCvG",
+  "confirm_password": "sole2304",
+  "avatar": "1631312719932_img.jpg"
  }
 ]

@@ -32,9 +32,8 @@ const path=require ("path");
       },
       create: function(userData){
         let allUsers = this.findAll()
+        delete allUsers.confirm_password
         let newUser={
-              
-
             id:this.generateId(),
             ...userData
         }
