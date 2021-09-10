@@ -11,7 +11,7 @@
         <img width=20% src="/img/logo.png" alt="logo">
     </div>
     
-    <form class="form-login-formulario" action="/" method="POST">
+    <form class="form-login-formulario" action="/client/login" method="POST">
         <section class="form-login-titulo">
         <h1 class="form-login-h1"> Welcome back!</h1>
         </section>
@@ -20,6 +20,9 @@
             <p class="form-login-p">
                 <label class="form-login-label" for=email >e-mail:</label>
                 <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com required>
+                <% if (locals.errors && errors.email) { %>
+                    <span class="error">  <%= errors.email.msg %> </span>
+                <% } %>
             </p>
         </section>
   
@@ -36,8 +39,8 @@
                 <img src="/img/tablaPerfil.png" alt="perfil">
             </p>
         </section>
-
-  
+    </form>
+  <form action="form-login-formulario">
         <section class="form-login-experiencia">
             <h2 class="form-login-h2"> ¿Estuviste surfeando? </h2>
         </section>

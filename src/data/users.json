@@ -1,84 +1,14 @@
 [
  {
   "id": 1,
-  "nombre": "Antonia",
-  "apellido": "Lytlle",
-  "fechaNac": "03.01.1974",
-  "email": "alytlle0@go.com",
-  "genero": "Genderqueer",
-  "pais": "Argentina",
-  "password": null,
-  "avatar": null
- },
- {
-  "id": 2,
-  "nombre": "Shawn",
-  "apellido": "Stiven",
-  "fechaNac": "10.06.1902",
-  "email": "sstiven1@nydailynews.com",
-  "genero": "Polygender",
-  "pais": "Argentina",
-  "password": null,
-  "avatar": null
- },
- {
-  "id": 3,
-  "nombre": "r",
-  "apellido": "y",
-  "genero": "r",
-  "fechaNac": "1990-06-30",
-  "email": "pedroetp@icloud.com",
-  "pais": "Brasil",
-  "password": "$2a$10$oSTJn3ItaQ2j.vnZjjrvGuSzxVfN.ROMvkPsR4N8ebWGTkzEJ77Va",
-  "confirm_password": "5555",
-  "avatar": "1631296127328_img.jpg"
- },
- {
-  "id": 4,
-  "nombre": "r",
-  "apellido": "y",
-  "genero": "r",
-  "fechaNac": "1990-06-30",
-  "email": "pedro@icloud.com",
-  "pais": "Brasil",
-  "password": "$2a$10$OjQNJ1wVIHZd2/6mKVGhROZ0CIwMzPulAQV02edNps2zwGLSbOhOi",
-  "confirm_password": "5555",
-  "avatar": "1631296188940_img.png"
- },
- {
-  "id": 5,
-  "nombre": "7",
-  "apellido": "9",
-  "genero": "e",
+  "nombre": "blue",
+  "apellido": "nami",
+  "genero": "tenes",
   "fechaNac": "1990-06-21",
-  "email": "martinatrueba1403@gmail.com",
+  "email": "que@andar.com",
   "pais": "Argentina",
-  "password": "$2a$10$KDLs09b4pbgMPKM4BzHMVOTqj/I23QbFnFvDW/sIHaZ5AX6qoBoZG",
-  "confirm_password": "7777",
-  "avatar": "1631296278881_img.png"
- },
- {
-  "id": 6,
-  "nombre": "juan",
-  "apellido": "j",
-  "genero": "e",
-  "fechaNac": "1990-06-30",
-  "email": "vas@yahoo.com.ar",
-  "pais": "Argentina",
-  "password": "$2a$10$vl6deaM0/BQSfDKPuaA5nO121J5JtzDyhWuOpHtAyYiZqGwlWebkW",
-  "confirm_password": "77",
-  "avatar": "1631296360937_img.png"
- },
- {
-  "id": 7,
-  "nombre": "juan",
-  "apellido": "j",
-  "genero": "e",
-  "fechaNac": "1990-06-30",
-  "email": "hola@yahoo.com.ar",
-  "pais": "Argentina",
-  "password": "$2a$10$AH6Lvt68YSrKBaPwoPCDW.xu7tjmuxuKCJ/.tUAWjawWcz.FxZ0qy",
-  "confirm_password": "7777",
-  "avatar": "1631296890785_img.png"
+  "password": "$2a$10$7JR/ysvWf4cO8Nb3k.VU5.I4wLM3AGBbAnaLWsbb7WDjNdp/zWqiC",
+  "confirm_password": "2222",
+  "avatar": "1631302954016_img.png"
  }
 ]

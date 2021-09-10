@@ -15,6 +15,6 @@ router.get ("/login", clientController.login);
 
 router.post("/login",clientController.loginProcess);
 
-//router.get("/profile", clientController.show);
+router.get("/profile/", clientController.show);
 
 module.exports = router;

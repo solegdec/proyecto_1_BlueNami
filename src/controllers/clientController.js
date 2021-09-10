@@ -49,66 +49,22 @@ const clientController = {
     },
     loginProcess: (req, res)=>{
         let userToLogin = User.findByField("email",req.body.email);
-        if(userToLogin)
-        {return res.send(userToLogin)}
-        return res.render("register",{errors:{email:{msg:"No se encuentra este email"}}})
-        
-        if(user){
-            if(bcryptjs.compareSync(req.body.password, user.password)){
-                req.session.userId = user.id;
-                res.render('/');
-            }else{
-                res.render('login',{"errors": 'La combinacion de email y contraseña no es valido'});
-            }
-        }else{
-            res.render('login',{"errors": 'El email no existe.'});
-        }
-
-
-    }
-
-
-}
-        /*let userId = req.session.userId;
-        let user = Users.findById(userId)
-        res.render('profile',{
-            user: user,
-        })
-    },
-    store: (req, res)   => {
-        let users_copy = Users.getAll().map(user => user);
-        let UserId = uuidv4();
-        if(req.body.password === req.body.confirm_password){
-            if(secure_password.test(req.body.password)){
-                const encrypt_pass = bcryptjs.hashSync(req.body.password, 10)
-                const user = {
-                    id: UserId,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    genero: req.body.genero,
-                    fechaNac: req.body.fechaNac,
-                    email: req.body.email,
-                    pais: req.body.pais,
-                    avatar:req.file.filename,
-                    password: encrypt_pass,
+        if(userToLogin){
+            let passOK=bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if(passOK){
+                return res.redirect("/client/profile/")  
+                }else{
+                return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}})
                 }
-                users_copy.push(user)
-                Users.modifiedAll(users_copy);
-            console.log('Entro al store 1')
-                res.redirect('/');
-            }else{
-                console.log('Entro al store 2')
-                res.render('register', {errors:'Contraseña no segura'})
-            }
-
         }else{
-            console.log('Entro al store 3')
-            res.render('register', {errors:'Contraseña no Coincide'})
-        }
-
+         return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}})
+                }
+     
     },
-    
-    
+    show: (req, res)=>{
+        res.render('profile');
+    },
+
 }
-*/
+       
 module.exports = clientController;
