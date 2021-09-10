@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false })); //captura info de un formulaar
 app.use(cookieParser());
 app.use(express.static('./public'));
 app.use("/styles", express.static(__dirname + "/styles"));
-app.use(session({secret:'BlueNami',resave: false,saveUninitialized: true,}));
+app.use(session({secret:'BlueNami',resave: false,saveUninitialized:false,}));
 
 const productCartRouter = require("./routes/productCartRouter.js")
 const clientRouter = require("./routes/clientRouter.js")

@@ -33,6 +33,8 @@ const path=require ("path");
       create: function(userData){
         let allUsers = this.findAll()
         let newUser={
+              
+
             id:this.generateId(),
             ...userData
         }

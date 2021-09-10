@@ -50,19 +50,20 @@ const clientController = {
     loginProcess: (req, res)=>{
         let userToLogin = User.findByField("email",req.body.email);
         if(userToLogin){
-            let passOK=bcryptjs.compareSync(req.body.password, userToLogin.password);
+                let passOK=bcryptjs.compareSync(req.body.password, userToLogin.password);
                 if(passOK){
+                delete userToLogin.password;
+                req.session.userLogged=userToLogin
                 return res.redirect("/client/profile/")  
-                }else{
-                return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}})
                 }
-        }else{
-         return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}})
+                return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}});
                 }
      
     },
     show: (req, res)=>{
-        res.render('profile');
+        res.render('profile',{
+         user:req.session.userLogged   
+        });
     },
 
 }
