@@ -14,6 +14,11 @@
    
 }
 
+.titProdRelgz h1:hover{
+    color:#1c2460;
+    }
+
+
 .botongz1 {
     width: 60%;
     background-color: #E9B843;
@@ -40,12 +45,10 @@ input.buscarProd{
 }
 
 article.tabla_lista {
-    box-shadow: inset 0 -3em 3em rgb(1 162 209 / 10%), 0 0 0 2px rgb(255 255 255), 0.3em 0.3em 1em rgb(0 0 0 / 50%);
     justify-content: space-around;
     display: inline-block;
     width: 70%;
     margin: 12px;
-    border-radius: 4px;
     flex-direction: row;
     flex-direction: column;   
  }
@@ -137,7 +140,10 @@ article.tabla_lista {
     }
 }}
 
+
 /*ProductCart*/
+
+
 body.bodysole {
     font-family: Roboto;
     background-color: rgb(207, 219, 235);
@@ -449,10 +455,7 @@ input.inputsole {
 }
 
 /*PRoductoDetail*/
-/*Comienzo css Gina*/
 
-
-/*Prueba*/
 
 .contenedorgz {
     width: 80vw;
