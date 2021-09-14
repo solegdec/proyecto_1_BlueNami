@@ -6,15 +6,33 @@
 <div class="container" style="margin-top: 40px;">
     <div class="row">
         <div class="col-md-3">
-            <h2>Bienvenido <%= user.nombre %>, vamos a surfear?</h2>
-            <img src="/img/avatars/<%= user.avatar %> ">
+            <div>
+            <h1 class="miPerfil1">MI PERFIL</h1>
+            </div>
+            <div>
+            <h2 class="miPerfil2">Bienvenido, <%=user.nombre%>...vamos a surfear?</h2>
+            </div>
+            <div class="tabla1Sole">
+            <img src="/img/avatars/<%=user.avatar%>"width="300px" height="300px">
+            </div>
             <br>
             <br>
-            <div class="alert alert-success"><%= user.email %> </div>
         </div>
+        <aside class="misDatos">
+            <h2 class="miPerfil2"> Mis Datos</h2>
+            <h4 class="miPerfil2">Nombre: <%=user.email%> </h4> <h4 class="miPerfil2">Apellido: <%=user.apellido%> </h4>
+                    <h4 class="miPerfil2"> Fecha de Nacimiento: <%=user.fechaNac%> </h4>
+                        <h4 class="miPerfil2">Género:<%=user.genero%> </h4>
+                            <h4 class="miPerfil2">Pais de Origen:<%=user.pais%> </h4>
+                            <a href="/client/<%=user.id%>/edit"><i class="far fa-edit"></i></a>
+        </aside>
     </div>
 </div>
 
+
+
+    
+<div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>   
 <%- include("./partials/footer") %>
 </body>
 </html>

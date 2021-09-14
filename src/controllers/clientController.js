@@ -1,5 +1,5 @@
 //Se escribe en mayuscula porque para diferenciar que es un "modelo"
-const Users = require('../models/User.js');
+const User = require('../models/User.js');
 const { v4: uuidv4 } = require('uuid');
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require ('express-validator')
@@ -18,75 +18,54 @@ const secure_password =new RegExp( /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?
 
 
 const clientController = {
-
-    /*index: (req, res) => {
-        const users_copy = Users.getAll()
-        res.render('users', {'users': products_copy});
-    },*/
-    show: (req, res) =>{
-        let userId = req.session.userId;
-        let user = Users.findById(userId)
-        res.render('profile',{
-            user: user,
-        })
-    },
-    create: (req, res) => {
+    register: (req, res) => {
         res.render('register');
     },
-    store: (req, res)   => {
-        let users_copy = Users.getAll().map(user => user);
-        let UserId = uuidv4();
-        if(req.body.password === req.body.confirm_password){
-            if(secure_password.test(req.body.password)){
-                const encrypt_pass = bcryptjs.hashSync(req.body.password, 10)
-                const user = {
-                    id: UserId,
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    genero: req.body.genero,
-                    fechaNac: req.body.fechaNac,
-                    email: req.body.email,
-                    pais: req.body.pais,
-                    //avatar:req.file.filename,
-                    password: encrypt_pass,
-                }
-                users_copy.push(user)
-                Users.modifiedAll(users_copy);
-            console.log('Entro al store 1')
-                res.redirect('/');
-            }else{
-                console.log('Entro al store 2')
-                res.render('register', {errors:'Contraseña no segura'})
+    processRegister: (req, res) =>{
+        const resultValidation = validationResult(req);
+                if (resultValidation.errors.length > 0) {
+                return res.render('register', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                });
             }
-
-        }else{
-            console.log('Entro al store 3')
-            res.render('register', {errors:'Contraseña no Coincide'})
-        }
-
-    },
-    showLogin: (req, res)=>{
-        res.render('login');
+            let userInDb= User.findByField("email", req.body.email);
+            if (userInDb){
+                return res.render("register",{
+                 errors:{email:{msg:"Este email ya está registrado"}},
+                 oldData:req.body 
+                });
+            }
+            let userToCreate={
+                ...req.body,
+                password:bcryptjs.hashSync(req.body.password, 10),
+                avatar:req.file.filename
+            }
+           let userCreated = User.create(userToCreate)
+        res.redirect("/client/login")
     },
     login: (req, res)=>{
-        let user_email = req.body.email;
-        const user = Users.findByEmail(user_email);
-        //console.log(user)
-        if(user){
-            if(bcryptjs.compareSync(req.body.password, user.password)){
-                req.session.userId = user.id;
-                res.render('/');
-            }else{
-                res.render('login',{"errors": 'La combinacion de email y contraseña no es valido'});
-            }
-        }else{
-            res.render('login',{"errors": 'El email no existe.'});
-        }
-
-
-    }
-
+        res.render('login');
+    },
+    loginProcess: (req, res)=>{
+        let userToLogin = User.findByField("email",req.body.email);
+        if(userToLogin){
+                let passOK=bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if(passOK){
+                delete userToLogin.password;
+                req.session.userLogged=userToLogin
+                return res.redirect("/client/profile/")  
+                }
+                return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}});
+                }
+     
+    },
+    show: (req, res)=>{
+        res.render('profile',{
+         user:req.session.userLogged   
+        });
+    },
 
 }
-
+       
 module.exports = clientController;

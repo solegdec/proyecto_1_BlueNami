@@ -7,14 +7,14 @@ const uploadFile= require ('../middlewares/multerMidd.js')
 const validations = require ('../middlewares/regFormMidd.js')
 
 
-router.get ("/register", clientController.create)
+router.get ("/register", clientController.register)
 
-router.post("/register", /*uploadFile.single("avatar"),*/ validations,clientController.store)
+router.post("/register", uploadFile.single("avatar"), validations,clientController.processRegister)
 
-router.get ("/login", clientController.showLogin);
+router.get ("/login", clientController.login);
 
-router.post("/login",clientController.login);
+router.post("/login",clientController.loginProcess);
 
-router.get("/profile", clientController.show);
+router.get("/profile/", clientController.show);
 
 module.exports = router;

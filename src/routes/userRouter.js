@@ -8,7 +8,7 @@ const userController= require ("../controllers/userController.js")
 router.get("/", userController.list);
 
 //detail
-//router.get("/:id", userController.detail);
+router.get("/profile", userController.profile);
 
 //create 
 router.get("/create", userController.create);

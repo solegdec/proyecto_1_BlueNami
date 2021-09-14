@@ -4,12 +4,12 @@ const {check}=require("express-validator")
 const validations=[
     check("nombre").notEmpty().withMessage("Tienes que completar este campo"),
     check("apellido").notEmpty().withMessage("Tienes que completar este campo"),
-    check("nacimiento").notEmpty().withMessage("Tienes que completar este campo"),
+    check("fechaNac").notEmpty().withMessage("Tienes que completar este campo"),
     check("email")
-    .notEmpty().withMessage("Tienes que completar este campo")
+    .notEmpty().withMessage("Tienes que completar este campo").bail()
     .isEmail().withMessage("Tienes que completar con un email"),
     check("pais").notEmpty().withMessage("Tienes que completar este campo"),
-    check("telefono").notEmpty().withMessage("Tienes que completar este campo"),
+    check("genero").notEmpty().withMessage("Tienes que completar este campo"),
     check("password").notEmpty().withMessage("Tienes que completar este campo"),
     check("avatar").custom((value,{req})=>{
         let file=req.file;
