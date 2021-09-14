@@ -34,5 +34,17 @@
   "password": "$2a$10$eJ1/wS3lpCueJ1mdI88V7.POhhgyq0/psEccBNUgoj1gbtnh0HCvG",
   "confirm_password": "sole2304",
   "avatar": "1631312719932_img.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "m",
+  "apellido": "b",
+  "genero": "f",
+  "fechaNac": "1990-06-30",
+  "email": "mb@gmail.com",
+  "pais": "Argentina",
+  "password": "$2a$10$AFX.oxA0z.pMHpOeaqrqWOeV0mcmkiu1Frj5jZpS.Z8xs3ZFdOTYC",
+  "confirm_password": "1212",
+  "avatar": "1631657585770_img.png"
  }
 ]
