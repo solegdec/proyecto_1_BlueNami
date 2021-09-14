@@ -37,14 +37,14 @@
  },
  {
   "id": 4,
-  "nombre": "azu",
-  "apellido": "osacar",
-  "genero": "femenino",
-  "fechaNac": "1990-06-05",
-  "email": "azuosacar@gmail.com",
-  "pais": "Chile",
-  "password": "$2a$10$.Fal08gtwvmKR12cXnnR5OtIaGNJtL1SNkZeLB9Ck7oL8lAKe8U/y",
-  "confirm_password": "azu",
-  "avatar": "1631657578205_img.png"
+  "nombre": "m",
+  "apellido": "b",
+  "genero": "f",
+  "fechaNac": "1990-06-30",
+  "email": "mb@gmail.com",
+  "pais": "Argentina",
+  "password": "$2a$10$AFX.oxA0z.pMHpOeaqrqWOeV0mcmkiu1Frj5jZpS.Z8xs3ZFdOTYC",
+  "confirm_password": "1212",
+  "avatar": "1631657585770_img.png"
  }
 ]

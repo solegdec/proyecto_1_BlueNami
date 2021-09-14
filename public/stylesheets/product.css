@@ -14,6 +14,11 @@
    
 }
 
+.titProdRelgz h1:hover{
+    color:#1c2460;
+    }
+
+
 .botongz1 {
     width: 60%;
     background-color: #E9B843;
@@ -40,12 +45,10 @@ input.buscarProd{
 }
 
 article.tabla_lista {
-    box-shadow: inset 0 -3em 3em rgb(1 162 209 / 10%), 0 0 0 2px rgb(255 255 255), 0.3em 0.3em 1em rgb(0 0 0 / 50%);
     justify-content: space-around;
     display: inline-block;
     width: 70%;
     margin: 12px;
-    border-radius: 4px;
     flex-direction: row;
     flex-direction: column;   
  }
@@ -136,3 +139,622 @@ article.tabla_lista {
        
     }
 }}
+
+
+/*ProductCart*/
+
+
+body.bodysole {
+    font-family: Roboto;
+    background-color: rgb(207, 219, 235);
+    height: 100%
+}
+
+h1.micarritoSole {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(9, 153, 219);
+    font-weight: 300;
+}
+
+h2.h2sole {
+    font-weight: 200;
+}
+
+.contenedorSole {
+    font-family: "lobster";
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+    background-color: white;
+    padding: 10px;
+    border: 20 px solid rgb(6, 50, 78);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: rgb(82, 118, 173) dotted 2px;
+}
+
+.contenedorSole2 {
+    font-family: "lobster";
+    width: 100%;
+    height: 100%;
+    font-weight: 200;
+    background-color: white;
+    padding: 10px;
+    border: 20 px solid rgb(6, 50, 78);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-bottom: rgb(82, 118, 173) dotted 2px;
+}
+
+section.contenedorSole3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "lobster";
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+    color: rgb(90, 219, 252);
+    padding: 10px;
+    font-size: 20px;
+}
+
+.precioTabla1Sole {
+    margin: 5px;
+    color: rgb(37, 75, 85);
+    align-self: center;
+}
+
+.precioTabla2Sole {
+    margin: 5px;
+    color: rgb(37, 75, 85);
+    align-self: center;
+}
+
+.tabla1Sole {
+    margin: 5px;
+    text-align: center;
+    color: #254b55;
+    font-weight: 300;
+    align-self: center
+}
+
+.tabla2Sole {
+    margin: 5px;
+    text-align: center;
+    color: #254b55;
+    font-weight: 300;
+    align-self: center
+}
+
+aside {
+    color: rgb(37, 75, 85);
+    font-weight: 300;
+    flex-direction: row;
+    text-align: justify;
+    align-self: center
+}
+
+.botonPagarSole {
+    width: 250px;
+    height: 50%;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(2, 16, 61);
+    border-color: rgb(95, 99, 99);
+    background-color: #E9B843;
+    padding: 5px;
+}
+
+.seguirComprandoSole {
+    width: 250px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: rgb(2, 16, 61);
+    border-color: rgb(95, 99, 99);
+    background-color: #E9B843;
+    padding: 5px;
+}
+
+button.buttonressole {
+    color: rgb(2, 16, 61);
+    border-color: rgb(95, 99, 99);;
+    border-radius: 20px;
+    background-color: #E9B843;
+    font-size: 15px;
+    width: 70px;
+}
+
+.totalsole {
+    align-self: center;
+    font-weight: 200;
+    color: rgb(2, 16, 61);
+}
+
+.todmedpagosole {
+    color: rgb(37, 75, 85);
+}
+
+@keyframes surfear {
+    100% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.50;
+    }
+    25% {
+        opacity: 0.25;
+    }
+}
+
+.aSurfear {
+    font-size: 20px;
+    font-family: "lobster";
+    font-weight: 200;
+    color: rgb(2, 16, 61);
+    animation-name: surfear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+input.inputsole {
+    border-radius: 10px;
+    width: 70px;
+    background-color: rgb(236, 216, 172);
+    padding: 2px 2px 2px 8px;
+    font-family: "lobster";
+    border-color: cyan;
+    margin: 10px;
+}
+
+.tabla1Sole img:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.tabla2Sole img:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+@keyframes opaco {
+    0% {
+        color: cyan;
+    }
+    25% {
+        color: rgb(23, 90, 216)
+    }
+    75% {
+        color: rgb(95, 95, 231)
+    }
+    100% {
+        color: rgb(3, 82, 119)
+    }
+}
+
+@keyframes girar {
+    0% {
+        rotateY: 100px
+    }
+    50% {
+        rotateY: 100px;
+    }
+    100% {
+        rotateX: 100px
+    }
+}
+
+.precioTabla1Sole h4 {
+    animation-name: opaco;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.precioTabla2Sole h4 {
+    animation-name: opaco;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.asidesole:hover {
+    color: rgb(5, 151, 156);
+}
+
+.totalsole:hover {
+    font-size: x-large;
+}
+
+@media screen and (min-width: 576px) {
+    h1.micarritoSole {
+        font-size: 20px;
+    }
+    h2.h2sole {
+        font-size: 18px;
+    }
+    section.contenedorSole {
+        flex-direction: row;
+        float: right;
+        font-weight: 200;
+    }
+    section.contenedorSole2 {
+        flex-direction: row;
+        float: right;
+        font-weight: 200;
+    }
+    section.contenedorSole3 {
+        flex-direction: column;
+        font-weight: 200;
+        font-size: 20px;
+    }
+    .todmedpagosole {
+        font-size: 15px;
+    }
+    .totalsole {
+        font-size: 20px;
+        text-align: center;
+        align-self: center;
+    }
+    aside.asidesole {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (min-width: 768px) {
+    h1.micarritoSole {
+        font-size: 30px;
+    }
+    h2.h2sole {
+        font-size: 25px;
+    }
+    section.contenedorSole3 {
+        flex-direction: row;
+        font-weight: 200;
+        font-size: 28px;
+    }
+    aside.asidesole {
+        display: block;
+    }
+    
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    .totalsole {
+        font-size: large;
+    }
+    h1.micarritoSole {
+        font-size: 40px;
+    }
+    h2.h2sole {
+        font-size: 30px;
+    }
+    section.contenedorSole3 {
+        flex-direction: row;
+        font-weight: 200;
+        font-size: 35px;
+    }
+    aside.asidesole {
+        display: block;
+    }
+    
+
+}
+
+/*PRoductoDetail*/
+
+
+.contenedorgz {
+    width: 80vw;
+    flex-direction: column;
+    max-width: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.productogz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.imgproductogz {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+}
+
+.imggrandegz img {
+    width: 90%;
+    height: 80%;
+}
+
+.imgcambiogz {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgcambiogz img {
+    width: 20%;
+    height: 20%;
+    justify-content: space-around;
+    opacity: 0.3;
+}
+
+.desproductosgz {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+.desproductosgz h4 {
+    font-family: "Numans";
+    font-size: 1em;
+    color: #7D7D7D;
+    padding: 10px;
+}
+
+.desproductosgz h1 {
+    font-family: "Lobster";
+    font-size: 3em;
+    color: #000000;
+    text-align: center;
+}
+
+.coloresgz {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-left: 15%;
+}
+
+.coloresgz p {
+    font-family: "Nova Cut";
+    font-size: 15px;
+    color: #000000;
+    margin-right: 10px;
+    margin-top: 5%;
+}
+
+.color1gz {
+    width: 30px;
+    height: 30px;
+    background: #FEC36A;
+}
+
+.color2gz {
+    width: 30px;
+    height: 30px;
+    background: #FE398C;
+}
+
+.color3gz {
+    width: 30px;
+    height: 30px;
+    background: #7CDEDE;
+}
+
+.botongz {
+    width: 60%;
+    background-color: #E9B843;
+    font-family: "roboto";
+    font-size: 1em;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.preciosgz p {
+    font-family: "roboto";
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+aside.descripciongz li {
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2em;
+}
+
+aside.descripciongz p {
+    font-family: "Roboto";
+    font-weight: 800;
+}
+
+aside.descripciongz {
+    padding-top: 0px;
+}
+
+.descripcion2gz {
+    width: 100%;
+    padding: 0% 5%;
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+
+/* Comienzo segundo contenedor Gina*/
+
+.divisiongz {
+    width: 100%;
+    height: 10%;
+}
+
+.divisiongz p {
+    font-family: "roboto";
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.productosRelacionadosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.productosgz {
+    width: 100%;
+    flex-direction: column;
+}
+
+.imgTabla2gz img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.tabla3gz {
+    width: 100%;
+    align-items: center;
+}
+
+.imgTabla3gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.tabla4gz {
+    width: 100%;
+    align-items: center;
+}
+
+.imgTabla4gz img {
+    width: 100%;
+    height: 50%;
+}
+
+.coloresRelgz {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.color1Rgz {
+    width: 20px;
+    height: 20px;
+    background: #FEC36A;
+}
+
+.color2Rgz {
+    width: 20px;
+    height: 20px;
+    background: #FE398C;
+}
+
+.color3Rgz {
+    width: 20px;
+    height: 20px;
+    background: #7CDEDE;
+}
+
+.titProdRelgz h1 {
+    margin: auto;
+    font-family: "Lobster";
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+.preciosRgz p {
+    font-family: "roboto";
+    font-size: 30px;
+    text-align: center;
+}
+
+.destablagz {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+/* Comienzo Media */
+
+@media screen and (min-width: 576px) {
+    /*CSS Gina*/
+    .productogz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .productosRelacionadosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .productosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    aside.descripciongz {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+    }
+    .descripcion2gz {
+        display: none;
+    }
+    .productosgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .contenedor4tablasgz {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    /*MEdia Gina*/
+    aside.descripciongz {
+        display: block;
+    }
+    .descripcion2gz {
+        display: none;
+    }
+    .contenedor4tablasgz {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
