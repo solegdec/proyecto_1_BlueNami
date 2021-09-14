@@ -15,12 +15,20 @@
                                     <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"  readonly>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="nombreCompleto">Nombre Completo</label><br/>
-                                    <input id="nombreCompleto"  name ="nombreCompleto" type="text"class="campos_add" value="<%= user.nombreCompleto%>"required >
+                                    <label for="nombre">Nombre </label><br/>
+                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%= user.nombre%>"required >
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="apellido">Apellido </label><br/>
+                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>"required >
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="fechaNac">Fecha De Nacimiento </label><br/>
+                                    <input id="fechaNac"  name ="fechaNac" type="text"class="campos_add" value="<%= user.fechaNac%>"required >
                                 </div>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="genero">Genero</label><br/>                          
+                                    <label for="genero">Género</label><br/>                          
                                     <input id="genero" name="genero" type="text" class="campos_add" value="<%= user.genero%>" >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">

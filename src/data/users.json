@@ -34,5 +34,17 @@
   "password": "$2a$10$eJ1/wS3lpCueJ1mdI88V7.POhhgyq0/psEccBNUgoj1gbtnh0HCvG",
   "confirm_password": "sole2304",
   "avatar": "1631312719932_img.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "azu",
+  "apellido": "osacar",
+  "genero": "femenino",
+  "fechaNac": "1990-06-05",
+  "email": "azuosacar@gmail.com",
+  "pais": "Chile",
+  "password": "$2a$10$.Fal08gtwvmKR12cXnnR5OtIaGNJtL1SNkZeLB9Ck7oL8lAKe8U/y",
+  "confirm_password": "azu",
+  "avatar": "1631657578205_img.png"
  }
 ]
