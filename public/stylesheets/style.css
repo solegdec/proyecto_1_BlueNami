@@ -29,8 +29,13 @@ nav h1 {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
 }
-
-nav ul {
+ul.logReg{
+    float:right;
+}
+ul.navGral{
+    float:left;
+}
+nav ul  {
     float: right;
     margin-right: 25px;
     margin-top: 7px;
@@ -49,6 +54,9 @@ nav ul li a {
     color: rgb(0, 0, 0);
     font-size: 12px;
     text-decoration: none;
+}
+img.logo{
+    float: left;
 }
 
 label #sign-one,

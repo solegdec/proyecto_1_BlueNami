@@ -3,30 +3,34 @@
 <%- include("./partials/head") %>
 <body>
 <%- include("./partials/header") %>   
+<div>
+    <h1 class="miPerfil1">MI PERFIL</h1>
+</div>
 <div class="container" style="margin-top: 40px;">
-    <div class="row">
-        <div class="col-md-3">
+    <div class="profile">
             <div>
-            <h1 class="miPerfil1">MI PERFIL</h1>
+            <h2 class="miPerfil2">Bienvenido, <%=user.nombre%>...vamos a surfear?<img src="\img\tablaVector50x62 (1) (1).png" ></h2>
             </div>
-            <div>
-            <h2 class="miPerfil2">Bienvenido, <%=user.nombre%>...vamos a surfear?</h2>
-            </div>
-            <div class="tabla1Sole">
-            <img src="/img/avatars/<%=user.avatar%>"width="300px" height="300px">
+            <div class="emailPerfil">
+            <img class="imgProfile" src="/img/avatars/<%=user.avatar%>"width="300px" height="300px">
             </div>
             <br>
             <br>
-        </div>
-        <aside class="misDatos">
-            <h2 class="miPerfil2"> Mis Datos</h2>
-            <h4 class="miPerfil2">Nombre: <%=user.email%> </h4> <h4 class="miPerfil2">Apellido: <%=user.apellido%> </h4>
-                    <h4 class="miPerfil2"> Fecha de Nacimiento: <%=user.fechaNac%> </h4>
-                        <h4 class="miPerfil2">Género:<%=user.genero%> </h4>
-                            <h4 class="miPerfil2">Pais de Origen:<%=user.pais%> </h4>
-                            <a href="/client/<%=user.id%>/edit"><i class="far fa-edit"></i></a>
-        </aside>
-    </div>
+    </div>         
+     <aside class="misDatos">
+            <h2 class="miPerfil2"> Mis Datos</h2><br><br>
+            <h4 class="miPerfil2">Nombre: <%=user.email%> </h4> <br>
+            <h4 class="miPerfil2">Apellido: <%=user.apellido%> </h4><br>
+            <h4 class="miPerfil2"> Fecha de Nacimiento: <%=user.fechaNac%> </h4><br>
+            <h4 class="miPerfil2">Género:<%=user.genero%> </h4><br>
+            <h4 class="miPerfil2">Pais de Origen:<%=user.pais%> </h4><br><br>
+           <!--<a href="/client/<%=user.id%>/edit"><i class="far fa-edit"></i></a>-->
+            <a href="/client/<%=user.id%>/logout"><button class="botonLogout"width="30px" height="15px">Cerrar Sesión </button></a>
+            
+     </aside>       
+            
+        
+    
 </div>
 
 

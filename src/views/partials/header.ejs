@@ -4,8 +4,8 @@
         <i class="fa fa-bars" id="sign-two"></i>
         <i class="fa fa-times" id="sign-one"></i>
     </label>
-    <img src="/img/logoBN.png" alt="Logo">
-    <ul>
+    <img class="logo" src="/img/logoBN.png" alt="Logo">
+    <ul class="navGral">
         <li> <a href="/">Home</a> </li>
         <li> <a href="/product">Productos</a></li>
         <li> <a href="/#qsomos">Quienes somos</a> </li>
@@ -13,9 +13,9 @@
         <li> <a href="/admin">Admin</a> </li>
     <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
     </ul>
-    <ul>
+    <ul class="logReg">
         <% if (locals.isLogged){%>
-            <li><a href="/client/profile">Hola <%= locals.userLogged.nombre%> <img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" height="37px"></a></li>     
+            <li ><a href="/client/profile">Hola <%= locals.userLogged.nombre%> <img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" style="border-radius: 100%"></a></li>     
     </ul>
     <%} else{%>  
     <ul>
