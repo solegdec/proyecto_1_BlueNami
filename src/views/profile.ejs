@@ -3,31 +3,31 @@
 <%- include("./partials/head") %>
 <body>
 <%- include("./partials/header") %>   
-<div>
-    <h1 class="miPerfil1">MI PERFIL</h1>
+<div  class="miPerfil">
+    <h1>MI PERFIL</h1>
 </div>
-<div class="container" style="margin-top: 40px;">
-    <div class="profile">
-            <div>
-            <h2 class="miPerfil2">Bienvenido, <%=user.nombre%>...vamos a surfear?<img src="\img\tablaVector50x62 (1) (1).png" ></h2>
+<div class="container1" style="margin-top: 40px;">
+    <div class="perfil">
+            <div class="tituloprofile">
+            <h2>Bienvenido, <%=user.nombre%>...vamos a surfear?<img src="\img\tablaVector50x62 (1) (1).png" ></h2>
             </div>
-            <div class="emailPerfil">
-            <img class="imgProfile" src="/img/avatars/<%=user.avatar%>"width="300px" height="300px">
+            <div class="fotoPerfil">
+            <img src="/img/avatars/<%=user.avatar%>">
+            <h4 class="fotoPerfilh4"><%=user.nombre%> <%=user.apellido%></h4><br>
             </div>
             <br>
             <br>
     </div>         
-     <aside class="misDatos">
-            <h2 class="miPerfil2"> Mis Datos</h2><br><br>
-            <h4 class="miPerfil2">Nombre: <%=user.email%> </h4> <br>
-            <h4 class="miPerfil2">Apellido: <%=user.apellido%> </h4><br>
-            <h4 class="miPerfil2"> Fecha de Nacimiento: <%=user.fechaNac%> </h4><br>
-            <h4 class="miPerfil2">Género:<%=user.genero%> </h4><br>
-            <h4 class="miPerfil2">Pais de Origen:<%=user.pais%> </h4><br><br>
+     <div class="misDatos">
+            <h2 > Mis Datos</h2><br><br>
+            <h4 >Email: <%=user.email%> </h4> <br>
+            <h4 > Fecha de Nacimiento: <%=user.fechaNac%> </h4><br>
+            <h4 >Género:<%=user.genero%> </h4><br>
+            <h4 >Pais de Origen:<%=user.pais%> </h4><br><br>
            <!--<a href="/client/<%=user.id%>/edit"><i class="far fa-edit"></i></a>-->
-            <a href="/client/<%=user.id%>/logout"><button class="botonLogout"width="30px" height="15px">Cerrar Sesión </button></a>
+            <a href="/client/logout"><button class="botonLogout"width="30px" height="15px">Cerrar Sesión </button></a>
             
-     </aside>       
+     </div>       
             
         
     

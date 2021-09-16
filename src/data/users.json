@@ -46,5 +46,17 @@
   "password": "$2a$10$AFX.oxA0z.pMHpOeaqrqWOeV0mcmkiu1Frj5jZpS.Z8xs3ZFdOTYC",
   "confirm_password": "1212",
   "avatar": "1631657585770_img.png"
+ },
+ {
+  "id": 5,
+  "nombre": "gina",
+  "apellido": "zanol",
+  "genero": "gina",
+  "fechaNac": "1990-06-30",
+  "email": "ginazanol@gmail.com",
+  "pais": "Chile",
+  "password": "$2a$10$ivXMHlxCoJpv.mZM5dT8UedMNDUdzXHkf2PUBsdmXFDwdSRVGQVBG",
+  "confirm_password": "ginazanol",
+  "avatar": "1631799141987_img.png"
  }
 ]
