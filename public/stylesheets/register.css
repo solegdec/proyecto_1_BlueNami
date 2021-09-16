@@ -140,12 +140,7 @@ img.imgProfile{
     position:relative;
     left:150px;
 }
-.container{
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 .emailPerfil{
     font-size: 20px;
     position:relative;
@@ -156,6 +151,12 @@ img.imgProfile{
     color: rgb(9, 153, 219);
     font-weight: 200;
 
+}
+.container{
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 /* Fin CSS Register*/
 
@@ -186,7 +187,7 @@ img.imgProfile{
     .form-reg-formulario {
         font-size: 1.5em;
     }
-
+    
 }
 
 
@@ -204,5 +205,5 @@ img.imgProfile{
     .form-reg-formulario {
         font-size: 2em;
     }
-
+    
 }
