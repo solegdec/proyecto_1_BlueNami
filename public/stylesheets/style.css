@@ -272,10 +272,11 @@ label #sign-two {
 
 
 .qstext {
-    font-size: 17px;
-    color: #000000;
+    font-size: 15px;
+    color: #1b1b1b;
     font-family: "roboto";
     font-weight: 300;
+    text-align: center;
 }
 
 div.qsomos {
@@ -952,6 +953,7 @@ aside.descripciongz {
 /* Comienzo Media */
 
 @media screen and (min-width: 576px) {
+    
     h1.micarritoSole {
         font-size: 20px;
     }
@@ -1008,6 +1010,7 @@ aside.descripciongz {
 }
 
 @media screen and (min-width: 768px) {
+    
     h1.micarritoSole {
         font-size: 30px;
     }

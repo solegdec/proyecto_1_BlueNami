@@ -17,7 +17,7 @@
         <section class="form-login-mail">
             <p class="form-login-p">
                 <label class="form-login-label" for=email >e-mail:</label>
-                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com required>
+                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com >
                 <% if (locals.errors && errors.email) { %>
                     <span class="error">  <%= errors.email.msg %> </span>
                 <% } %>
@@ -27,11 +27,13 @@
         <section class="form-login-password">
             <p class="form-login-p">
                 <label class="form-login-label" for="contraseña">Contraseña:</label>
-                <input class="form-login-input" type="password" name="password" id="contraseña" required>
-            </p> <br>
-            
-                <input type="checkbox" class="" name="remember_user" id="remember_user"> Recordame 
-            
+                <input class="form-login-input" type="password" name="password" id="contraseña" >
+            </p> 
+        </section>
+        <section class="form-login-password">  
+            <p class="form-login-p"> 
+            <input class="form-login-input" type="checkbox"  name="remember_user" id="remember_user" >Recordame  
+            </p>
         </section>
 
         <section class="form-login-boton">
@@ -41,17 +43,17 @@
             </p>
         </section>
     </form>
-  <form action="form-login-formulario">
+  <form class="form-login-formulario2"action="">
         <section class="form-login-experiencia">
             <h2 class="form-login-h2"> ¿Estuviste surfeando? </h2>
         </section>
   
         <section class="form-login-comment-olas">
             <p class="form-login-p">
-                <label class="form-login-label" for="form-comentario-olas">¿Buenas olas? ¿Dónde?</label>
+                <label class="form-login-label" for="form-comentario-olas">¿Buenas olas? ¿Dónde?</label> <br>
                 <textarea class="form-login-textarea" name="form-comentario" id="form-comentario">Brasil, Peru, Ecuador, Francia, Portugal, Australia, Japon... </textarea>
             </p>
-        </section>
+        </section><br>
   
         <section class="form-login-comment-tablas">
             <p class="form-login-p">

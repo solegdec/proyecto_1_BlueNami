@@ -76,6 +76,7 @@
 .form-login-textarea {
     border-radius: 5px;
     margin: auto;
+    width: 100%;
 }
 
 .form-login-separacion-mobile {
@@ -109,6 +110,8 @@
     font-size: 1.5em;
 }
 
+  
+
 }
 
 
@@ -126,5 +129,6 @@
     .form-login-formulario {
         font-size: 2em;
     }
-
+    
+     
 }
