@@ -19,6 +19,7 @@ const secure_password =new RegExp( /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?
 
 const clientController = {
     register: (req, res) => {
+        
         res.render('register');
     },
     processRegister: (req, res) =>{
@@ -54,6 +55,11 @@ const clientController = {
             if(passOK){
                 delete userToLogin.password;
                 req.session.userLogged=userToLogin
+                if( req.body.remember_user){
+                    res.cookie("userEmail",req.body.email,{maxAge:(1000 * 60)})
+                }
+
+
                 return res.redirect("/client/profile/")  
                 }
             return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}});
@@ -67,6 +73,7 @@ const clientController = {
     },
     
     logout: (req,res)=> {
+        res.clearCookie("userEmail");
         req.session.destroy();
         return res.redirect ("/");
     }

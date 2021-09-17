@@ -11,12 +11,13 @@
         <li> <a href="/#qsomos">Quienes somos</a> </li>
         <li> <a href="/#contactos-index">Contactos</a> </li>
         <li> <a href="/admin">Admin</a> </li>
-    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+    
     </ul>
     <ul class="logReg">
         <% if (locals.isLogged){%>
-            <li ><a href="/client/profile">Hola <%= locals.userLogged.nombre%> <img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" style="border-radius: 100%"></a>
-                
+            <li ><img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" style="border-radius: 100%"><a href="/client/profile">Hola <%= locals.userLogged.nombre%> </a>
+                <a href="/client/logout"> <i class="fas fa-sign-in-alt"></i> </a>  <br>
+                <a href="/productCart"><i class="fas fa-shopping-cart" ></i></a>  
             </li>     
     </ul>
     <%} else{%>  

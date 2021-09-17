@@ -58,9 +58,14 @@ function findAll(){
         let users = findAll();
         let usersActualizados= users.map(function(user){
             if (user.id == req.params.id){
-                user.nombreCompleto=req.body.nombreCompleto
+                user.nombre=req.body.nombre
+                user.apellido=req.body.apellido
+                user.email=req.body.email 
+                user.fechaNac=req.body.fechaNac 
                 user.genero=req.body.genero
-                user.email=req.body.email  
+                user.email=req.body.email 
+                user.pais=req.body.pais
+
             }
             return user
         })
