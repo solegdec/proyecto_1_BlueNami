@@ -15,9 +15,11 @@
     </ul>
     <ul class="logReg">
         <% if (locals.isLogged){%>
-            <li ><img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" style="border-radius: 100%"><a href="/client/profile">Hola <%= locals.userLogged.nombre%> </a>
-                <a href="/client/logout"> <i class="fas fa-sign-in-alt"></i> </a>  <br>
-                <a href="/productCart"><i class="fas fa-shopping-cart" ></i></a>  
+            <li >
+                <div class="avatarnav"><img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" style="border-radius: 10%"></div>
+                <div class="nombrenav"><a href="/client/profile">Hola <%= locals.userLogged.nombre%> </a></div>
+                <div class="logoutnav"><a href="/client/logout"> <i class="fas fa-sign-in-alt"></i> </a> </div>
+                <div class="cartnav"><a href="/productCart"><i class="fas fa-shopping-cart"></i></a>  </div>
             </li>     
     </ul>
     <%} else{%>  

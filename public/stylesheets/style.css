@@ -32,6 +32,22 @@ nav h1 {
 ul.logReg{
     float:right;
 }
+
+.avatarnav{
+    display: inline;
+    padding: 10% 0 20%;
+}
+.nombrenav{
+    display: inline;
+}
+.logoutnav{
+
+    display: inline;
+}
+.cartnav{
+    display: inline;
+}
+
 ul.navGral{
     float:left;
 }
