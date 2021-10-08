@@ -1,3 +1,28 @@
+let db = require('../database/models')
+
+let adminController = {
+    crear: function (req,res){
+        
+        db.Models.findAll()
+        .then(function(modelos){
+            return res.render("product-add-form", {modelos} )});
+        
+            db.Colours.findAll()
+        .then(function(colores){
+            return res.render("product-add-form", {colores} )});
+    },
+}
+        
+    
+
+
+
+
+
+
+
+
+/*
 const fs = require("fs");
 const path = require("path");
 
@@ -84,4 +109,6 @@ function writeJson(array){
         
         
     }
+
+    */
 module.exports= adminController;
