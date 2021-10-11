@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize/types")
-const { sequelize } = require(".")
+//const { DataTypes } = require("sequelize/types")
+//const { sequelize } = require(".")
 
 module.exports = (sequelize, DataTypes)=> {
 
@@ -76,21 +76,22 @@ const Users = sequelize.define("Users",
 
 );
 
-},
-
-Users.associate = function(){
-    Users.belongsTo(Categoria,{
+Users.associate = function(models){
+    Users.belongsTo(models.Categories,{
         as: 'categoria',
         foreignKey: "categoria_id"
     }),
-    Users.hasMany(Items,{
+    Users.hasMany(models.Items,{
         as: 'items2',
         foreignKey: "user_id"
         })
 
-    }
+    };
 
-    
 return Users
+
+}
+
+
 
 

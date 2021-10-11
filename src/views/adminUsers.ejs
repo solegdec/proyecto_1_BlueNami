@@ -27,10 +27,13 @@
                         <td><%=user.id%></td>
                         <td><%=user.nombre%></td>
                         <td><%=user.apellido%></td>
+                        <td><%=user.categoria.categoria%></td>
                         <td><%=user.fechaNac%></td>
                         <td><%=user.pais%></td>
                         <td><%=user.genero%></td>
                         <td><%=user.email%></td>
+                        <td><img src="/img/avatars/<%=user.avatar%>"></td>
+                        <td><a href="/profile/<%=user.id%>"><i class="fas fa-info-circle"></a></td>
                         <td><a href="/adminUser/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
                 
                         </tr>

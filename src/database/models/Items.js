@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize/types")
-const { sequelize } = require(".")
+//const { DataTypes } = require("sequelize/types")
+//const { sequelize } = require(".")
 
 module.exports = (sequelize, DataTypes)=> {
 
@@ -50,22 +50,24 @@ const Items = sequelize.define("Items",
         timestamps: true,
     }
 
-)
-};
+);
 
-Items.associate = function(){
-    Items.belongsTo(Products,{
+Items.associate = function(models){
+    Items.belongsTo(models.Products,{
         as: 'producto',
         foreignKey: 'producto_id',
     });
-    Items.belongsTo(Users,{
+    Items.belongsTo(models.Users,{
         as: 'usuario',
         foreignKey: 'usuario_id',
     });
-    Items.belongsTo(Orders,{
+    Items.belongsTo(models.Orders,{
         as: 'orden',
         foreignKey: 'order_id',
     })
-}
+};
 
 return Items
+
+}
+

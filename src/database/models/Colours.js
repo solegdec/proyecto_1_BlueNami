@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize/types")
-const { sequelize } = require(".")
+//const { DataTypes } = require("sequelize/types")
+//const { sequelize } = require(".")
 
 module.exports = (sequelize, DataTypes)=> {
 
@@ -32,20 +32,20 @@ const Colours = sequelize.define("Colours",
         timestamps: true,
     }
 
-)
-};
+);
 
 
-Colours.associate = function(){
-    Colours.belongsToMany(Products,{
+Colours.associate = function(models){
+    Colours.belongsToMany(models.Products,{
         as: 'productos2',
         through: 'products_colours',
         foreignKey: 'producto_id',
         otherKey: "color_id",
         timestamps: true,
     })
+};
+
+return Colours
 }
 
 
-
-return Colours

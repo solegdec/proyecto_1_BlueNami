@@ -1,58 +1,56 @@
-const fs = require("fs");
-const path = require("path");
+const db = require('../database/models')
 
-function findAll(){
-    
-    let usersJson = fs.readFileSync(path.join(__dirname, "../data/users.json"))
-    let data = JSON.parse(usersJson)
-    return data
-  }
- 
-  function writeJson(array){
-    let arrayJson= JSON.stringify(array);
-    return fs.writeFileSync(path.join(__dirname, "../data/users.json"),arrayJson)
-  }
 
-  const userController={
+  
+  let userController={
     list:(req,res)=>{
-        let users=findAll();       
-        res.render("adminUsers", {users})    
+        db.Users.findAll(function(users){
+            res.render("adminUsers", {users})  
+        })      
+          
     },
     profile: (req,res)=>{
-        let users = findAll();
-        let userEncontrado= users.find(function(user){
-            return user.id==req.params.id
+        db.Users.findByPk(req.params.id, {
+            include: [{association: "categorias"}]
         })
-        res.render("profile",{user:userEncontrado})
+        .then(function(user){
+            res.render("profile",{user})
+        })   
     },
+
     create: (req,res)=>{
-        res.render("user-add-form")
+        db.Categories.findAll() 
+        .then(function(categorias){
+            return res.render("user-add-form", {categorias})
+        })
     },
+
     store: function(req, res){
-        let users = findAll()
-        let userId = users.length === 0 ? 1 :  users[users.length-1].id + 1
-        let nuevoUser = {
-          id: userId ,
+        db.Users.create(
+        {
           nombre: req.body.nombre ,
+          apellido: req.body.apellido,
+          categoria: req.body.categoria,
+          fechaNac: req.body.fechaNac,
           genero: req.body.genero,
-          fechaNac: req.body.fechaNac ,
-          pais: req.body.pais ,
-          apellido: req.body.apellido ,
-          email: req.body.email ,
-          contraseña: req.body.contraseña
-          
-        }
-        let usersActualizados = [...users, nuevoUser]
-        writeJson(usersActualizados);
+          pais: req.body.pais,
+          email: req.body.email,
+          contraseña: req.body.contraseña,
+          avatar: req.file.filename,
+        })
 
         res.redirect("/adminuser");
     },
     edit: (req,res)=>{
-        let users = findAll();
-        let userEncontrado=users.find(function(user){
-            return user.id==req.params.id
-        })
-        res.render("user-edit-form",{user : userEncontrado})
+        let pedidoUsuario = db.Users.findByPk(req.params.id);
+        let pedidoCategoria = db.Categories.findAll();
+        
+        Promise.all([pedidoUsuario, pedidoCategoria])
+            .then(function([users, categorias]){
+                res.render("user-edit-form",{users, categorias})
+            })
+        
+        
     },
     update: (req,res)=>{
         let users = findAll();

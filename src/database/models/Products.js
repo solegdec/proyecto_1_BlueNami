@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize/types")
-const { sequelize } = require(".")
+//const { DataTypes } = require("sequelize/types")
+//const { sequelize } = require(".")
 
 module.exports = (sequelize, DataTypes)=> {
 
@@ -58,27 +58,27 @@ const Products = sequelize.define("Products",
     }
 
 );
-}
 
-Products.associate = function(){
-    Products.belongsToMany(Colours,{
+Products.associate = function(models){
+    Products.belongsToMany(models.Colours,{
         as: 'colours',
         through: 'products_colours',
         foreignKey: "color_id",
         otherKey: 'producto_id',
         timestamps: true,
     }),
-    Products.belongsTo(Models,{
+    Products.belongsTo(models.Models,{
         as: 'modelo',
         foreignKey: "modelo_id"
         }),
-    Products.hasMany(Items,{
+    Products.hasMany(models.Items,{
         as: 'items',
         foreignKey: "producto_id"
         })
     
-}
-
-
+};
 
 return Products
+
+}
+

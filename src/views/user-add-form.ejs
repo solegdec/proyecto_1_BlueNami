@@ -18,6 +18,12 @@
                                 <div class="form-group mb-3">
                                     <label for="apellido">Apellido</label><br/>
                                     <input id="apellido"  name ="apellido" type="text"class="campos_add" required >
+                                </div><br>                                
+                                <div class="form-group mb-3">
+                                    <p>Categoría:</p>
+                                    <%categorias.forEach(categoria =>{ %>
+                                        <p><input type="checkbox" name="categories" class="campos_add" value="<%= categoria.id %>"><%= categoria.categoria %></p>
+                                    <% }) %>
                                 </div><br>
                                 <div class="form-group mb-3">
                                     <label for="fechaNac">Fecha de Nacimiento</label><br/>
@@ -44,6 +50,8 @@
                                     <label for="avatar"> Agregar Imagen de Perfil </label><br>
                                     <input id="avatar" type="file" name="avatar" value="avatar" class="campos_add">
                                 </div>
+
+                                
                                     <button type="submit" class="button_add">Agregar Usuario</button>
                                     
                             </form>

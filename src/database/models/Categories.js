@@ -1,7 +1,7 @@
-const { DataTypes } = require("sequelize/types")
-const { sequelize } = require(".")
+//const { DataTypes } = require("sequelize/types")
+//const { sequelize } = require(".")
 
-module.exports = (sequelize, DataTypes)=> {
+module.exports = function (sequelize, DataTypes) {
 
 const Categories = sequelize.define("Categories", 
     {
@@ -32,17 +32,22 @@ const Categories = sequelize.define("Categories",
         timestamps: true,
     }
 
-)
-};
+);
 
 
-Categories.associate = function(){
-    Categories.hasMany(Users,{
+Categories.associate = function(models){
+    Categories.hasMany(models.Users,{
         as: 'usuarios',
         foreignKey: "categoria_id"
     })
+
+   
+};
+
+return Categories;
+
 }
 
 
 
-return Categories
+
