@@ -46,36 +46,39 @@ const db = require('../database/models')
         let pedidoCategoria = db.Categories.findAll();
         
         Promise.all([pedidoUsuario, pedidoCategoria])
-            .then(function([users, categorias]){
-                res.render("user-edit-form",{users, categorias})
+            .then(function([user, categorias]){
+                res.render("user-edit-form",{user, categorias})
             })
         
         
     },
     update: (req,res)=>{
-        let users = findAll();
-        let usersActualizados= users.map(function(user){
-            if (user.id == req.params.id){
-                user.nombre=req.body.nombre
-                user.apellido=req.body.apellido
-                user.email=req.body.email 
-                user.fechaNac=req.body.fechaNac 
-                user.genero=req.body.genero
-                user.email=req.body.email 
-                user.pais=req.body.pais
+        db.Users.update(
+            {
+              nombre: req.body.nombre ,
+              apellido: req.body.apellido,
+              categoria: req.body.categoria,
+              fechaNac: req.body.fechaNac,
+              genero: req.body.genero,
+              pais: req.body.pais,
+              email: req.body.email,
+              contraseña: req.body.contraseña,
+              avatar: req.file.filename,
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            
+            res.redirect("/adminUser");
+        },
 
-            }
-            return user
-        })
-        writeJson(usersActualizados);
-        res.redirect("/adminUser")
-    },
     destroy: (req,res)=>{
-        let users = findAll();
-        let usersNoBorrados= users.filter(function(user){
-            return user.id !=req.params.id
+        db.Users.destroy({
+            where: {
+                id: req.params.id
+            }
         })
-        writeJson(usersNoBorrados);
         res.redirect("/adminUser")
     },
 }
