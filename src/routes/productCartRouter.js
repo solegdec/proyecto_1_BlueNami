@@ -1,4 +1,4 @@
-const express= require ("express");
+/*const express= require ("express");
 const router= express.Router();
 
 const productCartController= require ("../controllers/productCartController.js")
@@ -6,3 +6,4 @@ const productCartController= require ("../controllers/productCartController.js")
 router.get ("/", productCartController.entrarCarrito);
 
 module.exports = router;
+*/

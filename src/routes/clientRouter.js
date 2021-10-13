@@ -1,4 +1,4 @@
-const express= require ("express");
+/*const express= require ("express");
 const router= express.Router();
 
 const clientController= require ("../controllers/clientController.js")
@@ -22,3 +22,4 @@ router.get("/profile/",authMiddleware,clientController.profile);
 router.get("/logout/",clientController.logout);
 
 module.exports = router;
+*/

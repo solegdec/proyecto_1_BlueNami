@@ -35,12 +35,12 @@ const userRouter = require("./routes/userRouter.js")
 const adminRouter = require ("./routes/adminRouter.js")
 
 app.use(indexRouter)
-app.use("/productCart",productCartRouter)
-app.use("/client",clientRouter)
-app.use("/product",productRouter)
-app.use("/admin",adminRouter)
+//app.use("/productCart",productCartRouter)
+//app.use("/client",clientRouter)
+//app.use("/product",productRouter)
+//app.use("/admin",adminRouter)
 app.use("/adminUser",userRouter)
-app.use("/product-add-form",adminRouter)
+//app.use("/product-add-form",adminRouter)
 app.use("/user-add-form",userRouter)
 
 

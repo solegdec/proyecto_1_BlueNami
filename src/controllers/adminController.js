@@ -1,7 +1,7 @@
 let db = require('../database/models')
 
 let adminController = {
-    crear: function (req,res){
+    create: function (req,res){
         
         db.Models.findAll()
         .then(function(modelos){
@@ -11,6 +11,9 @@ let adminController = {
         .then(function(colores){
             return res.render("product-add-form", {colores} )});
     },
+    
+
+
 }
         
     

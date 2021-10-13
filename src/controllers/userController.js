@@ -1,12 +1,13 @@
 const db = require('../database/models')
 
-
   
   let userController={
     list:(req,res)=>{
         db.Users.findAll(function(users){
-            res.render("adminUsers", {users})  
-        })      
+        })
+        .then(function(users){
+            res.render("adminUsers", {users})
+        })     
           
     },
     profile: (req,res)=>{
