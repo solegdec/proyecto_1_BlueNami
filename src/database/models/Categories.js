@@ -29,7 +29,7 @@ const Categories = sequelize.define("Categories",
     },
     {
         tableName: 'userCategories',
-        timestamps: true,
+        timestamps: false,
     }
 
 );

@@ -53,12 +53,12 @@ const Users = sequelize.define("Users",
         },
         categoria_id:    {
             foreignKey:true,
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.INTEGER
         },
 
-        created_at:    {
-            allowNull: true,
+       created_at:    {
+           allowNull: true,
             type: DataTypes.DATE
         },
         updated_at:
@@ -71,7 +71,7 @@ const Users = sequelize.define("Users",
     
     {
         tableName: 'users',
-        timestamps: true,
+        timestamps: false,
     }
 
 );

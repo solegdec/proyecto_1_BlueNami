@@ -10,20 +10,20 @@
                 <section class="productogz">
                     <article class="imgproductogz">
                         <div class="imggrandegz">
-                            <img src="/img/<%=tabla.foto%>">
+                            <img src="/img/<%=product.foto%>">
                             </div>
                         <div class="imgcambiogz">
-                            <img src="/img/<%=tabla.foto%>">
-                            <img src="/img/<%=tabla.foto%>">
-                            <img src="/img/<%=tabla.foto%>">
-                            <img src="/img/<%=tabla.foto%>">
-                            <img src="/img/<%=tabla.foto%>">
+                            <img src="/img/<%=product.foto%>">
+                            <img src="/img/<%=product.foto%>">
+                            <img src="/img/<%=product.foto%>">
+                            <img src="/img/<%=product.foto%>">
+                            <img src="/img/<%=product.foto%>">
                         </div>
                     </article>
 
                     <article class="desproductosgz">
                         <h4>Tabla muy importante</h4>
-                        <h1><%=tabla.nombre %></h1>
+                        <h1><%=product.nombre %></h1>
                         
                         <div class="coloresgz">
                             <p>Colores</p>
@@ -34,8 +34,16 @@
                             <div class="color3gz">
                             </div>
                         </div>
+                        <p class="label"><label for="color"></label>Color</p>
+                    <select name="color">
+                        <% product.colours.forEach(colour=> { %>
+                    <option value="<%= colour.id %>">
+                        <%= colour.color %>
+                    </option><br>
+                        <% }) %>
+                    </select><br>
                         <div class="preciosgz">
-                            <p><%= tabla.precio %></p>
+                            <p><%= product.precio %></p>
                         </div>
                         <div class="botAgrCargz">
                             <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -44,7 +52,7 @@
                         <aside class="descripciongz">
                             <p>Tabla</p><br>
                             
-                            <li><%= tabla.descripcion %></li>
+                            <li><%= product.descripcion %></li>
 
                             
                         </aside>
@@ -55,7 +63,7 @@
                         <p>Tabla:</p><br>
                        
 
-                        <li><%= tabla.descripcion %></li>
+                        <li><%= product.descripcion %></li>
                     </aside>
                 </section>
                 
@@ -65,11 +73,11 @@
                 <section class="productosRelacionadosgz">
                     <article class="tabla3gz">
                         <div class="imgTabla3gz">
-                            <a href="/product/<%=tabla.id%> "><img src="/img/<%=tabla.foto2%>"></a>
+                            <a href="/product/<%=product.id%> "><img src="/img/<%=product.foto2%>"></a>
                         </div>
                         <div class="destablagz">
                             <div class="titProdRelgz">
-                                <h1><%=tabla.nombre%></h1>
+                                <h1><%=product.nombre%></h1>
                                 </a>
                             </div>
                             <div class="coloresRelgz">
@@ -81,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="preciosRgz">
-                                <p><%=tabla.precio%></p>
+                                <p><%=product.precio%></p>
                             </div>
                             <div class="botAgrCargz">
                                 <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -91,11 +99,11 @@
                     </article>
                     <article class="tabla3gz">
                         <div class="imgTabla3gz">
-                            <a href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto3%>"></a>
+                            <a href="/product/<%=product.id%>"><img src="/img/<%=product.foto3%>"></a>
                         </div>
                         <div class="destablagz">
                             <div class="titProdRelgz">
-                                <h1><%=tabla.nombre %></h1>
+                                <h1><%=product.nombre %></h1>
                             </div>
                             <div class="coloresRelgz">
                                 <div class="color1Rgz">
@@ -106,7 +114,7 @@
                                 </div>
                             </div>
                             <div class="preciosRgz">
-                                <p><%=tabla.precio %></p>
+                                <p><%=product.precio %></p>
                             </div>
                             <div class="botAgrCargz">
                                 <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
@@ -116,11 +124,11 @@
                     </article>
                     <article class="tabla4gz">
                         <div class="imgTabla4gz">
-                            <a href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto4%>"></a>
+                            <a href="/product/<%=product.id%>"><img src="/img/<%=product.foto4%>"></a>
                         </div>
                         <div class="destablagz">
                             <div class="titProdRelgz">
-                                <h1><%=tabla.nombre%></h1>
+                                <h1><%=product.nombre%></h1>
                             </div>
                             <div class="coloresRelgz">
                                 <div class="color1Rgz">
@@ -131,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="preciosRgz">
-                                <p><%=tabla.precio %></p>
+                                <p><%=product.precio %></p>
                             </div>
                             <div class="botAgrCargz">
                                 <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>

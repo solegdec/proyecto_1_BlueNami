@@ -17,19 +17,11 @@ const Colours = sequelize.define("Colours",
             type: DataTypes.STRING
         },
        
-        created_at:    {
-            allowNull: true,
-            type: DataTypes.DATE
-        },
-        updated_at:
-        {
-            allowNull: true,
-            type: DataTypes.DATE
-        },
+        
     },
     {
         tableName: 'Colours',
-        timestamps: true,
+        timestamps: false,
     }
 
 );
@@ -37,11 +29,11 @@ const Colours = sequelize.define("Colours",
 
 Colours.associate = function(models){
     Colours.belongsToMany(models.Products,{
-        as: 'productos2',
+        as: 'products',
         through: 'products_colours',
         foreignKey: 'producto_id',
         otherKey: "color_id",
-        timestamps: true,
+        timestamps: false,
     })
 };
 

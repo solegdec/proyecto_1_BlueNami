@@ -42,19 +42,11 @@ const Products = sequelize.define("Products",
             type: DataTypes.INTEGER
         },
 
-        created_at:    {
-            allowNull: true,
-            type: DataTypes.DATE
-        },
-        updated_at:
-        {
-            allowNull: true,
-            type: DataTypes.DATE
-        },
+        
     },
     {
         tableName: 'products',
-        timestamps: true,
+        timestamps: false,
     }
 
 );
@@ -65,7 +57,7 @@ Products.associate = function(models){
         through: 'products_colours',
         foreignKey: "color_id",
         otherKey: 'producto_id',
-        timestamps: true,
+        timestamps: false,
     }),
     Products.belongsTo(models.Models,{
         as: 'modelo',

@@ -9,7 +9,7 @@
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
-                            <form  class="tm-edit-product-form" action="/adminUser/create" method="POST" >
+                            <form  class="tm-edit-product-form" action="/adminUser/create" method="POST" enctype="multipart/form-data">
                     
                                 <div class="form-group mb-3">
                                     <label for="nombre">Nombre </label><br/>
@@ -22,7 +22,7 @@
                                 <div class="form-group mb-3">
                                     <p>Categoría:</p>
                                     <%categorias.forEach(categoria =>{ %>
-                                        <p><input type="checkbox" name="categories" class="campos_add" value="<%= categoria.id %>"><%= categoria.categoria %></p>
+                                        <p><input type="checkbox" name="categoria" class="campos_add" value="<%= categoria.id %>"><%= categoria.categoria %></p>
                                     <% }) %>
                                 </div><br>
                                 <div class="form-group mb-3">
@@ -43,12 +43,12 @@
                                     <input id="email"name="email" type="email"class="campos_add" required />
                                 </div><br>
                                 <div class="form-group mb-3">
-                                    <label for="contraseña">Contraseña</label><br/>
-                                    <input id="contraseña"  name ="contraseña" type="text"class="campos_add" required >
+                                    <label for="password">Contraseña</label><br/>
+                                    <input id="password"  name ="password" type="text"class="campos_add" required >
                                 </div><br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="avatar"> Agregar Imagen de Perfil </label><br>
-                                    <input id="avatar" type="file" name="avatar" value="avatar" class="campos_add">
+                                    <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
 
                                 

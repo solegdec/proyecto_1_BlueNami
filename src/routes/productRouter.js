@@ -6,6 +6,8 @@ const productController= require ("../controllers/productController.js")
 
 ///list
 router.get("/", productController.list);
+router.get("/buscar", productController.buscar);
+
 
 //detail
 router.get("/:id", productController.detail);

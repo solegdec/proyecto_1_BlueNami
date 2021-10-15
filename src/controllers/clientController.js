@@ -1,8 +1,12 @@
 //Se escribe en mayuscula porque para diferenciar que es un "modelo"
-const User = require('../models/User.js');
+const Users = require('../database/models/Users.js');
 const { v4: uuidv4 } = require('uuid');
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
+const db = require('../database/models');
+const { Op } = require("sequelize");
+
+
 
 /*
     Minimo 8 caracteres
@@ -22,48 +26,53 @@ const clientController = {
         
         res.render('register');
     },
-    processRegister: (req, res) =>{
-        const resultValidation = validationResult(req);
-                if (resultValidation.errors.length > 0) {
-                return res.render('register', {
-                    errors: resultValidation.mapped(),
-                    oldData: req.body
-                });
-            }
-            let userInDb= User.findByField("email", req.body.email);
-            if (userInDb){
-                return res.render("register",{
-                 errors:{email:{msg:"Este email ya está registrado"}},
-                 oldData:req.body 
-                });
-            }
-            let userToCreate={
-                ...req.body,
-                password:bcryptjs.hashSync(req.body.password, 10),
-                avatar:req.file.filename
-            }
-           let userCreated = User.create(userToCreate)
-        res.redirect("/client/login")
-    },
+    processRegister:(req, res, next) => {
+            const errores = validationResult(req);
+            if(!errores.isEmpty()){
+                return res.render("register", {
+                    errores: errores.errors,
+                    old: req.body
+                })
+            };
+            db.Users.create({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                genero:req.body.genero,
+                pais:req.body.pais,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                fechaNac: req.body.fechaNac,
+                avatar: req.file.filename,
+                categoria:req.body.categoria
+                
+            }).then(function(){
+                return res.redirect("/client/login");
+            })
+        },
+    
     login: (req, res)=>{
         res.render('login');
     },
-    loginProcess: (req, res)=>{
-        let userToLogin = User.findByField("email",req.body.email);
-        if(userToLogin){
-            let passOK = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(passOK){
-                delete userToLogin.password;
-                req.session.userLogged=userToLogin
-                if( req.body.remember_user){
-                    res.cookie("userEmail",req.body.email,{maxAge:(1000 * 60)})
-                }
+    processLogin: (req, res, next) => {
+        const errores = validationResult(req);
 
-
-                return res.redirect("/client/profile/")  
-                }
-            return res.render("login",{errors:{email:{msg:"Las credenciales son inválidas"}}});
+        if(!errores.isEmpty()){
+            return res.render("login", { 
+                errors: errors.errors,
+                old: req.body 
+            });
+        }
+        db.Users.findOne({
+            where: {
+                email: req.body.email 
             }
+        }).then( users => {
+            req.session.userLogged = users;
+            if(req.body.remember_user){
+                res.cookie("remember_user", users.id, { maxAge: 60000 * 60 * 24 })
+            }
+            return res.redirect("/client/profile/");
+        })  
     },
     
     profile: (req, res)=>{
@@ -72,11 +81,13 @@ const clientController = {
         });
     },
     
-    logout: (req,res)=> {
-        res.clearCookie("userEmail");
+    logout: function(req, res){
         req.session.destroy();
-        return res.redirect ("/");
-    }
+        res.clearCookie("remember_user");
+        res.redirect("/");
+    },   
+    
+    
 
 }
        

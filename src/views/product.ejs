@@ -7,21 +7,32 @@
         <%- include("./partials/header") %>
             <section>
                 <div class="barra-bus"> 
-                    <input type="search" id= "search" placeholder="Search " class="buscarProd" 
-                    ><button ><i class="fas fa-search"></i></button>
+                <form action="/products/buscar" method="post">
+
+                   
+                  
+                      Busca entre nuestros modelos: 
+                  
+                      <input type="search" id= "search" placeholder="Search " class="buscarProd" href="/products/buscar">
+                      <button ><i class="fas fa-search"></i></button>
+                   
+                  </form>
+                
+                   
+                    
                </div>
                 
             </section>
-            <% tablas.forEach(function(tabla){ %>
+            <% products.forEach(function(products){ %>
 
                 <article class="tabla_lista">
 
-                    <a class="imgTabla2gz" href="/product/<%=tabla.id%>"><img src="/img/<%=tabla.foto%>"></a>
+                    <a class="imgTabla2gz" href="/product/<%=products.id%>"><img src="/img/<%=products.foto%>"></a>
 
                     <div class="destablagz">
                         <div class="titProdRelgz">
                             <h1>
-                                <%= tabla.nombre %>
+                                <%= products.nombre %>
                             </h1>
                             </a>
                         </div>
@@ -35,7 +46,7 @@
                         </div>
                         <div class="preciosRgz">
                             <p>
-                                <%=tabla.precio %>
+                                <%=products.precio %>
                             </p>
                         </div>
                         <div class="botAgrCargz">

@@ -15,26 +15,26 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Modelo</th>
                             <th scope="col">Precio</th>
-                            <th scope="col">Color</th>
+                           
                             <th scope="col">Unidades</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
                         
                         </thead>
                         <tbody>
-                            <% tablas.forEach(function(tabla){ %>
+                            <% products.forEach(function(products){ %>
                         <form  class="tm-edit-product-form" action="" method="POST" >
                             <tr>
                             <th scope="row"> <input type="checkbox"> </th>
-                            <td><%=tabla.id%></td>
-                            <td><%=tabla.nombre%></td>
-                            <td><%=tabla.modelo%></td>
-                            <td><%=tabla.precio%></td>
-                            <td><%=tabla.color%></td>
-                            <td><%=tabla.unidades%></td>
+                            <td><%=products.id%></td>
+                            <td><%=products.nombre%></td>
+                            <td><%=products.modelo.modelo%></td>
+                            <td><%=products.precio%></td>
+                            
+                            <td><%=products.unidades%></td>
                         </form> 
-                            <td><a href="/product/<%=tabla.id%>"><i class="fas fa-info-circle"></a></td>
-                            <td><a href="/admin/<%=tabla.id%>/edit"><i class="far fa-edit"></a></td>
+                            <td><a href="/product/<%=products.id%>"><i class="fas fa-info-circle"></a></td>
+                            <td><a href="/admin/<%=products.id%>/edit"><i class="far fa-edit"></a></td>
                             </tr> 
                          <% }) %>       
          

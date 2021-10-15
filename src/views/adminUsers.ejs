@@ -14,27 +14,29 @@
                         <th scope="col">Id</th>           
                         <th scope="col">Nombre </th>
                         <th scope="col">Apellido </th>
+                        <th scope="col">Categoría</th>
                         <th scope="col">Fecha de Nacimiento </th>
                         <th scope="col">Pais de Origen </th>
                         <th scope="col">Género</th>
                         <th scope="col">E-mail</th>
+                        <th scope="col">Foto</th>
                         <th scope="col">Editar</th>           
                     </thead>
                     <tbody>           
-                    <%users.forEach(function(user){ %>
+                    <%users.forEach(function(users){ %>
                         <tr>
                          <th scope="row"> <input type="checkbox"> </th>
-                        <td><%=user.id%></td>
-                        <td><%=user.nombre%></td>
-                        <td><%=user.apellido%></td>
-                        <td><%=user.categoria.categoria%></td>
-                        <td><%=user.fechaNac%></td>
-                        <td><%=user.pais%></td>
-                        <td><%=user.genero%></td>
-                        <td><%=user.email%></td>
-                        <td><img src="/img/avatars/<%=user.avatar%>"></td>
-                        <td><a href="/profile/<%=user.id%>"><i class="fas fa-info-circle"></a></td>
-                        <td><a href="/adminUser/<%=user.id%>/edit"><i class="far fa-edit"></i></a></td>
+                        <td><%=users.id%></td>
+                        <td><%=users.nombre%></td>
+                        <td><%=users.apellido%></td>
+                        <td><%=users.categoria.categoria%></td>
+                        <td><%=users.fechaNac%></td>
+                        <td><%=users.pais%></td>
+                        <td><%=users.genero%></td>
+                        <td><%=users.email%></td>
+                        <td><img src="/img/avatars/<%=users.avatar%>" width="30px" height="30px"></td>
+                        <td><a href="/profile/<%=users.id%>"><i class="fas fa-info-circle"></a></td>
+                        <td><a href="/adminUser/<%=users.id%>/edit"><i class="far fa-edit"></i></a></td>
                 
                         </tr>
                      <% }) %>               

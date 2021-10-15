@@ -17,19 +17,11 @@ const Models = sequelize.define("Models",
             type: DataTypes.STRING
         },
        
-        created_at:    {
-            allowNull: true,
-            type: DataTypes.DATE
-        },
-        updated_at:
-        {
-            allowNull: true,
-            type: DataTypes.DATE
-        },
+       
     },
     {
         tableName: 'Models',
-        timestamps: true,
+        timestamps: false,
     }
 
 );

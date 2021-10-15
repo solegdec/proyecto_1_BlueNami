@@ -1,4 +1,4 @@
-const fs = require('fs');
+/*const fs = require('fs');
 const path=require ("path");
  
 
@@ -46,5 +46,5 @@ const path=require ("path");
   
 }
 //console.log(User.create({nombre:"sebas", email:"sebas@gmail.com"}))
-module.exports = User;
+module.exports = User;*/
 

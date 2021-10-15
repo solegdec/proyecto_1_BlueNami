@@ -1,17 +1,27 @@
-const db = require('../database/models')
+const db = require('../database/models');
+const { Op } = require("sequelize");
+const { v4: uuidv4 } = require('uuid');
+const bcrypt = require('bcryptjs');
+const {validationResult} = require ('express-validator')
 
 
-  
+
+
   let userController={
-    list:(req,res)=>{
-        db.Users.findAll(function(users){
-            res.render("adminUsers", {users})  
-        })      
-          
+    list: function (req,res){
+        
+        db.Users.findAll( 
+            {include: [ {association:"categoria"}]})
+            .then(function(users)
+           {
+            res.render("adminUsers", { users:users })
+        }
+        )
     },
+    
     profile: (req,res)=>{
         db.Users.findByPk(req.params.id, {
-            include: [{association: "categorias"}]
+            include: [{association: "categoria"}, {association:"usuarios"}]
         })
         .then(function(user){
             res.render("profile",{user})
@@ -30,16 +40,19 @@ const db = require('../database/models')
         {
           nombre: req.body.nombre ,
           apellido: req.body.apellido,
-          categoria: req.body.categoria,
+          categoria_id: req.body.categoria,
           fechaNac: req.body.fechaNac,
           genero: req.body.genero,
           pais: req.body.pais,
           email: req.body.email,
-          contraseña: req.body.contraseña,
+          password: bcrypt.hashSync(req.body.password, 10),
           avatar: req.file.filename,
         })
+    .then(function(){
+        return res.redirect("/adminUser");
+    })
 
-        res.redirect("/adminuser");
+      
     },
     edit: (req,res)=>{
         let pedidoUsuario = db.Users.findByPk(req.params.id);

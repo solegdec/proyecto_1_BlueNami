@@ -1,28 +1,93 @@
-const fs = require("fs");
-const path = require("path");
+const db = require('../database/models');
+const { Op } = require("sequelize");
+const {validationResult} = require("express-validator")
 
-function findAll(){
-    //leer el json
-    let tablasJson= fs.readFileSync(path.join(__dirname, "../data/tablas.json"))
   
-    //parsear la inform
-    let data = JSON.parse(tablasJson)
-    return data
-  }
-
-const productController={
-    list:(req,res)=>{
-        let tablas=findAll();       
-        res.render("product", {tablas})    
-    },
-    detail: (req,res)=>{
-        let tablas = findAll();
-        let tablaEncontrada= tablas.find(function(tabla){
-            return tabla.id==req.params.id
-        })
-        res.render("productDetail",{tabla:tablaEncontrada})
+  let productController={
+    list: (req, res) => {
+        db.Products.findAll(
+            {            include: ['modelo']        }
+        )
+            .then(products => {
+                res.render('product', {products})
+            })
     },
     
-}
+    detail: (req,res)=>{
+        db.Products.findByPk(req.params.id, {
+            include: [{association: "modelo"},{association:"colours"}]
+        })
+        .then(function(product){
+            res.render("productDetail",{product})
+        })   
+    
+    
+    },
+    buscar: function (req, res, next) {
+        let productToFind = req.keyword.products;
+        db.Products.findAll({
+            where: {
+                name: { [Op.like]: '%' + productToFind + '%' }
+            }
+        })
+    },
 
-module.exports = productController;
+    create: (req,res)=>{
+        db.Models.findAll() 
+        .then(function(modelos){
+            return res.render("product-add-form", {modelos})
+        })
+    },
+
+    store: function(req, res){
+        db.Products.create(
+        {
+          nombre: req.body.nombre ,
+          descripcion: req.body.descripcion,
+          unidades: req.body.unidades,
+          foto: req.body.foto,
+          precio: req.body.precio,
+          
+        })
+
+        res.redirect("/product");
+    },
+    /*edit: (req,res)=>{
+        let pedidoUsuario = db.Users.findByPk(req.params.id);
+        let pedidoCategoria = db.Categories.findAll();
+        
+        Promise.all([pedidoUsuario, pedidoCategoria])
+            .then(function([user, categorias]){
+                res.render("user-edit-form",{user, categorias})
+            })
+        
+        
+    },*/
+    //aca faltan los datos correctos de product
+    update: (req,res)=>{
+        db.Products.update(
+            {
+              nombre: req.body.nombre ,
+              descripcion: req.body.descripcion,
+              unidades: req.body.unidades,
+              foto: req.body.foto,
+              precio: req.body.precio,e,
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            
+            res.redirect("/product");
+        },
+
+    destroy: (req,res)=>{
+        db.Products.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/product")
+    },
+}
+module.exports= productController;

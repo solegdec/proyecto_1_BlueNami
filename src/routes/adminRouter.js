@@ -23,14 +23,14 @@ router.get ("/", adminController.list);
 
 //create 
 router.get("/create", adminController.create);
-router.post("/create",fileUpload.single("foto"), adminController.store);
+router.post("/create",fileUpload.single("avatar"), adminController.store);
 
 //edit
-router.get("/:id/edit", adminController.edit);
-router.put("/:id/edit", adminController.update);
+//router.get("/:id/edit", adminController.edit);
+//router.put("/:id/edit", adminController.update);
 
 // delete
-router.delete("/destroy/:id", adminController.destroy);
+//router.delete("/destroy/:id", adminController.destroy);
 
 //detail
 router.get("/detail/:id", adminController.detail);
