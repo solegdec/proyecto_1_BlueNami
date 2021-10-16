@@ -43,7 +43,7 @@ const clientController = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 fechaNac: req.body.fechaNac,
                 avatar: req.file.filename,
-                categoria:req.body.categoria
+                categoria_id: 1
                 
             }).then(function(){
                 return res.redirect("/client/login");
