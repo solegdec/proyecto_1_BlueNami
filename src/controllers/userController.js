@@ -18,12 +18,13 @@ const {validationResult} = require ('express-validator')
     
     profile: (req,res)=>{
         db.Users.findByPk(req.params.id, {
-            include: [{association: "categoria"}, {association:"usuarios"}]
+            include: [{association: "categoria"}]
         })
         .then(function(user){
             res.render("profile",{user})
         })   
     },
+    
 
     create: (req,res)=>{
         db.Categories.findAll() 
@@ -52,10 +53,12 @@ const {validationResult} = require ('express-validator')
       
     },
     edit: (req,res)=>{
-        let pedidoUsuario = db.Users.findByPk(req.params.id);
-        let pedidoCategoria = db.Categories.findAll();
+        let pedidoUsuario = db.Users.findByPk(req.params.id,{
+            include: [{association: "categoria"}]
+        });
+        let pedidoCategorias = db.Categories.findAll();
         
-        Promise.all([pedidoUsuario, pedidoCategoria])
+        Promise.all([pedidoUsuario, pedidoCategorias])
             .then(function([user, categorias]){
                 res.render("user-edit-form",{user, categorias})
             })

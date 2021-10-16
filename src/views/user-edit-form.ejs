@@ -9,7 +9,7 @@
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
-                            <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" >
+                            <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data" >
                                 <div class="form-group mb-3">
                                     <label for="id">Id</label><br/>
                                     <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"  readonly>
@@ -24,19 +24,15 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="categoria">Categoria </label><br/>
-                                    <select name="categoria" id="categoria" class="campos_add" >
-                                    <% for (let i = 0; i < categorias.length; i++){ %>
-                                        <% if (categorias[i].id == user.categoria_id) { %>
-                                            <option value="categorias[i].id" selected>
-                                                <% categoria[i].categoria %>
-                                            </option>
-                                        <% }else{ %>
-                                            <option value="categorias[i].id" >
-                                                <% categoria[i].categoria %>
-                                            </option>
-                                        <%}%>
-                                    <%}%>
-                                    </select>
+                                    
+                                    <select name="categoria">
+                                        <% categorias.forEach(categoria=> { %>
+                                    <option value="<%= categoria.id %>">
+                                        <%= categoria.categoria %>
+                                    </option><br>
+                                        <% }) %>
+                                    </select><br>
+                                    
                                 </div>
 
 
@@ -54,7 +50,12 @@
                                     <label for="email" >E-Mail</label><br/>
                                     <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required >
                                 </div>
-                                
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="avatar"> Editar Imagen de Perfil </label><br>
+                                    <input id="avatar" type="file" name="avatar"  class="campos_add">
+                                </div>
+
+                                <img src="/img/avatars/<%=user.avatar%>" width="30px" height="30px">
                                     <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>
                         </div>

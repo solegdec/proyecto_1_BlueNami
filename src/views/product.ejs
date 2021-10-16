@@ -7,11 +7,10 @@
         <%- include("./partials/header") %>
             <section>
                 <div class="barra-bus"> 
-                <form action="/products/buscar" method="post">
-        
-                     <input type="search" id= "search" placeholder="Search " class="buscarProd" >
-                      <button href="/products/buscar">Buscar</button>
-                      
+                
+                <form class="barra-bus" action="/product/buscar" method="GET">
+                    <input type="text"  name="search" placeholder="Search"class="buscarProd">
+                    <input type="submit" value="Search" style="width:100px;"class="buscarProd">
                 </form>
                 </div>
                 

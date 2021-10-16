@@ -29,7 +29,7 @@ router.post("/create",fileUpload.single("avatar"), userController.store);
 
 //edit
 router.get("/:id/edit", userController.edit);
-router.put("/:id/edit", userController.update);
+router.put("/:id/edit",fileUpload.single("avatar"), userController.update);
 
 // delete
 router.delete("/destroy/:id", userController.destroy)

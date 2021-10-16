@@ -6,11 +6,12 @@ const {validationResult} = require("express-validator")
   let productController={
     list: (req, res) => {
         db.Products.findAll(
-            {            include: ['modelo']        }
+            { include: ['modelo']}
         )
             .then(products => {
                 res.render('product', {products})
             })
+        
     },
     
     detail: (req,res)=>{
@@ -24,15 +25,18 @@ const {validationResult} = require("express-validator")
     
     },
     buscar: (req,res)=> {
-        let productToFind = req.query.keyword;
+       
         db.Products.findAll({
+
             where: {
-                modelo: { [Op.like]: '%' + productToFind + '%' }
+                nombre: { [Op.like]: '%' + req.query.search + '%' }
             }
         })
+     
         .then(products=>{
-            res.render("productDetail",{product})
+            res.render("product",{products})
         })
+        .catch(err=>{res.send(err)})
     },
 
     create: (req,res)=>{
@@ -54,6 +58,20 @@ const {validationResult} = require("express-validator")
         })
 
         res.redirect("/product");
+    },
+    edit: (req,res)=>{
+        let pedidoProducto = db.Products.findByPk(req.params.id,{
+            include: [{association: "modelo"},{association:"colores"}]
+        });
+        let pedidoModelos = db.Models.findAll();
+        let pedidoColores = db.Colours.findAll();
+        
+        Promise.all([pedidoProducto, pedidoModelos, pedidoColores])
+            .then(function([producto, modelo, color]){
+                res.render("product-edit-form",{producto, modelo, color})
+            })
+        
+        
     },
     /*edit: (req,res)=>{
         let pedidoUsuario = db.Users.findByPk(req.params.id);
