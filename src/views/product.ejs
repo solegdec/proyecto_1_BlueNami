@@ -8,19 +8,12 @@
             <section>
                 <div class="barra-bus"> 
                 <form action="/products/buscar" method="post">
-
-                   
-                  
-                      Busca entre nuestros modelos: 
-                  
-                      <input type="search" id= "search" placeholder="Search " class="buscarProd" href="/products/buscar">
-                      <button ><i class="fas fa-search"></i></button>
-                   
-                  </form>
-                
-                   
-                    
-               </div>
+        
+                     <input type="search" id= "search" placeholder="Search " class="buscarProd" >
+                      <button href="/products/buscar">Buscar</button>
+                      
+                </form>
+                </div>
                 
             </section>
             <% products.forEach(function(products){ %>

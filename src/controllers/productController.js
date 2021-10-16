@@ -23,12 +23,15 @@ const {validationResult} = require("express-validator")
     
     
     },
-    buscar: function (req, res, next) {
-        let productToFind = req.keyword.products;
+    buscar: (req,res)=> {
+        let productToFind = req.query.keyword;
         db.Products.findAll({
             where: {
-                name: { [Op.like]: '%' + productToFind + '%' }
+                modelo: { [Op.like]: '%' + productToFind + '%' }
             }
+        })
+        .then(products=>{
+            res.render("productDetail",{product})
         })
     },
 

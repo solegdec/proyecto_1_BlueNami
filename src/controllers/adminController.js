@@ -15,13 +15,15 @@ let adminController = {
         )
     },
     
-    detail: (req,res)=>{
-        db.Products.findByPk(req.params.id, {
-            include: [{association: "modelo"},{association:"colours"}]
+    detail: async function (req, res, next ){
+        let tabla = await db.Products.findByPk(req.params.id, {
+            include:["colors", "models"]
         })
-        .then(function(product){
-            res.render("productDetail",{product})
-        })   
+        if(productFound){
+            res.render("productDetail", { tabla});
+        }else{
+            res.render("productDetail", { alert: true });
+        }
     },
     create: async function (req, res, next ){
        
@@ -35,12 +37,14 @@ let adminController = {
           unidades: req.body.unidades,
           foto: req.body.foto,
           precio: req.body.precio,
+          modelo_id:req.body.modelo_id
           
         })
 
-        res.redirect("/productDetail", {product});
+        res.redirect("/admin");
     },
     
     }
 
 module.exports= adminController;
+

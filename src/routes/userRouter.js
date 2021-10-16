@@ -21,7 +21,7 @@ const userController= require ("../controllers/userController.js")
 router.get("/", userController.list);
 
 //detail
-router.get("/profile", userController.profile);
+router.get("/profile/:id", userController.profile);
 
 //create 
 router.get("/create", userController.create);

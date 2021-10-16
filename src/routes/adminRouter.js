@@ -36,3 +36,4 @@ router.post("/create",fileUpload.single("avatar"), adminController.store);
 router.get("/detail/:id", adminController.detail);
 
 module.exports = router;
+
