@@ -6,7 +6,7 @@ const path=require("path")
 //multer
 const storage=multer.diskStorage({
     destination:function(req,file,cb){
-      cb(null, "./public/img/avatars")
+      cb(null, "./public/img")
     },
     filename:function(req,file,cb){
         let newFileName= Date.now()+path.extname(file.originalname)
@@ -23,14 +23,14 @@ router.get ("/", adminController.list);
 
 //create 
 router.get("/create", adminController.create);
-router.post("/create",fileUpload.single("avatar"), adminController.store);
+router.post("/create",fileUpload.single("foto"), adminController.store);
 
 //edit
-//router.get("/:id/edit", adminController.edit);
-//router.put("/:id/edit", adminController.update);
+router.get("/:id/edit", adminController.edit);
+router.put("/:id/edit", adminController.update);
 
 // delete
-//router.delete("/destroy/:id", adminController.destroy);
+router.delete("/destroy/:id", adminController.destroy);
 
 //detail
 router.get("/detail/:id", adminController.detail);

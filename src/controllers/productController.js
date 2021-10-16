@@ -73,18 +73,7 @@ const {validationResult} = require("express-validator")
         
         
     },
-    /*edit: (req,res)=>{
-        let pedidoUsuario = db.Users.findByPk(req.params.id);
-        let pedidoCategoria = db.Categories.findAll();
-        
-        Promise.all([pedidoUsuario, pedidoCategoria])
-            .then(function([user, categorias]){
-                res.render("user-edit-form",{user, categorias})
-            })
-        
-        
-    },*/
-    //aca faltan los datos correctos de product
+    
     update: (req,res)=>{
         db.Products.update(
             {
@@ -92,7 +81,7 @@ const {validationResult} = require("express-validator")
               descripcion: req.body.descripcion,
               unidades: req.body.unidades,
               foto: req.body.foto,
-              precio: req.body.precio,e,
+              precio: req.body.precio,
             }, {
                 where: {
                     id: req.params.id

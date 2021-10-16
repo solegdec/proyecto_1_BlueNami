@@ -43,7 +43,44 @@ let adminController = {
 
         res.redirect("/admin");
     },
-    
+    edit: (req,res)=>{
+        let pedidoProducto = db.Products.findByPk(req.params.id,{
+            include: [{association: "modelo"},{association:"colours"}]
+        });
+        let pedidoModelos = db.Models.findAll();
+        let pedidoColores = db.Colours.findAll();
+        
+        Promise.all([pedidoProducto, pedidoModelos, pedidoColores])
+            .then(function([product, model, color]){
+                res.render("product-edit-form",{product, model, color})
+            })
+        
+        
+    },
+    update: (req,res)=>{
+        db.Products.update(
+            {
+              nombre: req.body.nombre ,
+              descripcion: req.body.descripcion,
+              unidades: req.body.unidades,
+              foto: req.body.foto,
+              precio: req.body.precio,
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            
+            res.redirect("/admin");
+        },
+        destroy: (req,res)=>{
+            db.Products.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            res.redirect("/admin")
+        },
     }
 
 module.exports= adminController;
