@@ -2,18 +2,10 @@ const express= require ("express");
 const router= express.Router();
 const multer=require("multer")
 const path=require("path")
+const fileUpload = require("../middlewares/userMulterMidd.js");
+
 
 //multer
-const storage=multer.diskStorage({
-    destination:function(req,file,cb){
-      cb(null, "./public/img")
-    },
-    filename:function(req,file,cb){
-        let newFileName= Date.now()+path.extname(file.originalname)
-        cb(null,newFileName)
-        }})
-    
-const fileUpload=multer({storage:storage});
 
 
 const adminController= require ("../controllers/adminController.js")
@@ -27,7 +19,7 @@ router.post("/create",fileUpload.single("foto"), adminController.store);
 
 //edit
 router.get("/:id/edit", adminController.edit);
-router.put("/:id/edit", adminController.update);
+router.put("/:id/edit",fileUpload.single("foto"), adminController.update);
 
 // delete
 router.delete("/destroy/:id", adminController.destroy);

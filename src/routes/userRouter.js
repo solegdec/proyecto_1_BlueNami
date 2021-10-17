@@ -1,20 +1,13 @@
 const express= require ("express");
 const router= express.Router();
-const multer=require("multer")
-const path=require("path")
+const userController= require ("../controllers/userController.js");
+const validations = require ('../middlewares/regFormMidd.js')
+const guestMiddleware = require ('../middlewares/guestMiddleware.js')
+const authMiddleware = require ('../middlewares/authMiddleware.js');
+const fileUpload = require("../middlewares/userMulterMidd.js");
 
-const storage=multer.diskStorage({
-    destination:function(req,file,cb){
-      cb(null, "./public/img/avatars")
-    },
-    filename:function(req,file,cb){
-        let newFileName= Date.now()+path.extname(file.originalname)
-        cb(null,newFileName)
-        }})
-    
-const fileUpload=multer({storage:storage});
 
-const userController= require ("../controllers/userController.js")
+
 
 
 //list
@@ -25,7 +18,7 @@ router.get("/profile/:id", userController.profile);
 
 //create 
 router.get("/create", userController.create);
-router.post("/create",fileUpload.single("avatar"), userController.store);
+router.post("/create",fileUpload.single("avatar"),validations, userController.store);
 
 //edit
 router.get("/:id/edit", userController.edit);
