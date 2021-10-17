@@ -59,28 +59,26 @@ const {validationResult} = require("express-validator")
 
         res.redirect("/product");
     },
-    edit: (req,res)=>{
-        let pedidoProducto = db.Products.findByPk(req.params.id,{
-            include: [{association: "modelo"},{association:"colores"}]
+    edit: async (req,res)=>{
+
+        let pedidoProducto = await db.Products.findByPk(req.params.id,{
+            include: [{association: "modelo"}]
         });
-        let pedidoModelos = db.Models.findAll();
-        let pedidoColores = db.Colours.findAll();
+
         
-        Promise.all([pedidoProducto, pedidoModelos, pedidoColores])
-            .then(function([producto, modelo, color]){
-                res.render("product-edit-form",{producto, modelo, color})
+        Promise.all([pedidoProducto])
+            .then(function([product]){
+            res.render("product-edit-form",{product})
             })
         
         
     },
-    
     update: (req,res)=>{
         db.Products.update(
             {
               nombre: req.body.nombre ,
               descripcion: req.body.descripcion,
               unidades: req.body.unidades,
-              foto: req.body.foto,
               precio: req.body.precio,
             }, {
                 where: {
@@ -88,16 +86,16 @@ const {validationResult} = require("express-validator")
                 }
             });
             
-            res.redirect("/product");
+            res.redirect("/admin");
         },
 
-    destroy: (req,res)=>{
+    destroy: (req,res)=>{        
         db.Products.destroy({
             where: {
                 id: req.params.id
             }
         })
-        res.redirect("/product")
+        res.redirect("/admin")
     },
 }
 module.exports= productController;

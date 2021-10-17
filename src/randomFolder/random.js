@@ -12,6 +12,5 @@ for (let i = 0; i < 2; i++) {
         array.push(ran);
     }
 
-
 }
 module.exports = array;

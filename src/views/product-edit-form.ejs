@@ -10,7 +10,6 @@
                 <div class="add-bloque">
                     <div class="add-formulario">
                         <form class="tm-edit-product-form" action="/admin/<%= product.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data">
-
                             <div class="form-group mb-3">
                                 <label for="id">Id</label><br/>
                                 <input id="id" name="id" type="text" class="campos_add" value="<%= product.id%> " readonly>
@@ -19,31 +18,19 @@
                                 <label for="nombre">Nombre</label><br/>
                                 <input id="nombre" name="nombre" type="text" class="campos_add" value="<%= product.nombre%>" required>
                             </div>
-                            <div class="form-group mb-3">
-                                <label for="modelo">Modelo</label><br/>
-                                <select id="modelo" class="campos_cat" name="modelo" value="<%= product.modelo%>" required>
-                                    
-                                        
-                                        <option value="<%= product.modelo%>">KAILANI</option>
-                                        <option value="<%= product.modelo%>">MALIA</option>
-                                       
-                            </div>
-                            
+                    
+                        </div><br>
+
+
+
+
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="precio">Precio</label><br/>
                                     <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.precio%>">
                                 </div><br>
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="color">Color</label><br/>
-                                    <select name="color">
-                                    <% product.colours.forEach(colour=> { %>
-                                    <option value="<%= colour.id %>">
-                                     <%= colour.color %>
-                                    </option>
-                                     <% }) %>
-                                    </select>
-                                    
-                                </div><br>
+
+
+
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion">Descripción</label><br/>
                                     <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" required> <%= product.descripcion%></textarea>
@@ -55,6 +42,7 @@
 
 
                                 <button type="submit" class="button_add">Confirmar Cambios</button>
+                                
                         </form>
                         <form action="/admin/destroy/<%=product.id %>/?_method=DELETE" method="POST">
                             <button type="submit" class="button_add">Borrar Producto</button>

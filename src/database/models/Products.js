@@ -23,7 +23,7 @@ const Products = sequelize.define("Products",
         },
         foto:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.STRING
         },
         unidades:        
@@ -33,12 +33,12 @@ const Products = sequelize.define("Products",
         },
         precio:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.DECIMAL
         },
         modelo_id:    {
             foreignKey:true,
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.INTEGER
         },
 

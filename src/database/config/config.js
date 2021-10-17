@@ -2,7 +2,7 @@ module.exports = {
 
   "development": {
     "username": "root",
-    "password": null,
+    "password": "@Mysql07",
     "database": "blueNami_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

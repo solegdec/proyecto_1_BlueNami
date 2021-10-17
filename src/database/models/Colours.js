@@ -13,7 +13,7 @@ const Colours = sequelize.define("Colours",
         },
         color:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.STRING
         },
        

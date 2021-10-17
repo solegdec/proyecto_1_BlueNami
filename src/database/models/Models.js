@@ -13,7 +13,7 @@ const Models = sequelize.define("Models",
         },
         modelo:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.STRING
         },
        

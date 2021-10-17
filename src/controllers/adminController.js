@@ -25,54 +25,52 @@ let adminController = {
             res.render("productDetail", { alert: true });
         }
     },
-    create: async function (req, res, next ){
-       
-        res.render("product-add-form");
+    
+    create: (req,res)=>{
+        db.Models.findAll() 
+        .then(function(modelos){
+            return res.render("product-add-form", {modelos})
+        })
     },
+    
     store: function(req, res){
         db.Products.create(
         {
           nombre: req.body.nombre ,
           descripcion: req.body.descripcion,
           unidades: req.body.unidades,
-          foto: req.body.foto,
+          foto: req.file.filename,
           precio: req.body.precio,
-          modelo_id:req.body.modelo_id
+          modelo_id:req.body.modelo
           
         })
 
         res.redirect("/admin");
     },
+    
     edit: (req,res)=>{
-        let pedidoProducto = db.Products.findByPk(req.params.id,{
-            include: [{association: "modelo"},{association:"colours"}]
-        });
-        let pedidoModelos = db.Models.findAll();
-        let pedidoColores = db.Colours.findAll();
-        
-        Promise.all([pedidoProducto, pedidoModelos, pedidoColores])
-            .then(function([product, model, color]){
-                res.render("product-edit-form",{product, model, color})
-            })
-        
-        
+        db.Products.findByPk(req.params.id,{
+            include: [{association: "modelo"}]
+        })
+        .then(function(product){
+        res.render("product-edit-form",{product})
+        })   
     },
-    update: (req,res)=>{
-        db.Products.update(
-            {
-              nombre: req.body.nombre ,
-              descripcion: req.body.descripcion,
-              unidades: req.body.unidades,
-              foto: req.body.foto,
-              precio: req.body.precio,
-            }, {
-                where: {
-                    id: req.params.id
-                }
-            });
-            
-            res.redirect("/admin");
-        },
+
+        update: (req,res)=>{
+            db.Products.update(
+                {
+                  nombre: req.body.nombre ,
+                  descripcion: req.body.descripcion,
+                  unidades: req.body.unidades,
+                  precio: req.body.precio,
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                });
+                res.redirect("/admin");
+            },
         destroy: (req,res)=>{
             db.Products.destroy({
                 where: {
@@ -81,6 +79,21 @@ let adminController = {
             })
             res.redirect("/admin")
         },
+
+
+
+
+       
+    
+
+
+
+
+
+
+
+
+
     }
 
 module.exports= adminController;

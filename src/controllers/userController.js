@@ -62,8 +62,7 @@ const {validationResult} = require ('express-validator')
             .then(function([user, categorias]){
                 res.render("user-edit-form",{user, categorias})
             })
-        
-        
+          
     },
     update: (req,res)=>{
         db.Users.update(
@@ -73,10 +72,7 @@ const {validationResult} = require ('express-validator')
               categoria: req.body.categoria,
               fechaNac: req.body.fechaNac,
               genero: req.body.genero,
-              pais: req.body.pais,
               email: req.body.email,
-              contraseña: req.body.contraseña,
-              avatar: req.file.filename,
             }, {
                 where: {
                     id: req.params.id
