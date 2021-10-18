@@ -5,13 +5,16 @@
     <body class="bodysole">
         <%- include("./partials/header") %>
             <div>
-                <h1 class="micarritoSole">MI CARRITO</h1>
+                <h1 class="micarritoSole">Mis Items: </h1>
             </div>
            
             <section class="contenedorSole">
                 <div class="tabla1Sole">
-                    <h2 class="h2sole">Tabla SuperFish</h2>
-                    <img src="\img\tablaVector50x62 (1) (1).png">
+                    <%items.forEach(item=>{ %>
+
+                    <h2 class="h2sole"> <%= item.name %></h2>
+                    <%})%>
+                    <img src="\img\tablaVector50x62 (1) (1).png"
                 </div>
                 <div class="fotoTabla1Sole">
                     <img src="/img/tabla5.png" width="300px" height="300px">
@@ -30,29 +33,17 @@
                     <h4>Envio Gratis </h4>
                 </div>
             </section>
-            <section class="contenedorSole2">
-                <div class="tabla2Sole">
-                    <h2 class="h2sole">Longboard</h2>
-                    <img src="\img\tablaVector50x62 (1) (1).png">
-                </div>
-                <div class="fotoTabla4Sole">
-                    <img src="/img/tabla7.png"width="300px" height="300px">
-                </div>
-                <aside class="asidesole">
-                    <ul>
-                        <li> La Longboard es la tabla más estable</li>
-                        <li> Su superficie permite caminar sobre ella en la ola </li>
-                        <li> Gran maniobrabilidad</li>
-                        <li> Diseño exclusivo Blue Nami </li>
-                    </ul>
-                </aside>
-                <div class="precioTabla2Sole">
-                    <input class="inputsole" type="text" name="precio" id="precio" value="$2500">
-                    <button class="buttonressole" type="reset" name="reset" id="reset"> Eliminar </button>
-                    <h4>Envio Gratis </h4>
-                </div>
-                </section>
+       
                 <section class="contenedorSole3">
+
+
+                    <div>
+                        <h1 class="micarritoSole">Mi Carrito: </h1>
+                        <br>
+
+                    </div>
+                   
+
                 <a href="/product">
                     <div><button class="seguirComprandoSole"><img src="\img\tablaVector50x62 izq.png"> SEGUIR COMPRANDO</button></div>
                 </a>

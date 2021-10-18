@@ -12,12 +12,12 @@ const Items = sequelize.define("Items",
         },
         cantidad:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.INTEGER
         },
         subtotal:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.DECIMAL
         },
         producto_id:
@@ -36,12 +36,12 @@ const Items = sequelize.define("Items",
             type: DataTypes.INTEGER
         },
         created_at:    {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.DATE
         },
         updated_at:
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.DATE
         },
     },

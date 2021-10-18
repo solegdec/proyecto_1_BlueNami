@@ -105,12 +105,14 @@ cantidad INT UNSIGNED,
 subtotal DECIMAL NOT NULL,
 producto_id INT UNSIGNED,
 usuario_id INT UNSIGNED,
+order_id INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
 PRIMARY KEY (id),
 FOREIGN KEY (producto_id) REFERENCES products (id),
-FOREIGN KEY (usuario_id) REFERENCES users (id)
+FOREIGN KEY (usuario_id) REFERENCES users (id),
+FOREIGN KEY (order_id) REFERENCES orders (id)
 );
 -- Creacion de Tabla pivot entre Productos y Colores
 
@@ -182,21 +184,8 @@ insert into `colours`  VALUES
 
 
 -- Carga tabla products_colours
-insert into `products_colours`  VALUES
-(1, 1, 1, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(2, 1, 3, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(3, 1, 5, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(4, 2, 1, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(5, 3, 3, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(6, 4, 5, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(7, 5, 5, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(8, 6, 2, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(9, 7, 2, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(10, 8, 2, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(11, 9, 6, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(12, 10, 3, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(13, 11, 7, '2021-03-09 04:51:28', '2020-10-23 17:35:43'),
-(14, 12, 1, '2021-03-09 04:51:28', '2020-10-23 17:35:43');
+-- Borramos el contenido de esta tabla --
+
 
 
 

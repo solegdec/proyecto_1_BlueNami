@@ -3,6 +3,6 @@ const router= express.Router();
 
 const productCartController= require ("../controllers/productCartController.js")
 
-router.get ("/", productCartController.entrarCarrito);
+router.get ("/", productCartController.listItems);
 
 module.exports = router;
