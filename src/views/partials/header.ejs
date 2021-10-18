@@ -14,8 +14,8 @@
     
     </ul>
     <ul class="logReg">
-        <% if (locals.isLogged){%>
-        <li><a href="/client/profile">Hola <%= locals.userLogged.nombre%> <img src="/img/avatars/<%= locals.userLogged.avatar %>"width="37px" style="border-radius: 100%"title="MI PERFIL" ></a></li>
+        <% if (us){%>
+        <li><a href="/client/profile">Hola <%= users.nombre%> <img src="/img/avatars/<%= users.avatar %>"width="37px" style="border-radius: 100%"title="MI PERFIL" ></a></li>
             <a href="/productCart"><i class="fas fa-shopping-cart fa-lg" title="MI CARRITO" style="color:rgb(3, 76, 99)" ></i></a> 
             <a href="/client/logout"> <i class="fas fa-sign-out-alt fa-lg" title="LOGOUT"style="color:rgb(3, 76, 99)" ></i> </a>  
             

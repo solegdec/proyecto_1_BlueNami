@@ -19,22 +19,31 @@
             Nosotros te conseguimos la tabla.</h1>
         </section>
         
+        <span class="error">
+        <% if(typeof errores != "undefined"){ %>
+            <ul>
+                <% errores.forEach(function(error){ %>
+                <li>
+                    <%= error.msg %>
+                </li>
+                <% }) %>
+            </ul>
+            <% } %>
+        </span>
+
+
+
         <section class="form-reg-name"> 
             <p class="form-reg-p">
                 <label class="form-reg-label" for=nombre>Nombre.</label>
-                <input class="form-reg-input" type="text" name="nombre" value="<%=locals.oldData ? oldData.nombre:null%>"  id="nombre" placeholder=Nombre>
-                <% if (locals.errors && errors.nombre) { %>
-                   <span class="error"> <%= errors.nombre.msg %> </span>
-                  
-                <% } %>
+                <input class="form-reg-input" type="text" name="nombre" id="nombre"  value="<%= typeof old != "undefined" ? old.nombre : "" %>"  placeholder=Nombre>
+
             </p>
             
             <p class="form-reg-p">
                 <label class="form-reg-label" for=apellido>Apellido.</label>
-                <input class="form-reg-input" type="text" name="apellido" value="<%=locals.oldData ? oldData.apellido:null%>"  id="apellido" placeholder=Apellido>
-                <% if (locals.errors && errors.apellido) { %>
-                    <span class="error">  <%= errors.apellido.msg %> </span>
-                 <% } %>
+                <input class="form-reg-input" type="text" name="apellido" value="<%= typeof old != "undefined" ? old.apellido : "" %>"  id="apellido" placeholder=Apellido>
+             
             </p>
         </section>
 
@@ -42,10 +51,8 @@
             
             <p class="form-reg-p">
                 <label class="form-reg-label" for=genero>Genero.</label>
-                <input class="form-reg-input" type="text" name="genero" value="<%=locals.oldData ? oldData.genero:null%>"  id="genero" placeholder=Genero>
-                <% if (locals.errors && errors.genero) { %>
-                    <span class="error">  <%= errors.genero.msg %> </span>
-                 <% } %>
+                <input class="form-reg-input" type="text" name="genero" value="<%= typeof old != "undefined" ? old.genero : "" %>"  id="genero" placeholder=Genero>
+ 
             </p>
         </section>
 
@@ -61,10 +68,8 @@
         <section class="form-reg-mail">
             <p class="form-reg-p">
                 <label class="form-reg-label" for=email >e-mail.</label>
-                <input class="form-reg-input" type="email" name="email" value="<%=locals.oldData ? oldData.email:null%>"  id="email" placeholder=mail@dominio.com>
-                <% if (locals.errors && errors.email) { %>
-                    <span class="error">  <%= errors.email.msg %> </span>
-                <% } %>
+                <input class="form-reg-input" type="email" name="email" value="<%= typeof old != "undefined" ? old.email : "" %>"  id="email" placeholder=mail@dominio.com>
+
             </p>
         </section>
 
@@ -106,9 +111,7 @@
             <p class="form-reg-p">
                 <label class="form-reg-label" for="password">Contraseña.</label>
                 <input class="form-reg-input" type="password" name="password" id="password">
-                <% if (locals.errors && errors.password) { %>
-                    <span class="error">   <%= errors.password.msg %>  </span>           
-                <% } %>
+
             </p>
         </section>
 
@@ -199,6 +202,13 @@
 
         </section>
     -->
+
+
+
+
+
+
+
 
    </form>
 
