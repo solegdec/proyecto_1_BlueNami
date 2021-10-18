@@ -3,7 +3,7 @@ const router= express.Router();
 const multer=require("multer")
 const clientController= require ("../controllers/clientController.js")
 
-
+//este router maneja login y register
 const validations = require ('../middlewares/regFormMidd.js')
 const guestMiddleware = require ('../middlewares/guestMiddleware.js')
 const authMiddleware = require ('../middlewares/authMiddleware.js');

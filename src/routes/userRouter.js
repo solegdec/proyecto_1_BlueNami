@@ -2,12 +2,10 @@ const express= require ("express");
 const router= express.Router();
 const userController= require ("../controllers/userController.js");
 const validations = require ('../middlewares/regFormMidd.js')
-const guestMiddleware = require ('../middlewares/guestMiddleware.js')
-const authMiddleware = require ('../middlewares/authMiddleware.js');
 const fileUpload = require("../middlewares/userMulterMidd.js");
 
 
-
+//rutas que manejan la crud de usuarios desde admin
 
 
 //list

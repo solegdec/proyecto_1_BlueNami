@@ -3,7 +3,7 @@ const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
-
+//controlador de usuarios desde
   let userController={
     list: function (req,res){
         
@@ -34,6 +34,8 @@ const {validationResult} = require ('express-validator')
     },
 
     store: function(req, res){
+        
+        
         db.Users.create(
         {
           nombre: req.body.nombre ,
@@ -52,11 +54,11 @@ const {validationResult} = require ('express-validator')
 
       
     },
-    edit: (req,res)=>{
-        let pedidoUsuario = db.Users.findByPk(req.params.id,{
+    edit: async (req,res)=>{
+        let pedidoUsuario = await db.Users.findByPk(req.params.id,{
             include: [{association: "categoria"}]
         });
-        let pedidoCategorias = db.Categories.findAll();
+        let pedidoCategorias = await db.Categories.findAll();
         
         Promise.all([pedidoUsuario, pedidoCategorias])
             .then(function([user, categorias]){

@@ -1,29 +1,19 @@
-//Se escribe en mayuscula porque para diferenciar que es un "modelo"
-const Users = require('../database/models/Users.js');
-const { v4: uuidv4 } = require('uuid');
+const Users = require('../database/models/Users.js')
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
 const db = require('../database/models');
 const { Op } = require("sequelize");
 
-
-
 /*
     Minimo 8 caracteres
-    Maximo 15
-    Al menos una letra mayúscula
-    Al menos una letra minucula
-    Al menos un dígito
-    No espacios en blanco
-    Al menos 1 caracter especial
+    maximo 15 -Al menos una letra mayúscula-Al menos una letra minucula- Al menos un dígito- No espacios en blanco -Al menos 1 caracter especial
 */
 
-const secure_password =new RegExp( /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/);
+
 
 
 const clientController = {
     register: (req, res) => {
-        
         res.render('register');
     },
     processRegister:(req, res, next) => {
@@ -44,7 +34,7 @@ const clientController = {
                 fechaNac: req.body.fechaNac,
                 avatar: req.file.filename,
                 categoria_id: 1
-                
+             
             }).then(function(){
                 return res.redirect("/client/login");
             })
@@ -55,7 +45,6 @@ const clientController = {
     },
     processLogin: (req, res, next) => {
         const errores = validationResult(req);
-
         if(!errores.isEmpty()){
             return res.render("login", { 
                 errors: errors.errors,

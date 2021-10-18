@@ -2,10 +2,10 @@ const express= require ("express");
 const router= express.Router();
 const multer=require("multer")
 const path=require("path")
-const fileUpload = require("../middlewares/userMulterMidd.js");
+const fileUpload = require("../middlewares/productMulterMidd.js");
 
 
-//multer
+//router que maneja el crud de productos desde ADMIN
 
 
 const adminController= require ("../controllers/adminController.js")
