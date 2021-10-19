@@ -8,7 +8,7 @@ const methodOverride=require("method-override")
 const session = require('express-session');
 const userLoggedMidd =require("./middlewares/userLoggedMidd")
 const logueado =require("./middlewares/logueado.js")
-
+//const adminMidd= require("./middlewares/adminMidd.js")
 //heroku
 const port = process.env.PORT || 3030
 // Para que funcione nodemon, comentar  la linea 12- Para heroku sacar el comentario
@@ -27,14 +27,16 @@ app.use(express.static('./public'));
 app.use("/styles", express.static(__dirname + "/styles"));
 app.use(session({secret:'BlueNami',resave: false,saveUninitialized:false,}));
 app.use(userLoggedMidd)
-app.use(logueado);
+app.use(logueado)
+//app.use(adminMidd)
 
 const productCartRouter = require("./routes/productCartRouter.js")
 const clientRouter = require("./routes/clientRouter.js")
 const indexRouter = require("./routes/indexRouter.js")
 const productRouter = require("./routes/productRouter.js")
 const userRouter = require("./routes/userRouter.js")
-const adminRouter = require ("./routes/adminRouter.js")
+const adminRouter = require ("./routes/adminRouter.js");
+
 
 app.use(indexRouter)
 app.use("/productCart",productCartRouter)
