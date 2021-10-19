@@ -49,15 +49,18 @@ let adminController = {
     },
     
     edit: (req,res)=>{
-        db.Products.findByPk(req.params.id,{
-            include: [{association: "marca"}]
+        let pedidoProducto=db.Products.findByPk(req.params.id,{
+            include: [{association: "marca"},{association:"colours"}]
         })
+         
+       let pedidoMarcas= db.Marcas.findAll()
+        let pedidoColores= db.Colours.findAll()
+       Promise.all([pedidoProducto,pedidoMarcas,pedidoColores])
+     
+        .then(function(values)
+        { console.log(values)
+        res.render("product-edit-form",{product: values[0], marcas: values[1], colours: values[2]})
        
-
-            
-        
-        .then(function(product){
-        res.render("product-edit-form",{product})
         })   
     },
 

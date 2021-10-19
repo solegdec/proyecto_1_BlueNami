@@ -29,7 +29,7 @@ const Colours = sequelize.define("Colours",
 
 Colours.associate = function(models){
     Colours.belongsToMany(models.Products,{
-        as: 'products',
+        as: 'productos',
         through: 'products_colours',
         foreignKey: 'producto_id',
         otherKey: "color_id",
