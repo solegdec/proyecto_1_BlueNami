@@ -3,7 +3,7 @@
 
 module.exports = (sequelize, DataTypes)=> {
 
-const Models = sequelize.define("Models", 
+const Marcas = sequelize.define("Marcas", 
     {
         id:{
             auroincrement: true,
@@ -11,7 +11,7 @@ const Models = sequelize.define("Models",
             type: DataTypes.INTEGER
 
         },
-        modelo:
+        marca:
         {
             allowNull: true,
             type: DataTypes.STRING
@@ -20,20 +20,20 @@ const Models = sequelize.define("Models",
        
     },
     {
-        tableName: 'Models',
+        tableName: 'brands',
         timestamps: false,
     }
 
 );
 
-Models.associate = function(models){
-    Models.hasMany(models.Products,{
+Marcas.associate = function(models){
+    Marcas.hasMany(models.Products,{
         as: 'productos',
-        foreignKey: "modelo_id"
+        foreignKey: "marca_id"
     })
 };
 
-return Models
+return Marcas
 
 }
 

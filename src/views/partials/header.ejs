@@ -14,16 +14,20 @@
     
     </ul>
     <ul class="logReg">
-        <% if (us){%>
-        <li><a href="/client/profile">Hola <%= users.nombre%> <img src="/img/avatars/<%= users.avatar %>"width="37px" style="border-radius: 100%"title="MI PERFIL" ></a></li>
+        <% if (usuario){%> 
+        <li><a href="/client/profile">Hola <%= usuario.nombre%> <img src="/img/avatars/<%= usuario.avatar %>"width="37px" style="border-radius: 100%"title="MI PERFIL" ></a></li>
             <a href="/productCart"><i class="fas fa-shopping-cart fa-lg" title="MI CARRITO" style="color:rgb(3, 76, 99)" ></i></a> 
             <a href="/client/logout"> <i class="fas fa-sign-out-alt fa-lg" title="LOGOUT"style="color:rgb(3, 76, 99)" ></i> </a>  
             
+            <a href="/admin"><i class="fas fa-cogs fa-2x" title="ADMIN"style="color:rgb(5, 100, 129)"></i></a> 
     </ul> 
-    <%} else{%>  
+    
+        
+    <%} else{%> 
     <ul>
         <li> <a href="/client/login">Login</a> </li>
         <li><a href="/client/register">Registro</a></li>
     </ul>
-     <%}%>
+    <%}%>
+    
 </nav>

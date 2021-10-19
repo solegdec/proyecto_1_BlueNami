@@ -3,7 +3,7 @@ const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
-//controlador de usuarios desde
+//controlador de usuarios desde admin
   let userController={
     list: function (req,res){
         
@@ -29,7 +29,7 @@ const {validationResult} = require ('express-validator')
     create: (req,res)=>{
         db.Categories.findAll() 
         .then(function(categorias){
-            return res.render("user-add-form", {categorias})
+            return res.render("user-add-form", {categorias:categorias})
         })
     },
 
@@ -71,7 +71,7 @@ const {validationResult} = require ('express-validator')
             {
               nombre: req.body.nombre ,
               apellido: req.body.apellido,
-              categoria: req.body.categoria,
+              categoria_id: req.body.categoria,
               fechaNac: req.body.fechaNac,
               genero: req.body.genero,
               email: req.body.email,

@@ -6,7 +6,7 @@ const {validationResult} = require("express-validator")
   let productController={
     list: (req, res) => {
         db.Products.findAll(
-            { include: ['modelo']}
+            { include: ['marca']}
         )
             .then(products => {
                 res.render('product', {products})
@@ -16,7 +16,7 @@ const {validationResult} = require("express-validator")
     
     detail: (req,res)=>{
         db.Products.findByPk(req.params.id, {
-            include: [{association: "modelo"},{association:"colours"}]
+            include: [{association: "marca"},{association:"colours"}]
         })
         .then(function(product){
             res.render("productDetail",{product})
@@ -30,6 +30,7 @@ const {validationResult} = require("express-validator")
 
             where: {
                 nombre: { [Op.like]: '%' + req.query.search + '%' }
+                
             }
         })
      
@@ -40,9 +41,9 @@ const {validationResult} = require("express-validator")
     },
 
     create: (req,res)=>{
-        db.Models.findAll() 
-        .then(function(modelos){
-            return res.render("product-add-form", {modelos})
+        db.Marcas.findAll() 
+        .then(function(marcas){
+            return res.render("product-add-form", {marcas})
         })
     },
 
@@ -62,7 +63,7 @@ const {validationResult} = require("express-validator")
     edit: async (req,res)=>{
 
         let pedidoProducto = await db.Products.findByPk(req.params.id,{
-            include: [{association: "modelo"}]
+            include: [{association: "marca"}]
         });
 
         

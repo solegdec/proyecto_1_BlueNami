@@ -36,7 +36,7 @@ const Products = sequelize.define("Products",
             allowNull: true,
             type: DataTypes.DECIMAL
         },
-        modelo_id:    {
+        marca_id:    {
             foreignKey:true,
             allowNull: true,
             type: DataTypes.INTEGER
@@ -59,9 +59,9 @@ Products.associate = function(models){
         otherKey: 'producto_id',
         timestamps: false,
     }),
-    Products.belongsTo(models.Models,{
-        as: 'modelo',
-        foreignKey: "modelo_id"
+    Products.belongsTo(models.Marcas,{
+        as: 'marca',
+        foreignKey: "marca_id"
         }),
     Products.hasMany(models.Items,{
         as: 'items',

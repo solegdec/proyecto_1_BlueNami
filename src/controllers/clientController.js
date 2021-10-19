@@ -9,7 +9,7 @@ const { Op } = require("sequelize");
     maximo 15 -Al menos una letra mayúscula-Al menos una letra minucula- Al menos un dígito- No espacios en blanco -Al menos 1 caracter especial
 */
 
-
+//controller de clientes login/register
 
 
 const clientController = {
@@ -68,6 +68,18 @@ const clientController = {
         res.render('profile',{
          user:req.session.userLogged   
         });
+    },
+    account: function(req,res) {          
+        if(req.session.userLogged){;
+           if(req.session.userLogged.admin){
+               return res.render('admin', {usuario:req.session.userLogged})
+            }else{
+                return res.render('profile', {usuario:req.session.userLogged})
+            } 
+        }
+       
+       else{return res.redirect('/users/login')} 
+        
     },
     
     logout: function(req, res){

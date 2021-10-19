@@ -1,7 +1,7 @@
 const db = require("../database/models")
 
 function userLoggedMidd(req, res, next){ 
-    if(!req.session.userLogged && req.cookies.userEmail){
+    if(!req.session.userLogged && req.cookies.email){
         db.Users.findOne({
             where:{
                 id: req.cookies.remember_user

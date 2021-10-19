@@ -16,11 +16,11 @@
                                 <input id="nombre" name="nombre" type="text" class="campos_add" required>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="modelo">Modelo</label><br/>
+                                <label for="marca">Marca</label><br/>
                                 
-                                <select id="modelo" class="campos_cat" name="modelo" required>
-                                <%modelos.forEach(modelo =>{ %>
-                                <option value="<%=modelo.id%>"><%=modelo.modelo%></option>  
+                                <select id="marca" class="campos_cat" name="marca" required>
+                                <%marcas.forEach(marca =>{ %>
+                                <option value="<%=marca.id%>"><%=marca.marca%></option>  
                                 <%})%>
                                 </select>
                             </div>

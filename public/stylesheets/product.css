@@ -683,6 +683,14 @@ aside.descripciongz {
     color: #000000;
     text-align: center;
 }
+.titProdRelgz h4{
+    margin: auto;
+    font-family: "numan";
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
 
 .preciosRgz p {
     font-family: "roboto";

@@ -7,6 +7,7 @@ var app = express();
 const methodOverride=require("method-override")
 const session = require('express-session');
 const userLoggedMidd =require("./middlewares/userLoggedMidd")
+const logueado =require("./middlewares/logueado.js")
 
 //heroku
 const port = process.env.PORT || 3030
@@ -26,6 +27,7 @@ app.use(express.static('./public'));
 app.use("/styles", express.static(__dirname + "/styles"));
 app.use(session({secret:'BlueNami',resave: false,saveUninitialized:false,}));
 app.use(userLoggedMidd)
+app.use(logueado);
 
 const productCartRouter = require("./routes/productCartRouter.js")
 const clientRouter = require("./routes/clientRouter.js")
