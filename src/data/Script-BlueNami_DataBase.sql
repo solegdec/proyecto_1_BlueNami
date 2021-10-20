@@ -41,9 +41,9 @@ FOREIGN KEY (categoria_id) REFERENCES userCategories (id)
 
 -- Creacion de Tabla Modelos
 
-CREATE TABLE models (
+CREATE TABLE brands (
 id INT UNSIGNED AUTO_INCREMENT,
-modelo VARCHAR(255) NOT NULL,
+marca VARCHAR(255) NOT NULL,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
@@ -60,12 +60,12 @@ descripcion TEXT,
 foto VARCHAR(255) NOT NULL,
 unidades INT UNSIGNED, 
 precio DECIMAL NOT NULL,
-modelo_id INT UNSIGNED,
+marca_id INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
 PRIMARY KEY (id),
-FOREIGN KEY (modelo_id) REFERENCES models (id)
+FOREIGN KEY (marca_id) REFERENCES brands (id)
 );
 
 
@@ -104,14 +104,12 @@ id INT UNSIGNED AUTO_INCREMENT,
 cantidad INT UNSIGNED,
 subtotal DECIMAL NOT NULL,
 producto_id INT UNSIGNED,
-usuario_id INT UNSIGNED,
 order_id INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
 PRIMARY KEY (id),
 FOREIGN KEY (producto_id) REFERENCES products (id),
-FOREIGN KEY (usuario_id) REFERENCES users (id),
 FOREIGN KEY (order_id) REFERENCES orders (id)
 );
 -- Creacion de Tabla pivot entre Productos y Colores
@@ -140,7 +138,7 @@ insert into `userCategories`  VALUES
 
 
 -- Carga tabla models
-insert into `models`  VALUES 
+insert into `brands`  VALUES 
  (1, 'AUKAI', '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
  (2, 'WAI', '2021-03-17 08:42:10', '2021-08-17 09:37:46'),
  (3, 'ONE', '2021-08-12 12:41:39', '2021-09-25 22:11:37'),
@@ -185,17 +183,3 @@ insert into `colours`  VALUES
 
 -- Carga tabla products_colours
 -- Borramos el contenido de esta tabla --
-
-
-
-
-
-
-
-
-
-
-
-
-
-

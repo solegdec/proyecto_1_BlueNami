@@ -7,77 +7,60 @@
 
 <%- include("./partials/header") %>
     
-    <div class="form-reg-logo">
-        <img width=20% src="/img/logo.png" alt="logo">
-    </div>
-    
 
-
+    <section class="form-reg-titulo">
+        <h1 class="form-reg-h1"> Vos registrate.<br> 
+        Nosotros te conseguimos la tabla.</h1>
+    </section>
     <form class="form-reg-formulario" action="/client/register" method="POST" enctype="multipart/form-data">
-        <section class="form-reg-titulo">
-            <h1 class="form-reg-h1"> Vos registrate. 
-            Nosotros te conseguimos la tabla.</h1>
-        </section>
+       
         
-        <span class="error">
-        <% if(typeof errores != "undefined"){ %>
-            <ul>
-                <% errores.forEach(function(error){ %>
-                <li>
-                    <%= error.msg %>
-                </li>
-                <% }) %>
-            </ul>
-            <% } %>
-        </span>
-
-
-
-        <section class="form-reg-name"> 
-            <p class="form-reg-p">
-                <label class="form-reg-label" for=nombre>Nombre.</label>
-                <input class="form-reg-input" type="text" name="nombre" id="nombre"  value="<%= typeof old != "undefined" ? old.nombre : "" %>"  placeholder=Nombre>
-
-            </p>
+        <div class="form-reg-name">
+            <div class="form-reg-p">
+                <label class="form-reg-label" for=nombre><p>Nombre</p></label>
+                <input class="form-reg-input" type="text" name="nombre" value="<%=locals.oldData ? oldData.nombre:null%>"  id="nombre" placeholder=Nombre>
+                <% if (locals.errors && errors.nombre) { %>
+                   <span class="error"> <%= errors.nombre.msg %> </span>
+                  
+                <% } %>
+                </div>
             
-            <p class="form-reg-p">
-                <label class="form-reg-label" for=apellido>Apellido.</label>
-                <input class="form-reg-input" type="text" name="apellido" value="<%= typeof old != "undefined" ? old.apellido : "" %>"  id="apellido" placeholder=Apellido>
-             
-            </p>
-        </section>
+            <div class="form-reg-p">
+                <label class="form-reg-label" for=apellido><p>Apellido</p></label>
+                <input class="form-reg-input" type="text" name="apellido" value="<%=locals.oldData ? oldData.apellido:null%>"  id="apellido" placeholder=Apellido>
+                <% if (locals.errors && errors.apellido) { %>
+                    <span class="error">  <%= errors.apellido.msg %> </span>
+                 <% } %>
+                </div>
+            </div>
 
-        <section class="form-reg-mail"> 
-            
-            <p class="form-reg-p">
-                <label class="form-reg-label" for=genero>Genero.</label>
-                <input class="form-reg-input" type="text" name="genero" value="<%= typeof old != "undefined" ? old.genero : "" %>"  id="genero" placeholder=Genero>
- 
-            </p>
-        </section>
-
-
-        <section class="form-reg-nacimiento">
-            <p class="form-reg-p">
-                <label class="form-reg-label" for=fechaNac> Fecha de nacimiento.</label>
+        <div class="form-reg-info"> 
+            <div class="form-reg-p">
+                <label class="form-reg-label" for=genero><p>Genero</p></label>
+                <input class="form-reg-input" type="text" name="genero" value="<%=locals.oldData ? oldData.genero:null%>"  id="genero" placeholder=Genero>
+                <% if (locals.errors && errors.genero) { %>
+                    <span class="error">  <%= errors.genero.msg %> </span>
+                 <% } %>
+                </div>
+        
+            <div class="form-reg-p">
+                <label class="form-reg-label" for=fechaNac><p>Fecha de nacimiento</p></label>
                 <input class="form-reg-input" type="date" name="fechaNac" id="nacimiento" value=1990-06-30 min="1910-01-01">
-            </p>
-        </section>
+            </div>
+        </div>
         
 
-        <section class="form-reg-mail">
-            <p class="form-reg-p">
-                <label class="form-reg-label" for=email >e-mail.</label>
-                <input class="form-reg-input" type="email" name="email" value="<%= typeof old != "undefined" ? old.email : "" %>"  id="email" placeholder=mail@dominio.com>
-
-            </p>
-        </section>
-
-
-        <section class="form-reg-tel">
-            <p class="form-reg-p">
-               
-                    <label class="form-reg-label"><b>Pais de origen:</b></label>
+        <div class="form-reg-cont">
+            <div class="form-reg-p">
+                <label class="form-reg-label" for=email ><p>E-mail</p></label>
+                <input class="form-reg-input" type="email" name="email" value="<%=locals.oldData ? oldData.email:null%>"  id="email" placeholder=mail@dominio.com>
+                <% if (locals.errors && errors.email) { %>
+                    <span class="error">  <%= errors.email.msg %> </span>
+                <% } %>
+                </div>
+        </div>
+            <div class="form-reg-pais">
+                    <label class="form-reg-label"><p>Pais de origen:</p></label>
                     <select 
                         name="pais" 
                         class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
@@ -89,129 +72,61 @@
                             > <%= unPais %> 
                         </option>
                         <% } %>
-                    </select>
+                </div>
                         <% if (locals.errors && errors.pais) { %>
                             <span class="error">    <%= errors.pais.msg %></span>
                         <% } %> 
                 
-            </p>
-        </section>
+        
 
 
-        <section class="form-login-comment-tablas">
-            <p class="form-login-p">
-                <label class="form-login-label-comment-tablas" for="avatar">Sube tu foto de perfil</label>
-                <input class="form-login-input" type="file"  name="avatar" id="avatar" >
-            </p>
-        </section>
+        <div class="form-login-comment-tablas">
+            <div class="form-login-foto">
+                <label class="form-login-label-comment-tablas" for="avatar"><p>Sube tu foto de perfil</p></label>
+                <input class="form-login-input" type="file"  name="avatar" id="avatar">
+            </div>
+        </div>
 
-
-
-        <section class="form-reg-password">
-            <p class="form-reg-p">
-                <label class="form-reg-label" for="password">Contraseña.</label>
+        <div class="form-reg-password">
+            <div class="form-reg-p2">
+                <label class="form-reg-label" for="password"><p>Contraseña</p></label>
                 <input class="form-reg-input" type="password" name="password" id="password">
-
-            </p>
-        </section>
-
-  <!-- <form class="form-reg-formulario-no"action="">
-        <section class="form-reg-password">
-            <p class="form-reg-p">
-                <label class="form-reg-label" for="confirm_password">categoria</label>
-                <input class="form-reg-input" type="text" name="categoria" id="categoria_id" value="1" readonly>
-            </p>
-        </section>-->
-
-
+                <% if (locals.errors && errors.password) { %>
+                    <span class="error">   <%= errors.password.msg %>  </span>           
+                <% } %>
+            </div>
+        </div>
 
         <section class="form-reg-boton">
-            <p class="form-reg-botonP">
-                <button type="submit" > Enviar  </button>
+            <div class="form-reg-botonP">
+                <button type="submit" ><p>Enviar</p></button>
                 <img src="/img/tablaPerfil.png" alt="perfil" >
-            </p>
+            </div>
 
         </section>
    </form>
-   <!--<form class="form-reg-formulario"action="">
-
-        <section class="form-reg-verificacion">
-            <h3 class="form-reg-h3"> Verificación </h3>
-        
-            <p class="form-reg-p"> ¿Dónde querés que te enviemos el código de verificación?</p>
-
-            <ul type=none>
-                <li><input class="form-reg-input" type="radio" value="mail" name="form-medio-de-verificacion" id="form-medio-de-verificacion" required>
-                    <label class="form-reg-label" for="form-medio-de-verificacion">e-mail</label> </li>                  
-                <li><input class="form-reg-input" type="radio" value="SMS" name="form-medio-de-verificacion" id="form-medio-de-verificacion" required>
-                    <label class="form-reg-label" for="form-medio-de-verificacion">SMS</label> </li>
-            </ul>
-        </section>
-
-        <section class="form-reg-codigo">
-                <p class="form-reg-p">
-                    <label class="form-reg-label" for=form-codigo>Ingresa aquí el código de 4 números.</label>
-                    <input class="form-reg-input" type="text" name="form-codigo" id="form-codigo" placeholder="1234" required>
-                </p>
-        </section>
-
-        <section class="form-reg-boton">
-            <p class="form-reg-botonP">
-                <button type="submit" > Enviar código </button>
-                <img src="/img/tablaPerfil.png" alt="perfil">
-            </p>
-        </section>
-    -->
-
-        <section class="form-reg-listo">
-            <h2 class="form-reg-h2"> Listo! Entrá a elegir la tabla. Y a surfear. </h2>
-        </section>
-
-
+  
+<div class="contenedortablamb">
+    <br>
+            <h2> Listo! Entrá a elegir la tabla. Y a surfear. </h2>
         <div class="form-reg-separacion-mobile">
-            <img width=90% src="/img/tablaPerfil.png" alt="Tabla de Surf Colores">
+            <img width=100% src="/img/tablaPerfil.png" alt="Tabla de Surf Colores">
         </div>
 
         <div class="form-reg-separacion-tablet">
-            <img width=90% src="/img/tablaAbajo.png" alt="Tabla de Surf Colores">
+            <img width=100% src="/img/tablaAbajo.png" alt="Tabla de Surf Colores">
         </div>
 
         <div class="form-reg-separacion-escritorio">
-            <img width=90% src="/img/tablaFrente.png" alt="Tabla de Surf Colores">
+            <img width=100% src="/img/tablaFrente.png" alt="Tabla de Surf Colores">
         </div>
+    </div>
 
-        <!--<section class="form-reg-notificaciones">
-            <h3 class="form-reg-h3"> ¿Querés? </h3>
-    
-            <p class="form-reg-p"> ¿Querés que te enviemos un mail cuando...</p>
-            <ul type=none> 
-                <li> <input class="form-reg-input" type="checkbox" value="novedad" name="notificaciones" id="novedad" checked>
-                     <label class="form-reg-label" for="novedad"> ...sacamos una nueva tabla al mercado? </label>
-                </li>
-                <li> <input class="form-reg-input" type="checkbox" value="ofertas" name="notificaciones" id="ofertas" checked>
-                     <label class="form-reg-label" for="form-medio-de-verificacion"> ...tenemos una nueva promoción? </label>                
-                </li>
-            </ul>
-        </section>
-
-        <section class="form-reg-boton">
-            <p class="form-reg-botonP">
-                <button type="submit" > Enviar preferencias </button>
-                <img src="/img/tablaPerfil.png" alt="perfil">
-            </p>
-
-        </section>
-    -->
-
-
-
-
-
-
-
-
-   </form>
-
+   
+   
+   <div class="form-reg-logo">
+    <img width=20% src="/img/logo.png" alt="logo">
+</div>
     <section class="form-reg-foto">
         <img width=100% src="/img/olasBajas.png" alt="olas">
     </section>

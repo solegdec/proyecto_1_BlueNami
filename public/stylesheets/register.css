@@ -1,67 +1,78 @@
 /* Comienzo CSS Register*/
-
-.form-reg-h1,
-.form-reg-h2,
-.form-reg-h3 {
-    font-family: 'Lobster', cursive;
-}
-
-.form-reg-logo,
-.form-reg-separacion-mobile,
-.form-reg-separacion-tablet,
-.form-reg-separacion-escritorio {
-    display: flex;
-    justify-content: center;
-}
-
 .form-reg-formulario {
-    display: flex;
+    width: 80vw;
+    max-width: 800px;
     flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    background-color:#E9B843;
+    border-radius: 20px;
+    padding-bottom: 40px; 
+    font-size: 1.5em;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
-
-.form-reg-titulo,
+.form-reg-name{
+    padding-top: 40px;
+}
+.contenedortablamb{
+    width: 80vw;
+    max-width: 800px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+.form-reg-pais,
 .form-reg-name,
-.form-reg-nacimiento,
-.form-reg-mail,
-.form-reg-tel,
-.form-reg-password,
-.form-reg-boton,
-.form-reg-verificacion,
-.form-reg-codigo,
-.form-reg-boton,
-.form-reg-listo,
-.form-reg-notificaciones,
-.form-reg-boton,
-.form-reg-foto {
+.form-reg-info,
+.form-reg-cont{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 5px;
-}
-
-.form-reg-verificacion,
-.form-reg-notificaciones {
     flex-direction: column;
+    flex-direction: nowrap;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
 }
+.contenedortablamb h2,
+.form-reg-titulo h1{
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    margin: auto;
+    text-align: center;
+    color: #004e63;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+.form-reg-pais p,
+.form-reg-p p{
+font-size: 15px;
+font-family: "roboto";
+text-align: left;
+align-items: center;
+}
+.form-reg-p{
+    justify-content: center;
+    padding: 0px 30px 30px 0px;
+    }
 
-.form-reg-p,
-.form-reg-botonP {
-    display: flex;
-    ;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+.form-reg-p2 p{
+    font-size: 15px;
+font-family: "roboto";
+text-align: left;
+align-items: center;
+}
+.form-reg-password{
+    margin: auto;
 }
 
 .form-reg-input:focus {
     background-color: azure;
 }
 
-.form-reg-label {
-    font-family: 'Nova Cut', cursive;
-}
 
 .form-reg-input {
-    border-radius: 25;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: grey;
 }
 
 .form-reg-boton {
@@ -74,14 +85,8 @@
     width: 200px;
 }
 
-.form-reg-foto {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-}
-
 .form-reg-separacion-mobile {
+   
     display: block;
 }
 
@@ -92,174 +97,15 @@
 .form-reg-separacion-escritorio {
     display: none;
 }
-
-/*Profile*/
-
-span.error{
-    font-size: 12px;
-    color:red
-}
-.fotoPerfil{
-    flex-direction: column;
-    justify-content: center;
-    }
-.fotoPerfilh4{
-    font-family: "Pacifico";
-text-align: center;
-font-size: xx-large;
-padding: 5%;
-display: block;
-
-}
-
-.container1{
-    width: 80%;
-    border-radius: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    background-color:  #f0e0ba;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;   
-}
-.miPerfil h1{
-    font-size: 50px;
-    width: 100%;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(2, 26, 37);
-    font-weight: 300;
-}
-.perfil{
-        width: 50%;
-        align-items: center;   
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;   
-    }
-.misDatos {
-    width: 50%;
-    height: 100%;
-    align-items: center;
-    text-align: center;
-    padding-top: 8%;
-    }
-
-.misDatos h2{
-    text-align: center;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(9, 153, 219);
-    }
-
-.misDatos h4{
-    text-align: center;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(9, 153, 219);
-}
-
-.fotoPerfil img{
-    border-radius: 100%;
-    width:300px;
-    height: 300px;
-
-}
-.botonLogout{
-    width: 150px;
-    height: 50%;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: 300;
-    color: rgb(2, 16, 61);
-    border-color: rgb(95, 99, 99);
-    background-color: #E9B843;
-    padding: 5px;
-}
-
-
-.perfil .tituloprofile h2{
-    font-size: 30px;
-    width: 100%;
-    text-align: center;
-    font-family:"Pacifico";
-    color: rgb(4, 55, 78);
-    margin: 5%;
-}
-.tituloprofile img{
-    left: 20px;
-    
-     }
-
-/* Fin CSS profile*/
-
-/* register*/
-h1.miPerfil1{
-    font-size: 50px;
-    width: 100%;
-    text-align: center;
-    margin-left: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(2, 26, 37);
-    font-weight: 300;
-}
-h2.miPerfil2{
-    font-size: 35px;
-    width: 100%;
-    text-align: center;
-    font-family:'Lobster', cursive;
-    color: rgb(4, 55, 78);
-    font-weight: 300;
-}
-aside.misDatos{
-    width: 50%;
-    text-align: center;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(9, 153, 219);
-    font-weight: 100;
-    position: relative;
-}
-.botonLogout{
-    width: 150px;
-    height: 50%;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: 300;
-    color: rgb(2, 16, 61);
-    border-color: rgb(95, 99, 99);
-    background-color: #E9B843;
-    padding: 5px;
-}
-.profile{
-    width: 50%;
-       
-}
-img.imgProfile{
-    position:relative;
-    left:150px;
-}
-
-.emailPerfil{
-    font-size: 20px;
-    position:relative;
-    top:15px;
-    width: 50%;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(9, 153, 219);
-    font-weight: 200;
-
-}
-
-.container{
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 /* Fin CSS Register*/
-
-
 @media screen and (min-width: 768px) {
-
+    .form-reg-pais,
+    .form-reg-name,
+    .form-reg-info,
+    .form-reg-cont{
+        flex-direction: row;
+        flex-direction: wrap;
+    }
     .form-reg-separacion-mobile {
         display: none;
     }
@@ -269,32 +115,10 @@ img.imgProfile{
     .form-reg-separacion-escritorio {
         display: none;
     }
-    .form-reg-titulo,
-    .form-reg-name,
-    .form-reg-nacimiento,
-    .form-reg-mail,
-    .form-reg-tel,
-    .form-reg-password,
-    .form-reg-verificacion,
-    .form-reg-codigo,
-    .form-reg-listo,
-    .form-reg-notificaciones {
-        margin: auto;
-    }
-    .form-reg-formulario {
-        font-size: 1.5em;
-    }
-
-    /*Profile*/
-    .container1{
-        align-content: center;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 1200px;
+    .form-reg-titulo h1{
+        font-size: 2.5em;
     }
 }
-
 @media (min-width: 1200px) and (orientation: landscape) {
 
     .form-reg-separacion-mobile {
@@ -309,4 +133,15 @@ img.imgProfile{
     .form-reg-formulario {
         font-size: 2em;
     }
+    .form-reg-titulo h1{
+        font-size: 3em;
+    }
+    .form-reg-pais,
+    .form-reg-name,
+    .form-reg-info,
+    .form-reg-cont{
+        flex-direction: row;
+        flex-direction: wrap;
+    }
+    
 }
