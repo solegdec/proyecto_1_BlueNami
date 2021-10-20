@@ -1,6 +1,3 @@
-//const { DataTypes } = require("sequelize/types")
-//const { sequelize } = require(".")
-
 module.exports = (sequelize, DataTypes)=> {
 
 const Orders = sequelize.define("Orders", 
@@ -36,6 +33,11 @@ const Orders = sequelize.define("Orders",
             allowNull: true,
             type: DataTypes.DATE
         },
+        cerrada:
+        {
+            allowNull:true,
+            type: DataTypes.INTEGER
+        },
     },
     {
         tableName: 'orders',
@@ -46,7 +48,7 @@ const Orders = sequelize.define("Orders",
 
 Orders.associate = function(models){
     Orders.belongsTo(models.Users,{
-        as: 'usuario2',
+        as: 'usuario',
         foreignKey: 'usuario_id',
     });
     Orders.hasMany(models.Items,{

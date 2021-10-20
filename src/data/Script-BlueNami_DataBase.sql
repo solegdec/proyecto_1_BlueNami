@@ -88,6 +88,7 @@ PRIMARY KEY (id)
 CREATE TABLE orders (
 id INT UNSIGNED AUTO_INCREMENT,
 fecha DATETIME NOT NULL,
+cerrada INT unsigned,
 importe_total DECIMAL NOT NULL,
 usuario_id INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -104,13 +105,15 @@ id INT UNSIGNED AUTO_INCREMENT,
 cantidad INT UNSIGNED,
 subtotal DECIMAL NOT NULL,
 producto_id INT UNSIGNED,
+usuario_id INT unsigned,
 order_id INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
 PRIMARY KEY (id),
 FOREIGN KEY (producto_id) REFERENCES products (id),
-FOREIGN KEY (order_id) REFERENCES orders (id)
+FOREIGN KEY (order_id) REFERENCES orders (id),
+FOREIGN KEY (usuario_id) REFERENCES users (id)
 );
 -- Creacion de Tabla pivot entre Productos y Colores
 

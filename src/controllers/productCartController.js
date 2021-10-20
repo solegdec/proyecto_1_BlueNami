@@ -6,16 +6,24 @@ const {validationResult} = require ('express-validator')
 
 
 
-const productCartController=
-
-{
-    listItems: (req, res) => {
-        db.Items.findAll()
-            .then(items => {
-                res.render('productCart', {items})
-            })
-        
+const productCartController={
+    listCart: async (req, res) =>{
+        let items = await db.Items.findAll({include:[{association:"producto"}]},
+            {
+            where: {
+                user_id: req.session.userLogged.id,
+                order_id: null
+            }
+        })
+        let totalPrice = 0;
+        items.forEach(item =>{
+            totalPrice += item.subtotal
+        })
+        return res.render("productCart", { items , totalPrice});
     },
+
+
+    
 
 }
 module.exports= productCartController;
