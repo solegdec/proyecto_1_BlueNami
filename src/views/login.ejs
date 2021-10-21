@@ -4,63 +4,63 @@
 <%- include("./partials/head") %>
 
 <body>
-    <%- include("./partials/header") %>    
-    <div class="form-login-logo">
-        <img width=20% src="/img/logo.png" alt="logo">
-    </div>
-    
-    <form class="form-login-formulario" action="/client/login" method="POST">
-        <section class="form-login-titulo">
-        <h1 class="form-login-h1"> Welcome back!</h1>
-        </section>
+    <%- include("./partials/header") %>   
 
-        <section class="form-login-mail">
-            <p class="form-login-p">
-                <label class="form-login-label" for=email >e-mail:</label>
+<div class="form-login-titulo">
+        <h1> Welcome back!</h1>
+        </div>
+    <form class="form-login-formulario" action="/client/login" method="POST">
+        <div class="primeramb">
+        <div class="form-login-mail">
+            <div class="form-login-p">
+                <label class="form-login-label" for=email><p>E-mail:</p></label>
                 <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com >
                 <% if (locals.errors && errors.email) { %>
                     <span class="error">  <%= errors.email.msg %> </span>
                 <% } %>
-            </p>
-        </section>
+                </div>
+        </div>
   
-        <section class="form-login-password">
-            <p class="form-login-p">
-                <label class="form-login-label" for="contraseña">Contraseña:</label>
-                <input class="form-login-input" type="password" name="password" id="contraseña" >
-            </p> 
-        </section>
-        <section class="form-login-password">  
-            <p class="form-login-p"> 
-            <input class="form-login-input" type="checkbox"  name="remember_user" id="remember_user" >Recordame  
-            </p>
-        </section>
-
-        <section class="form-login-boton">
+        <div class="form-login-password">
+            <div class="form-login-p">
+                <label class="form-login-label" for="contraseña"><p>Contraseña:</p></label>
+                <input class="form-login-input" type="password" name="password" id="contraseña">
+            </div>
+        </div>
+    </div>
+        <div class="segundamb">
+            <div class="form-login-remember">  
+                <div class="form-login-p"> 
+                <input class="form-login-input" type="checkbox"  name="remember_user" id="remember_user"><p>Recordame</p>
+                </div>
+            </div>
+        <div class="form-login-boton">
             <p class="form-login-botonP">
-                <button type="submit" > Enviar  </button>
+                <button type="submit" > Login </button>
                 <img src="/img/tablaPerfil.png" alt="perfil">
             </p>
-        </section>
+        </div>
+       
+    </div>
     </form>
   <form class="form-login-formulario2"action="">
-        <section class="form-login-experiencia">
-            <h2 class="form-login-h2"> ¿Estuviste surfeando? </h2>
-        </section>
+        <div class="form-login-h2">
+            <h2> ¿Estuviste surfeando? </h2>
+        </div>
   
-        <section class="form-login-comment-olas">
-            <p class="form-login-p">
-                <label class="form-login-label" for="form-comentario-olas">¿Buenas olas? ¿Dónde?</label> <br>
+        <div class="form-login-comment-olas">
+            <div class="form-login-pro">
+                <label class="form-login-label" for="form-comentario-olas"><p>¿Buenas olas? ¿Dónde?</p></label> <br>
                 <textarea class="form-login-textarea" name="form-comentario" id="form-comentario">Brasil, Peru, Ecuador, Francia, Portugal, Australia, Japon... </textarea>
-            </p>
-        </section><br>
+            </div>
+        </div><br>
   
-        <section class="form-login-comment-tablas">
-            <p class="form-login-p">
-                <label class="form-login-label-comment-tablas" for="form-comment-tabla">¡Compartinos fotos!</label>
+        <div class="form-login-comment-tablas">
+            <div class="form-login-p">
+                <p class="form-login-label-comment-tablas" for="form-comment-tabla">¡Compartinos fotos!</p><br>
                 <input class="form-login-input" type="file"  name="form-comment-tabla" id="form-comment-tabla" accept=".jpg , .png" multiple>
-            </p>
-        </section>
+            </div>
+        </div>
     </form>
 
     <div class="form-login-separaciones">
@@ -77,10 +77,13 @@
         </div>
     </div>
 
+<div class="form-login-logo">
+    <img width=20% src="/img/logo.png" alt="logo">
+</div>
 
-    <section class="form-login-foto">
+    <div class="form-login-foto">
         <img width=100% src="/img/olasAltas.png" alt="olas">
-    </section>
+    </div>
 
 <%- include("./partials/footer") %>
 
