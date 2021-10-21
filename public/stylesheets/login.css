@@ -99,9 +99,13 @@ textarea {
 .form-login-boton button{
     margin-top: 10px;
     font-size: 20px;
-    color: #004e63;
-    border-color: #806400;
-    border-radius:  5px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    border-color: rgb(95, 99, 99);
+    background-color: rgb(8, 94, 169);
+    padding: 5px;
 }
 .form-login-separacion-mobile {
     display: block;
