@@ -34,12 +34,30 @@
                             <div class="color3gz">
                             </div>
                         </div>
-
+                        
                  
 
 
                         <div class="preciosgz">
                             <p><%= product.precio %></p>
+                        </div>
+                        <div>
+                            <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
+
+                                <p class="label"><label for="compra"></label>Cantidad</p>
+                                <input type="number" name="cantidad" id="cantidad" value="1">
+
+                                <p class="label"><label for="color"></label>Color</p>
+                                <select name="color">
+                                  <% product.colours.forEach(colour=> { %>
+                                    <option value="<%=colours.color%>">
+                                      <%= colour.color %>
+                                    </option><br>
+
+                                  <% }) %>
+                                </select><br>
+                                <button class="botAgrCargz" type="submit">AGREGAR AL CARRITO</button>
+                              </form>
                         </div>
                         <div class="botAgrCargz">
                             <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>

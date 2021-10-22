@@ -83,7 +83,7 @@ Users.associate = function(models){
     }),
     Users.hasMany(models.Items,{
         as: 'items2',
-        foreignKey: "user_id"
+        foreignKey: "usuario_id"
         })
 
     };

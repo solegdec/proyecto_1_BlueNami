@@ -32,7 +32,7 @@ const Items = sequelize.define("Items",
         },
         order_id:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.INTEGER
         },
         created_at:    {
@@ -47,7 +47,7 @@ const Items = sequelize.define("Items",
     },
     {
         tableName: 'items',
-        timestamps: true,
+        timestamps: false,
     }
 
 );

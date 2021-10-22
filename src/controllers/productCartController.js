@@ -11,19 +11,41 @@ const productCartController={
         let items = await db.Items.findAll({include:[{association:"producto"}]},
             {
             where: {
-                user_id: req.session.userLogged.id,
+                usuario_id: req.session.userLogged.id,
                 order_id: null
+                
             }
+           
         })
+       
         let totalPrice = 0;
         items.forEach(item =>{
             totalPrice += item.subtotal
         })
         return res.render("productCart", { items , totalPrice});
     },
+    addItem: async (req, res) => {
+        let productFound = await db.Products.findByPk(req.params.id, {
+            include:[{association:"marca"},{association:"colours"}]
+        });
+        await db.Items.create({
+           cantidad:Number(req.body.cantidad),
+           subtotal:Number(req.body.cantidad) * Number(productFound.precio),
+           producto_id:productFound.id,
+           
+           usuario_id: req.session.userLogged.id
+            
+            
+        
+           
+        })
+        return res.redirect("/productCart") 
+
+    },
 
 
-    
+  
 
 }
+
 module.exports= productCartController;
