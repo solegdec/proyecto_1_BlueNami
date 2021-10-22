@@ -4,35 +4,54 @@
 
     <body class="bodysole">
         <%- include("./partials/header") %>
-            <div>
-                <h1 class="micarritoSole">Mis Items: </h1>
-            </div>
+            <div> <h1 class="micarritoSole">MIS TABLAS</h1> </div>
            
             <section class="contenedorSole">
                 <div class="tabla1Sole">
-                    <%items.forEach(items=>{ %>
-
-                    <h2 class="h2sole"> <%= item.nombre %></h2>
-                    <%})%>
-                    <img src="\img\tablaVector50x62 (1) (1).png">
+                    <table class="tablaAdmin">
+                        <thead class="thead">
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Eliminar</th>
+                        </thead>
+                        <tbody>
+                        <%items.forEach(item=>{ %>
+                        <form  class="tm-edit-product-form" action="" method="POST" >
+                        <tr>
+                        <th scope="row"> <input type="checkbox"> </th>
+                        <td><%=item.producto.id%></td>
+                        <td><%=item.producto.nombre%></td>
+                        <td><%=item.producto.marca%></td>
+                        <td><%=item.producto.precio%></td>
+                        <td><%=item.producto.foto%></td>
+                        <td><%=item.producto.cantidad%></td>
+                        </form>
+                        <td> <form action="/productCart/delete/<%=item.id %>/?_method=DELETE" method="POST">
+                            <button type="submit" class="button_add">Borrar</button>
+                        </form>  
+                        </td>
+                          
+                        
+                        
+                       
+                        </tr> 
+                     <% }) %>       
+     
+                        </tbody>
+                    </table>
                 </div>
-                <div class="fotoTabla1Sole">
-                    <img src="/img/tabla5.png" width="300px" height="300px">
-                </div>
+                                
                 <aside class="asidesole">
-                    <ul>
-                        <li> La Super Fish es la tabla liviana ideal</li>
-                        <li> Mayor deslizamiento en olas chicas y medianas </li>
-                        <li> Gran maniobrabilidad</li>
-                        <li> Diseño exclusivo Blue Nami </li>
-                    </ul>
-                </aside>
-                <div class="precioTabla1Sole">
-                    <input class="inputsole" type="text" name="precio" id="precio" value="$2500">
                     
-                    <button class="buttonressole" type="reset" name="reset" id="reset"> Eliminar </button>
-                    <h4>Envio Gratis </h4>
-                </div>
+                </aside>
+                
+                   
+                
             </section>
        
                 <section class="contenedorSole3">
@@ -48,13 +67,19 @@
                 <a href="/product">
                     <div><button class="seguirComprandoSole"><img src="\img\tablaVector50x62 izq.png"> SEGUIR COMPRANDO</button></div>
                 </a>
-                <div class="totalsole"> <label for="total">Total<input class="inputsole" type="text" name="precio" id="precio" value="$5000"> </label></div>
+                
                 <div class="todmedpagosole">
-                    -Todos los medios de pago-
+                    -Todos los medios de pago
                     <i class="fas fa-credit-card"></i>
                     <i class="far fa-money-bill-alt"></i>
                 </div>
-                <a href="/checkout.html"><button class="botonPagarSole">PAGAR <img src="\img\tablaVector50x62 (1) (1).png" alt=""></button></a>
+
+                <form method="POST">
+                <label for="total">Importe Total<input class="inputsole" type="text" name="importe_total" id="importe_total" value="<%=totalPrice%>"> </label>
+                <button  type="submit" class="button_add">CONFIRMAR COMPRA</button>
+                </form>
+
+                
                 <div>
                     <p class="aSurfear">
                         ...y te vas a surfear...<img src="\img\tablaVector50x62 (1) (1).png">

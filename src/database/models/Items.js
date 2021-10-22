@@ -36,12 +36,12 @@ const Items = sequelize.define("Items",
             type: DataTypes.INTEGER
         },
         created_at:    {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.DATE
         },
         updated_at:
         {
-            allowNull: false,
+            allowNull: true,
             type: DataTypes.DATE
         },
     },
