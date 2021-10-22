@@ -58,7 +58,7 @@ let adminController = {
        Promise.all([pedidoProducto,pedidoMarcas,pedidoColores])
      
         .then(function(values)
-        { console.log(values)
+        { 
         res.render("product-edit-form",{product: values[0], marcas: values[1], colours: values[2]})
        
         })   
@@ -71,6 +71,7 @@ let adminController = {
                   descripcion: req.body.descripcion,
                   unidades: req.body.unidades,
                   precio: req.body.precio,
+                  marca:req.body.marca
                 }, {
                     where: {
                         id: req.params.id

@@ -2,7 +2,8 @@ const db = require('../database/models');
 const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
-const {validationResult} = require ('express-validator')
+const {validationResult} = require ('express-validator');
+const { UnorderedCollection } = require('http-errors');
 
 
 
@@ -11,19 +12,19 @@ const productCartController={
         let items = await db.Items.findAll({include:[{association:"producto"}]},
             {
             where: {
-                usuario_id: req.session.userLogged.id,
-                order_id: null
-                
-            }
-           
+                usuario_id:req.session.userLogged.id,
+                order_id: null,
+                }
+          
         })
-       
         let totalPrice = 0;
         items.forEach(item =>{
             totalPrice += item.subtotal
         })
-        return res.render("productCart", { items , totalPrice});
-    },
+        
+            return res.render("productCart", { items , totalPrice});
+       
+        },
     addItem: async (req, res) => {
         let productFound = await db.Products.findByPk(req.params.id, {
             include:[{association:"marca"},{association:"colours"}]
@@ -55,7 +56,7 @@ const productCartController={
             })
             let totalPrice = 0;
             items.forEach(item => {
-                totalPrice += item.subtotal
+                totalPrice + item.subtotal
             })
             let orderNew = await db.Orders.create({
                 importe_total: totalPrice,

@@ -81,6 +81,7 @@ const {validationResult} = require("express-validator")
               descripcion: req.body.descripcion,
               unidades: req.body.unidades,
               precio: req.body.precio,
+              marca:req.body.marca,
             }, {
                 where: {
                     id: req.params.id
