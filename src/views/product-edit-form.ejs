@@ -20,39 +20,22 @@
                             </div>
                     
                         </div><br>
-                        <select id="marca" class="campos_cat" name="marca" required>
-                            <%marcas.forEach(marca =>{ %>
-                            <option value="<%=marca.id%>"><%=marca.marca%></option>  
-                            <%})%>
-                            </select>
-                            <select id="color" class="campos_cat" name="color" required>
-                                <%colours.forEach(color =>{ %>
-                                <option value="<%=color.id%>"><%=color.color%></option>  
-                                <%})%>
-                                </select>
-
-
-
+                        
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="precio">Precio</label><br/>
                                     <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.precio%>">
                                 </div><br>
+                                                                   
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="precio">Precio</label><br/>
-                                    <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.nombre%>">
+                                    <label for="marca"></label><br/>
+                                    <input id="marca" name="color" type="text" class="campos_add" value="<%= product.marca.marca%>">
                                 </div><br>
-                                
-                                   
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="">product</label><br/>
-                                    <input id="precio" name="color" type="text" class="campos_add" value="<%= product.marca.marca%>">
-                                </div><br>
-
 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion">Descripción</label><br/>
                                     <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" required> <%= product.descripcion%></textarea>
                                 </div>
+
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="unidades">Unidades</label><br/>
                                     <input id="unidades" name="unidades" type="text" class="campos_add" value="<%= product.unidades%>" required />

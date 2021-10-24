@@ -56,6 +56,7 @@
                         <div class="preciosgz">
                             <p> $ <%= product.precio %></p>
                         </div>
+<<<<<<< HEAD
 
                         <div class="coloresgz">
                             <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
@@ -64,6 +65,19 @@
                                 <button class="botongz" type="submit">Agregar al carrito</button>
                               </form>
                         </div>
+=======
+                        <div>
+                            <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
+                            <div class="contadorGrandegz" >   
+                                <p>Cantidad</p>
+                                <input class="contadorgz" type="number" name="cantidad" id="cantidad" value="1">
+                                <p>Color</p>
+                                <button class="botongz" type="submit">AGREGAR AL CARRITO</button>
+                            </div>
+                              </form>
+                        </div>
+                
+>>>>>>> a808b9dc5d1898f838867f99e364bbaebd996bf6
 
                         <aside class="descripciongz">
                             <p>Tabla</p><br>

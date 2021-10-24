@@ -9,6 +9,7 @@
             <section class="contenedorSole">
                 <div class="tabla1Sole">
                     <table class="tablaAdmin">
+<<<<<<< HEAD
                         <thead class="thead">
                         <th scope="col">&nbsp;</th>
                         <th scope="col">Id</th>
@@ -20,6 +21,18 @@
                         <th scope="col">Subtotal</th>
                         <th scope="col">Eliminar</th>
                         </thead>
+=======
+                        <thead class="theadCart">
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Eliminar</th>
+                            </thead>
+>>>>>>> a808b9dc5d1898f838867f99e364bbaebd996bf6
                         <tbody>
                         <%items.forEach(item=>{ %>
                         <form  class="tm-edit-product-form" action="" method="POST" >
@@ -37,10 +50,6 @@
                             <button type="submit" class="button_add">Borrar</button>
                         </form>  
                         </td>
-                          
-                        
-                        
-                       
                         </tr> 
                      <% }) %>       
      
@@ -76,6 +85,7 @@
                     <i class="far fa-money-bill-alt"></i>
                 </div>
 
+<<<<<<< HEAD
 
 
                 <div class="contenedorSole3">
@@ -90,6 +100,10 @@
                   </div>
 
                 <form action="/productCart/order/add" method="POST">
+=======
+                <form method="POST">
+                <label for="total">Importe Total<input class="inputsole" type="number" name="importe_total" id="importe_total" value="<%=totalPrice%>"> </label>
+>>>>>>> a808b9dc5d1898f838867f99e364bbaebd996bf6
                 <button  type="submit" class="button_add">CONFIRMAR COMPRA</button>
                 </form>
 
