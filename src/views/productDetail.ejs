@@ -26,7 +26,7 @@
                         <h1><%=product.nombre %></h1>
                         
                         <div class="coloresgz">
-                            <p>Colores</p>
+
                             <div class="color1gz">
                             </div>
                             <div class="color2gz">
@@ -34,26 +34,35 @@
                             <div class="color3gz">
                             </div>
                         </div>
+                        <div class="coloresgz">
+                            <p class="label"><label for="color"></label>Colores:</p>
+
+
+                            <select name="colores" id="colores">
+                            <%colours.forEach(colour=>{%>
+
+                                <option value="<%=colour.id%>"  <%if(product.colours.find(colorDelProducto => colour.id  == colorDelProducto.id)){%><%"selected"%><%};  %>><%=colour.color%></option>
+
+                            <%})%>
+                        </select>
+
+
+
+                        </div>
                         
                  
 
 
                         <div class="preciosgz">
-                            <p><%= product.precio %></p>
+                            <p> $ <%= product.precio %></p>
                         </div>
-                        <div>
-                            <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
 
+                        <div class="coloresgz">
+                            <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
                                 <p class="label"><label for="compra"></label>Cantidad</p>
                                 <input type="number" name="cantidad" id="cantidad" value="1">
-
-                                <p class="label"><label for="color"></label>Color</p>
-                                
-                                <button class="botAgrCargz" type="submit">AGREGAR AL CARRITO</button>
+                                <button class="botongz" type="submit">Agregar al carrito</button>
                               </form>
-                        </div>
-                        <div class="botAgrCargz">
-                            <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
                         </div>
 
                         <aside class="descripciongz">

@@ -4,7 +4,7 @@
 
     <body class="bodysole">
         <%- include("./partials/header") %>
-            <div> <h1 class="micarritoSole">MIS TABLAS</h1> </div>
+            <div> <h1 class="micarritoSole">Mi Carrito: </h1> </div>
            
             <section class="contenedorSole">
                 <div class="tabla1Sole">
@@ -15,8 +15,9 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Marca</th>
                         <th scope="col">Precio</th>
-                        <th scope="col">Cantidad</th>
                         <th scope="col">Foto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Subtotal</th>
                         <th scope="col">Eliminar</th>
                         </thead>
                         <tbody>
@@ -24,14 +25,15 @@
                         <form  class="tm-edit-product-form" action="" method="POST" >
                         <tr>
                         <th scope="row"> <input type="checkbox"> </th>
-                        <td><%=item.producto.id%></td>
+                        <td><%=item.id%></td>
                         <td><%=item.producto.nombre%></td>
-                        <td><%=item.producto.marca%></td>
+                        <td><%=item.producto.marca_id%></td>
                         <td><%=item.producto.precio%></td>
-                        <td><%=item.producto.foto%></td>
-                        <td><%=item.producto.cantidad%></td>
+                        <td><img src="/img/<%=item.producto.foto%>" width="30px" height="30px"></td>
+                        <td><%=item.cantidad%></td>
+                        <td><%=item.subtotal%></td>
                         </form>
-                        <td> <form action="/productCart/delete/<%=item.id %>/?_method=DELETE" method="POST">
+                        <td> <form action="/productCart/delete/<%=item.id %>/?_method=DELETE" method="POST" >
                             <button type="submit" class="button_add">Borrar</button>
                         </form>  
                         </td>
@@ -58,7 +60,7 @@
 
 
                     <div>
-                        <h1 class="micarritoSole">Mi Carrito: </h1>
+                        <h1 class="micarritoSole">Mi Compra: </h1>
                         <br>
 
                     </div>
@@ -74,8 +76,20 @@
                     <i class="far fa-money-bill-alt"></i>
                 </div>
 
-                <form method="POST">
-                <label for="total">Importe Total<input class="inputsole" type="text" name="importe_total" id="importe_total" value="<%=totalPrice%>"> </label>
+
+
+                <div class="contenedorSole3">
+                    <div class="inputsole">
+                      <h2>TOTAL A PAGAR</h4>
+                    </div>
+                    <div class="inputsole">
+                      <p id="total"> 
+                        <%= totalPrice %> 
+                      </p>
+                    </div>
+                  </div>
+
+                <form action="/productCart/order/add" method="POST">
                 <button  type="submit" class="button_add">CONFIRMAR COMPRA</button>
                 </form>
 

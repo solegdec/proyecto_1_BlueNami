@@ -2,25 +2,24 @@ const db = require('../database/models');
 const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
-const {validationResult} = require ('express-validator')
+const {validationResult} = require ('express-validator');
+const Items = require('../database/models/Items');
 
 
 
 const productCartController={
     listCart: async (req, res) =>{
-        let items = await db.Items.findAll({include:[{association:"producto"}]},
-            {
+        let items = await db.Items.findAll(
+            {include:["producto", "orden", "usuario"],
             where: {
-                usuario_id: req.session.userLogged.id,
-                order_id: null
-                
-            }
-           
-        })
-       
+                order_id: null,
+                usuario_id: req.session.userLogged.id
+                }
+            },
+        );
         let totalPrice = 0;
         items.forEach(item =>{
-            totalPrice += item.subtotal
+            totalPrice = Number(totalPrice) + Number(item.subtotal)
         })
         return res.render("productCart", { items , totalPrice});
     },
@@ -48,6 +47,7 @@ const productCartController={
         },
         addOrder: async(req, res) =>{
             let items = await db.Items.findAll({
+                include:["producto", "orden", "usuario"],
                 where:{
                     usuario_id: req.session.userLogged.id,
                     order_id: null
@@ -55,27 +55,28 @@ const productCartController={
             })
             let totalPrice = 0;
             items.forEach(item => {
-                totalPrice += item.subtotal
+                totalPrice = Number(totalPrice) + Number(item.subtotal)
             })
+
             let orderNew = await db.Orders.create({
                 importe_total: totalPrice,
-                usuario_id: req.session.userLogged.id
+                usuario_id: req.session.userLogged.id,
+                fecha: new Date(),
             })
-            await db.Items.update({
-                order_id : orderNew.id
-            },{
-                where:{
+            
+            await db.Items.update(
+            {
+                order_id: orderNew.id
+            }
+            ,{where:{
                     usuario_id: req.session.userLogged.id,
                     order_id: null
                 }
             })
+            console.log(Items)
             return res.redirect("/")
         }
 
-   
-
-
-  
 
 }
 
