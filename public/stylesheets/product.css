@@ -44,6 +44,8 @@ input.buscarProd{
     transition:all 0.5s;  
 }
 
+
+
 article.tabla_lista {
     justify-content: space-around;
     display: inline-block;
@@ -135,10 +137,8 @@ article.tabla_lista {
     /*MEdia Gina*/
     article.tabla_lista {
         width: 22%;
-    
-       
     }
-}}
+}
 
 
 /*ProductCart*/
@@ -598,6 +598,7 @@ aside.descripciongz {
 }
 
 
+
 /* Comienzo segundo contenedor Gina*/
 
 .divisiongz {
@@ -749,6 +750,15 @@ aside.descripciongz {
         width: 100%;
         flex-direction: row;
     }
+    .contadorgz{
+        margin-left: 30%;
+     }
+     .contadorGrandegz p{
+         font-size: 15px;
+     font-family: "roboto";
+     text-align: center;
+     padding: 10px;
+     }
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
@@ -764,5 +774,13 @@ aside.descripciongz {
         display: flex;
         flex-direction: row;
     }
+    .contadorgz{
+        margin-left: 40%;
+     }
+     .contadorGrandegz p{
+         font-size: 15px;
+     font-family: "roboto";
+     text-align: center;
+     padding: 10px;
+     }
 }
-

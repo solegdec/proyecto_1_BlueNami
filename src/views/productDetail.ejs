@@ -43,18 +43,15 @@
                         </div>
                         <div>
                             <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
-
-                                <p class="label"><label for="compra"></label>Cantidad</p>
-                                <input type="number" name="cantidad" id="cantidad" value="1">
-
-                                <p class="label"><label for="color"></label>Color</p>
-                                
-                                <button class="botAgrCargz" type="submit">AGREGAR AL CARRITO</button>
+                            <div class="contadorGrandegz" >   
+                                <p>Cantidad</p>
+                                <input class="contadorgz" type="number" name="cantidad" id="cantidad" value="1">
+                                <p>Color</p>
+                                <button class="botongz" type="submit">AGREGAR AL CARRITO</button>
+                            </div>
                               </form>
                         </div>
-                        <div class="botAgrCargz">
-                            <a href="/productCart"><input class="botongz" type="submit" value="Agregar Al Carrito"></a>
-                        </div>
+                
 
                         <aside class="descripciongz">
                             <p>Tabla</p><br>
