@@ -18,9 +18,7 @@ const {validationResult} = require("express-validator")
         await db.Products.findByPk(req.params.id, {
             include: [{association: "marca"},{association:"colours"}]
         })
-        await db.Colours.findAll({
-            include: [{association: "productos"}]
-        })
+        
         .then(function(product){
             res.render("productDetail",{product})
         })

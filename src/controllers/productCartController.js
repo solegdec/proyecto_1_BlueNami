@@ -47,7 +47,7 @@ const productCartController={
             });
             res.redirect("/productCart")
         },
-        addOrder: async(req, res) =>{
+        addOrder: async (req, res) =>{
             let items = await db.Items.findAll({
                 include:["producto", "orden", "usuario"],
                 where:{
@@ -59,23 +59,24 @@ const productCartController={
             items.forEach(item => {
                 totalPrice = Number(totalPrice) + Number(item.subtotal)
             })
-
-            let orderNew = await db.Orders.create({
+            let newOrder = await db.Orders.create({
+               
                 importe_total: totalPrice,
                 usuario_id: req.session.userLogged.id,
                 fecha: new Date(),
             })
-            
-            await db.Items.update(
+            let update = await db.Items.update(
             {
-                order_id: orderNew.id
+                order_id:newOrder.id
             }
             ,{where:{
+                    order_id: null,
                     usuario_id: req.session.userLogged.id,
-                    order_id: null
+                    
                 }
+                
             })
-            console.log(Items)
+            console.log(update)
             return res.redirect("/")
         }
 

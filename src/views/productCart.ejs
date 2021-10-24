@@ -10,7 +10,6 @@
                 <div class="tabla1Sole">
                     <table class="tablaAdmin">
                         <thead class="thead">
-                        <th scope="col">&nbsp;</th>
                         <th scope="col">Id</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Marca</th>
@@ -24,7 +23,6 @@
                         <%items.forEach(item=>{ %>
                         <form  class="tm-edit-product-form" action="" method="POST" >
                         <tr>
-                        <th scope="row"> <input type="checkbox"> </th>
                         <td><%=item.id%></td>
                         <td><%=item.producto.nombre%></td>
                         <td><%=item.producto.marca_id%></td>
@@ -39,49 +37,31 @@
                         </td>
                         </tr> 
                      <% }) %>       
-     
-                        </tbody>
+                         </tbody>
                     </table>
                 </div>
-                                
-                <aside class="asidesole">
-                    
-                </aside>
-                
-                   
-                
+                  
             </section>
        
-                <section class="contenedorSole3">
-
-
+            <section class="contenedorSole3">
                     <div>
                         <h1 class="micarritoSole">Mi Compra: </h1>
                         <br>
-
                     </div>
-                   
-
-                <a href="/product">
-                    <div><button class="seguirComprandoSole"><img src="\img\tablaVector50x62 izq.png"> SEGUIR COMPRANDO</button></div>
-                </a>
-                
-                <div class="todmedpagosole">
-                    -Todos los medios de pago
-                    <i class="fas fa-credit-card"></i>
-                    <i class="far fa-money-bill-alt"></i>
+                <div class="contenedorSole3">
+                    <div class="micarritoSole"> TOTAL A PAGAR </div>
+                    <div class="inputsole">
+                      <h1 id="total"> $<%= totalPrice %> </p>
+                    </div>
                 </div>
-
-
-                <form action="" method="POST">
-
-                <form method="POST">
-                <label for="total">Importe Total<input class="inputsole" type="number" name="importe_total" id="importe_total" value="<%=totalPrice%>"> </label>
-
-                <button  type="submit" class="button_add">CONFIRMAR COMPRA</button>
+                  <div><a href="/product"> <button class="button_add"> Seguir Comprando</button> </a></div>
+                  
+                <form action="productCart/order/add" method="POST">
+                <button  type="submit" class="button_add">Confirmar Compra</button>
+                <div class="todmedpagosole">Todos los medios de pago<i class="fas fa-credit-card"></i><i class="far fa-money-bill-alt"></i></div>
+              
                 </form>
 
-                
                 <div>
                     <p class="aSurfear">
                         ...y te vas a surfear...<img src="\img\tablaVector50x62 (1) (1).png">

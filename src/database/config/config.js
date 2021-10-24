@@ -5,9 +5,9 @@ module.exports = {
 
     "password": "",
 
-    "password": "@Mysql07",
+    "password": "",
 
-    "password": "gianzari84",
+    "password": "",
 
     "database": "blueNami_db",
     "host": "127.0.0.1",
