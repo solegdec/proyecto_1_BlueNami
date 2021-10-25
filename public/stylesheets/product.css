@@ -176,6 +176,14 @@ table.tableCart th{
  td.nombreCart{
      margin: auto;
  }
+ .botonBorrar{
+        font-weight: 300;
+        color: rgb(1, 13, 48);
+        padding: 15px 10px 20px 10px;
+        margin: 15px 10px 15px 10px;
+    }
+
+ }
 
 
 body.bodysole {
