@@ -8,7 +8,7 @@
             </div>
             
             <div class="tm-product-table-container">
-                <table class="tablaAdminUsers">
+                <table class="tableAdminUsers">
                     <thead class="theadAdminUsers">
                         <th scope="col">&nbsp;</th>
                         <th scope="col">Id</th>           
@@ -23,9 +23,9 @@
                         <th scope="col">Perfil</th>
                         <th scope="col">Editar</th>           
                     </thead>
-                    <tbody>           
+                    <tbody class="tbodyAdminUsers">           
                     <%users.forEach(function(users){ %>
-                        <tr>
+                        <tr class="tradminUsers">
                          <th scope="row"> <input type="checkbox"> </th>
                         <td><%=users.id%></td>
                         <td><%=users.nombre%></td>

@@ -23,10 +23,13 @@
 
                     <article class="desproductosgz">
                         <h4>Tabla muy importante</h4>
+
                         <h1><%=product.nombre %></h1>
+                       
+                          
                         
                         <div class="coloresgz">
-
+                            <p class="label"><label for="color"></label>Colores:</p>
                             <div class="color1gz">
                             </div>
                             <div class="color2gz">
@@ -34,43 +37,33 @@
                             <div class="color3gz">
                             </div>
                         </div>
-                        <div class="coloresgz">
-                            <p class="label"><label for="color"></label>Colores:</p>
-
-
-                           
-
-
-                        </div>
                         
                  
-
-
                         <div class="preciosgz">
                             <p> $ <%= product.precio %></p>
                         </div>
 
-                        <div class="coloresgz">
+                        
                             <form action="/productCart/add/<%= product.id %>" method="POST" id="formulario">
-                                <p class="label"><label for="compra"></label>Cantidad</p>
-                                <input type="number" name="cantidad" id="cantidad" value="1">
-                                <button class="botongz" type="submit">Agregar al carrito</button>
+                                <div class="contadorGrandegz"> 
+                                    <p class="label"><label for="cantidad"></label>Cantidad:</p>
+                                <input class="contadorgz" type="number" name="cantidad" id="cantidad" value="1">
+                            </div>
+                            <button class="botongz" type="submit">Agregar al carrito</button>
                               </form>
-                        </div>
+                              
 
                         <aside class="descripciongz">
                             <p>Tabla</p><br>
                             
                             <li><%= product.descripcion %></li>
 
-                            
                         </aside>
                     </article>
                 </section>
                 <section>
                     <aside class="descripcion2gz">
                         <p>Tabla:</p><br>
-                       
 
                         <li><%= product.descripcion %></li>
                     </aside>

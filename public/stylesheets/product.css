@@ -13,12 +13,9 @@
     margin: auto;
    
 }
-
 .titProdRelgz h1:hover{
     color:#1c2460;
     }
-
-
 .botongz1 {
     width: 60%;
     background-color: #E9B843;
@@ -143,14 +140,51 @@ article.tabla_lista {
 
 /*ProductCart*/
 
+/*Tabla carrito*/
+table.tableCart{
+    max-width: 1200px;
+   border-radius: 6px;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+   margin: 40px 40px;
+   padding: 10px 10px 10px 10px;
+}
+tbody.tbodyCart{
+    margin:50px;
+    padding: 50px;
+}
+
+thead.theadCart{
+    font-weight: 100;
+}
+
+table.tableCart th{
+   font-family: "numans", "nova-cut";
+   padding: 10px;
+   text-align:left;
+}
+.tbodyCart td{
+    font-family: "roboto";
+    padding: 10px;
+    text-align: left;
+    font-size: 13px; 
+    background-color: white;
+ }
+ .tbodyCart img{
+     width: 25%;
+     height: 25%;
+ }
+ td.nombreCart{
+     margin: auto;
+ }
+
 
 body.bodysole {
     font-family: Roboto;
     background-color: rgb(207, 219, 235);
     height: 100%
 }
-
-h1.micarritoSole {
+.totalapagarsole h1,
+.micarritoSole h1{
     font-size: 20px;
     display: block;
     width: 100%;
@@ -378,7 +412,8 @@ input.inputsole {
 }
 
 @media screen and (min-width: 576px) {
-    h1.micarritoSole {
+    .totalapagarsole h1,
+    .micarritoSole h1{
         font-size: 20px;
     }
     h2.h2sole {
@@ -410,12 +445,20 @@ input.inputsole {
     aside.asidesole {
         display: none;
     }
-    
+  /*Tabla carrito*/
+    table.tableCart{
+        width: 85%;    
+    }
+    .tbodyCart img{
+        width: 25%;
+        height: 25%;
+    }
     
 }
 
 @media screen and (min-width: 768px) {
-    h1.micarritoSole {
+    .totalapagarsole h1,
+    .micarritoSole h1{
         font-size: 30px;
     }
     h2.h2sole {
@@ -429,6 +472,14 @@ input.inputsole {
     aside.asidesole {
         display: block;
     }
+        /*Tabla carrito*/
+    table.tableCart{
+        width: 85%;
+    }
+    .tbodyCart img{
+        width: 25%;
+        height: 25%;
+    }
     
 }
 
@@ -436,7 +487,8 @@ input.inputsole {
     .totalsole {
         font-size: large;
     }
-    h1.micarritoSole {
+    .totalapagarsole h1,
+    .micarritoSole h1{
         font-size: 40px;
     }
     h2.h2sole {
@@ -450,7 +502,15 @@ input.inputsole {
     aside.asidesole {
         display: block;
     }
-    
+    /*Tabla carrito*/
+    table.tableCart{
+        width: 100%;
+        height:fit-content; 
+    }
+    .tbodyCart img{
+        width: 25%;
+        height: 25%;
+    }
 
 }
 
@@ -526,12 +586,21 @@ input.inputsole {
     padding: 20px;
     margin-left: 15%;
 }
+.contadorGrandegz {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-left: 8%;
+}
 
 .coloresgz p {
     font-family: "Nova Cut";
     font-size: 15px;
     color: #000000;
-    margin-right: 10px;
+    margin-right: 50px;
     margin-top: 5%;
 }
 
@@ -552,7 +621,6 @@ input.inputsole {
     height: 30px;
     background: #7CDEDE;
 }
-
 .botongz {
     width: 60%;
     background-color: #E9B843;
@@ -568,7 +636,6 @@ input.inputsole {
     font-family: "roboto";
     font-size: 40px;
     text-align: center;
-    padding: 20px 10px;
 }
 
 aside.descripciongz li {
@@ -597,7 +664,13 @@ aside.descripciongz {
     line-height: 1.2em;
 }
 
+.contadorgz{
+    padding: 10px;
+    border-radius: 30px;
+    max-width: 60px;
+    display: block;
 
+}
 
 /* Comienzo segundo contenedor Gina*/
 
@@ -697,6 +770,7 @@ aside.descripciongz {
     font-family: "roboto";
     font-size: 30px;
     text-align: center;
+    
 }
 
 .destablagz {
@@ -705,8 +779,6 @@ aside.descripciongz {
     align-items: center;
     justify-content: space-around;
 }
-
-
 
 
 /* Comienzo Media */
@@ -718,6 +790,7 @@ aside.descripciongz {
         display: flex;
         flex-direction: row;
     }
+   
     .productosRelacionadosgz {
         width: 100%;
         display: flex;
@@ -731,10 +804,13 @@ aside.descripciongz {
     aside.descripciongz {
         display: none;
     }
+  
+
 }
 
 @media screen and (min-width: 768px) {
     /*MEdia Gina*/
+    
     aside.descripciongz {
         display: block;
     }
@@ -750,15 +826,10 @@ aside.descripciongz {
         width: 100%;
         flex-direction: row;
     }
-    .contadorgz{
-        margin-left: 30%;
-     }
-     .contadorGrandegz p{
-         font-size: 15px;
-     font-family: "roboto";
-     text-align: center;
-     padding: 10px;
-     }
+   
+    
+     
+   
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
@@ -774,13 +845,6 @@ aside.descripciongz {
         display: flex;
         flex-direction: row;
     }
-    .contadorgz{
-        margin-left: 40%;
-     }
-     .contadorGrandegz p{
-         font-size: 15px;
-     font-family: "roboto";
-     text-align: center;
-     padding: 10px;
-     }
+   
+     
 }
