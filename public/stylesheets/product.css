@@ -177,14 +177,14 @@ table.tableCart th{
      margin: auto;
  }
  .botonBorrar{
+     font-size: 30px;
         font-weight: 300;
         color: rgb(1, 13, 48);
         padding: 15px 10px 20px 10px;
         margin: 15px 10px 15px 10px;
     }
-
- }
-
+/*Fin Tabla carrito*/
+ 
 
 body.bodysole {
     font-family: Roboto;
