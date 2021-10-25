@@ -53,8 +53,9 @@ article.tabla_lista {
  }
 
 .imgTabla2gz img {
-    width: 20%;
-    height: 20%;
+    width: 100%;
+    height: 100%;
+  
 }
 
 .coloresRelgz {
@@ -115,9 +116,7 @@ article.tabla_lista {
 @media screen and (min-width: 576px) {
     /*CSS Gina*/
     article.tabla_lista {
-        width: 85%;
-    
-       
+        width: 85%; 
     }
 }
 
@@ -190,6 +189,7 @@ body.bodysole {
     font-family: Roboto;
     background-color: rgb(207, 219, 235);
     height: 100%
+    
 }
 .totalapagarsole h1,
 .micarritoSole h1{
@@ -510,6 +510,7 @@ input.inputsole {
     aside.asidesole {
         display: block;
     }
+
     /*Tabla carrito*/
     table.tableCart{
         width: 100%;
@@ -522,10 +523,9 @@ input.inputsole {
 
 }
 
+
 /*PRoductoDetail*/
-
-
-.contenedorgz {
+.contenedorPDgz {
     width: 80vw;
     flex-direction: column;
     max-width: 1000;
@@ -834,9 +834,6 @@ aside.descripciongz {
         width: 100%;
         flex-direction: row;
     }
-   
-    
-     
    
 }
 
