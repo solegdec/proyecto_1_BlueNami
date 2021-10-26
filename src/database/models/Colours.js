@@ -31,8 +31,8 @@ Colours.associate = function(models){
     Colours.belongsToMany(models.Products,{
         as: 'productos',
         through: 'products_colours',
-        foreignKey: 'producto_id',
-        otherKey: "color_id",
+        foreignKey: 'color_id',
+        otherKey: "producto_id",
         timestamps: false,
     })
 };
