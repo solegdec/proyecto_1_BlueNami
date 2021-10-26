@@ -59,25 +59,24 @@ const productCartController={
             items.forEach(item => {
                 totalPrice = Number(totalPrice) + Number(item.subtotal)
             })
-            let newOrder = await db.Orders.create({
-               
+            let ordersFound = await db.Orders.findAll()
+            let newId = ordersFound.length === 0 ? 1 :  ordersFound[ordersFound.length-1].id + 1
+            let newOrder = await db.Orders.create({   
                 importe_total: totalPrice,
                 usuario_id: req.session.userLogged.id,
                 fecha: new Date(),
+                id: newId
             })
-            let update = await db.Items.update(
-            {
-                order_id:newOrder.id
-            }
-            ,{where:{
+            
+            await db.Items.update(
+                {order_id: newOrder.id},
+                {where:{
+                    usuario_id: req.session.userLogged.id,  
                     order_id: null,
-                    usuario_id: req.session.userLogged.id,
-                    
+                    }
                 }
-                
-            })
-            console.log(update)
-            return res.redirect("/")
+            )
+            return res.redirect("/productCart")
         }
 
 
