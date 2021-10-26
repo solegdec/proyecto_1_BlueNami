@@ -7,7 +7,6 @@
         <%- include("./partials/header") %>
             <section>
                 <div class="barra-bus"> 
-                
                 <form class="barra-bus" action="/product/buscar" method="GET">
                     <input type="text"  name="search" placeholder="Search"class="buscarProd">
                     <input type="submit" value="Search" style="width:100px;"class="buscarProd">
@@ -15,19 +14,16 @@
                 </div>
                 
             </section>
+            
             <% products.forEach(function(products){ %>
-
                 <article class="tabla_lista">
-
                     <a class="imgTabla2gz" href="/product/<%=products.id%>"><img src="/img/<%=products.foto%>"></a>
-
                     <div class="destablagz">
                         <div class="titProdRelgz">
                             <h1>
                                 <%= products.nombre %>
                             </h1>
                             
-                         
                         </div>
                         <div class="coloresRelgz">
                             <div class="color1Rgz">
@@ -48,7 +44,7 @@
 
                     </div>
                 </article>
-
+            
                 <% }) %>
 
                     <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>

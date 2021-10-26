@@ -6,31 +6,27 @@
         <div class="h2admin">
             <h2>Administrador de Productos</h2>
         </div>
-          
-               <div class="tablaAdmin">
-                    <table class="tablaAdmin">
+                    <table class="tableAdmin">
                         <thead class="theadAdmin">
                             <th scope="col">&nbsp;</th>
                             <th scope="col">Id</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Marca</th>
                             <th scope="col">Precio</th>
-                           
                             <th scope="col">Unidades en stock</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
                         
                         </thead>
-                        <tbody>
+                        <tbody class="tbodyAdmin">
                             <% products.forEach(function(products){ %>
                         <form  class="tm-edit-product-form" action="" method="POST" >
-                            <tr>
+                            <tr class="trAdmin">
                             <th scope="row"> <input type="checkbox"> </th>
                             <td><%=products.id%></td>
                             <td><%=products.nombre%></td>
                             <td><%=products.marca_id%></td>
                             <td><%=products.precio%></td>
-                            
                             <td><%=products.unidades%></td>
                         </form> 
                             <td><a href="/product/<%=products.id%>"><i class="fas fa-info-circle"></a></td>
@@ -43,7 +39,7 @@
                     <article class="h2admin1">
                         <p><button class="buttonAdmin" type="button"><a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a></button></p>
                       </article>
-                </div>
+                
               <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
             <%- include("./partials/footer") %>
     </body>

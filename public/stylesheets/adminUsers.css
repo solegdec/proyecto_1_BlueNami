@@ -11,11 +11,12 @@ article.h2adminUsers{
     text-align: center;
     font-size: 20px;
 }
-tbody{
+/*Tabla*/
+tbody.tbodyAdminUsers{
     margin:50px;
     padding: 50px;
 }
- table.tablaAdminUsers{
+ table.tableAdminUsers{
     max-width: 1200px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
@@ -24,8 +25,7 @@ tbody{
     margin: 40px 40px
    
 }
-
-
+/*Tabla*/
 .h2adminUsers a{
     font-size: 14px;
     font-weight:500;
@@ -38,19 +38,18 @@ tbody{
     font-family: "lobster";
     font-size: 30px;
     color: grey
-
 }
 .theadAdminUsers{
     background-color:  #E9B843;
 }
 
-table.tablaAdminUsers th{
+table.tableAdminUsers th{
    font-family: "numans", "nova-cut";
    padding: 10px;
    color: gray;
    text-align:left;
 }
-table.tablaAdminUsers td{
+table.tableAdminUsers td{
     font-family: "roboto";
     padding: 10px;
     text-align: left;
@@ -58,7 +57,7 @@ table.tablaAdminUsers td{
     
  }
 
- tr:nth-child(even) {
+ tr.tradminUsers:nth-child(even) {
      background-color: #ddd;
  }
 
@@ -77,25 +76,21 @@ table.tablaAdminUsers td{
 
 
 @media screen and (min-width: 576px){
-table.tablaAdminUsers{
+table.tableAdminUsers{
     width: 70%;
     
 }
 
-
-    
 }
 @media screen and (min-width: 768px) {
-    table.tablaAdminUsers{
+    table.tableAdminUsers{
         width: 85%;
         
     }
-   
-   
     
 }
 @media (min-width: 1200px) and (orientation: landscape){
-    table.tablaAdminUsers{
+    table.tableAdminUsers{
         width: 100%;
         height:fit-content;
         
