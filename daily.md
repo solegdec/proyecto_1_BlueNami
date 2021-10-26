@@ -74,3 +74,16 @@ se crea un archivo con una funcion para poder tener productos relacionados en el
 se arregla el ruteo para multer
 se crea el middleware para poder subir los archivos de nuevos productos
 
+Sprint 4 Minutas:
+Sabado 4/9: Reunion de Planificacion + creacion de validaciones en registracion con las actualizaciones en app, clientRouter, clientController, register. Creacion de vista de Perfil.
+10/9 finalizacion  de vista Profile , rutas y controller
+16/9 arreglos de css de register y profile-  creacion de layout de base de datos en DRAWIO
+17/9ya funciona el profile luego del login- Lleva la info del cliente  
+22/9  se empieza con la creacion de script de la base de datos- 
+25/9 creacion de bluenami_db
+30/9 se llenan las tablas la db con datos-Creacion de modelos, asociaciones. Arreglo de funciones en controllers de toda la app para qy funcionen con db
+
+
+
+
+
