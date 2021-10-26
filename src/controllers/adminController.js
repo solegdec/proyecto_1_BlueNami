@@ -53,15 +53,17 @@ let adminController = {
             include: [{association: "marca"},{association:"colours"}]
         })
          
-       let pedidoMarcas= db.Marcas.findAll()
+        let pedidoMarcas= db.Marcas.findAll()
         let pedidoColores= db.Colours.findAll()
        Promise.all([pedidoProducto,pedidoMarcas,pedidoColores])
      
         .then(function(values)
         { 
+        return res.send(values[0])
         res.render("product-edit-form",{product: values[0], marcas: values[1], colours: values[2]})
        
         })   
+
     },
 
         update: (req,res)=>{

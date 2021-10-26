@@ -30,6 +30,29 @@
                                     <label for="marca"></label><br/>
                                     <input id="marca" name="color" type="text" class="campos_add" value="<%= product.marca.marca%>">
                                 </div><br>
+                                
+                                Todas las marcas:
+                                <% marcas.forEach(marca=> { %> 
+                                    <p> <%=marca.marca %></p>
+                                <%})%>
+
+                                Todos los colores:
+
+                                <% colours.forEach(colour=> { %> 
+                                    <p> <%=colour.color %></p>
+                                <%})%>
+
+                                Los colores del producto:
+                                <% product.colours.forEach(colourDelProduct=> { %> 
+                                    <p> <%=colourDelProduct.color %></p>
+                                <%})%>
+
+
+
+
+
+
+
 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion">Descripción</label><br/>

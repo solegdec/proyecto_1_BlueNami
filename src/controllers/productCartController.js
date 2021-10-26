@@ -3,11 +3,7 @@ const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator');
-<<<<<<< HEAD
 const Items = require('../database/models/Items');
-=======
-const { UnorderedCollection } = require('http-errors');
->>>>>>> a808b9dc5d1898f838867f99e364bbaebd996bf6
 
 
 
@@ -16,19 +12,11 @@ const productCartController={
         let items = await db.Items.findAll(
             {include:["producto", "orden", "usuario"],
             where: {
-<<<<<<< HEAD
                 order_id: null,
                 usuario_id: req.session.userLogged.id
                 }
             },
         );
-=======
-                usuario_id:req.session.userLogged.id,
-                order_id: null,
-                }
-          
-        })
->>>>>>> a808b9dc5d1898f838867f99e364bbaebd996bf6
         let totalPrice = 0;
         items.forEach(item =>{
             totalPrice = Number(totalPrice) + Number(item.subtotal)
@@ -69,11 +57,7 @@ const productCartController={
             })
             let totalPrice = 0;
             items.forEach(item => {
-<<<<<<< HEAD
                 totalPrice = Number(totalPrice) + Number(item.subtotal)
-=======
-                totalPrice + item.subtotal
->>>>>>> a808b9dc5d1898f838867f99e364bbaebd996bf6
             })
 
             let orderNew = await db.Orders.create({
