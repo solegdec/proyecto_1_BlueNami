@@ -26,10 +26,17 @@
 
                         <h1><%=product.nombre %></h1>
                        
-                          
+                        <div class="coloresgz">Marca: <%= product.marca.marca%></div>
+                        
+                        <div class="coloresgz">Colores: 
+                            <% product.colours.forEach(colourDelProduct=> { %> 
+                                <p> <%=colourDelProduct.color %></p>
+                            <%})%>
+                        </div>
+                        
                         
                         <div class="coloresgz">
-                            <p class="label"><label for="color"></label>Colores:</p>
+                            <p class="label"><label for="color"></label></p>
                             <div class="color1gz">
                             </div>
                             <div class="color2gz">

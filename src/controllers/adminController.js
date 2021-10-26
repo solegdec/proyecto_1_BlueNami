@@ -66,18 +66,23 @@ let adminController = {
     },
 
         update: (req,res)=>{
+            db.Products.findAll(
+                {include:["colours", "marca"]}
+            )
             db.Products.update(
                 {
                   nombre: req.body.nombre ,
                   descripcion: req.body.descripcion,
                   unidades: req.body.unidades,
                   precio: req.body.precio,
-                  marca:req.body.marca
+                  marca_id:req.body.marca
                 }, {
                     where: {
                         id: req.params.id
                     }
-                });
+                },
+                {include:["colours"]}
+                );
                 res.redirect("/admin");
             },
         destroy: (req,res)=>{

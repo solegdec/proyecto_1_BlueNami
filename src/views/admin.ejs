@@ -25,8 +25,8 @@
                             <th scope="row"> <input type="checkbox"> </th>
                             <td><%=products.id%></td>
                             <td><%=products.nombre%></td>
-                            <td><%=products.marca_id%></td>
-                            <td><%=products.precio%></td>
+                            <td><%=products.marca.marca%></td>
+                            <td> $ <%=products.precio%></td>
                             <td><%=products.unidades%></td>
                         </form> 
                             <td><a href="/product/<%=products.id%>"><i class="fas fa-info-circle"></a></td>
