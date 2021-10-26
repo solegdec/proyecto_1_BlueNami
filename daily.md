@@ -79,9 +79,19 @@ Sabado 4/9: Reunion de Planificacion + creacion de validaciones en registracion 
 10/9 finalizacion  de vista Profile , rutas y controller
 16/9 arreglos de css de register y profile-  creacion de layout de base de datos en DRAWIO
 17/9ya funciona el profile luego del login- Lleva la info del cliente  
-22/9  se empieza con la creacion de script de la base de datos- 
+22/9  finalizacion de tareas del sprint- se empieza con la creacion de script de la base de datos- 
 25/9 creacion de bluenami_db
-30/9 se llenan las tablas la db con datos-Creacion de modelos, asociaciones. Arreglo de funciones en controllers de toda la app para qy funcionen con db
+30/9 se crean archivos sql para las tablas -Creacion de modelos, asociaciones. Arreglo de funciones en controllers de toda la app para qy funcionen con db
+
+Sprint 5 minutas
+26/9 arreglos el el header para usuarios admin y no admin
+27/9 preuabas con la tabla pivot products_colours
+29/9 nueva creacion de archivos sql para poblar las tablas con MOckaroo
+6/10 arreglo del drawio
+12/10 pruebas de crud usando db
+ 16/10 se revee la estructura de la db
+ 22/10 crud funcionando aunque con algunos errores menores
+ 26/10 crud listo. quedan detalles para mejorar
 
 
 
