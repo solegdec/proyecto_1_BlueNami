@@ -12,19 +12,11 @@ const productCartController={
         let items = await db.Items.findAll(
             {include:["producto", "orden", "usuario"],
             where: {
-<<<<<<< HEAD
                 order_id: null,
                 usuario_id: req.session.userLogged.id
                 }
             },
         );
-=======
-                usuario_id:req.session.userLogged.id,
-                order_id: null,
-                }
-          
-        })
->>>>>>> 4486daa8ecc7189a0c9cdc09273795a64f0447ae
         let totalPrice = 0;
         items.forEach(item =>{
             totalPrice = Number(totalPrice) + Number(item.subtotal)

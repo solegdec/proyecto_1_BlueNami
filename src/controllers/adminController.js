@@ -59,11 +59,7 @@ let adminController = {
      
         .then(function(values)
         { 
-<<<<<<< HEAD
         return res.send(values[0])
-=======
-            return res.send(values[0])
->>>>>>> 4486daa8ecc7189a0c9cdc09273795a64f0447ae
         res.render("product-edit-form",{product: values[0], marcas: values[1], colours: values[2]})
        
         })   
