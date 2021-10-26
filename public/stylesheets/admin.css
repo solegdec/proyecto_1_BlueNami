@@ -11,19 +11,39 @@ article.h2admin1{
     text-align: center;
     font-size: 20px;
 }
-tbody{
+/*Tabla */
+tbody.tbodyAdmin{
     margin:50px;
     padding: 50px;
 }
 
- table.tablaAdmin{
+ table.tableAdmin{
      max-width: 1200px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     margin: 40px 40px;
     padding: 10px 10px 10px 10px;
 }
+.theadAdmin{
+    background-color:#E9B843;
+}
 
+table.tableAdmin th{
+   font-family: "numans", "nova-cut";
+   padding: 10px;
+   color: gray;
+   text-align:left;
+}
+table.tableAdmin td{
+    font-family: "roboto";
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;  
+ }
+ tr.trAdmin:nth-child(even) {
+    background-color: #ddd;
+}
+/*FIN Tabla */
 .h2admin1 a{
         font-size: 14px;
         font-weight:500;
@@ -36,23 +56,6 @@ tbody{
     font-size: 30px;
     color: grey
 }
-
-.theadAdmin{
-    background-color:#E9B843;
-}
-
-table.tablaAdmin th{
-   font-family: "numans", "nova-cut";
-   padding: 10px;
-   color: gray;
-   text-align:left;
-}
-table.tablaAdmin td{
-    font-family: "roboto";
-    padding: 10px;
-    text-align: left;
-    font-size: 13px;  
- }
 
 button.eliminarAdmin{
     width:100%;
@@ -77,18 +80,7 @@ button.selAdmin{
     flex-direction: row;
     justify-content: space-evenly;
 }
-.thead{
-  
-   font-weight: 100;
 
-
-}
-td img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
 .buttonAdmin {
     width: 150px;
     height: 30%;
@@ -105,7 +97,7 @@ input.campos_add{
     height: auto;
 }
 @media screen and (min-width: 576px){
-table.tablaAdmin{
+table.tableAdmin{
     width: 70%;
     
 }
@@ -119,7 +111,7 @@ table.tablaAdmin{
     
 }
 @media screen and (min-width: 768px) {
-    table.tablaAdmin{
+    table.tableAdmin{
         width: 85%;
         
     }
@@ -132,7 +124,7 @@ table.tablaAdmin{
     
 }
 @media (min-width: 1200px) and (orientation: landscape){
-    table.tablaAdmin{
+    table.tableAdmin{
         width: 100%;
         height:fit-content;
         
