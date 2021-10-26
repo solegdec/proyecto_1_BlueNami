@@ -182,6 +182,17 @@ table.tableCart th{
         padding: 15px 10px 20px 10px;
         margin: 15px 10px 15px 10px;
     }
+/*Agregar*/
+    .nombreCart h3{
+        color: #1c2460;
+        margin-bottom: -10px;
+        font-size:20px;
+    }
+    .nombreCart p{
+        
+        
+    
+    }
 /*Fin Tabla carrito*/
  
 
