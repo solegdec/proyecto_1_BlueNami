@@ -86,6 +86,7 @@ let adminController = {
                 res.redirect("/admin");
             },
         destroy: (req,res)=>{
+            
             db.Products.destroy({
                 where: {
                     id: req.params.id

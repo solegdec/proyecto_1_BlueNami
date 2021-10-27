@@ -33,12 +33,15 @@
 
                                 <div class="form-group mb-3">
                                     <label for="marca">Elegir una nueva marca:</label><br/>
-                                    <select id="marca" class="campos_cat" name="marca" required>
+                                    
+                                <select id="marca" class="campos_cat" name="marca" required>
                                     <%marcas.forEach(marca =>{ %>
-                                    <option value="<%=marca.id%>"><%=marca.marca%></option>  
+                                    <option value="<%=marca.id%>"> <%=marca.marca%> </option>  
                                     <%})%>
                                     </select>
                                 </div>
+
+
                                 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="color">Colores actuales de la tabla: </label><br/>
@@ -46,14 +49,6 @@
                                         <p> <%=colourDelProduct.color%></p>
                                     <%})%>
                                 </div><br>
-
-                                <div class="form-group mb-3">
-                                    <label for="colores">Elegir los nuevos colores:</label><br/>
-                                    <%colours.forEach(colour =>{ %>
-                                    <input type="checkbox" id="colores" class="campos_cat" name="colores" value="<%=colour.id%>"> <%=colour.color%>
-                                    <%})%>
-                                
-                                </div>
 
         
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
