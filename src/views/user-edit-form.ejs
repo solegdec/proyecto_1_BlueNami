@@ -5,32 +5,32 @@
         <%- include("./partials/headerAdmin") %>    
         <div id="card">
             <div class="add-titulo">
-                <h2 class="add-titulo-2">Editar Usuario</h2>
+                <h2>Editar Usuario</h2>
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
                             <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data" >
                                 <div class="form-group mb-3">
-                                    <label for="id">Id</label><br/>
+                                    <label for="id"><p>Id</p></label><br/>
                                     <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"  readonly>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="nombre">Nombre </label><br/>
+                                    <label for="nombre"><p>Nombre</p></label><br/>
                                     <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%= user.nombre%>"required >
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="apellido">Apellido </label><br/>
+                                    <label for="apellido"><p>Apellido</p></label><br/>
                                     <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>"required >
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="categoria">Categoria </label><br/>
+                                    <label for="categoria"><p>Categoria</p></label><br/>
                                     
                                     <select name="categoria">
-                                        <% categorias.forEach(categoria=> { %>
+                                        <p><% categorias.forEach(categoria=> { %></p>
                                     <option value="<%= categoria.id %>">
-                                        <%= categoria.categoria %>
+                                        <p><%= categoria.categoria %></p>
                                     </option><br>
-                                        <% }) %>
+                                        <p><% }) %></p>
                                     </select><br>
                                     
                                 </div>
@@ -38,20 +38,20 @@
 
 
                                 <div class="form-group mb-3">
-                                    <label for="fechaNac">Fecha De Nacimiento </label><br/>
+                                    <label for="fechaNac"><p>Fecha De Nacimiento</p></label><br/>
                                     <input id="fechaNac"  name ="fechaNac" type="text"class="campos_add" value="<%= user.fechaNac%>"required >
                                 </div>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="genero">Género</label><br/>                          
+                                    <label for="genero"><p>Género</p></label><br/>                          
                                     <input id="genero" name="genero" type="text" class="campos_add" value="<%= user.genero%>" >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="email" >E-Mail</label><br/>
+                                    <label for="email" ><p>E-Mail</p></label><br/>
                                     <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="avatar"> Editar Imagen de Perfil </label><br>
+                                    <label for="avatar"><p>Editar Imagen de Perfil</p></label><br>
                                     <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
 

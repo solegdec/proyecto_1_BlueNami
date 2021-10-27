@@ -28,11 +28,23 @@
 .form-reg-cont{
     display: flex;
     flex-direction: column;
-    flex-direction: nowrap;
+    flex-direction: wrap;
     max-width: 60%;
     margin: auto;
     text-align: center;
 }
+
+.form-login-input {
+    border-radius: 5px;
+    margin: auto;
+}
+.form-login-input:focus {
+    background-color: azure;
+}
+.form-reg-pais{
+    display: block;
+}
+
 .contenedortablamb h2,
 .form-reg-titulo h1{
     font-family: 'Lobster', cursive;
@@ -150,7 +162,7 @@ align-items: center;
     .form-reg-info,
     .form-reg-cont{
         flex-direction: row;
-        flex-direction: wrap;
+        flex-direction: nowrap;
     }
     
 }

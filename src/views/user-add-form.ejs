@@ -5,49 +5,49 @@
         <%- include("./partials/headerAdmin") %>    
         <div id="card">
             <div class="add-titulo">
-                <h2 class="add-titulo-2">Agregar Usuario</h2>
+                <h2>Agregar Usuario</h2>
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
                             <form  class="tm-edit-product-form" action="/adminUser/create" method="POST" enctype="multipart/form-data">
                     
                                 <div class="form-group mb-3">
-                                    <label for="nombre">Nombre </label><br/>
+                                    <label for="nombre"><p>Nombre</p></label><br/>
                                     <input id="nombre"  name ="nombre" type="text"class="campos_add"  >
                                 </div><br>
                                 <div class="form-group mb-3">
-                                    <label for="apellido">Apellido</label><br/>
+                                    <label for="apellido"><p>Apellido</p></label><br/>
                                     <input id="apellido"  name ="apellido" type="text"class="campos_add"  >
                                 </div><br>                                
                                 <div class="form-group mb-3">
                                     <p>Categoría:</p>
-                                    <%categorias.forEach(categoria =>{ %>
+                                    <p><%categorias.forEach(categoria =>{ %></p>
                                         <p><input type="checkbox" name="categoria" class="campos_add" value="<%= categoria.id %>"><%= categoria.categoria %></p>
                                     <% }) %>
                                 </div><br>
                                 <div class="form-group mb-3">
-                                    <label for="fechaNac">Fecha de Nacimiento</label><br/>
+                                    <label for="fechaNac"><p>Fecha de Nacimiento</p></label><br/>
                                     <input id="fechaNac"  name ="fechaNac" type="date"class="campos_add"  >
                                 </div><br>
                                 <div class="form-group mb-3">
-                                    <label for="genero">Genero</label><br/>
+                                    <label for="genero"><p>Genero</p></label><br/>
                                     <input id="genero"  name ="genero" type="text"class="campos_add" >
                                 </div><br>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="pais">Pais de Origen</label><br/>                          
+                                    <label for="pais"><p>Pais de Origen</p></label><br/>                          
                                     <input id="pais" name="pais" type="text" class="campos_add" >
                                 </div><br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="email" >E-Mail</label><br/>
+                                    <label for="email" ><p>E-Mail</p></label><br/>
                                     <input id="email"name="email" type="email"class="campos_add"  />
                                 </div><br>
                                 <div class="form-group mb-3">
-                                    <label for="password">Contraseña</label><br/>
+                                    <label for="password"><p>Contraseña</p></label><br/>
                                     <input id="password"  name ="password" type="text"class="campos_add"  >
                                 </div><br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="avatar"> Agregar Imagen de Perfil </label><br>
+                                    <label for="avatar"><p>Agregar Imagen de Perfil</p></label><br>
                                     <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
 

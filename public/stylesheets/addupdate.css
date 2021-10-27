@@ -12,12 +12,41 @@ button.volverAdmin {
     margin: 3em auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 600px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     text-align: center;
+    background-color: #E9B843;
 }
+.add-titulo{
+    width: 100%;
+}
+.add-titulo h2{
+    font-family: "roboto";
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+.add-bloque p{
+    font-family: "numans", "nova-cut";
+    font-weight: 300;
+    display: inline;
+}
+button.button_add{
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    border-color: rgb(95, 99, 99);
+    background-color: rgb(8, 94, 169);
+    padding: 5px;
+}
+
 
 textarea {
     width: 50%;
@@ -83,3 +112,4 @@ textarea {
     padding: 15px 10px 20px 10px;
     margin: 15px 10px 15px 10px;
 }
+
