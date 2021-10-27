@@ -797,9 +797,7 @@ aside.descripciongz {
 .form-login-mail,
 .form-login-password,
 .form-login-experiencia,
-.form-login-comment-olas,
-.form-login-comment-tablas,
-.form-login-foto {
+.form-login-comment-olas{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -828,28 +826,14 @@ aside.descripciongz {
     font-family: 'Roboto', sans-serif;
 }
 
-.form-login-input:focus {
-    background-color: azure;
-}
 
-.form-login-textarea:focus {
-    background-color: azure;
-}
 
-.form-login-label-comment-tablas {
-    font-family: 'Nova Cut', cursive;
-    margin: auto;
-}
 
 .form-login-label {
     font-family: 'Nova Cut', cursive;
 }
 
-.form-login-input,
-.form-login-textarea {
-    border-radius: 5px;
-    margin: auto;
-}
+
 
 .form-login-separacion-mobile {
     display: block;

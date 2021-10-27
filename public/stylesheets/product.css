@@ -235,19 +235,7 @@ section.contenedorSole {
     border-bottom: rgb(82, 118, 173) dotted 2px;
 }
 
-section.contenedorSole2 {
-    font-family: "lobster";
-    width: 100%;
-    height: 100%;
-    font-weight: 200;
-    background-color: white;
-    padding: 10px;
-    border: 20 px solid rgb(6, 50, 78);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    border-bottom: rgb(82, 118, 173) dotted 2px;
-}
+
 
 section.contenedorSole3 {
     display: flex;
@@ -443,11 +431,6 @@ input.inputsole {
         font-size: 18px;
     }
     section.contenedorSole {
-        flex-direction: row;
-        float: right;
-        font-weight: 200;
-    }
-    section.contenedorSole2 {
         flex-direction: row;
         float: right;
         font-weight: 200;
