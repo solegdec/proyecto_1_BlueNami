@@ -41,7 +41,9 @@
 .form-login-input:focus {
     background-color: azure;
 }
-
+.form-reg-pais{
+    display: block;
+}
 
 .contenedortablamb h2,
 .form-reg-titulo h1{
