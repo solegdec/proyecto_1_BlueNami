@@ -28,7 +28,7 @@
                         <td class="nombreCart"><h3><%=item.producto.nombre%></h3><br><p>Cód: <%=item.id%></p></td>
                         <td><p><%item.producto.marca_id%></p></td>
                         <td><p>$<%=item.producto.precio%></p></td>
-                        <td><%=item.subtotal%></td>
+                        <td><p><%=item.subtotal%></p></td>
                         </form>
                         <td> <form action="/productCart/delete/<%=item.id %>/?_method=DELETE" method="POST" >
                             <button type="submit" class="botonBorrar"><i class="fas fa-trash-alt"></i></button>
