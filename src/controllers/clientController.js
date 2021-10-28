@@ -52,6 +52,7 @@ const clientController = {
             });
         }
         db.Users.findOne({
+            include: [{association: "categoria"}], 
             where: {
                 email: req.body.email 
             }
@@ -60,15 +61,26 @@ const clientController = {
             if(req.body.remember_user){
                 res.cookie("remember_user", users.id, { maxAge: 60000 * 60 * 24 })
             }
-            return res.redirect("/client/profile/");
+            return res.render('profile',{
+                user:req.session.userLogged   
+               });
         })  
     },
     
-    profile: (req, res)=>{
-        res.render('profile',{
-         user:req.session.userLogged   
-        });
+    profile: (req,res)=>{
+        db.Users.findByPk(req.params.id, {
+            include: [{association: "categoria"}]
+        })
+        .then(function(user){
+            res.render("profile",{user})
+        })   
     },
+
+
+
+
+
+
     account: function(req,res) {          
         if(req.session.userLogged){;
            if(req.session.userLogged.admin){

@@ -33,11 +33,6 @@ const Orders = sequelize.define("Orders",
             allowNull: true,
             type: DataTypes.DATE
         },
-        cerrada:
-        {
-            allowNull:true,
-            type: DataTypes.INTEGER
-        },
     },
     {
         tableName: 'orders',

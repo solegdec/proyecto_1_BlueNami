@@ -32,13 +32,16 @@
                                 </div><br>
 
                                 <div class="form-group mb-3">
-                                    <label for="marca"><p>Elegir una nueva marca:</p></label><br/>
-                                    <select id="marca" class="campos_cat" name="marca" required>
+                                    <label for="marca">Elegir una nueva marca:</label><br/>
+                                    
+                                <select id="marca" class="campos_cat" name="marca" required>
                                     <%marcas.forEach(marca =>{ %>
-                                    <option value="<%=marca.id%>"><%=marca.marca%></option>  
+                                    <option value="<%=marca.id%>"> <%=marca.marca%> </option>  
                                     <%})%>
                                     </select>
                                 </div>
+
+
                                 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="color"><p>Colores actuales de la tabla:</p></label><br/>
@@ -47,6 +50,8 @@
                                     <%})%>
                                 </div><br>
 
+<<<<<<< HEAD
+=======
                                 <div class="form-group mb-3">
                                     <label for="colores"><p>Elegir los nuevos colores:</p></label><br/>
                                     <%colours.forEach(colour =>{ %>
@@ -55,6 +60,7 @@
                                 
                                 </div>
 
+>>>>>>> 6ba03994972bdd2f54c039a87e29be58caeaa2ff
         
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion"><p>Descripción</p></label><br/>
