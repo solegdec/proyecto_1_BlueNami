@@ -25,26 +25,27 @@
                                     <label for="precio"><p>Precio</p></label><br/>
                                     <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.precio%>">
                                 </div><br>
-                                                                   
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="marca"><p>Marca actual:</p></label><br/>
-                                    <input id="marca" name="color" type="text" class="campos_add" value="<%= product.marca.marca%>">
-                                </div><br>
 
                                 <div class="form-group mb-3">
                                     <label for="marca">Elegir una nueva marca:</label><br/>
                                     
                                 <select id="marca" class="campos_cat" name="marca" required>
-                                    <%marcas.forEach(marca =>{ %>
-                                    <option value="<%=marca.id%>"> <%=marca.marca%> </option>  
-                                    <%})%>
+                                    <%marcas.forEach(marca =>{
+                                         if(marca.marca==product.marca.marca) { %>
+                                    <option value="<%=marca.id%>" selected> <%=marca.marca%> </option> 
+                                     <% }
+                                     else { %> 
+                                        <option value="<%=marca.id%>"> <%=marca.marca%> </option> 
+                                    <% }
+                                    })%>
                                     </select>
+                                    
                                 </div>
 
-
+                                <br>
                                 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="color"><p>Colores actuales de la tabla:</p></label><br/>
+                                    <label for="color"><p><b>Colores actuales de la tabla:</p></b></label><br/>
                                     <% product.colours.forEach(colourDelProduct=> { %> 
                                         <p> <%=colourDelProduct.color%></p>
                                     <%})%>
@@ -55,7 +56,7 @@
                                     <label for="descripcion"><p>Descripción</p></label><br/>
                                     <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" required> <%= product.descripcion%></textarea>
                                 </div>
-
+<br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="unidades"><p>Unidades en stock:</p></label><br/>
                                     <input id="unidades" name="unidades" type="number" class="campos_add" value="<%= product.unidades%>" required>
