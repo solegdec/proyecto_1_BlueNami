@@ -24,7 +24,7 @@
                         <form  class="tm-edit-product-form" action="" method="POST" >
                         <tr class="trCart">
                         <td><p><%=item.cantidad%></p></td>
-                        <td><img src="/img/<%=item.producto.foto%>"></td>
+                        <td class="tdfotoproducto"><img src="/img/<%=item.producto.foto%>"></td>
                         <td class="nombreCart"><h3><%=item.producto.nombre%></h3><br><p>Cód: <%=item.id%></p></td>
                         <td><p><%item.producto.marca_id%></p></td>
                         <td><p>$<%=item.producto.precio%></p></td>
@@ -42,30 +42,26 @@
                 
             </section>
             <section class="contenedorSole3">
-                    <div class="micarritoSole">
-                        <h1>Mi Compra: </h1>
-                        <br>
-                    </div>
-                <div class="contenedorSole3">
-                    <div class="totalapagarsole">
-                        <h1>TOTAL A PAGAR </h1>
-                    </div>
-                    <div class="inputsole">
-                      <p> $<%= totalPrice %> </p>
-                    </div>
-                </div>
-                  <div><a href="/product"> <button class="button_add"> Seguir Comprando</button> </a></div>
-                  
-                <form action="productCart/order/add" method="POST">
-                <button  type="submit" class="button_add">Confirmar Compra</button>
-                <div class="todmedpagosole">Todos los medios de pago<i class="fas fa-credit-card"></i><i class="far fa-money-bill-alt"></i></div>
-              
-                </form>
+                  <div><a href="/product"> <button class="button_add_Cart"><i class="fas fa-arrow-left"></i>        Seguir Comprando</button> </a></div>
 
-                <div>
+                  <div>
+                    <div class="todmedpagosole">Todos los medios de pago<i class="fas fa-credit-card"></i><i class="far fa-money-bill-alt"></i></div>
                     <p class="aSurfear">
                         ...y te vas a surfear...<img src="\img\tablaVector50x62 (1) (1).png">
                     </p>
+                </div>
+
+
+                
+                <div clsss="totalSoleTT">
+                <div class="totalapagarsole">
+                    <h1>TOTAL A PAGAR </h1>
+                    <p>$<%= totalPrice %>.-</p>
+                </div>
+
+                <form action="productCart/order/add" method="POST">
+                    <button  type="submit" class="button_add_Cart">Confirmar Compra</button>
+                    </form>
                 </div>
             </section>
             

@@ -111,37 +111,11 @@ article.tabla_lista {
 }
 
 
-/* Comienzo Media */
-
-@media screen and (min-width: 576px) {
-    /*CSS Gina*/
-    article.tabla_lista {
-        width: 85%; 
-    }
-}
-
-@media screen and (min-width: 768px) {
-    /*MEdia Gina*/
-   
-    article.tabla_lista {
-        width: 30%;
-       
-       
-    }
-
-@media (min-width: 1200px) and (orientation: landscape) {
-    /*MEdia Gina*/
-    article.tabla_lista {
-        width: 22%;
-    }
-}
-
 
 /*ProductCart*/
 
 /*Tabla carrito*/
 table.tableCart{
-    max-width: 1200px;
    border-radius: 6px;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
    margin: 40px 40px;
@@ -168,9 +142,13 @@ table.tableCart th{
     font-size: 13px; 
     background-color: white;
  }
+ .tdfotoproducto {
+     width: 100px;
+     height: 100px;
+ }
  .tbodyCart img{
-     width: 25%;
-     height: 25%;
+     width: 100%;
+     height: 100%;
  }
  td.nombreCart{
      margin: auto;
@@ -205,6 +183,19 @@ body.bodysole {
     background-color: rgb(207, 219, 235);
     height: 100%
     
+}
+.totalSoleTT{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+.totalapagarsole p {
+    color: grey;
+    font-family: "roboto";
+    font-weight: 500;
+    text-align: center;
 }
 .totalapagarsole h1,
 .micarritoSole h1{
@@ -318,6 +309,23 @@ button.buttonressole {
     width: 70px;
 }
 
+button.button_add_Cart{
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    border-color: rgb(95, 99, 99);
+    background-color: rgb(8, 94, 169);
+    padding: 5px;
+}
+
+.button_add_Cart {
+    width: 150px;
+    height: 30%;
+    padding: 15px 10px 20px 10px;
+    margin: 15px 10px 15px 10px;
+}
 .totalsole {
     align-self: center;
     font-weight: 200;
@@ -351,6 +359,7 @@ button.buttonressole {
     animation-name: surfear;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    margin-top: 30px;
 }
 
 input.inputsole {
@@ -455,10 +464,7 @@ input.inputsole {
     table.tableCart{
         width: 85%;    
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+    
     
 }
 
@@ -482,10 +488,7 @@ input.inputsole {
     table.tableCart{
         width: 85%;
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+   
     
 }
 
@@ -514,10 +517,7 @@ input.inputsole {
         width: 100%;
         height:fit-content; 
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+   
 
 }
 
@@ -790,7 +790,7 @@ aside.descripciongz {
 /* Comienzo Media */
 
 @media screen and (min-width: 576px) {
-    /*CSS Gina*/
+    /*CSS Detail Gina*/
     .productogz {
         width: 100%;
         display: flex;
@@ -814,7 +814,7 @@ aside.descripciongz {
 }
 
 @media screen and (min-width: 768px) {
-    /*MEdia Gina*/
+    /*MEdia Detail Gina*/
     
     aside.descripciongz {
         display: block;
@@ -831,11 +831,13 @@ aside.descripciongz {
         width: 100%;
         flex-direction: row;
     }
+    article.tabla_lista {
+        width: 30%;
    
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
-    /*MEdia Gina*/
+    /*MEdia Detail Gina*/
     aside.descripciongz {
         display: block;
     }
@@ -849,4 +851,25 @@ aside.descripciongz {
     }
    
      
+}
+
+/* Comienzo Media Product */
+
+@media screen and (min-width: 576px) {
+    /*CSS Gina*/
+    article.tabla_lista {
+        width: 85%; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article.tabla_lista {
+        width: 30%;
+    }
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    /*MEdia Gina*/
+    article.tabla_lista {
+        width: 22%;
+    }
 }

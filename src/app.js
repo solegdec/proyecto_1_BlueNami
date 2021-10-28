@@ -10,7 +10,8 @@ const userLoggedMidd =require("./middlewares/userLoggedMidd")
 const logueado =require("./middlewares/logueado.js")
 //const adminMidd= require("./middlewares/adminMidd.js")
 //heroku
-const port = process.env.PORT || 3030
+const port = process.env.PORT || 8000
+
 // Para que funcione nodemon, comentar  la linea 12- Para heroku sacar el comentario
 //app.listen(process.env.PORT||3030, function(){console.log("ok")})
 
