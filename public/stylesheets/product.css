@@ -111,31 +111,6 @@ article.tabla_lista {
 }
 
 
-/* Comienzo Media */
-
-@media screen and (min-width: 576px) {
-    /*CSS Gina*/
-    article.tabla_lista {
-        width: 85%; 
-    }
-}
-
-@media screen and (min-width: 768px) {
-    /*MEdia Gina*/
-   
-    article.tabla_lista {
-        width: 30%;
-       
-       
-    }
-
-@media (min-width: 1200px) and (orientation: landscape) {
-    /*MEdia Gina*/
-    article.tabla_lista {
-        width: 22%;
-    }
-}
-
 
 /*ProductCart*/
 
@@ -168,9 +143,13 @@ table.tableCart th{
     font-size: 13px; 
     background-color: white;
  }
+ .tdfotoproducto {
+     width: 100px;
+     height: 100px;
+ }
  .tbodyCart img{
-     width: 25%;
-     height: 25%;
+     width: 100%;
+     height: 100%;
  }
  td.nombreCart{
      margin: auto;
@@ -455,10 +434,7 @@ input.inputsole {
     table.tableCart{
         width: 85%;    
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+    
     
 }
 
@@ -482,10 +458,7 @@ input.inputsole {
     table.tableCart{
         width: 85%;
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+   
     
 }
 
@@ -514,10 +487,7 @@ input.inputsole {
         width: 100%;
         height:fit-content; 
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+   
 
 }
 
@@ -790,7 +760,7 @@ aside.descripciongz {
 /* Comienzo Media */
 
 @media screen and (min-width: 576px) {
-    /*CSS Gina*/
+    /*CSS Detail Gina*/
     .productogz {
         width: 100%;
         display: flex;
@@ -814,7 +784,7 @@ aside.descripciongz {
 }
 
 @media screen and (min-width: 768px) {
-    /*MEdia Gina*/
+    /*MEdia Detail Gina*/
     
     aside.descripciongz {
         display: block;
@@ -831,11 +801,13 @@ aside.descripciongz {
         width: 100%;
         flex-direction: row;
     }
+    article.tabla_lista {
+        width: 30%;
    
 }
 
 @media (min-width: 1200px) and (orientation: landscape) {
-    /*MEdia Gina*/
+    /*MEdia Detail Gina*/
     aside.descripciongz {
         display: block;
     }
@@ -849,4 +821,25 @@ aside.descripciongz {
     }
    
      
+}
+
+/* Comienzo Media Product */
+
+@media screen and (min-width: 576px) {
+    /*CSS Gina*/
+    article.tabla_lista {
+        width: 85%; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article.tabla_lista {
+        width: 30%;
+    }
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    /*MEdia Gina*/
+    article.tabla_lista {
+        width: 22%;
+    }
 }
