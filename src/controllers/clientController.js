@@ -72,7 +72,7 @@ const clientController = {
             include: [{association: "categoria"}]
         })
         .then(function(user){
-            res.render("profile",{user})
+            res.render("profile",{user:req.session.userLogged})
         })   
     },
 
