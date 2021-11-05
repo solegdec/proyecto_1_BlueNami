@@ -15,39 +15,38 @@
 
                                 <div class="form-group mb-3">
                                     <label for="nombre"><p>Nombre</p></label><br/>
-                                    <input id="nombre"  name ="nombre" type="text"class="campos_add"  >
+                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%=locals.oldData ? oldData.nombre:null%>" >
                                 </div><br>
-
-
+                                
                                 <div class="form-group mb-3">
                                     <label for="apellido"><p>Apellido</p></label><br/>
-                                    <input id="apellido"  name ="apellido" type="text"class="campos_add"  >
+                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%=locals.oldData ? oldData.apellido:null%>" >
                                 </div><br>                                
                                 
                                 <div class="form-group mb-3">
                                     <label for="fechaNac"><p>Fecha de Nacimiento</p></label><br/>
-                                    <input id="fechaNac"  name ="fechaNac" type="date"class="campos_add"  >
+                                    <input id="fechaNac"  name ="fechaNac" type="date"class="campos_add" value="<%=locals.oldData ? oldData.fechaNac:null%>" >
                                 </div><br>
                                 <div class="form-group mb-3">
                                     <label for="genero"><p>Genero</p></label><br/>
-                                    <input id="genero"  name ="genero" type="text"class="campos_add" >
+                                    <input id="genero"  name ="genero" type="text"class="campos_add" value="<%=locals.oldData ? oldData.genero:null%>">
                                 </div><br>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="pais"><p>Pais de Origen</p></label><br/>                          
-                                    <input id="pais" name="pais" type="text" class="campos_add" >
+                                    <input id="pais" name="pais" type="text" class="campos_add" value="<%=locals.oldData ? oldData.pais:null%>">
                                 </div><br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="email" ><p>E-Mail</p></label><br/>
-                                    <input id="email"name="email" type="email"class="campos_add"  />
+                                    <input id="email"name="email" type="email"class="campos_add"  value="<%=locals.oldData ? oldData.email:null%>">
                                 </div><br>
                                 <div class="form-group mb-3">
                                     <label for="password"><p>Contraseña</p></label><br/>
-                                    <input id="password"  name ="password" type="text"class="campos_add"  >
+                                    <input id="password"  name ="password" type="password"class="campos_add"  >
                                 </div><br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="avatar"><p>Agregar Imagen de Perfil</p></label><br>
-                                    <input id="avatar" type="file" name="avatar"  class="campos_add">
+                                    <input id="avatar" type="file" name="avatar"  class="campos_add" value="<%=locals.oldData ? oldData.avatar:null%>">
                                 </div>
                                 <% if(typeof errores != "undefined"){ %>
                                     <ul>

@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const { Op } = require("sequelize");
-const {validationResult} = require("express-validator");
+const {validationResult} = require ('express-validator')
+
 //controller de productos desde admin
 
 let adminController = {
@@ -27,14 +28,25 @@ let adminController = {
     },
     
     create: (req,res)=>{
+        
         db.Marcas.findAll() 
         .then(function(marcas){
             return res.render("product-add-form", {marcas})
         })
     },
     
-    store: function(req, res){
-        db.Products.create(
+    store: async function(req, res){
+        const errores = validationResult(req);
+            if(!errores.isEmpty())
+            {
+                return res.render("product-add-form", {
+                    errores: errores.errors,
+                    oldData: req.body
+                })}
+        await db.Marcas.findAll({
+            include: "productos"}
+        ) 
+        await db.Products.create(
         {
           nombre: req.body.nombre ,
           descripcion: req.body.descripcion,
@@ -48,7 +60,16 @@ let adminController = {
         res.redirect("/admin");
     },
     
+    
     edit: (req,res)=>{
+        const errores = validationResult(req);
+        if(!errores.isEmpty()){
+            return res.render("user-add-form", {
+                errores: errores.errors,
+                oldData: req.body
+            })
+    
+        }else{
         let pedidoProducto=db.Products.findByPk(req.params.id,{
             include: [{association: "marca"},{association:"colours"}]
         })
@@ -61,7 +82,7 @@ let adminController = {
         { 
         res.render("product-edit-form",{product: values[0], marcas: values[1], colours: values[2]})
        
-        })   
+        })  } 
 
     },
 

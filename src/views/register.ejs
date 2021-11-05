@@ -19,8 +19,8 @@
             <div class="form-reg-p">
                 <label class="form-reg-label" for=nombre><p>Nombre</p></label>
                 <input class="form-reg-input" type="text" name="nombre" value="<%=locals.oldData ? oldData.nombre:null%>"  id="nombre" placeholder=Nombre>
-                <% if (locals.errors && errors.nombre) { %>
-                   <span class="error"> <%= errors.nombre.msg %> </span>
+                <% if (locals.errores && errores.nombre) { %>
+                   <span class="error"> <%= errores.nombre.msg %> </span>
                   
                 <% } %>
                 </div>
@@ -28,8 +28,8 @@
             <div class="form-reg-p">
                 <label class="form-reg-label" for=apellido><p>Apellido</p></label>
                 <input class="form-reg-input" type="text" name="apellido" value="<%=locals.oldData ? oldData.apellido:null%>"  id="apellido" placeholder=Apellido>
-                <% if (locals.errors && errors.apellido) { %>
-                    <span class="error">  <%= errors.apellido.msg %> </span>
+                <% if (locals.errores && errores.apellido) { %>
+                    <span class="error">  <%= errores.apellido.msg %> </span>
                  <% } %>
                 </div>
             </div>

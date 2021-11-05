@@ -1,15 +1,15 @@
 const path = require('path');
 const {check}=require("express-validator")
 const bcrypt = require('bcryptjs');
-const Users = require('../database/models/Users.js')
 const db = require('../database/models');
 
 const validations={
 register:[
-    check("nombre").notEmpty().withMessage("Tienes que completar el campo Nombre").isLength({min:2}),
-    check("apellido").notEmpty().withMessage("Tienes que completar el campo Apellido"),
+    check("nombre").notEmpty().withMessage("Tienes que completar tu Nombre").bail()
+    .isLength({min:2}).withMessage("El nombre debe tener al menos 2 caracteres"),
+    check("apellido").notEmpty().withMessage("Tienes que completar tu Apellido"),
     check("fechaNac").notEmpty().withMessage("Tienes que completar tu Fecha de Nacimiento"),
-    check("email").isEmail().withMessage("Tienes que completar tu email").bail()
+    check("email").isEmail().withMessage("Tienes que completar tu Email").bail()
             .custom(function(value){
                 return db.Users.findOne({
                     where:{
@@ -22,9 +22,10 @@ register:[
                 })
             }),
    
-    check("pais").notEmpty().withMessage("Tienes que completar tu pais"),
-    check("genero").notEmpty().withMessage("Tienes que completar tu genero"),
-    check("password").notEmpty().withMessage("Tienes que completar tu password").isLength({min:8}),
+    check("pais").notEmpty().withMessage("Tienes que completar tu Pais"),
+    check("genero").notEmpty().withMessage("Tienes que completar tu Género"),
+    check("password").notEmpty().withMessage("Tienes que completar tu Password").bail()
+    .isLength({min:8}).withMessage("El Password debe tener al menos 8 caracteres"),
     check("avatar").custom((value,{req})=>{
         return req.file;
             })
@@ -34,7 +35,7 @@ register:[
                 const ext = path.extname(req.file.originalname);
                 return imagenesValidas.includes(ext);               
             })
-            .withMessage("archivo no valido")
+            .withMessage("Debes subir un archivo válido")
 ],
     
 
@@ -59,13 +60,15 @@ login:[
             }),
         check("password")
             .notEmpty()
-            .withMessage("Tienes que completar la password")
+            .withMessage("Tienes que completar el password")
+            
 ],
 userAdd:[
-    check("nombre").notEmpty().withMessage("Tienes que completar el campo Nombre").isLength({min:2}),
-    check("apellido").notEmpty().withMessage("Tienes que completar el campo Apellido"),
+    check("nombre").notEmpty().withMessage("Tienes que completar tu Nombre").bail()
+    .isLength({min:2}).withMessage("El nombre debe tener al menos 2 caracteres"),
+    check("apellido").notEmpty().withMessage("Tienes que completar tu Apellido"),
     check("fechaNac").notEmpty().withMessage("Tienes que completar tu Fecha de Nacimiento"),
-    check("email").isEmail().withMessage("Tienes que completar tu email").bail()
+    check("email").isEmail().withMessage("Tienes que completar tu Email").bail()
             .custom(function(value){
                 return db.Users.findOne({
                     where:{
@@ -78,9 +81,10 @@ userAdd:[
                 })
             }),
    
-    check("pais").notEmpty().withMessage("Tienes que completar tu pais"),
-    check("genero").notEmpty().withMessage("Tienes que completar tu genero"),
-    check("password").notEmpty().withMessage("Tienes que completar tu password").isLength({min:4}),
+    check("pais").notEmpty().withMessage("Tienes que completar tu Pais"),
+    check("genero").notEmpty().withMessage("Tienes que completar tu Género"),
+    check("password").notEmpty().withMessage("Tienes que completar tu Password").bail()
+    .isLength({min:8}).withMessage("El Password debe tener al menos 8 caracteres"),
     check("avatar").custom((value,{req})=>{
         return req.file;
             })
@@ -90,9 +94,50 @@ userAdd:[
                 const ext = path.extname(req.file.originalname);
                 return imagenesValidas.includes(ext);               
             })
-            .withMessage("archivo no valido")
+            .withMessage("Debes subir un archivo válido")
 ],
+productAdd:[
+    check("nombre").notEmpty().withMessage("Tienes que completar el nombre del producto").bail()
+    .isLength({min:5}).withMessage("El nombre del producto  debe tener al menos 5 caracteres"),
+    check("marca").notEmpty().withMessage("Tienes que completar la marca del producto"),
+    check("precio").notEmpty().withMessage("Tienes que completar el precio del producto"),
+    check("descripcion").notEmpty().withMessage("Tienes que completar la descripción del producto").bail()
+    .isLength({min:20}).withMessage("La descripción del producto  debe tener al menos 20 caracteres"),
+    check("unidades").notEmpty().withMessage("Tienes que completar cantidad del producto"),
+    check("foto").custom((value,{req})=>{
+        return req.file;
+            })
+            .withMessage("Debes subir una imagen de producto").bail()
+            .custom(function(value, {req} ){
+                const imagenesValidas = [".jpg", ".jpeg", ".png", ".gif"]
+                const ext = path.extname(req.file.originalname);
+                return imagenesValidas.includes(ext);               
+            })
+            .withMessage("Debes subir un archivo válido")
 
+
+],
+productEdit:[
+    check("nombre").notEmpty().withMessage("Tienes que completar el nombre del producto").bail()
+    .isLength({min:5}).withMessage("El nombre del producto  debe tener al menos 5 caracteres"),
+    check("marca").notEmpty().withMessage("Tienes que completar la marca del producto"),
+    check("precio").notEmpty().withMessage("Tienes que completar el precio del producto"),
+    check("descripcion").notEmpty().withMessage("Tienes que completar la descripción del producto").bail()
+    .isLength({min:20}).withMessage("La descripción del producto  debe tener al menos 20 caracteres"),
+    check("unidades").notEmpty().withMessage("Tienes que completar cantidad del producto"),
+    check("foto").custom((value,{req})=>{
+        return req.file;
+            })
+            .withMessage("Debes subir una imagen de producto").bail()
+            .custom(function(value, {req} ){
+                const imagenesValidas = [".jpg", ".jpeg", ".png", ".gif"]
+                const ext = path.extname(req.file.originalname);
+                return imagenesValidas.includes(ext);               
+            })
+            .withMessage("Debes subir un archivo válido")
+
+
+]
 
 
 }

@@ -28,7 +28,7 @@ const Products = sequelize.define("Products",
         },
         unidades:        
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.INTEGER
         },
         precio:
@@ -38,7 +38,7 @@ const Products = sequelize.define("Products",
         },
         marca_id:    {
             foreignKey:true,
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.INTEGER
         },
 

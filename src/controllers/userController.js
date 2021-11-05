@@ -38,9 +38,8 @@ const Users = require('../database/models/Users.js')
         })
     },
 
-    store: function(req, res){
-        
-
+    store: async function(req, res){
+ 
         const errores = validationResult(req);
             if(!errores.isEmpty()){
                 return res.render("user-add-form", {
@@ -49,17 +48,18 @@ const Users = require('../database/models/Users.js')
                 })
         
             }
+                       
         db.Users.create(
         {
           nombre: req.body.nombre ,
           apellido: req.body.apellido,
-          categoria_id: 1,
+          categoria_id: req.body.categoria,
           fechaNac: req.body.fechaNac,
           genero: req.body.genero,
           pais: req.body.pais,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
-          avatar:req.file.filemane
+          avatar:req.file.filename
         }
         )
     .then(function(){

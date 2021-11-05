@@ -14,7 +14,7 @@
         <div class="form-login-mail">
             <div class="form-login-p">
                 <label class="form-login-label" for=email><p>E-mail:</p></label>
-                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com >
+                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com value="<%=locals.oldData ? oldData.email:null%>">
                 <% if (locals.errores && errores.email) { %>
                     <span class="error">  <%= errores.email.msg %> </span>
                 <% } %>
@@ -25,7 +25,7 @@
         <div class="form-login-password">
             <div class="form-login-p">
                 <label class="form-login-label" for="contraseña"><p>Contraseña:</p></label>
-                <input class="form-login-input" type="password" name="password" id="contraseña">
+                <input class="form-login-input" type="password" name="password" id="password">
             </div>
         </div>
         <% if(typeof errores != "undefined"){ %>
