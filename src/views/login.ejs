@@ -15,11 +15,12 @@
             <div class="form-login-p">
                 <label class="form-login-label" for=email><p>E-mail:</p></label>
                 <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com >
-                <% if (locals.errors && errors.email) { %>
-                    <span class="error">  <%= errors.email.msg %> </span>
+                <% if (locals.errores && errores.email) { %>
+                    <span class="error">  <%= errores.email.msg %> </span>
                 <% } %>
                 </div>
         </div>
+        
   
         <div class="form-login-password">
             <div class="form-login-p">
@@ -27,13 +28,24 @@
                 <input class="form-login-input" type="password" name="password" id="contraseña">
             </div>
         </div>
+        <% if(typeof errores != "undefined"){ %>
+            <ul>
+                <% errores.forEach(function(error){ %>
+                <li>
+                    <%= error.msg %>
+                </li>
+                <% }) %>
+            </ul>
+            <% } %>
     </div>
         <div class="segundamb">
             <div class="form-login-remember">  
                 <div class="form-login-p"> 
                 <input class="form-login-input" type="checkbox"  name="remember_user" id="remember_user"><p>Recordame</p>
                 </div>
+                
             </div>
+            
         <div class="form-login-boton">
             <p class="form-login-botonP">
                 <button type="submit" > Login </button>

@@ -10,21 +10,20 @@
                     <div class="add-bloque">
                         <div class="add-formulario">
                             <form  class="tm-edit-product-form" action="/adminUser/create" method="POST" enctype="multipart/form-data">
-                    
+                                
+                                
+
                                 <div class="form-group mb-3">
                                     <label for="nombre"><p>Nombre</p></label><br/>
                                     <input id="nombre"  name ="nombre" type="text"class="campos_add"  >
                                 </div><br>
+
+
                                 <div class="form-group mb-3">
                                     <label for="apellido"><p>Apellido</p></label><br/>
                                     <input id="apellido"  name ="apellido" type="text"class="campos_add"  >
                                 </div><br>                                
-                                <div class="form-group mb-3">
-                                    <p>Categoría:</p>
-                                    <p><%categorias.forEach(categoria =>{ %></p>
-                                        <p><input type="checkbox" name="categoria" class="campos_add" value="<%= categoria.id %>"><%= categoria.categoria %></p>
-                                    <% }) %>
-                                </div><br>
+                                
                                 <div class="form-group mb-3">
                                     <label for="fechaNac"><p>Fecha de Nacimiento</p></label><br/>
                                     <input id="fechaNac"  name ="fechaNac" type="date"class="campos_add"  >
@@ -50,7 +49,15 @@
                                     <label for="avatar"><p>Agregar Imagen de Perfil</p></label><br>
                                     <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
-
+                                <% if(typeof errores != "undefined"){ %>
+                                    <ul>
+                                        <% errores.forEach(function(error){ %>
+                                        <li>
+                                            <%= error.msg %>
+                                        </li>
+                                        <% }) %>
+                                    </ul>
+                                    <% } %>
                                 
                                     <button type="submit" class="button_add">Agregar Usuario</button>
                                     

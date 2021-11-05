@@ -94,6 +94,15 @@
                 <% } %>
             </div>
         </div>
+        <% if(typeof errores != "undefined"){ %>
+            <ul>
+                <% errores.forEach(function(error){ %>
+                <li>
+                    <%= error.msg %>
+                </li>
+                <% }) %>
+            </ul>
+            <% } %>
 
         <section class="form-reg-boton">
             <div class="form-reg-botonP">

@@ -18,12 +18,12 @@ const Products = sequelize.define("Products",
         },
         descripcion:
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.TEXT
         },
         foto:
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.STRING
         },
         unidades:        
@@ -33,7 +33,7 @@ const Products = sequelize.define("Products",
         },
         precio:
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.DECIMAL
         },
         marca_id:    {
