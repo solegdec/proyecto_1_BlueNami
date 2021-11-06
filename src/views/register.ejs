@@ -6,6 +6,8 @@
 <body>
 
 <%- include("./partials/header") %>
+   
+
     
 
     <section class="form-reg-titulo">
@@ -93,6 +95,12 @@
                     <span class="error">   <%= errors.password.msg %>  </span>           
                 <% } %>
             </div>
+            <div class="errores">
+                <ul>
+
+                </ul>
+
+            </div>
         </div>
         <% if(typeof errores != "undefined"){ %>
             <ul>
@@ -106,7 +114,7 @@
 
         <section class="form-reg-boton">
             <div class="form-reg-botonP">
-                <button type="submit" ><p>Enviar</p></button>
+                <button type="submit" id="btnReg"><p>Enviar</p></button>
                 
             </div>
 

@@ -99,7 +99,7 @@ userAdd:[
 productAdd:[
     check("nombre").notEmpty().withMessage("Tienes que completar el nombre del producto").bail()
     .isLength({min:5}).withMessage("El nombre del producto  debe tener al menos 5 caracteres"),
-    check("marca").notEmpty().withMessage("Tienes que completar la marca del producto"),
+    
     check("precio").notEmpty().withMessage("Tienes que completar el precio del producto"),
     check("descripcion").notEmpty().withMessage("Tienes que completar la descripción del producto").bail()
     .isLength({min:20}).withMessage("La descripción del producto  debe tener al menos 20 caracteres"),
@@ -120,7 +120,7 @@ productAdd:[
 productEdit:[
     check("nombre").notEmpty().withMessage("Tienes que completar el nombre del producto").bail()
     .isLength({min:5}).withMessage("El nombre del producto  debe tener al menos 5 caracteres"),
-    check("marca").notEmpty().withMessage("Tienes que completar la marca del producto"),
+    
     check("precio").notEmpty().withMessage("Tienes que completar el precio del producto"),
     check("descripcion").notEmpty().withMessage("Tienes que completar la descripción del producto").bail()
     .isLength({min:20}).withMessage("La descripción del producto  debe tener al menos 20 caracteres"),
