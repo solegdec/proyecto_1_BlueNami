@@ -4,7 +4,8 @@
 <%- include("./partials/head") %>
 
 <body>
-    <%- include("./partials/header") %>   
+    <%- include("./partials/header") %>
+    <script src="/js/js-front.js"> </script>   
 
 <div class="form-login-titulo">
         <h1> Welcome back!</h1>
@@ -14,26 +15,38 @@
         <div class="form-login-mail">
             <div class="form-login-p">
                 <label class="form-login-label" for=email><p>E-mail:</p></label>
-                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com >
-                <% if (locals.errors && errors.email) { %>
-                    <span class="error">  <%= errors.email.msg %> </span>
+                <input class="form-login-input" type="email" name="email" id="email" placeholder=mail@dominio.com value="<%=locals.oldData ? oldData.email:null%>">
+                <% if (locals.errores && errores.email) { %>
+                    <span class="error">  <%= errores.email.msg %> </span>
                 <% } %>
                 </div>
         </div>
+        
   
         <div class="form-login-password">
             <div class="form-login-p">
                 <label class="form-login-label" for="contraseña"><p>Contraseña:</p></label>
-                <input class="form-login-input" type="password" name="password" id="contraseña">
+                <input class="form-login-input" type="password" name="password" id="password">
             </div>
         </div>
+        <% if(typeof errores != "undefined"){ %>
+            <ul>
+                <% errores.forEach(function(error){ %>
+                <li>
+                    <%= error.msg %>
+                </li>
+                <% }) %>
+            </ul>
+            <% } %>
     </div>
         <div class="segundamb">
             <div class="form-login-remember">  
                 <div class="form-login-p"> 
                 <input class="form-login-input" type="checkbox"  name="remember_user" id="remember_user"><p>Recordame</p>
                 </div>
+                
             </div>
+            
         <div class="form-login-boton">
             <p class="form-login-botonP">
                 <button type="submit" > Login </button>
@@ -41,6 +54,9 @@
             </p>
         </div>
        
+    </div>
+    <div class="errores">
+        <ul> </ul>
     </div>
     </form>
   <form class="form-login-formulario2"action="">
@@ -61,6 +77,7 @@
                 <input class="form-login-input" type="file"  name="form-comment-tabla" id="form-comment-tabla" accept=".jpg , .png" multiple>
             </div>
         </div>
+       
 
         <section class="form-log-boton">
             <div class="form-log-botonP">
@@ -69,6 +86,7 @@
             </div>
 
         </section>
+        
     </form>
 
     <div class="form-login-separaciones">
@@ -94,6 +112,6 @@
     </div>
 
 <%- include("./partials/footer") %>
-
+<script src="/js/js-front-login.js"> </script>
 </body>
 </html>

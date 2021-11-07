@@ -1,8 +1,9 @@
 const express= require ("express");
 const router= express.Router();
-const multer=require("multer")
-const path=require("path")
+
 const fileUpload = require("../middlewares/productMulterMidd.js");
+const validar = require ('../middlewares/validForms.js');
+
 
 
 //router que maneja el crud de productos desde ADMIN
@@ -15,11 +16,11 @@ router.get ("/", adminController.list);
 
 //create 
 router.get("/create", adminController.create);
-router.post("/create",fileUpload.single("foto"), adminController.store);
+router.post("/create",fileUpload.single("foto"),validar.productAdd, adminController.store);
 
 //edit
 router.get("/:id/edit", adminController.edit);
-router.put("/:id/edit",fileUpload.single("foto"), adminController.update);
+router.put("/:id/edit",fileUpload.single("foto"), validar.productEdit, adminController.update);
 
 // delete
 router.delete("/destroy/:id", adminController.destroy);

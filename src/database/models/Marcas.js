@@ -13,7 +13,7 @@ const Marcas = sequelize.define("Marcas",
         },
         marca:
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.STRING
         },
        

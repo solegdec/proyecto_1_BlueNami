@@ -75,6 +75,7 @@ align-items: center;
 }
 .form-reg-password{
     margin: auto;
+    
 }
 
 .form-reg-input:focus {
@@ -118,6 +119,11 @@ align-items: center;
 .form-reg-separacion-escritorio {
     display: none;
 }
+.errores ul{
+    color:red;
+    font-size: 15px;
+}
+
 /* Fin CSS Register*/
 @media screen and (min-width: 768px) {
     .form-reg-pais,

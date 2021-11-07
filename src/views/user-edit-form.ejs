@@ -2,7 +2,9 @@
 <%- include("./partials/head") %>
 
     <body class= "bodyAdminAdd">   
-        <%- include("./partials/headerAdmin") %>    
+        <%- include("./partials/headerAdmin") %>  
+        <script src="/js/js-front.js"> </script>   
+  
         <div id="card">
             <div class="add-titulo">
                 <h2>Editar Usuario</h2>
@@ -16,11 +18,11 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="nombre"><p>Nombre</p></label><br/>
-                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%= user.nombre%>"required >
+                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%= user.nombre%>" >
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="apellido"><p>Apellido</p></label><br/>
-                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>"required >
+                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>" >
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="categoria"><p>Categoria</p></label><br/>
@@ -39,7 +41,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="fechaNac"><p>Fecha De Nacimiento</p></label><br/>
-                                    <input id="fechaNac"  name ="fechaNac" type="text"class="campos_add" value="<%= user.fechaNac%>"required >
+                                    <input id="fechaNac"  name ="fechaNac" type="text"class="campos_add" value="<%= user.fechaNac%>" >
                                 </div>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -48,7 +50,7 @@
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="email" ><p>E-Mail</p></label><br/>
-                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required >
+                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>"  >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="avatar"><p>Editar Imagen de Perfil</p></label><br>

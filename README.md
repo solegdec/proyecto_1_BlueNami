@@ -1,3 +1,13 @@
+Por favor: 
+1) chequear que la password (de root) en el config.js sea la que corresponda
+2) chequear que el port sea el mismo tanto en el app como en el www
+3) para probar el borrado de productos, eliminen el producto 12, dado que en la tabla pivot de colores y productos, no le hemos asignado color a ese producto (es decir, el product_id = 12 no esta utilizado como foreign key en ningun registro de la tabla pivot )
+4) usuarios que pueden utilizar para pruebas: administrador@gmail.com con password 1234 y cliente@gmail.com con password 1234. Por favor si serian tan amables de dar refresh luego del login para que se actualice el header.
+5) Felices pruebas! Y gracias por la paciencia!
+
+
+
+
 # proyecto_1_BlueNami
 Blue Nami- Proyecto Integrador DH 2021
 

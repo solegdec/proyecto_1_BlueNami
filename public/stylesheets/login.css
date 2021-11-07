@@ -149,7 +149,11 @@ textarea.form-login-textarea {
 .form-login-separacion-escritorio {
     display: none;
 }
-
+.errores ul{
+    color:red;
+    font-size: 15px;
+    text-align: center;
+}
 /* Fin CSS Login*/
 
 

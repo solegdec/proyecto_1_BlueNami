@@ -3,6 +3,11 @@ const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
+const Users = require('../database/models/Users.js')
+
+
+
+
 //controlador de usuarios desde admin
   let userController={
     list: function (req,res){
@@ -33,9 +38,17 @@ const {validationResult} = require ('express-validator')
         })
     },
 
-    store: function(req, res){
+    store: async function(req, res){
+ 
+        const errores = validationResult(req);
+            if(!errores.isEmpty()){
+                return res.render("user-add-form", {
+                    errores: errores.errors,
+                    oldData: req.body
+                })
         
-        
+            }
+                       
         db.Users.create(
         {
           nombre: req.body.nombre ,
@@ -46,8 +59,9 @@ const {validationResult} = require ('express-validator')
           pais: req.body.pais,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
-          avatar: req.file.filename,
-        })
+          avatar:req.file.filename
+        }
+        )
     .then(function(){
         return res.redirect("/adminUser");
     })

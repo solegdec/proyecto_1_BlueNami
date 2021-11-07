@@ -42,6 +42,7 @@ const {validationResult} = require("express-validator")
     },
 
     create: (req,res)=>{
+        
         db.Marcas.findAll() 
         .then(function(marcas){
             return res.render("product-add-form", {marcas})
@@ -49,12 +50,20 @@ const {validationResult} = require("express-validator")
     },
 
     store: function(req, res){
+        const errores = validationResult(req);
+            if(!errores.isEmpty()){
+                return res.render("product-add-form", {
+                    errores: errores.errors,
+                    oldData: req.body
+                })
+        
+            }
         db.Products.create(
         {
           nombre: req.body.nombre ,
           descripcion: req.body.descripcion,
           unidades: req.body.unidades,
-          foto: req.body.foto,
+          foto: req.file.filename,
           precio: req.body.precio,
           
         })

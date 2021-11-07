@@ -1,8 +1,15 @@
 const express= require ("express");
 const router= express.Router();
-const userController= require ("../controllers/userController.js");
-const validations = require ('../middlewares/regFormMidd.js')
+
+
+
+
+const validar = require ('../middlewares/validForms.js');
 const fileUpload = require("../middlewares/userMulterMidd.js");
+
+const userController= require ("../controllers/userController.js");
+
+
 
 
 //rutas que manejan la crud de usuarios desde admin
@@ -15,8 +22,8 @@ router.get("/", userController.list);
 router.get("/profile/:id", userController.profile);
 
 //create 
-router.get("/create", userController.create);
-router.post("/create",fileUpload.single("avatar"),validations, userController.store);
+router.get("/create",userController.create);
+router.post("/create",fileUpload.single("avatar"),validar.userAdd, userController.store);
 
 //edit
 router.get("/:id/edit", userController.edit);

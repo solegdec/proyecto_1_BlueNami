@@ -21,7 +21,7 @@ const clientController = {
             if(!errores.isEmpty()){
                 return res.render("register", {
                     errores: errores.errors,
-                    old: req.body
+                    oldData: req.body
                 })
             };
             db.Users.create({
@@ -47,8 +47,8 @@ const clientController = {
         const errores = validationResult(req);
         if(!errores.isEmpty()){
             return res.render("login", { 
-                errors: errors.errors,
-                old: req.body 
+                errores: errores.errors,
+                oldData: req.body 
             });
         }
         db.Users.findOne({
@@ -56,6 +56,7 @@ const clientController = {
             where: {
                 email: req.body.email 
             }
+
         }).then( users => {
             req.session.userLogged = users;
             if(req.body.remember_user){
@@ -75,11 +76,6 @@ const clientController = {
             res.render("profile",{user:req.session.userLogged})
         })   
     },
-
-
-
-
-
 
     account: function(req,res) {          
         if(req.session.userLogged){;
