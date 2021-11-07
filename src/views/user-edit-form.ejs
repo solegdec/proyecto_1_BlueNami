@@ -11,6 +11,31 @@
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
+
+                            <% if(typeof errores != "undefined"){ %>
+                                <ul>
+                                    <% errores.forEach(function(error){ %>
+                                    <li>
+                                        <%= error.msg %>
+                                    </li>
+                                    <% }) %>
+                                </ul>
+                                <% } %>
+
+                                <div class="errores">
+                                    <ul> </ul>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
                             <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data" >
                                 <div class="form-group mb-3">
                                     <label for="id"><p>Id</p></label><br/>
@@ -58,6 +83,16 @@
                                 </div>
 
                                 <img src="/img/avatars/<%=user.avatar%>" width="30px" height="30px">
+
+
+
+
+
+
+
+
+
+
                                     <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>
                         </div>
@@ -69,7 +104,9 @@
 
         </div>     
         <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>       
-        <%- include("./partials/footer") %>               
+        <%- include("./partials/footer") %>    
+        
+        <script src="/js/js-front-user-edit.js"> </script>
   </body>      
 
 </html>

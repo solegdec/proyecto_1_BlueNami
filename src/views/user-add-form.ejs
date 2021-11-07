@@ -26,6 +26,12 @@
                                 </div><br>                                
                                 
                                 <div class="form-group mb-3">
+                                    <label for="categoria"><p>Categoria</p></label><br/>
+                                    <input id="categoria"  name ="categoria" type="number"class="campos_add" value="<%=locals.oldData ? oldData.categoria:null%>" >
+                                </div><br> 
+
+
+                                <div class="form-group mb-3">
                                     <label for="fechaNac"><p>Fecha de Nacimiento</p></label><br/>
                                     <input id="fechaNac"  name ="fechaNac" type="date"class="campos_add" value="<%=locals.oldData ? oldData.fechaNac:null%>" >
                                 </div><br>
@@ -59,6 +65,10 @@
                                         <% }) %>
                                     </ul>
                                     <% } %>
+
+                                    <div class="errores">
+                                        <ul> </ul>
+                                    </div>
                                 
                                     <button type="submit" class="button_add">Agregar Usuario</button>
                                     
@@ -69,7 +79,10 @@
           
         </div>     
         <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>       
-        <%- include("./partials/footer") %>               
+        <%- include("./partials/footer") %>    
+        
+        <script src="/js/js-front-user-add.js"> </script>
+
   </body>      
 
 </html>
