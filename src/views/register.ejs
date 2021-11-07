@@ -94,12 +94,13 @@
                 <% if (locals.errors && errors.password) { %>
                     <span class="error">   <%= errors.password.msg %>  </span>           
                 <% } %>
-            </div>
-            <div class="errores">
-                <ul>
-
-                </ul>
-
+            
+        </div>
+        
+        <section class="form-reg-boton">
+            <div class="form-reg-botonP">
+                <button type="submit" id="btnReg"><p>Enviar</p></button>
+                
             </div>
         </div>
         <% if(typeof errores != "undefined"){ %>
@@ -112,13 +113,10 @@
             </ul>
             <% } %>
 
-        <section class="form-reg-boton">
-            <div class="form-reg-botonP">
-                <button type="submit" id="btnReg"><p>Enviar</p></button>
-                
-            </div>
-
         </section>
+        <div class="errores">
+            <ul> </ul>
+        </div>
    </form>
   
 <div class="contenedortablamb">
@@ -147,6 +145,6 @@
     </section>
 
 <%- include("./partials/footer") %>
-
+<script src="/js/js-front-register.js"> </script>
 </body>
 </html>
