@@ -29,6 +29,12 @@
                                     <label for="categoria"><p>Categoria</p></label><br/>
                                     <input id="categoria"  name ="categoria" type="number"class="campos_add" value="<%=locals.oldData ? oldData.categoria:null%>" >
                                 </div><br> 
+                                <div class="form-group mb-3">
+                                    <p>Categoría:</p>
+                                    <p><%categorias.forEach(categoria =>{ %></p>
+                                        <p><input type="radio" name="categoria" class="campos_add" value="<%= categoria.id %>"><%=categoria.categoria %></p>
+                                    <% }) %>
+                                </div><br>
 
 
                                 <div class="form-group mb-3">

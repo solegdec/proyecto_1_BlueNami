@@ -23,7 +23,16 @@
                                 <label for="marca"><p>Marca id</p></label><br/>
                                 <input id="marca" name="marca" type="number" class="campos_add"value="<%=locals.oldData ? oldData.marca:null%>" >
                             </div>
-
+                            <div class="form-group mb-3">
+                                <label for="marca"><p>Marca</p></label><br/>
+                                
+                                <select id="marca" class="campos_cat" name="marca" >
+                                <option value="">Elegi una marca</option>
+                                <p><%marcas.forEach(marca =>{ %></p>
+                                <option value="<%=marca.id%>"><%=marca.marca%></option>  
+                                <%})%>
+                                </select>
+                            </div>
 
 
                             <div class="row">
