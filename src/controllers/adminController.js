@@ -41,7 +41,8 @@ let adminController = {
             {
                 return res.render("product-add-form", {
                     errores: errores.errors,
-                    oldData: req.body
+                    oldData: req.body,
+                    marcas: marcas
                 })}
         await db.Marcas.findAll({
             include: "productos"}
@@ -66,7 +67,8 @@ let adminController = {
         if(!errores.isEmpty()){
             return res.render("user-add-form", {
                 errores: errores.errors,
-                oldData: req.body
+                oldData: req.body,
+                marcas: marcas
             })
     
         }else{

@@ -30,12 +30,7 @@ window.addEventListener("load",function(){
                 
                 errores.push("Debes ingresar un email válido")
             }
-        let campoAvatar= document.querySelector("#avatar");
-      
-        if(!campoAvatar.value.includes(".png") && campoAvatar.value !=="" ){
-                console.log("ok2")
-                errores.push("Debes subir un archivo válido")
-            }
+        
         
             if (errores.length>0){
                 e.preventDefault();

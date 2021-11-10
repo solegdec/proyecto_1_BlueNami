@@ -51,8 +51,8 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="categoria"><p>Categoria</p></label><br/>
-                                    
-                                    <select name="categoria">
+
+                                    <select name="categoria" class="campos_add">
                                         <p><% categorias.forEach(categoria=> { %></p>
                                     <option value="<%= categoria.id %>">
                                         <p><%= categoria.categoria %></p>
@@ -82,16 +82,9 @@
                                     <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
 
-                                <img src="/img/avatars/<%=user.avatar%>" width="30px" height="30px">
+                                <img src="/img/avatars/<%=user.avatar%>" width="100px" height="100px">
 
-
-
-
-
-
-
-
-
+                                <br> 
 
                                     <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>

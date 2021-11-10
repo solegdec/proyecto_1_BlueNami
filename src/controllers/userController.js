@@ -44,7 +44,8 @@ const Users = require('../database/models/Users.js')
             if(!errores.isEmpty()){
                 return res.render("user-add-form", {
                     errores: errores.errors,
-                    oldData: req.body
+                    oldData: req.body,
+                    categorias: categorias
                 })
         
             }

@@ -67,16 +67,6 @@
 
                                 <br>
                                 
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="color"><p><b>Colores actuales de la tabla:</p></b></label><br/>
-                                    <% product.colours.forEach(colourDelProduct=> { %> 
-                                        <p> <%=colourDelProduct.color%></p>
-                                    <%})%>
-                                </div><br>
-
-
-
-
 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion"><p>Descripción</p></label><br/>
@@ -88,8 +78,12 @@
                                     <input id="unidades" name="unidades" type="number" class="campos_add" value="<%= product.unidades%>" >
                                 </div> <br>
                                 
-                                
-
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="foto"><p>Editar Imagen</p></label><br><br>
+                                    <input id="foto" type="file" name="foto" value="foto" class="campos_add"value="<%=locals.oldData ? oldData.foto:null%>">
+                            </div>
+                            <img src="/img/<%=product.foto%>" width="100px" height="100px">
+                            <br>
                                 <button type="submit" class="button_add">Confirmar Cambios</button>
                                 
                         </form>

@@ -37,9 +37,6 @@ window.addEventListener("load",function(){
             if(campoFoto.value==""){            
                 errores.push("Debes subir una foto del producto")
                 
-            }else if(!campoFoto.value.includes(".png") ){
-                console.log("ok2")
-                errores.push("Debes subir un archivo válido")
             }
 
 

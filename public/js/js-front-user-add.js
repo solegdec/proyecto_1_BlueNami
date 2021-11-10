@@ -33,9 +33,6 @@ window.addEventListener("load",function(){
             if(campoAvatar.value==""){            
                 errores.push("Debes subir una imagen de perfil")
                 
-            }else if(!campoAvatar.value.includes(".png") ){
-                console.log("ok2")
-                errores.push("Debes subir un archivo válido")
             }
         let campoPassword= document.querySelector("#password")
        
