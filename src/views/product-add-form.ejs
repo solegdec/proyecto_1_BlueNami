@@ -17,18 +17,21 @@
                                 <label for="nombre"><p>Tabla</p></label><br/>
                                 <input id="nombre" name="nombre" type="text" class="campos_add"value="<%=locals.oldData ? oldData.nombre:null%>" >
                             </div>
- 
-                    
                             <div class="form-group mb-3">
                                 <label for="marca"><p>Marca</p></label><br/>
                                 
                                 <select id="marca" class="campos_cat" name="marca" >
-                                <option value="">Elegi una marca</option>
-                                <p><%marcas.forEach(marca =>{ %></p>
-                                <option value="<%=marca.id%>"><%=marca.marca%></option>  
-                                <%})%>
+                                    <% for (let i=0; i < marcas.length; i++) { %>
+                                        <option value="<%=marcas[i].id%>" >
+                                            <%=marcas[i].marca%>
+                                        </option>
+                                        <% } %>
+                                
                                 </select>
                             </div>
+                           
+                            
+                            
 
 
                             <div class="row">

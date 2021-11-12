@@ -42,20 +42,13 @@
                                     <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.precio%>">
                                 </div><br>
 
-
-
-
-
-
-
-
                                 <div class="form-group mb-3">
                                     <label for="marca">Elegir una nueva marca:</label><br/>
                                     
                                 <select id="marca" class="campos_cat" name="marca" >
                                     <%marcas.forEach(marca =>{
                                          if(marca.marca==product.marca.marca) { %>
-                                    <option value="<%=marca.id%>" selected> <%=marca.marca%> </option> 
+                                    <option value="<%=product.marca.id%>"> <%=product.marca.marca%> </option> 
                                      <% }
                                      else { %> 
                                         <option value="<%=marca.id%>"> <%=marca.marca%> </option> 

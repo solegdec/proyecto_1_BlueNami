@@ -22,11 +22,6 @@ console.log("entro")
                 errores.push("El campo precio no debe estar vacio")
             }
 
-
-
-
-
-
             let campoDescripcion= document.querySelector("#descripcion");
             if(campoDescripcion.value==""){
                 errores.push("El campo descripcion no debe estar vacio")

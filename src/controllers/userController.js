@@ -41,6 +41,8 @@ const Users = require('../database/models/Users.js')
     store: async function(req, res){
  
         const errores = validationResult(req);
+        let categorias= await db.Categories.findAll()
+
             if(!errores.isEmpty()){
                 return res.render("user-add-form", {
                     errores: errores.errors,
@@ -70,6 +72,15 @@ const Users = require('../database/models/Users.js')
       
     },
     edit: async (req,res)=>{
+        const errores = validationResult(req);
+        if(!errores.isEmpty()){
+            return res.render("user-add-form", {
+                errores: errores.errors,
+                oldData: req.body,
+                categorias:categorias
+            })
+    
+        }else{
         let pedidoUsuario = await db.Users.findByPk(req.params.id,{
             include: [{association: "categoria"}]
         });
@@ -79,7 +90,7 @@ const Users = require('../database/models/Users.js')
             .then(function([user, categorias]){
                 res.render("user-edit-form",{user, categorias})
             })
-          
+        }
     },
     update: (req,res)=>{
         db.Users.update(
