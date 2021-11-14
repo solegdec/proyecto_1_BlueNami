@@ -32,7 +32,11 @@ nav h1 {
 ul.logReg{
     float:right;
 }
-
+.svg-inline--fa{
+    color: grey;
+    font-size: 20px;
+    
+}
 .avatarnav{
     display: inline;
     padding: 10% 0 20%;
