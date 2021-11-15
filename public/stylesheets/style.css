@@ -578,47 +578,6 @@ form.form_contact input[type="submit"]:hover {
     padding: 10px;
 }
 
-.desproductosgz h1 {
-    font-family: "Lobster";
-    font-size: 3em;
-    color: #000000;
-    text-align: center;
-}
-
-.coloresgz {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    margin-left: 15%;
-}
-
-.coloresgz p {
-    font-family: "Nova Cut";
-    font-size: 15px;
-    color: #000000;
-    margin-right: 10px;
-}
-
-.color1gz {
-    width: 30px;
-    height: 30px;
-    background: #FEC36A;
-}
-
-.color2gz {
-    width: 30px;
-    height: 30px;
-    background: #FE398C;
-}
-
-.color3gz {
-    width: 30px;
-    height: 30px;
-    background: #7CDEDE;
-}
 
 .botongz {
     width: 60%;

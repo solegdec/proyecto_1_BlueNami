@@ -22,27 +22,18 @@
                     </article>
 
                     <article class="desproductosgz">
-                        <h4>Tabla muy importante</h4>
+                        <h4>Marca: <%= product.marca.marca%></h4>
 
                         <h1><%=product.nombre %></h1>
                        
-                        <div class="coloresgz">Marca: <%= product.marca.marca%></div>
-                        
-                        <div class="coloresgz">Colores: 
-                            <% product.colours.forEach(colourDelProduct=> { %> 
-                                <p> <%=colourDelProduct.color %></p>
-                            <%})%>
-                        </div>
-                        
-                        
+                
                         <div class="coloresgz">
+                            <h4>Colores:</h4>
                             <p class="label"><label for="color"></label></p>
-                            <div class="color1gz">
-                            </div>
-                            <div class="color2gz">
-                            </div>
-                            <div class="color3gz">
-                            </div>
+                            <div class="colorgz">
+                                <% product.colours.forEach(colourDelProduct=> { %> 
+                                    <p> <%=colourDelProduct.color %></p>
+                                <%})%></div>
                         </div>
                         
                  
