@@ -34,7 +34,7 @@
 input.buscarProd{
     width:40%;
     margin:10px;
-    padding:10px 16px;
+    padding:5px 8px;
     border-radius:32px;
     outline:none;
     border:2px solid #ccd1d1;
@@ -42,6 +42,10 @@ input.buscarProd{
     transition:all 0.5s;  
 }
 
+.barra-bus {
+    text-align: center;
+    padding: 10px;  
+}
 
 
 article.tabla_lista {
@@ -106,12 +110,20 @@ article.tabla_lista {
     justify-content: space-around;
 }
 
-.barra-bus {
-    text-align: center;
-    padding: 20px;  
+.barra-busDet {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: -10px;
 }
-
-
+input.buscarProdDet{
+    width:20%;
+    padding:5px 8px;
+    border-radius:20px;
+    border:2px solid #ccd1d1;
+    background:#d4f4fc;
+    font-family: "roboto";
+  
+}
 
 
 
@@ -893,4 +905,4 @@ aside.descripciongz {
     article.tabla_lista {
         width: 22%;
     }
-}
+ }
