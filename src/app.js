@@ -48,7 +48,7 @@ app.use("/admin",adminRouter)
 app.use("/adminUser",userRouter)
 app.use("/product-add-form",adminRouter)
 app.use("/user-add-form",userRouter)
-//app.use('/api', apiRouter);
+app.use('/api', apiRouter);
 
 
 // catch 404 and forward to error handler

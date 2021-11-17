@@ -3,18 +3,41 @@ const bcrypt = require("bcryptjs");
 const { Op } = require("sequelize");
 
 let apiController={
-listProducts:(req,res)=>{
-        db.Products
-        .findAll()
+listProducts: async (req,res)=>{
+       await db.Products
+        .findAll({
+            include:["marca","colours"]
+        })
         .then(products=>{
             return res.status(200).json({
-                total: products.length,
-                data: products,
-                status:200
+                count: products.length,
+                products: products,
+                url:"/api/products/" 
             })
         })
     },
 
+listColours: async function(req, res){
+        let coloursList = await db.Colours.findAll({
+            include: ["productos"]
+        })
+        let qtyProducts = coloursList.map(colour =>{
+            return {
+                name: colour.color,
+                count: colour.productos.length
+            }
+        })
+
+        let coloursJson = {
+            meta:{
+                status:200,
+                url:"/api/colours",
+                qtyProducts
+            },
+            data: coloursList
+        }
+        res.json(coloursJson)
+    }, 
 detailProduct:(req,res)=>{
     db.Products
         .findByPk(req.params.id)
@@ -38,6 +61,7 @@ listMarcas: async function(req, res){
             data: marcas
         }
         res.json(marcasJson);
+        
     },
 createProduct:(req,res)=>{
     db.Products

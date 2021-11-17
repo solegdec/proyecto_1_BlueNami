@@ -6,6 +6,8 @@ router.get('/products', apiController.listProducts);
 router.get("/products/:id", apiController.detailProduct);
 
 router.get('/marcas', apiController.listMarcas);
+router.get('/colours', apiController.listColours);
+
 
 
 
