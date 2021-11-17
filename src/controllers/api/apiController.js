@@ -4,15 +4,20 @@ const { Op } = require("sequelize");
 
 let apiController={
 listProducts: async (req,res)=>{
-       await db.Products
+    let colours= await db.Colours.findAll()
+      let product=await db.Products
         .findAll({
-            include:["marca","colours"]
+            include:["marca","colours"],
+            
         })
+        
         .then(products=>{
             return res.status(200).json({
                 count: products.length,
+                countByColours: colours.length,
                 products: products,
-                url:"/api/products/" 
+                url:"/api/products"  
+                
             })
         })
     },
