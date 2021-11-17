@@ -25,6 +25,7 @@
     margin-left: 20%;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding: 5px;
 }
 
 
@@ -107,8 +108,10 @@ article.tabla_lista {
 
 .barra-bus {
     text-align: center;
-    
+    padding: 20px;  
 }
+
+
 
 
 
@@ -571,9 +574,10 @@ input.inputsole {
 
 .desproductosgz h4 {
     font-family: "Numans";
-    font-size: 1em;
-    color: #7D7D7D;
+    font-size: 1.2em;
+    color: #940303;
     padding: 10px;
+
 }
 
 .desproductosgz h1 {
@@ -598,6 +602,11 @@ input.inputsole {
 .colorgz p{
     margin: 10px;
     font-family: "numans";
+}
+.cuadradogz{
+    background-color: #E9B843;
+    width: 30px;
+    height: 30px;
 }
 .contadorGrandegz {
     width: 60%;
@@ -647,6 +656,7 @@ input.inputsole {
     margin-left: 20%;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding: 10px;
 }
 
 .preciosgz p {

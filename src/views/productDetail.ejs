@@ -6,6 +6,16 @@
     <body>
 
         <%- include("./partials/header") %>
+     
+            <div class="barra-bus"> 
+            <form class="barra-bus" action="/product/buscar" method="GET">
+                <input type="text"  name="search" placeholder="Search"class="buscarProd">
+                <input type="submit" value="Search" style="width:100px;"class="buscarProd">
+            </form>
+            </div>
+            
+       
+        
             <div class="contenedorPDgz">
                 <section class="productogz">
                     <article class="imgproductogz">
@@ -32,7 +42,7 @@
                             <p class="label"><label for="color"></label></p>
                             <div class="colorgz">
                                 <% product.colours.forEach(colourDelProduct=> { %> 
-                                    <p> <%=colourDelProduct.color %></p>
+                                    <p class="cuadradogz" color=""> <%=colourDelProduct.color %></p>
                                 <%})%></div>
                         </div>
                         
