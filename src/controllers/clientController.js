@@ -43,7 +43,7 @@ const clientController = {
     login: (req, res)=>{
         res.render('login');
     },
-    processLogin: (req, res, next) => {
+    processLogin:async (req, res, next) => {
         const errores = validationResult(req);
         if(!errores.isEmpty()){
             return res.render("login", { 
@@ -51,7 +51,7 @@ const clientController = {
                 oldData: req.body 
             });
         }
-        db.Users.findOne({
+        await db.Users.findOne({
             include: [{association: "categoria"}], 
             where: {
                 email: req.body.email 
@@ -68,8 +68,8 @@ const clientController = {
         })  
     },
     
-    profile: (req,res)=>{
-        db.Users.findByPk(req.params.id, {
+    profile:async (req,res)=>{
+        await db.Users.findByPk(req.params.id, {
             include: [{association: "categoria"}]
         })
         .then(function(user){

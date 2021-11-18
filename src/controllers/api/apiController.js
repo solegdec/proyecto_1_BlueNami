@@ -4,22 +4,26 @@ const { Op } = require("sequelize");
 
 let apiController={
 listProducts: async (req,res)=>{
-    let colours= await db.Colours.findAll()
-      let product=await db.Products
-        .findAll({
-            include:["marca","colours"],
-            
-        })
+    let products=await db.Products.findAll({
+        include:["marca","colours"],
         
-        .then(products=>{
-            return res.status(200).json({
-                count: products.length,
-                countByColours: colours.length,
-                products: products,
-                url:"/api/products"  
-                
-            })
-        })
+})
+    let countByColours= await db.Colours.findAll({
+        include:["productos"]
+    })
+    let productsJson = {
+        meta:{
+            status: 200,
+            count: products.length,
+            countByColours: countByColours,
+            url: "/api/products"
+        },
+        data:products
+    }
+    res.json(productsJson)
+
+        
+        
     },
 
 listColours: async function(req, res){
@@ -43,16 +47,24 @@ listColours: async function(req, res){
         }
         res.json(coloursJson)
     }, 
-detailProduct:(req,res)=>{
-    db.Products
-        .findByPk(req.params.id)
-        .then(product=>{
-            return res.status(200).json({
-                data: product,
-                status:200
-            })
+
+detailProduct: function(req, res){
+        db.Products.findByPk(req.params.id, {
+            include:["marca","colours"],
+            
+    }).then(product =>{
+            let productJson = {
+                data:{
+                    id: product.id,
+                    nombre: product.nombre,
+                    precio: product.precio,
+                    descripcion: product.descripcion,
+                    color: product.colour_id,
+                    marca: product.marca
+                }
+            }
+            res.json(productJson)
         })
-    
     },
 listMarcas: async function(req, res){
         let marcas = await db.Marcas.findAll({
