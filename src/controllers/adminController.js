@@ -29,14 +29,17 @@ let adminController = {
     
     create: (req,res)=>{
         
-        db.Marcas.findAll() 
+        db.Marcas.findAll({
+            include: "productos"}) 
         .then(function(marcas){
-            return res.render("product-add-form", {marcas})
+            return res.render("product-add-form", {marcas:marcas})
         })
     },
     
     store: async function(req, res){
-        const errores = validationResult(req);
+        let marcas= await db.Marcas.findAll({
+            include: "productos"}) 
+            const errores = validationResult(req);
             if(!errores.isEmpty())
             {
                 return res.render("product-add-form", {
@@ -44,9 +47,7 @@ let adminController = {
                     oldData: req.body,
                     marcas: marcas
                 })}
-        await db.Marcas.findAll({
-            include: "productos"}
-        ) 
+                
         await db.Products.create(
         {
           nombre: req.body.nombre ,
@@ -62,10 +63,13 @@ let adminController = {
     },
     
     
+    
     edit: (req,res)=>{
         const errores = validationResult(req);
+        let marcas= db.Marcas.findAll({
+            include: "productos"})
         if(!errores.isEmpty()){
-            return res.render("user-add-form", {
+            return res.render("product-add-form", {
                 errores: errores.errors,
                 oldData: req.body,
                 marcas: marcas

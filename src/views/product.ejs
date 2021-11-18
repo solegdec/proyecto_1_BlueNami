@@ -5,7 +5,7 @@
     <body>
 
         <%- include("./partials/header") %>
-            <section>
+           
                 <div class="barra-bus"> 
                 <form class="barra-bus" action="/product/buscar" method="GET">
                     <input type="text"  name="search" placeholder="Search"class="buscarProd">
@@ -13,7 +13,7 @@
                 </form>
                 </div>
                 
-            </section>
+         
             
             <% products.forEach(function(products){ %>
                 <article class="tabla_lista">

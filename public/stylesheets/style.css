@@ -32,7 +32,11 @@ nav h1 {
 ul.logReg{
     float:right;
 }
-
+.svg-inline--fa{
+    color: grey;
+    font-size: 20px;
+    
+}
 .avatarnav{
     display: inline;
     padding: 10% 0 20%;
@@ -288,11 +292,19 @@ label #sign-two {
 
 
 .qstext {
-    font-size: 15px;
+
+    font-size: 21px;
     color: #1b1b1b;
-    font-family: "roboto";
+    font-family: "caveat";
     font-weight: 300;
+    text-align: left;
+    
+}
+p.firmagz {
+    font-size: 25px;
     text-align: center;
+    text-decoration: underline;
+
 }
 
 div.qsomos {
@@ -574,58 +586,7 @@ form.form_contact input[type="submit"]:hover {
     padding: 10px;
 }
 
-.desproductosgz h1 {
-    font-family: "Lobster";
-    font-size: 3em;
-    color: #000000;
-    text-align: center;
-}
 
-.coloresgz {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    margin-left: 15%;
-}
-
-.coloresgz p {
-    font-family: "Nova Cut";
-    font-size: 15px;
-    color: #000000;
-    margin-right: 10px;
-}
-
-.color1gz {
-    width: 30px;
-    height: 30px;
-    background: #FEC36A;
-}
-
-.color2gz {
-    width: 30px;
-    height: 30px;
-    background: #FE398C;
-}
-
-.color3gz {
-    width: 30px;
-    height: 30px;
-    background: #7CDEDE;
-}
-
-.botongz {
-    width: 60%;
-    background-color: #E9B843;
-    font-family: "roboto";
-    font-size: 1em;
-    border-radius: 10px;
-    margin-left: 20%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
 
 .preciosgz p {
     font-family: "roboto";
@@ -765,9 +726,6 @@ aside.descripciongz {
     justify-content: space-around;
 }
 
-.barra-bus {
-    padding: 20px;
-}
 
 
 

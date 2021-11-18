@@ -20,11 +20,6 @@
                                 <% }) %>
                             </ul>
                             <% } %>
-
-                            <div class="errores">
-                                <ul> </ul>
-                            </div>
-
                         <form class="tm-edit-product-form" action="/admin/<%= product.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data">
                             <div class="form-group mb-3">
                                 <label for="id"><p>Id</p></label><br/>
@@ -42,17 +37,10 @@
                                     <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.precio%>">
                                 </div><br>
 
-
-
-
-
-
-
-
                                 <div class="form-group mb-3">
-                                    <label for="marca">Elegir una nueva marca:</label><br/>
+                                    <label for="marca"><p>Elegir una nueva marca:</p></label><br/>
                                     
-                                <select id="marca" class="campos_cat" name="marca" >
+                                 <select id="marca" class="campos_cat" name="marca" >
                                     <%marcas.forEach(marca =>{
                                          if(marca.marca==product.marca.marca) { %>
                                     <option value="<%=marca.id%>" selected> <%=marca.marca%> </option> 
@@ -62,28 +50,32 @@
                                     <% }
                                     })%>
                                     </select>
-                                    
+                                
                                 </div>
 
                                 <br>
                                 
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="color"><p><b>Colores actuales de la tabla:</p></b></label><br/>
+                                    <div class="cajaBlanca"><% product.colours.forEach(colourDelProduct=> { %> 
+                                        <p><%=colourDelProduct.color%>,</p>
+                                    <%})%>
+                                    </div>
+                                </div><br>
+
 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion"><p>Descripción</p></label><br/>
                                     <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" > <%= product.descripcion%></textarea>
                                 </div>
-                                <br>
+<br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="unidades"><p>Unidades en stock:</p></label><br/>
                                     <input id="unidades" name="unidades" type="number" class="campos_add" value="<%= product.unidades%>" >
                                 </div> <br>
                                 
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="foto"><p>Editar Imagen</p></label><br><br>
-                                    <input id="foto" type="file" name="foto" value="foto" class="campos_add"value="<%=locals.oldData ? oldData.foto:null%>">
-                            </div>
-                            <img src="/img/<%=product.foto%>" width="100px" height="100px">
-                            <br>
+                                
+
                                 <button type="submit" class="button_add">Confirmar Cambios</button>
                                 
                         </form>
@@ -94,14 +86,12 @@
                     </div>
                 </div>
 
-
+                
                 
 
             </div>
             <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>
             <%- include("./partials/footer") %>
-
-            <script src="/js/js-front-product-edit.js"> </script>
     </body>
 
     </html>

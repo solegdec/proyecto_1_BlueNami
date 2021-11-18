@@ -60,12 +60,9 @@
                     <span class="error">  <%= errors.email.msg %> </span>
                 <% } %>
                 </div>
-        </div>
             <div class="form-reg-pais">
                     <label class="form-reg-label"><p>Pais de origen:</p></label>
-                    <select 
-                        name="pais" 
-                        class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
+                    <select name="pais" class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
                         <option value="">Elegí un país</option> <br>
                         <%  let pais = ['Argentina', 'Chile', 'Brasil', 'Uruguay']; %>
                         <% for (const unPais of pais) { %>
@@ -74,7 +71,9 @@
                             > <%= unPais %> 
                         </option>
                         <% } %>
+                    </select>
                 </div>
+            </div>
                         <% if (locals.errors && errors.pais) { %>
                             <span class="error">    <%= errors.pais.msg %></span>
                         <% } %> 
@@ -82,7 +81,7 @@
     
       
             <div class="subeTuFoto">
-                <label class="form-login-label-comment-tablas" for="avatar"><p>Sube tu foto de perfil</p></label>
+                <label class="form-login-label-comment-tablas" for="avatar"><p>Subí tu foto de perfil</p></label>
                 <input class="form-login-input" type="file"  name="avatar" id="avatar">
             </div>
         
@@ -96,13 +95,13 @@
                 <% } %>
             
         </div>
-        
+    </div>
         <section class="form-reg-boton">
             <div class="form-reg-botonP">
                 <button type="submit" id="btnReg"><p>Enviar</p></button>
                 
             </div>
-        </div>
+        
         <% if(typeof errores != "undefined"){ %>
             <ul>
                 <% errores.forEach(function(error){ %>

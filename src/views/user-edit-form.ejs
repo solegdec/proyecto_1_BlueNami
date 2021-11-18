@@ -26,15 +26,8 @@
                                     <ul> </ul>
                                 </div>
 
-
-
-
-
-
-
-
-
-
+                               
+                             
 
                             <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data" >
                                 <div class="form-group mb-3">
@@ -49,20 +42,30 @@
                                     <label for="apellido"><p>Apellido</p></label><br/>
                                     <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>" >
                                 </div>
+                                
                                 <div class="form-group mb-3">
-                                    <label for="categoria"><p>Categoria</p></label><br/>
+                                    <div class="form-group mb-3">
+                                        <label for="categoria">Elegir una nueva categoria</label><br/>
+                                        
 
-                                    <select name="categoria" class="campos_add">
-                                        <p><% categorias.forEach(categoria=> { %></p>
-                                    <option value="<%= categoria.id %>">
-                                        <p><%= categoria.categoria %></p>
-                                    </option><br>
-                                        <p><% }) %></p>
-                                    </select><br>
+
+                                        <select id="categoria" class="campos_add2" name="categoria" >
+                                            <%categorias.forEach(categoria =>{
+                                           
+                                                if(categoria.categoria== user.categoria.categoria) { 
+                                                   %>
+                                           <option value="<%=user.categoria.id%>" selected> <%=user.categoria.categoria%> </option> 
+                                            <% }
+                                            else { %> 
+                                               <option value="<%=categoria.id%>"> <%=categoria.categoria%> </option> 
+                                           <% }
+                                           })%>
+                                        </select>
+                                        
+                                    </div>
                                     
                                 </div>
-
-
+                                
 
                                 <div class="form-group mb-3">
                                     <label for="fechaNac"><p>Fecha De Nacimiento</p></label><br/>

@@ -25,6 +25,7 @@
     margin-left: 20%;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding: 5px;
 }
 
 
@@ -33,7 +34,7 @@
 input.buscarProd{
     width:40%;
     margin:10px;
-    padding:10px 16px;
+    padding:5px 8px;
     border-radius:32px;
     outline:none;
     border:2px solid #ccd1d1;
@@ -41,6 +42,10 @@ input.buscarProd{
     transition:all 0.5s;  
 }
 
+.barra-bus {
+    text-align: center;
+    padding: 10px;  
+}
 
 
 article.tabla_lista {
@@ -105,9 +110,19 @@ article.tabla_lista {
     justify-content: space-around;
 }
 
-.barra-bus {
-    text-align: center;
-    
+.barra-busDet {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+input.buscarProdDet{
+    width:20%;
+    padding:5px 8px;
+    border-radius:20px;
+    border:2px solid #ccd1d1;
+    background:#d4f4fc;
+    font-family: "roboto";
+  
 }
 
 
@@ -571,16 +586,18 @@ input.inputsole {
 
 .desproductosgz h4 {
     font-family: "Numans";
-    font-size: 1em;
-    color: #7D7D7D;
+    font-size: 1.2em;
+    color: #940303;
     padding: 10px;
+
 }
 
 .desproductosgz h1 {
     font-family: "Lobster";
-    font-size: 3em;
-    color: #000000;
+    font-size: 4em;
+    color: rgb(6, 75, 128);
     text-align: center;
+     text-shadow: 0px 1px 2px rgba(77, 76, 76, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
 .coloresgz {
@@ -591,6 +608,17 @@ input.inputsole {
     align-items: center;
     padding: 20px;
     margin-left: 15%;
+
+
+}
+.colorgz p{
+    margin: 10px;
+    font-family: "numans";
+}
+.cuadradogz{
+    background-color: #E9B843;
+    width: 30px;
+    height: 30px;
 }
 .contadorGrandegz {
     width: 60%;
@@ -601,11 +629,15 @@ input.inputsole {
     padding: 20px;
     margin-left: 8%;
 }
+.contadorGrandegz p{
+    font-family: "Numans";
+    color: #7D7D7D;
+}
 
 .coloresgz p {
-    font-family: "Nova Cut";
+    font-family: "Numans";
     font-size: 15px;
-    color: #000000;
+    color: #7D7D7D;
     margin-right: 50px;
     margin-top: 5%;
 }
@@ -636,6 +668,7 @@ input.inputsole {
     margin-left: 20%;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding: 10px;
 }
 
 .preciosgz p {
@@ -872,4 +905,4 @@ aside.descripciongz {
     article.tabla_lista {
         width: 22%;
     }
-}
+ }
