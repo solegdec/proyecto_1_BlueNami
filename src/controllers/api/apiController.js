@@ -69,15 +69,10 @@ detailProduct: function(req, res){
                     nombre: product.nombre,
                     precio: product.precio,
                     descripcion: product.descripcion,
-<<<<<<< HEAD
-                    
-                    marca: product.marca
-=======
                     color: product.colour_id,
                     marca: product.marca,
                     foto: "/img/" + product.foto,
                     url: "/api/products/" + req.params.id
->>>>>>> e98a9450e4578e1beed3d708476bead4977b596b
                 }
             }
             res.json(productJson)
