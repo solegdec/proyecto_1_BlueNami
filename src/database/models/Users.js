@@ -67,11 +67,12 @@ const Users = sequelize.define("Users",
             type: DataTypes.DATE
         },
     },
-
-    
     {
         tableName: 'users',
         timestamps: false,
+        defaultScope: {
+              attributes: { exclude: ['password' , 'categoria_id'] }
+            }
     }
 
 );
