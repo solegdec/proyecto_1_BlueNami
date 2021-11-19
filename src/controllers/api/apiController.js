@@ -8,15 +8,23 @@ listProducts: async (req,res)=>{
         include:["marca","colours"],
         
 })
-    let countByColours= await db.Colours.findAll({
+    let coloursList= await db.Colours.findAll({
         include:["productos"]
     })
+
+    let qtyProducts = coloursList.map(colour =>{
+        return {
+            id: colour.id,
+            name: colour.color,
+            count: colour.productos.length
+        }
+    })
+
     let productsJson = {
         meta:{
             status: 200,
             count: products.length,
-            countByColours: countByColours,
-            
+            countByColours: qtyProducts,
             url: "/api/products"
         },
         data:products
@@ -33,6 +41,7 @@ listColours: async function(req, res){
         })
         let qtyProducts = coloursList.map(colour =>{
             return {
+                id: colour.id,
                 name: colour.color,
                 count: colour.productos.length
             }
@@ -60,8 +69,15 @@ detailProduct: function(req, res){
                     nombre: product.nombre,
                     precio: product.precio,
                     descripcion: product.descripcion,
+<<<<<<< HEAD
                     
                     marca: product.marca
+=======
+                    color: product.colour_id,
+                    marca: product.marca,
+                    foto: "/img/" + product.foto,
+                    url: "/api/products/" + req.params.id
+>>>>>>> e98a9450e4578e1beed3d708476bead4977b596b
                 }
             }
             res.json(productJson)
@@ -136,8 +152,8 @@ listUsers:(req,res)=>{
     .findAll()
     .then(users=>{
         return res.status(200).json({
-            total: users.length,
-            data: users,
+            count: users.length,
+            users: users,
             status:200
         })
     })
@@ -148,7 +164,9 @@ db.Users
     .then(user=>{
         return res.status(200).json({
             data: user,
-            status:200
+            status:200,
+            avatar: "/img/avatars/" + user.avatar,
+            url: "/api/users/" + req.params.id
         })
     })
 
