@@ -16,6 +16,7 @@ listProducts: async (req,res)=>{
             status: 200,
             count: products.length,
             countByColours: countByColours,
+            
             url: "/api/products"
         },
         data:products
@@ -59,7 +60,7 @@ detailProduct: function(req, res){
                     nombre: product.nombre,
                     precio: product.precio,
                     descripcion: product.descripcion,
-                    color: product.colour_id,
+                    
                     marca: product.marca
                 }
             }
