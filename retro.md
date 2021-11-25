@@ -39,5 +39,10 @@ Hacer más: setear objetivos claros a cumplir semanalmente y divisoin de tareas.
 Continuar haciendo: trabajo en equipo y gran compromiso de todos los miembros
 Hacer menos: intentar implementar funcionalidades aún no enseñadas en clases.
 Dejar de hacer: minutas al final del sprint
-
-
+ 
+Retrospectiva Sprint 7
+Comenzar a hacer: volver a hacer minutas inmediatamente despues de cada reunion
+Hacer más: dividr tareas y luego reunion para compilar avanaces
+Continuar haciendo: trabajo en equipo y gran compromiso de todos los miembros
+Hacer menos: intentar implementar funcionalidades aún no enseñadas en clases.
+Dejar de hacer: minutas al final del sprint

@@ -3,6 +3,11 @@ const { Op } = require("sequelize");
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require ('express-validator')
+const Users = require('../database/models/Users.js')
+
+
+
+
 //controlador de usuarios desde admin
   let userController={
     list: function (req,res){
@@ -33,9 +38,20 @@ const {validationResult} = require ('express-validator')
         })
     },
 
-    store: function(req, res){
+    store: async function(req, res){
+ 
+        const errores = validationResult(req);
+        let categorias= await db.Categories.findAll()
+
+            if(!errores.isEmpty()){
+                return res.render("user-add-form", {
+                    errores: errores.errors,
+                    oldData: req.body,
+                    categorias: categorias
+                })
         
-        
+            }
+                       
         db.Users.create(
         {
           nombre: req.body.nombre ,
@@ -46,8 +62,9 @@ const {validationResult} = require ('express-validator')
           pais: req.body.pais,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
-          avatar: req.file.filename,
-        })
+          avatar:req.file.filename
+        }
+        )
     .then(function(){
         return res.redirect("/adminUser");
     })
@@ -55,6 +72,15 @@ const {validationResult} = require ('express-validator')
       
     },
     edit: async (req,res)=>{
+        const errores = validationResult(req);
+        if(!errores.isEmpty()){
+            return res.render("user-add-form", {
+                errores: errores.errors,
+                oldData: req.body,
+                categorias:categorias
+            })
+    
+        }else{
         let pedidoUsuario = await db.Users.findByPk(req.params.id,{
             include: [{association: "categoria"}]
         });
@@ -64,7 +90,7 @@ const {validationResult} = require ('express-validator')
             .then(function([user, categorias]){
                 res.render("user-edit-form",{user, categorias})
             })
-          
+        }
     },
     update: (req,res)=>{
         db.Users.update(

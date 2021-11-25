@@ -21,7 +21,7 @@ const clientController = {
             if(!errores.isEmpty()){
                 return res.render("register", {
                     errores: errores.errors,
-                    old: req.body
+                    oldData: req.body
                 })
             };
             db.Users.create({
@@ -43,32 +43,40 @@ const clientController = {
     login: (req, res)=>{
         res.render('login');
     },
-    processLogin: (req, res, next) => {
+    processLogin:async (req, res, next) => {
         const errores = validationResult(req);
         if(!errores.isEmpty()){
             return res.render("login", { 
-                errors: errors.errors,
-                old: req.body 
+                errores: errores.errors,
+                oldData: req.body 
             });
         }
-        db.Users.findOne({
+        await db.Users.findOne({
+            include: [{association: "categoria"}], 
             where: {
                 email: req.body.email 
             }
+
         }).then( users => {
             req.session.userLogged = users;
             if(req.body.remember_user){
                 res.cookie("remember_user", users.id, { maxAge: 60000 * 60 * 24 })
             }
-            return res.redirect("/client/profile/");
+            return res.render('profile',{
+                user:req.session.userLogged   
+               });
         })  
     },
     
-    profile: (req, res)=>{
-        res.render('profile',{
-         user:req.session.userLogged   
-        });
+    profile:async (req,res)=>{
+        await db.Users.findByPk(req.params.id, {
+            include: [{association: "categoria"}]
+        })
+        .then(function(user){
+            res.render("profile",{user:req.session.userLogged})
+        })   
     },
+
     account: function(req,res) {          
         if(req.session.userLogged){;
            if(req.session.userLogged.admin){

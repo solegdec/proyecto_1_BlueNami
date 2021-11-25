@@ -27,7 +27,7 @@ const Users = sequelize.define("Users",
             type: DataTypes.STRING
         },
         email:        
-        {
+        {  allowNull: false,
             unique: true,
             type: DataTypes.STRING
         },
@@ -43,7 +43,7 @@ const Users = sequelize.define("Users",
         },
         avatar:
         {
-            allowNull: true,
+            allowNull: false,
             type: DataTypes.STRING
         },
         password:
@@ -67,11 +67,12 @@ const Users = sequelize.define("Users",
             type: DataTypes.DATE
         },
     },
-
-    
     {
         tableName: 'users',
         timestamps: false,
+        defaultScope: {
+              attributes: { exclude: ['password' , 'categoria_id'] }
+            }
     }
 
 );

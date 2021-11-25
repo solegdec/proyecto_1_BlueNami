@@ -2,13 +2,33 @@
 <%- include("./partials/head") %>
 
     <body class= "bodyAdminAdd">   
-        <%- include("./partials/headerAdmin") %>    
+        <%- include("./partials/headerAdmin") %>  
+        <script src="/js/js-front.js"> </script>   
+  
         <div id="card">
             <div class="add-titulo">
                 <h2>Editar Usuario</h2>
                  </div>
                     <div class="add-bloque">
                         <div class="add-formulario">
+
+                            <% if(typeof errores != "undefined"){ %>
+                                <ul>
+                                    <% errores.forEach(function(error){ %>
+                                    <li>
+                                        <%= error.msg %>
+                                    </li>
+                                    <% }) %>
+                                </ul>
+                                <% } %>
+
+                                <div class="errores">
+                                    <ul> </ul>
+                                </div>
+
+                               
+                             
+
                             <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data" >
                                 <div class="form-group mb-3">
                                     <label for="id"><p>Id</p></label><br/>
@@ -16,30 +36,40 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="nombre"><p>Nombre</p></label><br/>
-                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%= user.nombre%>"required >
+                                    <input id="nombre"  name ="nombre" type="text"class="campos_add" value="<%= user.nombre%>" >
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="apellido"><p>Apellido</p></label><br/>
-                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>"required >
+                                    <input id="apellido"  name ="apellido" type="text"class="campos_add" value="<%= user.apellido%>" >
                                 </div>
+                                
                                 <div class="form-group mb-3">
-                                    <label for="categoria"><p>Categoria</p></label><br/>
-                                    
-                                    <select name="categoria">
-                                        <p><% categorias.forEach(categoria=> { %></p>
-                                    <option value="<%= categoria.id %>">
-                                        <p><%= categoria.categoria %></p>
-                                    </option><br>
-                                        <p><% }) %></p>
-                                    </select><br>
+                                    <div class="form-group mb-3">
+                                        <label for="categoria">Elegir una nueva categoria</label><br/>
+                                        
+
+
+                                        <select id="categoria" class="campos_add2" name="categoria" >
+                                            <%categorias.forEach(categoria =>{
+                                           
+                                                if(categoria.categoria== user.categoria.categoria) { 
+                                                   %>
+                                           <option value="<%=user.categoria.id%>" selected> <%=user.categoria.categoria%> </option> 
+                                            <% }
+                                            else { %> 
+                                               <option value="<%=categoria.id%>"> <%=categoria.categoria%> </option> 
+                                           <% }
+                                           })%>
+                                        </select>
+                                        
+                                    </div>
                                     
                                 </div>
-
-
+                                
 
                                 <div class="form-group mb-3">
                                     <label for="fechaNac"><p>Fecha De Nacimiento</p></label><br/>
-                                    <input id="fechaNac"  name ="fechaNac" type="text"class="campos_add" value="<%= user.fechaNac%>"required >
+                                    <input id="fechaNac"  name ="fechaNac" type="text"class="campos_add" value="<%= user.fechaNac%>" >
                                 </div>
                                  <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -48,14 +78,17 @@
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="email" ><p>E-Mail</p></label><br/>
-                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>" required >
+                                    <input id="email"name="email" type="email"class="campos_add" value="<%= user.email%>"  >
                                 </div>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="avatar"><p>Editar Imagen de Perfil</p></label><br>
                                     <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
 
-                                <img src="/img/avatars/<%=user.avatar%>" width="30px" height="30px">
+                                <img src="/img/avatars/<%=user.avatar%>" width="100px" height="100px">
+
+                                <br> 
+
                                     <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>
                         </div>
@@ -67,7 +100,9 @@
 
         </div>     
         <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" heigth="100%"></div>       
-        <%- include("./partials/footer") %>               
+        <%- include("./partials/footer") %>    
+        
+        <script src="/js/js-front-user-edit.js"> </script>
   </body>      
 
 </html>

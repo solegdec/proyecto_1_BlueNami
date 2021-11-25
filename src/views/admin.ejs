@@ -8,12 +8,13 @@
         </div>
                     <table class="tableAdmin">
                         <thead class="theadAdmin">
-                            <th scope="col">&nbsp;</th>
+                            
                             <th scope="col">Id</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Marca</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Unidades en stock</th>
+                            <th scope="col">Descripcion</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
                         
@@ -22,12 +23,13 @@
                             <% products.forEach(function(products){ %>
                         <form  class="tm-edit-product-form" action="" method="POST" >
                             <tr class="trAdmin">
-                            <th scope="row"> <input type="checkbox"> </th>
+                            
                             <td><%=products.id%></td>
                             <td><%=products.nombre%></td>
                             <td><%=products.marca.marca%></td>
-                            <td> $ <%=products.precio%></td>
+                            <td>$<%=products.precio%></td>
                             <td><%=products.unidades%></td>
+                            <td><%=products.descripcion%></td>
                         </form> 
                             <td><a href="/product/<%=products.id%>"><i class="fas fa-info-circle"></a></td>
                             <td><a href="/admin/<%=products.id%>/edit"><i class="far fa-edit"></a></td>

@@ -8,20 +8,19 @@
     <ul class="navGral">
         <li> <a href="/">Home</a> </li>
         <li> <a href="/product">Productos</a></li>
-        <li> <a href="/#qsomos">Quienes somos</a> </li>
+        <li> <a href="/#qsomos">Quienes somos</a></li>
         <li> <a href="/#contactos-index">Contactos</a> </li>
-        <a href="/admin"><i class="fas fa-cogs fa-2x" title="ADMIN"style="color:rgb(5, 100, 129)"></i></a>
         
     </ul>
     <ul class="logReg">
-        <% if (usuario.categoria_id==3) {%>
+        <% if (usuario.categoria_id==2) {%>
             <a href="/admin"><i class="fas fa-cogs fa-2x" title="ADMIN"style="color:rgb(5, 100, 129)"></i></a>
             <li><a href="/client/profile">Hola <%= usuario.nombre%> <img src="/img/avatars/<%= usuario.avatar %>"width="37px" style="border-radius: 100%"title="MI PERFIL" ></a></li>
             <a href="/productCart"><i class="fas fa-shopping-cart fa-lg" title="MI CARRITO" style="color:rgb(3, 76, 99)" ></i></a> 
             <a href="/client/logout"> <i class="fas fa-sign-out-alt fa-lg" title="LOGOUT"style="color:rgb(3, 76, 99)" ></i> </a>  
             
             <%}%>
-            <%  if (usuario.categoria_id==2 ||usuario.categoria_id==1) {%> 
+            <% if (usuario.categoria_id==1) {%> 
         <li><a href="/client/profile">Hola <%= usuario.nombre%> <img src="/img/avatars/<%= usuario.avatar %>"width="37px" style="border-radius: 100%"title="MI PERFIL" ></a></li>
             <a href="/productCart"><i class="fas fa-shopping-cart fa-lg" title="MI CARRITO" style="color:rgb(3, 76, 99)" ></i></a> 
             <a href="/client/logout"> <i class="fas fa-sign-out-alt fa-lg" title="LOGOUT"style="color:rgb(3, 76, 99)" ></i> </a>  
@@ -30,7 +29,7 @@
     </ul> 
     
         
-    <%} else if (usuario.categoria_id!=3){%> 
+    <%} else if (usuario.categoria_id!=2){%> 
     <ul>
         <li> <a href="/client/login">Login</a> </li>
         <li><a href="/client/register">Registro</a></li>

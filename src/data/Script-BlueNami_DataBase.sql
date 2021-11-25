@@ -88,7 +88,6 @@ PRIMARY KEY (id)
 CREATE TABLE orders (
 id INT UNSIGNED AUTO_INCREMENT,
 fecha DATETIME NOT NULL,
-cerrada INT unsigned,
 importe_total DECIMAL NOT NULL,
 usuario_id INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -134,10 +133,12 @@ FOREIGN KEY (color_id) REFERENCES colours (id)
 -- Carga tabla userCategories
 insert into `userCategories`  VALUES 
 (1, 'cliente', '2021-03-25 17:02:08', '2021-01-26 02:55:46'),
-(2, 'usuario', '2020-10-01 16:06:35', '2020-10-26 09:19:07'),
-(3, 'administrador', '2020-12-01 07:03:55', '2021-01-22 15:26:02');
+(2, 'administrador', '2020-12-01 07:03:55', '2021-01-22 15:26:02');
                           
 -- Carga tabla users
+insert into `users`  VALUES 
+(1, 'Nombre Cliente', 'Apellido Cliente', 'Femenino', 'cliente@gmail.com', 'Argentina', '2021-10-27', '1634926058147.png', '$2a$10$m4U855LygI6kOjAug1b/auvhCT88Q8a9bnr2GHcKHQ73J/AyOQyg2', '1', '2021-01-26 02:55:46', '2021-01-26 02:55:46'),
+(2, 'Nombre Administrador', 'Apellido Administrador', 'Femenino', 'administrador@gmail.com', 'Argentina', '2021-10-27', '1634926058147.png' , '$2a$10$qLJ3CsCgEmevbryujCix4ujaRYPZGpD/Esbb19tlCsWg/q.IZbIp.', '2', '2021-01-26 02:55:46', '2021-01-26 02:55:46');
 
 
 -- Carga tabla models
@@ -185,4 +186,28 @@ insert into `colours`  VALUES
 
 
 -- Carga tabla products_colours
+insert into `products_colours`  VALUES 
+ (1, 1, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (2, 1, 2, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (3, 1, 3, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (4, 1, 4, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (5, 2, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (6, 2, 5, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (7, 3, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (8, 4, 6, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (9, 4, 7, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (10, 5, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (11, 5, 5, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (12, 6, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (13, 7, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (14, 8, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (15, 9, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (16, 10, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00'),
+ (17, 11, 1, '2021-08-09 12:03:29', '2021-01-04 03:34:00');
+
+
+
+
+
+
 -- Borramos el contenido de esta tabla --

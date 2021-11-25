@@ -3,12 +3,23 @@
 
     <body class="bodyAdminAdd">
         <%- include("./partials/headerAdmin") %>
+        <script src="/js/js-front.js"> </script>   
+
             <div id="card">
                 <div class="add-titulo">
                     <h2>Editar Producto</h2>
                 </div>
                 <div class="add-bloque">
                     <div class="add-formulario">
+                        <% if(typeof errores != "undefined"){ %>
+                            <ul>
+                                <% errores.forEach(function(error){ %>
+                                <li>
+                                    <%= error.msg %>
+                                </li>
+                                <% }) %>
+                            </ul>
+                            <% } %>
                         <form class="tm-edit-product-form" action="/admin/<%= product.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data">
                             <div class="form-group mb-3">
                                 <label for="id"><p>Id</p></label><br/>
@@ -16,7 +27,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="nombre"><p>Nombre</p></label><br/>
-                                <input id="nombre" name="nombre" type="text" class="campos_add" value="<%= product.nombre%>" required>
+                                <input id="nombre" name="nombre" type="text" class="campos_add" value="<%= product.nombre%>" >
                             </div>
                     
                         </div><br>
@@ -28,6 +39,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="marca"><p>Elegir una nueva marca:</p></label><br/>
+<<<<<<< HEAD
                                     <select id="marca" class="campos_cat" name="marca" required>
                                     <%marcas.forEach(marca =>{ %>
                                         <% if (marca.marca == product.marca.marca){ %>
@@ -37,35 +49,44 @@
                                     <option value="<%=marca.id%>"><%=marca.marca%></option>  
                                         <%}%>
                                     <%})%>
+=======
+                                    
+                                 <select id="marca" class="campos_cat" name="marca" >
+                                    <%marcas.forEach(marca =>{
+                                         if(marca.marca==product.marca.marca) { %>
+                                    <option value="<%=marca.id%>" selected> <%=marca.marca%> </option> 
+                                     <% }
+                                     else { %> 
+                                        <option value="<%=marca.id%>"> <%=marca.marca%> </option> 
+                                    <% }
+                                    })%>
+>>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
                                     </select>
+                                
                                 </div>
+
+                                <br>
                                 
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="color"><p>Colores actuales de la tabla:</p></label><br/>
-                                    <% product.colours.forEach(colourDelProduct=> { %> 
-                                        <p> <%=colourDelProduct.color%></p>
+                                    <label for="color"><p><b>Colores actuales de la tabla:</p></b></label><br/>
+                                    <div class="cajaBlanca"><% product.colours.forEach(colourDelProduct=> { %> 
+                                        <p><%=colourDelProduct.color%>,</p>
                                     <%})%>
+                                    </div>
                                 </div><br>
 
-                                <div class="form-group mb-3">
-                                    <label for="colores"><p>Elegir los nuevos colores:</p></label><br/>
-                                    <%colours.forEach(colour =>{ %>
-                                    <input type="checkbox" id="colores" class="campos_cat" name="colores" value="<%=colour.id%>"> <%=colour.color%>
-                                    <%})%>
-                                
-                                </div>
 
-        
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="descripcion"><p>Descripción</p></label><br/>
-                                    <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" required> <%= product.descripcion%></textarea>
+                                    <textarea class="form-control validate" rows="3" id="descripcion" name="descripcion" type="text" > <%= product.descripcion%></textarea>
                                 </div>
-
+<br>
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
                                     <label for="unidades"><p>Unidades en stock:</p></label><br/>
-                                    <input id="unidades" name="unidades" type="number" class="campos_add" value="<%= product.unidades%>" required>
+                                    <input id="unidades" name="unidades" type="number" class="campos_add" value="<%= product.unidades%>" >
                                 </div> <br>
-
+                                
+                                
 
                                 <button type="submit" class="button_add">Confirmar Cambios</button>
                                 

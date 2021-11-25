@@ -11,6 +11,7 @@ const logueado =require("./middlewares/logueado.js")
 //const adminMidd= require("./middlewares/adminMidd.js")
 //heroku
 const port = process.env.PORT || 8000
+
 // Para que funcione nodemon, comentar  la linea 12- Para heroku sacar el comentario
 //app.listen(process.env.PORT||3030, function(){console.log("ok")})
 
@@ -36,6 +37,7 @@ const indexRouter = require("./routes/indexRouter.js")
 const productRouter = require("./routes/productRouter.js")
 const userRouter = require("./routes/userRouter.js")
 const adminRouter = require ("./routes/adminRouter.js");
+const apiRouter = require('./routes/apiRouter.js');
 
 
 app.use(indexRouter)
@@ -46,6 +48,7 @@ app.use("/admin",adminRouter)
 app.use("/adminUser",userRouter)
 app.use("/product-add-form",adminRouter)
 app.use("/user-add-form",userRouter)
+app.use('/api', apiRouter);
 
 
 // catch 404 and forward to error handler

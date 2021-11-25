@@ -25,6 +25,7 @@
     margin-left: 20%;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding: 5px;
 }
 
 
@@ -33,7 +34,7 @@
 input.buscarProd{
     width:40%;
     margin:10px;
-    padding:10px 16px;
+    padding:5px 8px;
     border-radius:32px;
     outline:none;
     border:2px solid #ccd1d1;
@@ -41,6 +42,10 @@ input.buscarProd{
     transition:all 0.5s;  
 }
 
+.barra-bus {
+    text-align: center;
+    padding: 10px;  
+}
 
 
 article.tabla_lista {
@@ -105,21 +110,22 @@ article.tabla_lista {
     justify-content: space-around;
 }
 
-.barra-bus {
-    text-align: center;
-    
+.barra-busDet {
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+input.buscarProdDet{
+    width:20%;
+    padding:5px 8px;
+    border-radius:20px;
+    border:2px solid #ccd1d1;
+    background:#d4f4fc;
+    font-family: "roboto";
+  
 }
 
-
-/* Comienzo Media */
-
-@media screen and (min-width: 576px) {
-    /*CSS Gina*/
-    article.tabla_lista {
-        width: 85%; 
-    }
-}
-
+<<<<<<< HEAD
 /*@media screen and (min-width: 768px) {
     /*MEdia Gina
    
@@ -135,13 +141,14 @@ article.tabla_lista {
         width: 22%;
     }
 }
+=======
+>>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
 
 
 /*ProductCart*/
 
 /*Tabla carrito*/
 table.tableCart{
-    max-width: 1200px;
    border-radius: 6px;
    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
    margin: 40px 40px;
@@ -168,6 +175,7 @@ table.tableCart th{
     font-size: 13px; 
     background-color: white;
  }
+<<<<<<< HEAD
  .tdfotoproducto{
     width: 100px;
     height: 100px;  
@@ -175,6 +183,15 @@ table.tableCart th{
   .tbodyCart img{
      width: 250%;
      height: 25%;
+=======
+ .tdfotoproducto {
+     width: 100px;
+     height: 100px;
+ }
+ .tbodyCart img{
+     width: 100%;
+     height: 100%;
+>>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
  }
  td.nombreCart{
      margin: auto;
@@ -209,6 +226,19 @@ body.bodysole {
     background-color: rgb(207, 219, 235);
     height: 100%
     
+}
+.totalSoleTT{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+.totalapagarsole p {
+    color: grey;
+    font-family: "roboto";
+    font-weight: 500;
+    text-align: center;
 }
 .totalapagarsole h1,
 .micarritoSole h1{
@@ -322,6 +352,23 @@ button.buttonressole {
     width: 70px;
 }
 
+button.button_add_Cart{
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    border-color: rgb(95, 99, 99);
+    background-color: rgb(8, 94, 169);
+    padding: 5px;
+}
+
+.button_add_Cart {
+    width: 150px;
+    height: 30%;
+    padding: 15px 10px 20px 10px;
+    margin: 15px 10px 15px 10px;
+}
 .totalsole {
     align-self: center;
     font-weight: 200;
@@ -355,6 +402,7 @@ button.buttonressole {
     animation-name: surfear;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    margin-top: 30px;
 }
 
 input.inputsole {
@@ -459,10 +507,7 @@ input.inputsole {
     table.tableCart{
         width: 85%;    
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+    
     
 }
 
@@ -486,10 +531,7 @@ input.inputsole {
     table.tableCart{
         width: 85%;
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+   
     
 }*/
 
@@ -518,10 +560,7 @@ input.inputsole {
         width: 100%;
         height:fit-content; 
     }
-    .tbodyCart img{
-        width: 25%;
-        height: 25%;
-    }
+   
 
 }
 
@@ -575,16 +614,18 @@ input.inputsole {
 
 .desproductosgz h4 {
     font-family: "Numans";
-    font-size: 1em;
-    color: #7D7D7D;
+    font-size: 1.2em;
+    color: #940303;
     padding: 10px;
+
 }
 
 .desproductosgz h1 {
     font-family: "Lobster";
-    font-size: 3em;
-    color: #000000;
+    font-size: 4em;
+    color: rgb(6, 75, 128);
     text-align: center;
+     text-shadow: 0px 1px 2px rgba(77, 76, 76, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
 .coloresgz {
@@ -595,6 +636,17 @@ input.inputsole {
     align-items: center;
     padding: 20px;
     margin-left: 15%;
+
+
+}
+.colorgz p{
+    margin: 10px;
+    font-family: "numans";
+}
+.cuadradogz{
+    background-color: #E9B843;
+    width: 30px;
+    height: 30px;
 }
 .contadorGrandegz {
     width: 60%;
@@ -605,11 +657,15 @@ input.inputsole {
     padding: 20px;
     margin-left: 8%;
 }
+.contadorGrandegz p{
+    font-family: "Numans";
+    color: #7D7D7D;
+}
 
 .coloresgz p {
-    font-family: "Nova Cut";
+    font-family: "Numans";
     font-size: 15px;
-    color: #000000;
+    color: #7D7D7D;
     margin-right: 50px;
     margin-top: 5%;
 }
@@ -640,6 +696,7 @@ input.inputsole {
     margin-left: 20%;
     margin-top: 5%;
     margin-bottom: 10%;
+    padding: 10px;
 }
 
 .preciosgz p {
@@ -794,7 +851,7 @@ aside.descripciongz {
 /* Comienzo Media */
 
 @media screen and (min-width: 576px) {
-    /*CSS Gina*/
+    /*CSS Detail Gina*/
     .productogz {
         width: 100%;
         display: flex;
@@ -817,8 +874,13 @@ aside.descripciongz {
 
 }
 
+<<<<<<< HEAD
 /*@media screen and (min-width: 768px) {
     /*MEdia Gina
+=======
+@media screen and (min-width: 768px) {
+    /*MEdia Detail Gina*/
+>>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
     
     aside.descripciongz {
         display: block;
@@ -835,11 +897,13 @@ aside.descripciongz {
         width: 100%;
         flex-direction: row;
     }
+    article.tabla_lista {
+        width: 30%;
    
 }*/
 
 @media (min-width: 1200px) and (orientation: landscape) {
-    /*MEdia Gina*/
+    /*MEdia Detail Gina*/
     aside.descripciongz {
         display: block;
     }
@@ -854,3 +918,24 @@ aside.descripciongz {
    
      
 }
+
+/* Comienzo Media Product */
+
+@media screen and (min-width: 576px) {
+    /*CSS Gina*/
+    article.tabla_lista {
+        width: 85%; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article.tabla_lista {
+        width: 30%;
+    }
+
+@media (min-width: 1200px) and (orientation: landscape) {
+    /*MEdia Gina*/
+    article.tabla_lista {
+        width: 22%;
+    }
+ }

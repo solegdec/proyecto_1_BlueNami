@@ -77,9 +77,17 @@ textarea {
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    resize: none;
+ 
 }
-
+.campos_add2 {
+    width: 50%;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+ 
+}
 .notview {
     display: none
 }
