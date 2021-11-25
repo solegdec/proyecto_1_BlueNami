@@ -70,11 +70,9 @@ const Users = sequelize.define("Users",
     {
         tableName: 'users',
         timestamps: false,
-        defaultScope: {
-              attributes: { exclude: ['password' , 'categoria_id'] }
-            }
+       
     }
-
+   
 );
 
 Users.associate = function(models){
