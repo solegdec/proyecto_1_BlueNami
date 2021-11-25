@@ -33,6 +33,10 @@ const Orders = sequelize.define("Orders",
             allowNull: true,
             type: DataTypes.DATE
         },
+<<<<<<< HEAD
+       
+=======
+>>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
     },
     {
         tableName: 'orders',
