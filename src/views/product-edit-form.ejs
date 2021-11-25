@@ -39,7 +39,6 @@
 
                                 <div class="form-group mb-3">
                                     <label for="marca"><p>Elegir una nueva marca:</p></label><br/>
-<<<<<<< HEAD
                                     <select id="marca" class="campos_cat" name="marca" required>
                                     <%marcas.forEach(marca =>{ %>
                                         <% if (marca.marca == product.marca.marca){ %>
@@ -49,18 +48,6 @@
                                     <option value="<%=marca.id%>"><%=marca.marca%></option>  
                                         <%}%>
                                     <%})%>
-=======
-                                    
-                                 <select id="marca" class="campos_cat" name="marca" >
-                                    <%marcas.forEach(marca =>{
-                                         if(marca.marca==product.marca.marca) { %>
-                                    <option value="<%=marca.id%>" selected> <%=marca.marca%> </option> 
-                                     <% }
-                                     else { %> 
-                                        <option value="<%=marca.id%>"> <%=marca.marca%> </option> 
-                                    <% }
-                                    })%>
->>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
                                     </select>
                                 
                                 </div>
