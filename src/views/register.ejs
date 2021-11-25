@@ -50,23 +50,7 @@
                 <input class="form-reg-input" type="date" name="fechaNac" id="nacimiento" value=1990-06-30 min="1910-01-01">
             </div>
         </div>
-        <div>
-            <label><p>Pais de origen:</p></label>
-            <select 
-                name="pais" 
-                class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
-                <option value="">Elegí un país</option> <br>
-                <%  let pais = ['Argentina', 'Chile', 'Brasil', 'Uruguay']; %>
-                <% for (const unPais of pais) { %>
-                <option value="<%= unPais %>"
-                    <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
-                    > <%= unPais %> 
-                </option>
-                <% } %>
-                <% if (locals.errors && errors.pais) { %>
-                    <span class="error">    <%= errors.pais.msg %></span>
-                <% } %> 
-        </div>
+        
 
         <div class="form-reg-cont">
             <div class="form-reg-p">
@@ -76,11 +60,6 @@
                     <span class="error">  <%= errors.email.msg %> </span>
                 <% } %>
                 </div>
-<<<<<<< HEAD
-        </div>
-       
-            <div><br></div>
-=======
             <div class="form-reg-pais">
                     <label class="form-reg-label"><p>Pais de origen:</p></label>
                     <select name="pais" class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
@@ -101,7 +80,6 @@
                 
     
       
->>>>>>> c8c4f77607f45674524d8189cd7f5d8a221cbaf0
             <div class="subeTuFoto">
                 <label class="form-login-label-comment-tablas" for="avatar"><p>Subí tu foto de perfil</p></label>
                 <input class="form-login-input" type="file"  name="avatar" id="avatar">
@@ -169,5 +147,3 @@
 <script src="/js/js-front-register.js"> </script>
 </body>
 </html>
-
-
