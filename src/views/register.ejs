@@ -48,7 +48,23 @@
                 <input class="form-reg-input" type="date" name="fechaNac" id="nacimiento" value=1990-06-30 min="1910-01-01">
             </div>
         </div>
-        
+        <div>
+            <label><p>Pais de origen:</p></label>
+            <select 
+                name="pais" 
+                class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
+                <option value="">Elegí un país</option> <br>
+                <%  let pais = ['Argentina', 'Chile', 'Brasil', 'Uruguay']; %>
+                <% for (const unPais of pais) { %>
+                <option value="<%= unPais %>"
+                    <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
+                    > <%= unPais %> 
+                </option>
+                <% } %>
+                <% if (locals.errors && errors.pais) { %>
+                    <span class="error">    <%= errors.pais.msg %></span>
+                <% } %> 
+        </div>
 
         <div class="form-reg-cont">
             <div class="form-reg-p">
@@ -59,26 +75,8 @@
                 <% } %>
                 </div>
         </div>
-            <div class="form-reg-pais">
-                    <label class="form-reg-label"><p>Pais de origen:</p></label>
-                    <select 
-                        name="pais" 
-                        class="form-select <%= locals.errors && errors.pais ? 'is-invalid' : null %>">
-                        <option value="">Elegí un país</option> <br>
-                        <%  let pais = ['Argentina', 'Chile', 'Brasil', 'Uruguay']; %>
-                        <% for (const unPais of pais) { %>
-                        <option value="<%= unPais %>"
-                            <%= locals.oldData && (unPais === oldData.pais) ? 'selected' : null %> 
-                            > <%= unPais %> 
-                        </option>
-                        <% } %>
-                </div>
-                        <% if (locals.errors && errors.pais) { %>
-                            <span class="error">    <%= errors.pais.msg %></span>
-                        <% } %> 
-                
-    
-      
+       
+            <div><br></div>
             <div class="subeTuFoto">
                 <label class="form-login-label-comment-tablas" for="avatar"><p>Sube tu foto de perfil</p></label>
                 <input class="form-login-input" type="file"  name="avatar" id="avatar">
@@ -133,3 +131,5 @@
 
 </body>
 </html>
+
+

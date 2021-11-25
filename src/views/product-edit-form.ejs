@@ -25,17 +25,17 @@
                                     <label for="precio"><p>Precio</p></label><br/>
                                     <input id="precio" name="precio" type="text" class="campos_add" value="<%= product.precio%>">
                                 </div><br>
-                                                                   
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="marca"><p>Marca actual:</p></label><br/>
-                                    <input id="marca" name="color" type="text" class="campos_add" value="<%= product.marca.marca%>">
-                                </div><br>
 
                                 <div class="form-group mb-3">
                                     <label for="marca"><p>Elegir una nueva marca:</p></label><br/>
                                     <select id="marca" class="campos_cat" name="marca" required>
                                     <%marcas.forEach(marca =>{ %>
+                                        <% if (marca.marca == product.marca.marca){ %>
+                                        <option value="<%=marca.id%>"selected><%=marca.marca%></option>  
+                                        <%}
+                                        else { %>
                                     <option value="<%=marca.id%>"><%=marca.marca%></option>  
+                                        <%}%>
                                     <%})%>
                                     </select>
                                 </div>
