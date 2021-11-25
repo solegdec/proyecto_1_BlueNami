@@ -19,13 +19,22 @@ listProducts: async (req,res)=>{
             count: colour.productos.length
         }
     })
+    let lastProducts = await db.Products.findAll({
+        include:["marca"],
+        order: [
+            ['created_at', 'DESC'],
+        ],
+        limit: 5
+    })
 
     let productsJson = {
         meta:{
             status: 200,
             count: products.length,
             countByColours: qtyProducts,
-            url: "/api/products"
+            url: "/api/products",
+            lastProducts: lastProducts,
+           
         },
         data:products
     }
@@ -84,8 +93,10 @@ listMarcas: async function(req, res){
         })
         let marcasJson = {
             meta:{
+                count: marcas.length,
                 status:200,
                 url: "/api/marcas",
+                data:marcas
             },
             data: marcas
         }
