@@ -72,7 +72,7 @@ const Users = sequelize.define("Users",
         timestamps: false,
        
     }
-
+   
 );
 
 Users.associate = function(models){
