@@ -30,7 +30,10 @@ app.use(session({secret:'BlueNami',resave: false,saveUninitialized:false,}));
 app.use(userLoggedMidd)
 app.use(logueado)
 //app.use(adminMidd)
-
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
 const productCartRouter = require("./routes/productCartRouter.js")
 const clientRouter = require("./routes/clientRouter.js")
 const indexRouter = require("./routes/indexRouter.js")

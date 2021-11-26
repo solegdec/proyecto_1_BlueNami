@@ -9,7 +9,7 @@ span.error{
     height: auto;
     border-radius: 20px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    background-color: rgb(207, 219, 235);
+    background-color:#E9B843;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -33,14 +33,14 @@ span.error{
     font-size: 25px;
     width: 100%;
     text-align: center;
-    font-family:"Pacifico";
+    font-family: 'Caveat', cursive;
     color: rgb(4, 55, 78);
     }
 
 .nombreperfil{
-    font-family: "Pacifico";
+    font-family: 'Pacifico', cursive;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     color: rgb(4, 55, 78);
     }
 
@@ -57,10 +57,10 @@ span.error{
     }
 
 .misDatos p{
-    font-size: 20px;
+    font-size: 27px;
     text-align: center;
-    font-family: "roboto";
-    color: rgb(9, 153, 219);
+    font-family: 'Caveat', cursive;
+     color: rgb(255, 255, 255);
     }
 .misDatos h4{
     font-size: 15px;

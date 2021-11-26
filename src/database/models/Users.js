@@ -74,7 +74,7 @@ const Users = sequelize.define("Users",
           //    attributes: { exclude: ['password' , 'categoria_id'] }
             //}
     }
-
+   
 );
 
 Users.associate = function(models){

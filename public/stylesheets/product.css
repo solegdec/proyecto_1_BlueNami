@@ -45,16 +45,21 @@ input.buscarProd{
 .barra-bus {
     text-align: center;
     padding: 10px;  
+
 }
 
 
 article.tabla_lista {
+    border-radius: 20px;
     justify-content: space-around;
     display: inline-block;
     width: 70%;
     margin: 12px;
     flex-direction: row;
     flex-direction: column;   
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+
  }
 
 .imgTabla2gz img {
@@ -98,9 +103,12 @@ article.tabla_lista {
 }
 
 .preciosRgz p {
-    font-family: "roboto";
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-align: center;
+    color: #1c2460;
+   
+
 }
 
 .destablagz {
@@ -550,17 +558,23 @@ input.inputsole {
 .productogz {
     width: 100%;
     flex-direction: column;
+
+
 }
 
 .imgproductogz {
     width: 100%;
     height: 80%;
     flex-direction: column;
+   
 }
 
 .imggrandegz img {
     width: 90%;
     height: 80%;
+  
+    margin-top: 30px;
+  
 }
 
 .imgcambiogz {
@@ -575,6 +589,16 @@ input.inputsole {
     height: 20%;
     justify-content: space-around;
     opacity: 0.3;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow:0 3px 5px rgba(0, 0, 0, 0.25);
+}
+.imgcambiogz img:hover {
+    
+    opacity: 1;
+        
+   
 }
 
 .desproductosgz {
@@ -586,8 +610,8 @@ input.inputsole {
 
 .desproductosgz h4 {
     font-family: "Numans";
-    font-size: 1.2em;
-    color: #940303;
+    font-size: 1.4em;
+    color: #945c03;
     padding: 10px;
 
 }
@@ -616,7 +640,7 @@ input.inputsole {
     font-family: "numans";
 }
 .cuadradogz{
-    background-color: #E9B843;
+    background-color: #10ddf0;
     width: 30px;
     height: 30px;
 }
@@ -631,7 +655,7 @@ input.inputsole {
 }
 .contadorGrandegz p{
     font-family: "Numans";
-    color: #7D7D7D;
+    color: #1c2460;
 }
 
 .coloresgz p {
@@ -672,10 +696,18 @@ input.inputsole {
 }
 
 .preciosgz p {
-    font-family: "roboto";
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     text-align: center;
+    color: #1c2460;
+    font-weight: 400;
+   
 }
+.preciosgz p:hover {
+    transform: rotate(30deg);
+}
+
+
 
 aside.descripciongz li {
     padding: 0% 5%;
@@ -793,7 +825,7 @@ aside.descripciongz {
     margin: auto;
     font-family: "Lobster";
     font-size: 30px;
-    color: #000000;
+    color: #1c2460;
     text-align: center;
 }
 .titProdRelgz h4{
@@ -805,12 +837,7 @@ aside.descripciongz {
 }
 
 
-.preciosRgz p {
-    font-family: "roboto";
-    font-size: 30px;
-    text-align: center;
-    
-}
+
 
 .destablagz {
     width: 100%;
@@ -905,4 +932,4 @@ aside.descripciongz {
     article.tabla_lista {
         width: 22%;
     }
- }
+ }}}
