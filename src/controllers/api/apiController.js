@@ -31,9 +31,11 @@ listProducts: async (req,res)=>{
         meta:{
             status: 200,
             count: products.length,
+            
             countByColours: qtyProducts,
             url: "/api/products",
             lastProducts: lastProducts,
+            
            
         },
         data:products
