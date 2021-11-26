@@ -265,6 +265,5 @@ db.Users
 
 }
 
-
 }
 module.exports  = apiController;
