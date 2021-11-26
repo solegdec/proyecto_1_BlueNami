@@ -43,6 +43,26 @@ listProducts: async (req,res)=>{
         
         
     },
+    search: async (req,res)=> {
+       
+       await  db.Products.findAll({
+
+            where: {
+                nombre: { [Op.like]: '%' + req.query.search + '%' }
+                
+            }
+        })
+     
+        .then(product=>{
+            return res.status(200).json({
+                data: product,
+                status:200,
+                
+            })
+        })
+        res.json(product)
+    },
+
 
 listColours: async function(req, res){
         let coloursList = await db.Colours.findAll({
