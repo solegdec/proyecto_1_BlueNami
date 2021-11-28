@@ -155,6 +155,7 @@ searchProducts:(req,res)=>{
 },
 listUsers:(req,res)=>{
     db.Users
+    .scope("withoutPassword")
     .findAll()
     .then(users=>{
         return res.status(200).json({
@@ -166,9 +167,8 @@ listUsers:(req,res)=>{
 },
 detailUser:(req,res)=>{
 db.Users
-    .findByPk(req.params.id, {
-        include:["categoria"]
-})
+    .scope("withoutPassword")
+    .findByPk(req.params.id,{include:["categoria"]})
     .then(user=>{
         return res.status(200).json({
             data: user,
