@@ -1,6 +1,7 @@
 //const { DataTypes } = require("sequelize/types")
 //const { sequelize } = require(".")
 
+
 module.exports = (sequelize, DataTypes)=> {
 
 const Users = sequelize.define("Users", 
@@ -71,12 +72,14 @@ const Users = sequelize.define("Users",
     {
         tableName: 'users',
         timestamps: false,
-        //defaultScope: {
-          //    attributes: { exclude: ['password' , 'categoria_id'] }
-            //}
+        scopes:{
+            withoutPassword:{
+                attributes:{exclude:["password"]},
+            }
+        },
+        
     },
-    
-
+  
    
 );
 
