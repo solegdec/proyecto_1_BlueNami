@@ -157,7 +157,7 @@ searchProducts:(req,res)=>{
 
 },
 listUsers:(req,res)=>{
-    db.Users
+    db.Users.scope("withoutPassword")
     .findAll()
     .then(users=>{
         return res.status(200).json({
