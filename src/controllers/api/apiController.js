@@ -6,8 +6,8 @@ let apiController={
 listProducts: async (req,res)=>{
     let products=await db.Products.findAll({
         include:["marca","colours"],
-        
-})
+    })
+
     let coloursList= await db.Colours.findAll({
         include:["productos"]
     })
@@ -19,6 +19,7 @@ listProducts: async (req,res)=>{
             count: colour.productos.length
         }
     })
+
     let lastProducts = await db.Products.findAll({
         include:["marca"],
         order: [
@@ -34,20 +35,19 @@ listProducts: async (req,res)=>{
             countByColours: qtyProducts,
             url: "/api/products",
             lastProducts: lastProducts,
-           
         },
         data:products
     }
     res.json(productsJson)
 
-        
-        
     },
+    
 
 listColours: async function(req, res){
         let coloursList = await db.Colours.findAll({
             include: ["productos"]
         })
+
         let qtyProducts = coloursList.map(colour =>{
             return {
                 id: colour.id,
@@ -155,6 +155,7 @@ searchProducts:(req,res)=>{
 },
 listUsers:(req,res)=>{
     db.Users
+    .scope("withoutPassword")
     .findAll()
     .then(users=>{
         return res.status(200).json({
@@ -166,7 +167,8 @@ listUsers:(req,res)=>{
 },
 detailUser:(req,res)=>{
 db.Users
-    .findByPk(req.params.id)
+    .scope("withoutPassword")
+    .findByPk(req.params.id,{include:["categoria"]})
     .then(user=>{
         return res.status(200).json({
             data: user,
@@ -242,7 +244,6 @@ db.Users
 })
 
 }
-
 
 }
 module.exports  = apiController;
