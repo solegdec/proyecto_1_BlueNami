@@ -67,6 +67,7 @@ const Users = sequelize.define("Users",
             allowNull: true,
             type: DataTypes.DATE
         },
+       
     },
     {
         tableName: 'users',
@@ -76,9 +77,7 @@ const Users = sequelize.define("Users",
                 attributes:{exclude:["password"]},
             }
         },
-        //defaultScope: {
-          //    attributes: { exclude: ['password' , 'categoria_id'] }
-            //}
+        
     },
   
    
