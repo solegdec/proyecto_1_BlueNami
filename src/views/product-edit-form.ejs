@@ -21,6 +21,9 @@
                             </ul>
                             <% } %>
                         <form class="tm-edit-product-form" action="/admin/<%= product.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data">
+                            <img src="/img/<%=product.foto%>" width="100px" height="100px">
+
+                                <br> <br>
                             <div class="form-group mb-3">
                                 <label for="id"><p>Id</p></label><br/>
                                 <input id="id" name="id" type="text" class="campos_add" value="<%= product.id%> " readonly>

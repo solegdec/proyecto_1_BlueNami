@@ -30,6 +30,10 @@
                              
 
                             <form  class="tm-edit-product-form" action="/adminUser/<%=user.id %>/edit/?_method=PUT" method="POST" enctype="multipart/form-data" >
+                                <img src="/img/avatars/<%=user.avatar%>" width="100px" height="100px">
+
+                                <br> <br>
+
                                 <div class="form-group mb-3">
                                     <label for="id"><p>Id</p></label><br/>
                                     <input id="id" name="id" type="number" class="campos_add" value="<%= user.id%>"  readonly>
@@ -85,10 +89,7 @@
                                     <input id="avatar" type="file" name="avatar"  class="campos_add">
                                 </div>
 
-                                <img src="/img/avatars/<%=user.avatar%>" width="100px" height="100px">
-
-                                <br> 
-
+                                
                                     <button type="submit" class="button_add">Confirmar Cambios</button>
                             </form>
                         </div>
