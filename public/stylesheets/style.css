@@ -293,16 +293,17 @@ label #sign-two {
 /*Contenedor de Quienes somos*/
 
 
-.qstext {
+.qstext p{
     font-size: 100%;
     color: #1b1b1b;
     margin-top: 20px;
     font-family: "caveat";
     font-weight: 300;
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
     text-align: center;
     font-size: 27px; 
 }
+
 
 
 p.firmagz {

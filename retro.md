@@ -46,3 +46,11 @@ Hacer más: dividr tareas y luego reunion para compilar avanaces
 Continuar haciendo: trabajo en equipo y gran compromiso de todos los miembros
 Hacer menos: intentar implementar funcionalidades aún no enseñadas en clases.
 Dejar de hacer: minutas al final del sprint
+
+Retrospectiva Sprint 8
+Comenzar a hacer: volver a hacer minutas inmediatamente despues de cada reunion. dividir tareas
+Hacer más: dividir tareas y luego reunion para compilar avanaces
+Continuar haciendo: trabajo en equipo y gran compromiso de todos los miembros---seguimos asi!!
+Hacer menos:no encontramos nada !!
+Dejar de hacer: minutas al final del sprint
+
