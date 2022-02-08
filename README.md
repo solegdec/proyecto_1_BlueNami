@@ -1,3 +1,5 @@
+public/img/logoBN.png
+
 Por favor: 
 1) chequear que la password (de root) en el config.js sea la que corresponda
 2) chequear que el port sea el mismo tanto en el app como en el www
