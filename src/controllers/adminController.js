@@ -152,9 +152,8 @@ let adminController = {
 
     restore: async (req,res)=>{
         await db.Products.update (
-            {include: [ {association:"marca"}]},
          {
-            nombre: req.body.nombre ,
+            nombre: req.body.nombre,
             descripcion: req.body.descripcion,
             unidades: req.body.unidades,
             precio: req.body.precio,
@@ -167,9 +166,7 @@ let adminController = {
               }
               
           })
-          .then(productsBorrados=>{
-            res.render ("adminBorrado", { productsBorrados})
-        })
+          res.redirect ("/admin")
         },
 }
 
