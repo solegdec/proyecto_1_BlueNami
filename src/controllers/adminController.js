@@ -129,12 +129,6 @@ let adminController = {
 
           await db.Products.softDelete({ where: { borrado: 1 } })
 
-            db.Products.destroy({
-                where: {
-                    id: req.params.id
-                }
-            })
-            res.redirect("/admin")
         },
 
 
