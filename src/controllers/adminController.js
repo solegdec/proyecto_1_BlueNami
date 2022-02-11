@@ -128,26 +128,50 @@ let adminController = {
               }),
 
           await db.Products.softDelete({ where: { borrado: 1 } })
+          res.redirect("/admin")
 
-         
-            res.redirect("/admin")
         },
 
-
-
-
-       
+        listaBorrados: async (req,res)=> {
+      
+            await db.Products.findAll({
+                include:[{association:"marca"}],
+                
+                where: {
+                    borrado:1 }
+                    
+            }
+            )
+           
+            .then(productsBorrados=>{
+                res.render ("adminBorrado", { productsBorrados})
+            })
+           
     
+    },
 
-
-
-
-
-
-
-
-
-    }
+    restore: async (req,res)=>{
+        await db.Products.update (
+            {include: [ {association:"marca"}]},
+         {
+            nombre: req.body.nombre ,
+            descripcion: req.body.descripcion,
+            unidades: req.body.unidades,
+            precio: req.body.precio,
+            marca_id:req.body.marca,
+            borrado:0,
+          }, {
+              where: {
+                  id: req.params.id,
+                  borrado: 1
+              }
+              
+          })
+          .then(productsBorrados=>{
+            res.render ("adminBorrado", { productsBorrados})
+        })
+        },
+}
 
 module.exports= adminController;
 
