@@ -13,6 +13,7 @@ const adminController= require ("../controllers/adminController.js")
 
 //list
 router.get ("/", adminController.list);
+router.get("/borrados", adminController.listaBorrados);
 
 //create 
 router.get("/create", adminController.create);
@@ -24,7 +25,8 @@ router.put("/:id/edit",fileUpload.single("foto"), validar.productEdit, adminCont
 
 // delete
 router.delete("/destroy/:id", adminController.destroy);
-
+//restore
+router.get("/:id/restore",adminController.restore)
 //detail
 router.get("/detail/:id", adminController.detail);
 

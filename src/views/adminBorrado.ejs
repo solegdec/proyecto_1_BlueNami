@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<%- include("./partials/head") %>
+    <body>
+        <%- include("./partials/headerAdmin") %>
+          
+                  <div class="h2admin">
+                    <h2>Administrador de Productos Borrados</h2>
+                </div>
+                            <table class="tableAdmin">
+                                <thead class="theadAdmin">
+                                    
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Marca</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Unidades en stock</th>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Restaurar</th>
+                                    
+                                
+                                </thead>
+                                <tbody class="tbodyAdmin">
+                                    <% productsBorrados.forEach(function(productsBorrados){ %>
+                                <form  class="tm-edit-product-form" action="" method="POST" >
+                                    <tr class="trAdmin">
+                                    
+                                    <td><%=productsBorrados.id%></td>
+                                    <td><img src="/img/<%=productsBorrados.foto%>" width="30px" height="30px"></td>
+                                    <td><%=productsBorrados.nombre%></td>
+                                    <td><%=productsBorrados.marca_id%></td>
+                                    <td>$<%=productsBorrados.precio%></td>
+                                    <td><%=productsBorrados.unidades%></td>
+                                    <td><%=productsBorrados.descripcion%></td>
+                                    
+                                </form> 
+                                   
+                                    <td><a href="/admin/<%=productsBorrados.id%>/restore"><i class="fas fa-undo"></a></td>
+                                    </tr> 
+                                 <% }) %>       
+                 
+                                </tbody>
+                            </table>
+                            <article class="h2admin1">
+                                <p><button class="buttonAdmin" type="button"><a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a></button></p>
+                              </article>
+                        
+
+           
+
+               <div class="form-login-foto">
+        <img width=100% src="/img/olasAltas.png" alt="olas">
+    </div>
+
+<%- include("./partials/footer") %>
+    </body>
+
+</html>
