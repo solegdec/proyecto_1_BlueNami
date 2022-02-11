@@ -1,3 +1,6 @@
+![logo](https://user-images.githubusercontent.com/86257609/153061627-d85a7033-69f3-4c59-bcda-da8658c77b3f.png)
+
+
 Por favor: 
 1) chequear que la password (de root) en el config.js sea la que corresponda
 2) chequear que el port sea el mismo tanto en el app como en el www

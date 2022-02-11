@@ -112,8 +112,23 @@ let adminController = {
                 );
                 res.redirect("/admin");
             },
-        destroy: (req,res)=>{
-            
+        destroy: async (req,res)=>{
+            await db.Products.update (
+             {
+                nombre: req.body.nombre ,
+                descripcion: req.body.descripcion,
+                unidades: req.body.unidades,
+                precio: req.body.precio,
+                marca_id:req.body.marca,
+                borrado:1,
+              }, {
+                  where: {
+                      id: req.params.id
+                  }
+              }),
+
+          await db.Products.softDelete({ where: { borrado: 1 } })
+
             db.Products.destroy({
                 where: {
                     id: req.params.id

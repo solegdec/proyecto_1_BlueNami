@@ -1,5 +1,6 @@
 //const { DataTypes } = require("sequelize/types")
 //const { sequelize } = require(".")
+const sequelizeSoftDelete = require('sequelize-soft-delete')
 
 module.exports = (sequelize, DataTypes)=> {
 
@@ -41,15 +42,28 @@ const Products = sequelize.define("Products",
             allowNull: false,
             type: DataTypes.INTEGER
         },
-
         
+            borrado: {
+              type: DataTypes.INTEGER(1),
+              defaultValue: 0
+            },
+          
     },
     {
         tableName: 'products',
         timestamps: false,
-    }
 
+        defaultScope: {
+            where: {
+              borrado: 0
+            }
+          } 
+    }
+    
 );
+
+const options = {field: 'borrado', borrado: 1}
+    sequelizeSoftDelete.softDelete(Products, options)
 
 Products.associate = function(models){
     Products.belongsToMany(models.Colours,{
