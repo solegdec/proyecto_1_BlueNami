@@ -67,7 +67,11 @@ const Users = sequelize.define("Users",
             allowNull: true,
             type: DataTypes.DATE
         },
-       
+        borrado: {
+            type: DataTypes.INTEGER(1),
+            defaultValue: 0
+          },
+        
     },
     {
         tableName: 'users',
@@ -77,6 +81,11 @@ const Users = sequelize.define("Users",
                 attributes:{exclude:["password"]},
             }
         },
+        defaultScope: {
+            where: {
+              borrado: 0
+            }
+          } 
         
     },
   

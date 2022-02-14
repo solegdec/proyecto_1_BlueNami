@@ -94,9 +94,56 @@ const clientController = {
         req.session.destroy();
         res.clearCookie("remember_user");
         res.redirect("/");
-    },   
-    
-    
+    }, 
+    destroy: async (req,res)=>{
+        await db.Users.update (
+         {
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            genero:req.body.genero,
+            pais:req.body.pais,
+            email: req.body.email,
+            
+            fechaNac: req.body.fechaNac,
+            avatar: req.file.filename,
+            categoria_id: 1,
+            borrado:1,
+          }, {
+              where: {
+                  id: req.params.id
+              }
+          }),
+
+      await db.Users.softDelete({ where: { borrado: 1 } })
+      res.redirect("/index")
+
+    },
+    listaBorrados: async (req,res)=> {
+        let pedidoUsers= db.Users.findAll({
+            include:[{association:"categoria"}, {association:"items2"}],
+            
+            where: {
+                borrado:1 }
+                
+        })
+        let pedidoProductos= db.Products.findAll({
+        include:[{association:"marca"}],
+        
+        where: {
+            borrado:1 }
+            
+    })
+   Promise.all([pedidoProductos,pedidoUsers])
+ 
+    .then(function(values)
+    { 
+    res.render("adminBorrado",{products: values[0], users: values[1],})
+   
+    })   
+
+  
+      
+},
 
 }
        

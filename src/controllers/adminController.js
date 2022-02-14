@@ -133,21 +133,30 @@ let adminController = {
         },
 
         listaBorrados: async (req,res)=> {
-      
-            await db.Products.findAll({
-                include:[{association:"marca"}],
+            let pedidoUsers= db.Users.findAll({
+                include:[{association:"categoria"}, {association:"items2"}],
                 
                 where: {
                     borrado:1 }
                     
-            }
-            )
-           
-            .then(productsBorrados=>{
-                res.render ("adminBorrado", { productsBorrados})
             })
-           
-    
+            let pedidoProductos= db.Products.findAll({
+            include:[{association:"marca"}],
+            
+            where: {
+                borrado:1 }
+                
+        })
+       Promise.all([pedidoProductos,pedidoUsers])
+     
+        .then(function(values)
+        { 
+        res.render("adminBorrado",{products: values[0], users: values[1],})
+       
+        })   
+
+      
+          
     },
 
     restore: async (req,res)=>{

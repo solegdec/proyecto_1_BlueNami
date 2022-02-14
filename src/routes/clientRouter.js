@@ -23,4 +23,8 @@ router.get('/account', clientController.account);
 
 router.get("/logout",clientController.logout);
 
+router.get("/borrado",clientController.listaBorrados);
+
+router.delete("/destroy/:id", clientController.destroy);
+
 module.exports = router

@@ -23,15 +23,20 @@
      <div class="misDatos">
             <h4 >CATEGORIA:</h4> <p><%=user.categoria.categoria %> </p> <br>
             <h4 >EMAIL: </h4> <p><%=user.email%></p> <br>
-            <h4 > FECHA DE NACIMIENTO: </h4><p> <%=user.fechaNac%></p> <br>
+            <h4 >FECHA DE NACIMIENTO: </h4><p> <%=user.fechaNac%></p> <br>
             <h4 >GÉNERO: </h4><p><%=user.genero%></p> <br>
             <h4 >PAIS DE ORIGEN: </h4><p><%=user.pais%></p><br><br>
             
             <a href="/client/logout">
                 <button class="botonLogout1">Cerrar Sesión </button></a>
             
-     </div>       
+     </div>     
+     
+      
 </div>
+<form action="/admin/destroy/<%=user.id %>/?_method=DELETE" method="POST">
+    <button type="submit" class="botonLogout1">Eliminar mi Cuenta</button>
+</form>
 
 
 

@@ -31,6 +31,7 @@ fechaNac DATE NOT NULL,
 avatar VARCHAR(255) NOT NULL,
 password VARCHAR(255) NOT NULL,
 categoria_id INT UNSIGNED,
+borrado INT UNSIGNED,
 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
@@ -138,8 +139,8 @@ insert into `userCategories`  VALUES
                           
 -- Carga tabla users
 insert into `users`  VALUES 
-(1, 'Nombre Cliente', 'Apellido Cliente', 'Femenino', 'cliente@gmail.com', 'Argentina', '2021-10-27', '1634926058147.png', '$2a$10$m4U855LygI6kOjAug1b/auvhCT88Q8a9bnr2GHcKHQ73J/AyOQyg2', '1', '2021-01-26 02:55:46', '2021-01-26 02:55:46'),
-(2, 'Nombre Administrador', 'Apellido Administrador', 'Femenino', 'administrador@gmail.com', 'Argentina', '2021-10-27', '1634926058147.png' , '$2a$10$qLJ3CsCgEmevbryujCix4ujaRYPZGpD/Esbb19tlCsWg/q.IZbIp.', '2', '2021-01-26 02:55:46', '2021-01-26 02:55:46');
+(1, 'Nombre Cliente', 'Apellido Cliente', 'Femenino', 'cliente@gmail.com', 'Argentina', '2021-10-27', '1634926058147.png', '$2a$10$m4U855LygI6kOjAug1b/auvhCT88Q8a9bnr2GHcKHQ73J/AyOQyg2', '1',0, '2021-01-26 02:55:46', '2021-01-26 02:55:46'),
+(2, 'Nombre Administrador', 'Apellido Administrador', 'Femenino', 'administrador@gmail.com', 'Argentina', '2021-10-27', '1634926058147.png' , '$2a$10$qLJ3CsCgEmevbryujCix4ujaRYPZGpD/Esbb19tlCsWg/q.IZbIp.', '2',0, '2021-01-26 02:55:46', '2021-01-26 02:55:46');
 
 
 -- Carga tabla models

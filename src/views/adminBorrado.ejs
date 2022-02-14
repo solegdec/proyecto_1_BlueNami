@@ -5,7 +5,7 @@
         <%- include("./partials/headerAdmin") %>
           
                   <div class="h2adminB">
-                    <h2>Administrador de Productos Borrados</h2>
+                    <h2>Administrador de Productos Eliminados</h2>
                 </div>
                 <div class="cajaContBorrados"></div>
                             <table class="tableAdminB">
@@ -23,31 +23,65 @@
                                 
                                 </thead>
                                 <tbody class="tbodyAdminB">
-                                    <% productsBorrados.forEach(function(productsBorrados){ %>
+                                    <% products.forEach(function(products){ %>
                                 <form  class="tm-edit-product-form" action="" method="POST" >
                                     <tr class="trAdminB">
                                     
-                                    <td><%=productsBorrados.id%></td>
-                                    <td><img class="imgAdminB"src="/img/<%=productsBorrados.foto%>"></td>
-                                    <td><%=productsBorrados.nombre%></td>
-                                    <td><%=productsBorrados.marca.marca%></td>
-                                    <td>$<%=productsBorrados.precio%></td>
-                                    <td><%=productsBorrados.unidades%></td>
-                                    <td class="descripcionB"><%=productsBorrados.descripcion%></td>
+                                    <td><%=products.id%></td>
+                                    <td><img class="imgAdminB"src="/img/<%=products.foto%>"></td>
+                                    <td><%=products.nombre%></td>
+                                    <td><%=products.marca.marca%></td>
+                                    <td>$<%=products.precio%></td>
+                                    <td><%=products.unidades%></td>
+                                    <td class="descripcionB"><%=products.descripcion%></td>
                                     
                                 </form> 
                                    
-                                    <td><a href="/admin/<%=productsBorrados.id%>/restore"><i class="fas fa-undo"></a></td>
+                                    <td><a href="/admin/<%=products.id%>/restore"><i class="fas fa-undo"></a></td>
                                     </tr> 
                                  <% }) %>       
                  
                                 </tbody>
                             </table>
                         </div>
-                            <article class="h2admin1B">
-                                <p><button class="buttonAdminB" type="button"><a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a></button></p>
-                              </article>
-                        
+                        <div class="h2adminUsers">
+                            <h2>Administrador de Usuarios Eliminados</h2>
+                        </div>
+            
+                            <table class="tableAdminUsers">
+                                <thead class="theadAdminUsers">
+                                    <th scope="col">Id</th>           
+                                    <th scope="col">Nombre </th>
+                                    <th scope="col">Apellido </th>
+                                    <th scope="col">Categoría</th>
+                                    <th scope="col">Fecha de Nacimiento </th>
+                                    <th scope="col">Pais de Origen </th>
+                                    <th scope="col">Género</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Avatar</th>
+                                    <th scope="col">Perfil</th>
+                                    <th scope="col">Restaurar</th>           
+                                </thead>
+                                <tbody class="tbodyAdminUsers">           
+                                <%users.forEach(function(users){ %>
+                                    <tr class="tradminUsers">
+                                    <td><%=users.id%></td>
+                                    <td><%=users.nombre%></td>
+                                    <td><%=users.apellido%></td>
+                                    <td><%=users.categoria.categoria %></td>
+                                    <td><%=users.fechaNac%></td>
+                                    <td><%=users.pais%></td>
+                                    <td><%=users.genero%></td>
+                                    <td><%=users.email%></td>
+                                    <td><img src="/img/avatars/<%=users.avatar%>" width="30px" height="30px"></td>
+                                    <td><a href="/adminUser/profile/<%=users.id%>"><i class="fas fa-info-circle"></a></td>
+                                    <td><a href="/admin/<%=products.id%>/restore"><i class="fas fa-undo"></a></td>
+                            
+                                    </tr>
+                                 <% }) %>               
+                                </tbody>                
+                            </table>  
+                            
 
            
 
