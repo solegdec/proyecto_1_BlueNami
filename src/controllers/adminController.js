@@ -52,7 +52,7 @@ let adminController = {
         {
           nombre: req.body.nombre ,
           descripcion: req.body.descripcion,
-          unidades: req.body.unidades,
+          unidades: req.body.unidades ,
           foto: req.file.filename,
           precio: req.body.precio,
           marca_id:req.body.marca
@@ -117,7 +117,7 @@ let adminController = {
              {
                 nombre: req.body.nombre ,
                 descripcion: req.body.descripcion,
-                unidades: req.body.unidades,
+                unidades: 0,
                 precio: req.body.precio,
                 marca_id:req.body.marca,
                 borrado:1,

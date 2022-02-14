@@ -1,6 +1,6 @@
 //const { DataTypes } = require("sequelize/types")
 //const { sequelize } = require(".")
-
+const sequelizeSoftDelete = require('sequelize-soft-delete')
 
 module.exports = (sequelize, DataTypes)=> {
 
@@ -91,6 +91,8 @@ const Users = sequelize.define("Users",
   
    
 );
+const options = {field: 'borrado', borrado: 1}
+    sequelizeSoftDelete.softDelete(Users, options)
 
 Users.associate = function(models){
     Users.belongsTo(models.Categories,{

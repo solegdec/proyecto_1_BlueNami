@@ -5,7 +5,7 @@
         <%- include("./partials/headerAdmin") %>
           
                   <div class="h2adminB">
-                    <h2>Administrador de Productos Eliminados</h2>
+                    <h2>Administrador de Productos Sin Stock</h2>
                 </div>
                 <div class="cajaContBorrados"></div>
                             <table class="tableAdminB">
@@ -45,7 +45,7 @@
                             </table>
                         </div>
                         <div class="h2adminUsers">
-                            <h2>Administrador de Usuarios Eliminados</h2>
+                            <h2>Cuentas de  Usuario Eliminadas</h2>
                         </div>
             
                             <table class="tableAdminUsers">
@@ -59,7 +59,7 @@
                                     <th scope="col">Género</th>
                                     <th scope="col">E-mail</th>
                                     <th scope="col">Avatar</th>
-                                    <th scope="col">Perfil</th>
+                                    
                                     <th scope="col">Restaurar</th>           
                                 </thead>
                                 <tbody class="tbodyAdminUsers">           
@@ -74,8 +74,8 @@
                                     <td><%=users.genero%></td>
                                     <td><%=users.email%></td>
                                     <td><img src="/img/avatars/<%=users.avatar%>" width="30px" height="30px"></td>
-                                    <td><a href="/adminUser/profile/<%=users.id%>"><i class="fas fa-info-circle"></a></td>
-                                    <td><a href="/admin/<%=products.id%>/restore"><i class="fas fa-undo"></a></td>
+                                    
+                                    <td><a href="/admin/<%=users.id%>/restore"><i class="fas fa-undo"></a></td>
                             
                                     </tr>
                                  <% }) %>               

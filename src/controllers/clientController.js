@@ -33,7 +33,8 @@ const clientController = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 fechaNac: req.body.fechaNac,
                 avatar: req.file.filename,
-                categoria_id: 1
+                categoria_id: 1,
+                borrado:0
              
             }).then(function(){
                 return res.redirect("/client/login");
@@ -105,8 +106,8 @@ const clientController = {
             email: req.body.email,
             
             fechaNac: req.body.fechaNac,
-            avatar: req.file.filename,
-            categoria_id: 1,
+            
+            
             borrado:1,
           }, {
               where: {
@@ -115,7 +116,9 @@ const clientController = {
           }),
 
       await db.Users.softDelete({ where: { borrado: 1 } })
-      res.redirect("/index")
+      req.session.destroy();
+        res.clearCookie("remember_user");
+      res.redirect("/")
 
     },
     listaBorrados: async (req,res)=> {
