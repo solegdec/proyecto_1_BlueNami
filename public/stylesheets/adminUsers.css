@@ -3,20 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-article.h2adminUsers{
-    text-align: center;
+article.h2adminUsers1{
     font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    
+    margin: auto;
+
 }
-.h2adminUsers{
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    
+
+.contenerdorAdminU{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
+
 /*Tabla*/
 tbody.tbodyAdminUsers{
     margin:50px;
@@ -34,22 +33,19 @@ tbody.tbodyAdminUsers{
 }
 
 /*Tabla*/
-.h2adminUsers a{
-    font-size: 14px;
-    font-weight:500;
-    font-family: "roboto";
-    text-decoration: none;  
-    color:black;
-   
-}
 
+.h2adminUsers{
+    font-size: 20px;
+    margin: auto;
+}
 .h2adminUsers h2{
-    font-family: "lobster";
-    font-size: 30px;
-    color: grey;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    
+        font-family: "lobster";
+        font-size: 30px;
+        color: grey;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-shadow: 0px 1px 2px rgba(77, 76, 76, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+  
 }
 .theadAdminUsers{
     background-color:  #E9B843;
@@ -65,8 +61,7 @@ table.tableAdminUsers td{
     font-family: "roboto";
     padding: 10px;
     text-align: left;
-    font-size: 13px;
-    
+    font-size: 13px;  
  }
 
  tr.tradminUsers:nth-child(even) {
@@ -74,14 +69,11 @@ table.tableAdminUsers td{
  }
 
  .buttonUsers {
-    width: 150px;
-    height: 30%;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 300;
     color: rgb(1, 13, 48);
     border-color: rgb(95, 99, 99);
-    background-color: #E9B843;
     padding: 10px 5px 10px 5px;
     margin: 10px 5px 10px 5px;
 }
