@@ -67,9 +67,12 @@ table.tableAdminB td{
     color:black;
 }
 .h2adminB h2{
+   
     font-family: "lobster";
     font-size: 30px;
-    color: grey
+    color: grey;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 article.h2admin1B{
     text-align: center;

@@ -3,9 +3,16 @@
 <%- include("./partials/head") %>
     <body>
         <%- include("./partials/headerAdmin") %>
-        <div class="h2admin">
-            <h2>Administrador de Productos</h2>
-        </div>
+        <div class="contenerdorAdminP">
+            <div class="h2admin">
+                <h2>Administrador de Productos</h2>
+            </div>
+        <article class="h2admin1">
+            <p><button class="buttonAdmin" type="button"><a href="/product-add-form/create"><i class="fa-solid fa-circle-plus fa-2x">AGREGAR PRODUCTO</i></a></button></p>
+          </article>
+        
+        
+    </div>
                     <table class="tableAdmin">
                         <thead class="theadAdmin">
                             
@@ -34,16 +41,14 @@
                             <td><%=products.unidades%></td>
                             <td class="descripcion"><%=products.descripcion%></td>
                         </form> 
-                            <td><a href="/product/<%=products.id%>"><i class="fas fa-info-circle"></a></td>
+                            <td><a href="/product/<%=products.id%>"><i class="fa-solid fa-circle-info fa-beat" style="--fa-beat-scale: 2.0;"></i></a></td>
                             <td><a href="/admin/<%=products.id%>/edit"><i class="far fa-edit"></a></td>
                             </tr> 
                          <% }) %>       
          
                         </tbody>
                     </table>
-                    <article class="h2admin1">
-                        <p><button class="buttonAdmin" type="button"><a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a></button></p>
-                      </article>
+                    
                 
               <div class="olasSole"><img src="/img/olasSole1000x50.png" width="100%" height="100%"></div>
             <%- include("./partials/footer") %>

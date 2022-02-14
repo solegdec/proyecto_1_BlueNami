@@ -3,10 +3,15 @@
 <%- include("./partials/head") %>
     <body>
         <%- include("./partials/headerAdmin") %>
+        <div class="contenerdorAdminU">
             <div class="h2adminUsers">
                 <h2>Administrador de Usuarios</h2>
             </div>
 
+            <article class="h2adminUsers1">
+                <p><button class="buttonUsers" type="button"><a href="/users-add-form/create"><i class="fa-solid fa-circle-plus fa-2x">AGREGAR USUARIOS</i></a></button></p>
+               </article>
+            </div>
                 <table class="tableAdminUsers">
                     <thead class="theadAdminUsers">
                         <th scope="col">Id</th>           
@@ -41,9 +46,7 @@
                     </tbody>                
                 </table>  
                 
-                <article class="h2adminUsers">
-                   <p><button class="buttonUsers" type="button"><a href="/user-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Usuario</a></button></p>
-                  </article>
+              
 
            
 
