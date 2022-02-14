@@ -164,7 +164,7 @@ let adminController = {
          {
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
-            unidades: req.body.unidades,
+            unidades: 1,
             precio: req.body.precio,
             marca_id:req.body.marca,
             borrado:0,
