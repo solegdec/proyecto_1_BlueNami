@@ -6,25 +6,33 @@
 article.h2adminUsers{
     text-align: center;
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
 }
 .h2adminUsers{
     text-align: center;
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
 }
 /*Tabla*/
 tbody.tbodyAdminUsers{
     margin:50px;
     padding: 50px;
+    
 }
  table.tableAdminUsers{
-    max-width: 1200px;
+    max-width: 90%;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     margin: 10px 10px 10px 10px ;
     padding: 10px 10px 10px 10px;
-    margin: 40px 40px
+    margin: auto;
    
 }
+
 /*Tabla*/
 .h2adminUsers a{
     font-size: 14px;
@@ -32,12 +40,16 @@ tbody.tbodyAdminUsers{
     font-family: "roboto";
     text-decoration: none;  
     color:black;
+   
 }
 
 .h2adminUsers h2{
     font-family: "lobster";
     font-size: 30px;
-    color: grey
+    color: grey;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
 }
 .theadAdminUsers{
     background-color:  #E9B843;

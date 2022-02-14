@@ -4,11 +4,12 @@
     <body>
         <%- include("./partials/headerAdmin") %>
           
-                  <div class="h2admin">
+                  <div class="h2adminB">
                     <h2>Administrador de Productos Borrados</h2>
                 </div>
-                            <table class="tableAdmin">
-                                <thead class="theadAdmin">
+                <div class="cajaContBorrados"></div>
+                            <table class="tableAdminB">
+                                <thead class="theadAdminB">
                                     
                                     <th scope="col">Id</th>
                                     <th scope="col">Foto</th>
@@ -21,18 +22,18 @@
                                     
                                 
                                 </thead>
-                                <tbody class="tbodyAdmin">
+                                <tbody class="tbodyAdminB">
                                     <% productsBorrados.forEach(function(productsBorrados){ %>
                                 <form  class="tm-edit-product-form" action="" method="POST" >
-                                    <tr class="trAdmin">
+                                    <tr class="trAdminB">
                                     
                                     <td><%=productsBorrados.id%></td>
-                                    <td><img src="/img/<%=productsBorrados.foto%>" width="30px" height="30px"></td>
+                                    <td><img class="imgAdminB"src="/img/<%=productsBorrados.foto%>"></td>
                                     <td><%=productsBorrados.nombre%></td>
                                     <td><%=productsBorrados.marca.marca%></td>
                                     <td>$<%=productsBorrados.precio%></td>
                                     <td><%=productsBorrados.unidades%></td>
-                                    <td><%=productsBorrados.descripcion%></td>
+                                    <td class="descripcionB"><%=productsBorrados.descripcion%></td>
                                     
                                 </form> 
                                    
@@ -42,8 +43,9 @@
                  
                                 </tbody>
                             </table>
-                            <article class="h2admin1">
-                                <p><button class="buttonAdmin" type="button"><a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a></button></p>
+                        </div>
+                            <article class="h2admin1B">
+                                <p><button class="buttonAdminB" type="button"><a href="/product-add-form/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar Productos</a></button></p>
                               </article>
                         
 

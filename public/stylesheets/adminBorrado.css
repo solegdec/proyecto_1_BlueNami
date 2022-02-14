@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.h2adminB{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.imgAdminB{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+
+/*Tabla */
+tbody.tbodyAdminB{
+    margin:50px;
+    padding: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+ table.tableAdminB{
+     max-width: 90%;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+}
+.theadAdminB{
+    background-color:#E9B843;
+}
+
+table.tableAdminB th{
+   font-family: "numans", "nova-cut";
+   padding: 10px;
+   color: gray;
+   text-align:left;
+}
+table.tableAdminB td{
+    font-family: "roboto";
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;  
+ }
+
+ table.tableAdminB td.descripcionB{
+    text-align: left;
+    
+ }
+ tr.trAdminB:nth-child(even) {
+    background-color: #ddd;
+}
+
+/*FIN Tabla */
+.h2admin1B a{
+    font-size: 14px;
+    font-weight:500;
+    font-family: "roboto";
+    text-decoration: none;  
+    color:black;
+}
+.h2adminB h2{
+    font-family: "lobster";
+    font-size: 30px;
+    color: grey
+}
+article.h2admin1B{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.buttonAdminB {
+    width: 150px;
+    height: 30%;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    border-color: rgb(95, 99, 99);
+    background-color: #E9B843;
+    padding: 10px 5px 10px 5px;
+    margin: 10px 5px 10px 5px;
+}
+input.campos_add{
+    height: auto;
+}

@@ -10,12 +10,12 @@
                         <thead class="theadAdmin">
                             
                             <th scope="col">Id</th>
+                            <th scope="col">Foto</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Marca</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Unidades en stock</th>
                             <th scope="col">Descripcion</th>
-                            <th scope="col">Foto</th>
                             <th scope="col">Ver</th>
                             <th scope="col">Editar</th>
                             
@@ -27,12 +27,12 @@
                             <tr class="trAdmin">
                             
                             <td><%=products.id%></td>
+                            <td><img class="imgAdmin"src="/img/<%=products.foto%>" width="30px" height="30px"></td>
                             <td><%=products.nombre%></td>
                             <td><%=products.marca.marca%></td>
                             <td>$<%=products.precio%></td>
                             <td><%=products.unidades%></td>
-                            <td><%=products.descripcion%></td>
-                            <td><img src="/img/<%=products.foto%>" width="30px" height="30px"></td>
+                            <td class="descripcion"><%=products.descripcion%></td>
                         </form> 
                             <td><a href="/product/<%=products.id%>"><i class="fas fa-info-circle"></a></td>
                             <td><a href="/admin/<%=products.id%>/edit"><i class="far fa-edit"></a></td>
